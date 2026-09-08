@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Facilities | StoreHub</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/images/logo.png">
+
+    <!-- Font Awesome -->
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+
+    <div class="container">
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="navbar-brand d-flex align-items-center gap-2 fw-bold">
+
+            <img
+                src="assets/images/logo.png"
+                alt="StoreHub Logo"
+                style="height:45px;width:auto;object-fit:contain;">
+
+            <span>StoreHub</span>
+
+        </a>
+
+
+        <!-- MOBILE MENU -->
+
+       <button
+    class="navbar-toggler border-0 shadow-none"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#mainNavbar"
+    aria-controls="mainNavbar"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+
+    <i class="fa-solid fa-bars fs-3 text-white"></i>
+
+</button>
+
+
+        <!-- MENU -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar">
+
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+
+                <!-- HOME -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        Home
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="index.html">
+
+                                Home 1
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="index2.html">
+
+                                Home 2
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- FACILITIES -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="facilities.html">
+
+                        Facilities
+
+                    </a>
+
+                </li>
+
+
+                <!-- PRICING -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="pricing.html">
+
+                        Pricing
+
+                    </a>
+
+                </li>
+
+
+                <!-- LOCATIONS -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="locations.html">
+
+                        Locations
+
+                    </a>
+
+                </li>
+<!-- =====================================================
+     PAGES DROPDOWN
+===================================================== -->
+
+<li class="nav-item dropdown">
+
+    <a
+        class="nav-link dropdown-toggle"
+        href="#"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false">
+
+        Pages
+
+    </a>
+
+
+    <ul class="dropdown-menu">
+
+        <!-- MAINTENANCE -->
+
+        <li>
+
+            <a
+                class="dropdown-item"
+                href="maintenance.html">
+
+                <i class="fa-solid fa-screwdriver-wrench me-2"></i>
+
+                Maintenance
+
+            </a>
+
+        </li>
+
+
+        <!-- 404 -->
+
+        <li>
+
+            <a
+                class="dropdown-item"
+                href="404.html">
+
+                <i class="fa-solid fa-triangle-exclamation me-2"></i>
+
+                404 Page
+
+            </a>
+
+        </li>
+
+
+        <!-- COMING SOON -->
+
+        <li>
+
+            <a
+                class="dropdown-item"
+                href="coming-soon.html">
+
+                <i class="fa-solid fa-rocket me-2"></i>
+
+                Coming Soon
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</li>
+
+                <!-- CONTACT -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="contact.html">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div
+                class="d-flex align-items-center gap-2 flex-wrap">
+
+
+                <!-- RTL / LTR -->
+
+                <button
+                    id="rtlToggle"
+                    type="button"
+                    class="btn btn-outline-secondary btn-sm rounded-pill px-3">
+
+                    <span id="directionText">
+                        LTR
+                    </span>
+
+                    <i
+                        class="fa-solid fa-arrows-left-right ms-1">
+                    </i>
+
+                </button>
+
+
+                <!-- DARK MODE -->
+
+                <button
+                    id="themeToggle"
+                    type="button"
+                    class="btn btn-outline-secondary rounded-circle"
+                    style="width:38px;height:38px;">
+
+                    <i
+                        id="themeIcon"
+                        class="fa-solid fa-moon">
+                    </i>
+
+                </button>
+
+
+                <!-- LOGIN -->
+
+                <a
+                    href="login.html"
+                    class="btn btn-outline-dark btn-sm">
+
+                    Login
+
+                </a>
+
+
+                <!-- SIGNUP -->
+
+                <a
+                    href="signup.html"
+                    class="btn btn-dark btn-sm">
+
+                    Signup
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     PAGE HERO
+===================================================== -->
+
+<section class="bg-body-secondary py-5">
+
+    <div class="container py-5">
+
+        <div class="row align-items-center g-5">
+
+
+            <div class="col-lg-7">
+
+                <span
+                    class="badge text-bg-warning px-3 py-2 mb-3">
+
+                    OUR FACILITIES
+
+                </span>
+
+
+                <h1
+                    class="display-4 fw-bold text-body">
+
+                    Everything You Need
+                    for Safe Storage
+
+                </h1>
+
+
+                <p
+                    class="lead text-body-secondary mt-3">
+
+                    Modern storage facilities designed to keep
+                    your belongings safe, accessible and protected.
+
+                </p>
+
+
+                <a
+                    href="contact.html"
+                    class="btn btn-warning btn-lg px-4 mt-3">
+
+                    Enquire Now
+
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-5">
+
+                <img
+                    src="assets/images/reimage.png.jpg"
+                    alt="Storage Facility"
+                    class="img-fluid rounded-4 shadow"
+                    style="width:100%;height:350px;object-fit:cover;">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FACILITIES
+===================================================== -->
+
+<section class="py-5">
+
+    <div class="container">
+
+
+        <div class="text-center mb-5">
+
+            <span
+                class="text-warning fw-semibold">
+
+                STORAGE FEATURES
+
+            </span>
+
+
+            <h2
+                class="fw-bold mt-2 text-body">
+
+                Facilities Built Around You
+
+            </h2>
+
+
+            <p
+                class="text-body-secondary">
+
+                We provide everything required for a
+                convenient and secure storage experience.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- CLIMATE CONTROL -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div
+                    class="card h-100 border-0 shadow-sm">
+
+                    <div
+                        class="card-body p-4">
+
+                        <div
+                            class="bg-warning rounded-3 d-flex align-items-center justify-content-center mb-4"
+                            style="width:60px;height:60px;">
+
+                            <i
+                                class="fa-solid fa-temperature-half fa-xl text-dark">
+                            </i>
+
+                        </div>
+
+
+                        <h4 class="fw-bold">
+
+                            Climate Control
+
+                        </h4>
+
+
+                        <p
+                            class="text-body-secondary">
+
+                            Temperature-controlled storage
+                            helps protect sensitive goods,
+                            documents and valuable items.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CCTV -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div
+                    class="card h-100 border-0 shadow-sm">
+
+                    <div
+                        class="card-body p-4">
+
+                        <div
+                            class="bg-warning rounded-3 d-flex align-items-center justify-content-center mb-4"
+                            style="width:60px;height:60px;">
+
+                            <i
+                                class="fa-solid fa-video fa-xl text-dark">
+                            </i>
+
+                        </div>
+
+
+                        <h4 class="fw-bold">
+
+                            24/7 CCTV Monitoring
+
+                        </h4>
+
+
+                        <p
+                            class="text-body-secondary">
+
+                            Our facilities are monitored
+                            around the clock to provide
+                            an additional layer of security.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ACCESS -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div
+                    class="card h-100 border-0 shadow-sm">
+
+                    <div
+                        class="card-body p-4">
+
+                        <div
+                            class="bg-warning rounded-3 d-flex align-items-center justify-content-center mb-4"
+                            style="width:60px;height:60px;">
+
+                            <i
+                                class="fa-solid fa-clock fa-xl text-dark">
+                            </i>
+
+                        </div>
+
+
+                        <h4 class="fw-bold">
+
+                            24-Hour Access
+
+                        </h4>
+
+
+                        <p
+                            class="text-body-secondary">
+
+                            Access your storage whenever
+                            you need it with convenient
+                            entry throughout the day.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FIRE SAFETY -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div
+                    class="card h-100 border-0 shadow-sm">
+
+                    <div
+                        class="card-body p-4">
+
+                        <div
+                            class="bg-warning rounded-3 d-flex align-items-center justify-content-center mb-4"
+                            style="width:60px;height:60px;">
+
+                            <i
+                                class="fa-solid fa-fire-extinguisher fa-xl text-dark">
+                            </i>
+
+                        </div>
+
+
+                        <h4 class="fw-bold">
+
+                            Fire Safety
+
+                        </h4>
+
+
+                        <p
+                            class="text-body-secondary">
+
+                            Fire detection and safety
+                            systems help protect your
+                            stored belongings.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LOADING -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div
+                    class="card h-100 border-0 shadow-sm">
+
+                    <div
+                        class="card-body p-4">
+
+                        <div
+                            class="bg-warning rounded-3 d-flex align-items-center justify-content-center mb-4"
+                            style="width:60px;height:60px;">
+
+                            <i
+                                class="fa-solid fa-truck-ramp-box fa-xl text-dark">
+                            </i>
+
+                        </div>
+
+
+                        <h4 class="fw-bold">
+
+                            Loading & Unloading
+
+                        </h4>
+
+
+                        <p
+                            class="text-body-secondary">
+
+                            Convenient loading areas make
+                            moving your goods in and out
+                            simple and efficient.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CLEAN STORAGE -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div
+                    class="card h-100 border-0 shadow-sm">
+
+                    <div
+                        class="card-body p-4">
+
+                        <div
+                            class="bg-warning rounded-3 d-flex align-items-center justify-content-center mb-4"
+                            style="width:60px;height:60px;">
+
+                            <i
+                                class="fa-solid fa-sparkles fa-xl text-dark">
+                            </i>
+
+                        </div>
+
+
+                        <h4 class="fw-bold">
+
+                            Clean & Maintained
+
+                        </h4>
+
+
+                        <p
+                            class="text-body-secondary">
+
+                            Clean, organized and regularly
+                            maintained storage areas for
+                            a better experience.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECURITY SECTION
+===================================================== -->
+
+<section class="py-5 bg-body-secondary">
+
+    <div class="container">
+
+        <div
+            class="row align-items-center g-5">
+
+
+            <div class="col-lg-6">
+
+                <img
+                    src="assets/images/sec.png.jpg"
+                    alt="Secure Warehouse"
+                    class="img-fluid rounded-4 shadow"
+                    style="width:100%;height:400px;object-fit:cover;">
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <span
+                    class="text-warning fw-semibold">
+
+                    SECURITY FIRST
+
+                </span>
+
+
+                <h2
+                    class="fw-bold mt-2">
+
+                    Your Belongings
+                    Deserve Protection
+
+                </h2>
+
+
+                <p
+                    class="text-body-secondary">
+
+                    From advanced monitoring to controlled
+                    access, every part of our facility is
+                    designed with security in mind.
+
+                </p>
+
+
+                <ul
+                    class="list-group list-group-flush bg-transparent">
+
+
+                    <li
+                        class="list-group-item bg-transparent px-0">
+
+                        <i
+                            class="fa-solid fa-circle-check text-warning me-2">
+                        </i>
+
+                        24/7 CCTV surveillance
+
+                    </li>
+
+
+                    <li
+                        class="list-group-item bg-transparent px-0">
+
+                        <i
+                            class="fa-solid fa-circle-check text-warning me-2">
+                        </i>
+
+                        Controlled facility access
+
+                    </li>
+
+
+                    <li
+                        class="list-group-item bg-transparent px-0">
+
+                        <i
+                            class="fa-solid fa-circle-check text-warning me-2">
+                        </i>
+
+                        Fire safety systems
+
+                    </li>
+
+
+                    <li
+                        class="list-group-item bg-transparent px-0">
+
+                        <i
+                            class="fa-solid fa-circle-check text-warning me-2">
+                        </i>
+
+                        Regular facility maintenance
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div
+            class="bg-warning rounded-4 p-5 text-center">
+
+            <h2 class="fw-bold">
+
+                Looking for Secure Storage?
+
+            </h2>
+
+
+            <p class="mb-4">
+
+                Find the right storage space for
+                your personal or business needs.
+
+            </p>
+
+
+            <a
+                href="contact.html"
+                class="btn btn-dark btn-lg px-5">
+
+                Enquire About Storage
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="bg-dark text-white pt-5">
+
+    <div class="container">
+
+        <div class="row g-4 pb-4">
+
+
+            <!-- BRAND -->
+
+            <div class="col-lg-4">
+
+                <a
+                    href="index.html"
+                    class="text-white text-decoration-none">
+
+                    <img
+                        src="assets/images/logo.png"
+                        alt="StoreHub Logo"
+                        style="height:50px;width:auto;object-fit:contain;"
+                        class="mb-3">
+
+                    <h5>
+                        StoreHub
+                    </h5>
+
+                </a>
+
+
+                <p class="text-white-50">
+
+                    Secure and flexible warehouse
+                    and storage solutions for
+                    individuals and businesses.
+
+                </p>
+
+
+                <div class="d-flex gap-3">
+
+                    <a
+                        href="#"
+                        class="text-white">
+
+                        <i
+                            class="fa-brands fa-facebook">
+                        </i>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="text-white">
+
+                        <i
+                            class="fa-brands fa-instagram">
+                        </i>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="text-white">
+
+                        <i
+                            class="fa-brands fa-linkedin">
+                        </i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- LINKS -->
+
+            <div class="col-6 col-lg-2">
+
+                <h6>
+                    Quick Links
+                </h6>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+
+                        <a
+                            href="index.html"
+                            class="text-white-50 text-decoration-none">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="mb-2">
+
+                        <a
+                            href="facilities.html"
+                            class="text-white-50 text-decoration-none">
+
+                            Facilities
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="mb-2">
+
+                        <a
+                            href="pricing.html"
+                            class="text-white-50 text-decoration-none">
+
+                            Pricing
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="locations.html"
+                            class="text-white-50 text-decoration-none">
+
+                            Locations
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- ACCOUNT -->
+
+            <div class="col-6 col-lg-2">
+
+                <h6>
+                    Account
+                </h6>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+
+                        <a
+                            href="login.html"
+                            class="text-white-50 text-decoration-none">
+
+                            Login
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="mb-2">
+
+                        <a
+                            href="signup.html"
+                            class="text-white-50 text-decoration-none">
+
+                            Signup
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="contact.html"
+                            class="text-white-50 text-decoration-none">
+
+                            Enquiry
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="col-lg-4">
+
+                <h6>
+                    Contact Us
+                </h6>
+
+
+                <p class="text-white-50 mb-2">
+
+                    <i
+                        class="fa-solid fa-phone me-2">
+                    </i>
+
+                    +91 98765 43210
+
+                </p>
+
+
+                <p class="text-white-50 mb-2">
+
+                    <i
+                        class="fa-solid fa-envelope me-2">
+                    </i>
+
+                    storehub@gmail.com
+
+                </p>
+
+
+                <p class="text-white-50">
+
+                    <i
+                        class="fa-solid fa-location-dot me-2">
+                    </i>
+
+                    Chennai, Tamil Nadu
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div
+            class="border-top border-secondary py-3 text-center">
+
+            <small class="text-white-50">
+
+                © 2026 StoreHub.
+                All Rights Reserved.
+
+            </small>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Common JS -->
+
+<script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

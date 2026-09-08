@@ -1,0 +1,1959 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | StoreHub</title>
+
+
+    <!-- =====================================================
+         BOOTSTRAP 5
+    ====================================================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================================
+           GLOBAL
+        ====================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+
+            transition:
+                background-color 0.3s ease,
+                color 0.3s ease;
+        }
+
+
+        /* =====================================================
+           STOREHUB TOP HEADER
+        ====================================================== */
+
+        .storehub-header {
+
+            width: 100%;
+
+            min-height: 95px;
+
+            background: #071027;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            position: relative;
+
+            padding: 15px 30px;
+
+            z-index: 1000;
+        }
+
+
+        /* =====================================================
+           STOREHUB BRAND
+        ====================================================== */
+
+        .storehub-brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            text-decoration: none;
+
+            color: #ffffff;
+
+            font-size: 34px;
+
+            font-weight: 800;
+
+            letter-spacing: -1px;
+
+            transition: 0.3s ease;
+        }
+
+
+        .storehub-brand:hover {
+
+            color: #ffffff;
+
+        }
+
+
+        /* =====================================================
+           LOGO
+        ====================================================== */
+
+        .storehub-logo {
+
+            width: 58px;
+
+            height: 58px;
+
+            object-fit: contain;
+
+            display: block;
+
+            border-radius: 8px;
+        }
+
+
+        /* =====================================================
+           BRAND NAME
+        ====================================================== */
+
+        .storehub-name {
+
+            line-height: 1;
+
+        }
+
+
+        /* =====================================================
+           HEADER CONTROLS
+        ====================================================== */
+
+        .storehub-controls {
+
+            position: absolute;
+
+            right: 30px;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+
+
+        /* =====================================================
+           CONTROL BUTTON
+        ====================================================== */
+
+        .storehub-control {
+
+            border: none;
+
+            height: 48px;
+
+            min-width: 48px;
+
+            padding: 0 15px;
+
+            border-radius: 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 7px;
+
+            cursor: pointer;
+
+            font-family: inherit;
+
+            font-weight: 600;
+
+            transition: all 0.3s ease;
+        }
+
+
+        /* =====================================================
+           DARK MODE BUTTON
+        ====================================================== */
+
+        #themeToggle {
+
+            width: 52px;
+
+            height: 52px;
+
+            padding: 0;
+
+            border-radius: 50%;
+
+            background: #ffc107;
+
+            color: #000;
+
+            font-size: 20px;
+        }
+
+
+        #themeToggle:hover {
+
+            transform: scale(1.08);
+
+            background: #ffca2c;
+
+        }
+
+
+        /* =====================================================
+           RTL BUTTON
+        ====================================================== */
+
+        #rtlToggle {
+
+            background: #1c2738;
+
+            color: #ffffff;
+
+            border: 1px solid rgba(255,255,255,0.15);
+
+            font-size: 14px;
+        }
+
+
+        #rtlToggle:hover {
+
+            background: #ffc107;
+
+            color: #000;
+
+            border-color: #ffc107;
+
+        }
+
+
+        /* =====================================================
+           LOGIN SECTION
+        ====================================================== */
+
+        .login-section {
+
+            min-height: calc(100vh - 95px);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 70px 15px;
+        }
+
+
+        /* =====================================================
+           LOGIN CARD
+        ====================================================== */
+
+        .login-card {
+
+            width: 100%;
+
+            max-width: 450px;
+
+            background: #fff;
+
+            border-radius: 18px;
+
+            padding: 40px;
+
+            box-shadow:
+                0 10px 40px rgba(0, 0, 0, 0.08);
+
+            transition:
+                background-color 0.3s ease,
+                color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        /* =====================================================
+           LOGIN ICON
+        ====================================================== */
+
+        .login-icon {
+
+            width: 72px;
+
+            height: 72px;
+
+            border-radius: 50%;
+
+            background: #ffc107;
+
+            color: #000;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin: 0 auto 20px;
+
+            font-size: 28px;
+        }
+
+
+        /* =====================================================
+           FORM
+        ====================================================== */
+
+        .form-label {
+
+            color: #212529;
+
+        }
+
+
+        .form-control {
+
+            padding: 12px 15px;
+
+            border-radius: 10px;
+
+            min-height: 48px;
+
+        }
+
+
+        .form-control:focus {
+
+            border-color: #ffc107;
+
+            box-shadow:
+                0 0 0 0.2rem rgba(255,193,7,0.20);
+
+        }
+
+
+        /* =====================================================
+           LOGIN BUTTON
+        ====================================================== */
+
+        .login-btn {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border-radius: 10px;
+
+            font-weight: 700;
+
+        }
+
+
+        /* =====================================================
+           LINKS
+        ====================================================== */
+
+        .login-card a {
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .login-card a:hover {
+
+            opacity: 0.8;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+
+            background: #000;
+
+            color: #fff;
+
+        }
+
+
+        footer .footer-logo {
+
+            color: #fff;
+
+            font-weight: 800;
+
+        }
+
+
+        footer .footer-logo i {
+
+            color: #ffc107;
+
+        }
+
+
+        /* =====================================================
+           DARK MODE
+        ====================================================== */
+
+        body.dark-mode {
+
+            background: #121212 !important;
+
+            color: #f5f5f5 !important;
+
+        }
+
+
+        body.dark-mode .storehub-header {
+
+            background: #071027;
+
+        }
+
+
+        body.dark-mode .login-card {
+
+            background: #1e1e1e !important;
+
+            color: #fff !important;
+
+            box-shadow:
+                0 10px 40px rgba(0,0,0,0.45);
+
+        }
+
+
+        body.dark-mode .login-card h2 {
+
+            color: #ffffff !important;
+
+        }
+
+
+        body.dark-mode .login-card p {
+
+            color: #d1d5db !important;
+
+        }
+
+
+        body.dark-mode .login-card label {
+
+            color: #ffffff !important;
+
+        }
+
+
+        body.dark-mode .text-muted {
+
+            color: #bdbdbd !important;
+
+        }
+
+
+        body.dark-mode .form-control {
+
+            background: #292929 !important;
+
+            color: #fff !important;
+
+            border-color: #555 !important;
+
+        }
+
+
+        body.dark-mode .form-control::placeholder {
+
+            color: #aaa !important;
+
+        }
+
+
+        body.dark-mode .form-control:focus {
+
+            border-color: #ffc107 !important;
+
+            box-shadow:
+                0 0 0 0.2rem rgba(255,193,7,0.20);
+
+        }
+
+
+        body.dark-mode .form-check-label {
+
+            color: #fff !important;
+
+        }
+
+
+        body.dark-mode footer {
+
+            background: #000 !important;
+
+        }
+
+
+        /* =====================================================
+           RTL
+        ====================================================== */
+
+        html[dir="rtl"] body {
+
+            text-align: right;
+
+        }
+
+
+        html[dir="rtl"] .login-card {
+
+            direction: rtl;
+
+        }
+
+
+        html[dir="rtl"] .form-control {
+
+            text-align: right;
+
+        }
+
+
+        html[dir="rtl"] .form-check {
+
+            padding-right: 1.5em;
+
+            padding-left: 0;
+
+        }
+
+
+        html[dir="rtl"] .form-check .form-check-input {
+
+            float: right;
+
+            margin-right: -1.5em;
+
+            margin-left: 0;
+
+        }
+
+
+        html[dir="rtl"] .storehub-controls {
+
+            right: auto;
+
+            left: 30px;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+        @media (max-width: 768px) {
+
+            .storehub-header {
+
+                min-height: 80px;
+
+                padding: 12px 20px;
+
+            }
+
+
+            .storehub-logo {
+
+                width: 48px;
+
+                height: 48px;
+
+            }
+
+
+            .storehub-brand {
+
+                font-size: 28px;
+
+            }
+
+
+            .storehub-controls {
+
+                right: 15px;
+
+                gap: 6px;
+
+            }
+
+
+            html[dir="rtl"] .storehub-controls {
+
+                right: auto;
+
+                left: 15px;
+
+            }
+
+
+            #themeToggle {
+
+                width: 44px;
+
+                height: 44px;
+
+                font-size: 17px;
+
+            }
+
+
+            #rtlToggle {
+
+                height: 44px;
+
+                min-width: 44px;
+
+                padding: 0 12px;
+
+            }
+
+
+            .login-section {
+
+                min-height: calc(100vh - 80px);
+
+                padding: 45px 15px;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+
+        @media (max-width: 480px) {
+
+            .storehub-header {
+
+                justify-content: flex-start;
+
+                min-height: 72px;
+
+                padding-left: 15px;
+
+                padding-right: 15px;
+
+            }
+
+
+            .storehub-brand {
+
+                font-size: 23px;
+
+                gap: 7px;
+
+            }
+
+
+            .storehub-logo {
+
+                width: 42px;
+
+                height: 42px;
+
+            }
+
+
+            .storehub-controls {
+
+                right: 10px;
+
+                gap: 4px;
+
+            }
+
+
+            html[dir="rtl"] .storehub-controls {
+
+                right: auto;
+
+                left: 10px;
+
+            }
+
+
+            #themeToggle {
+
+                width: 40px;
+
+                height: 40px;
+
+            }
+
+
+            #rtlToggle {
+
+                height: 40px;
+
+                padding: 0 9px;
+
+                font-size: 12px;
+
+            }
+
+
+            .login-card {
+
+                padding: 28px 22px;
+
+                border-radius: 14px;
+
+            }
+
+        }
+        /* =====================================================
+   LOGIN / SIGNUP HEADER
+===================================================== */
+
+.auth-header {
+
+    width: 100%;
+
+    min-height: 140px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    background: #ffffff;
+
+    border-radius: 0 0 35px 35px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.08);
+
+    z-index: 1000;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.auth-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: #000000;
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+    transition: 0.3s ease;
+}
+
+
+.auth-brand:hover {
+
+    color: #198754;
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.auth-logo {
+
+    width: 58px;
+
+    height: 58px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =====================================================
+   CONTROLS
+===================================================== */
+
+.auth-controls {
+
+    position: absolute;
+
+    right: 35px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* =====================================================
+   DARK MODE BUTTON
+===================================================== */
+
+.theme-btn {
+
+    width: 60px;
+
+    height: 60px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ffc107;
+
+    color: #000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.theme-btn:hover {
+
+    transform: scale(1.08);
+
+    background: #ffca2c;
+
+}
+
+
+/* =====================================================
+   RTL BUTTON
+===================================================== */
+
+.rtl-btn {
+
+    height: 60px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #1c252c;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.rtl-btn:hover {
+
+    background: #ffc107;
+
+    color: #000;
+
+}
+
+
+/* =====================================================
+   DARK MODE HEADER
+===================================================== */
+
+body.dark-mode .auth-header {
+
+    background: #1e1e1e;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.40);
+}
+
+
+body.dark-mode .auth-brand {
+
+    color: #ffffff;
+
+}
+
+
+body.dark-mode .auth-brand:hover {
+
+    color: #ffffff;
+
+}
+
+
+/* =====================================================
+   RTL
+===================================================== */
+
+html[dir="rtl"] .auth-controls {
+
+    right: auto;
+
+    left: 35px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .auth-header {
+
+        min-height: 115px;
+
+    }
+
+
+    .auth-brand {
+
+        font-size: 32px;
+
+    }
+
+
+    .auth-logo {
+
+        width: 48px;
+
+        height: 48px;
+
+    }
+
+
+    .auth-controls {
+
+        right: 18px;
+
+        gap: 7px;
+
+    }
+
+
+    html[dir="rtl"] .auth-controls {
+
+        right: auto;
+
+        left: 18px;
+
+    }
+
+
+    .theme-btn {
+
+        width: 48px;
+
+        height: 48px;
+
+        font-size: 18px;
+
+    }
+
+
+    .rtl-btn {
+
+        height: 48px;
+
+        padding: 0 14px;
+
+        font-size: 14px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+
+    .auth-header {
+
+        min-height: 100px;
+
+        padding: 15px;
+
+    }
+
+
+    .auth-brand {
+
+        font-size: 25px;
+
+        gap: 7px;
+
+    }
+
+
+    .auth-logo {
+
+        width: 40px;
+
+        height: 40px;
+
+    }
+
+
+    .auth-controls {
+
+        right: 10px;
+
+        gap: 5px;
+
+    }
+
+
+    html[dir="rtl"] .auth-controls {
+
+        right: auto;
+
+        left: 10px;
+
+    }
+
+
+    .theme-btn {
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 16px;
+
+    }
+
+
+    .rtl-btn {
+
+        height: 40px;
+
+        padding: 0 10px;
+
+        font-size: 12px;
+
+    }
+
+}
+/* =====================================================
+   STOREHUB AUTH HEADER
+===================================================== */
+
+.auth-header {
+    width: 100%;
+    height: 145px;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    border-radius: 0 0 35px 35px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.08);
+
+    z-index: 1000;
+}
+
+
+/* =====================================================
+   STOREHUB BRAND
+===================================================== */
+
+.auth-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    color: #050505;
+
+    line-height: 1;
+
+    transition: 0.3s ease;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.auth-logo {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+
+    display: block;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   STOREHUB NAME
+===================================================== */
+
+.auth-brand-name {
+    font-size: 42px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -1.5px;
+
+    color: #050505;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   CONTROLS
+===================================================== */
+
+.auth-controls {
+    position: absolute;
+
+    right: 35px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* =====================================================
+   DARK MODE BUTTON
+===================================================== */
+
+.theme-btn {
+    width: 64px;
+    height: 64px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ffbd0a;
+
+    color: #000000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.theme-btn:hover {
+    transform: scale(1.06);
+
+    background: #ffc107;
+}
+
+
+/* =====================================================
+   RTL BUTTON
+===================================================== */
+
+.rtl-btn {
+    height: 64px;
+
+    min-width: 108px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    border-radius: 35px;
+
+    background: #1c2738;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+
+.rtl-btn:hover {
+    background: #ffbd0a;
+
+    color: #000000;
+}
+
+
+/* =====================================================
+   DARK MODE HEADER
+===================================================== */
+
+body.dark-mode .auth-header {
+    background: #161b22;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+
+body.dark-mode .auth-brand-name {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   RTL POSITION
+===================================================== */
+
+html[dir="rtl"] .auth-controls {
+    right: auto;
+    left: 35px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .auth-header {
+        height: 125px;
+    }
+
+    .auth-logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .auth-brand-name {
+        font-size: 34px;
+    }
+
+    .auth-controls {
+        right: 20px;
+    }
+
+    html[dir="rtl"] .auth-controls {
+        right: auto;
+        left: 20px;
+    }
+
+    .theme-btn {
+        width: 54px;
+        height: 54px;
+    }
+
+    .rtl-btn {
+        height: 54px;
+        min-width: 95px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+
+    .auth-header {
+        height: 105px;
+
+        padding: 10px 15px;
+    }
+
+    .auth-logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .auth-brand-name {
+        font-size: 25px;
+
+        letter-spacing: -0.8px;
+    }
+
+    .auth-brand {
+        gap: 7px;
+    }
+
+    .auth-controls {
+        right: 12px;
+
+        gap: 6px;
+    }
+
+    html[dir="rtl"] .auth-controls {
+        right: auto;
+        left: 12px;
+    }
+
+    .theme-btn {
+        width: 43px;
+        height: 43px;
+
+        font-size: 16px;
+    }
+
+    .rtl-btn {
+        height: 43px;
+
+        min-width: 70px;
+
+        padding: 0 10px;
+
+        font-size: 13px;
+
+        gap: 5px;
+    }
+}
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         STOREHUB TOP HEADER
+    ====================================================== -->
+
+   <!-- =====================================================
+     LOGIN / SIGNUP TOP HEADER
+===================================================== -->
+
+<!-- =====================================================
+     STOREHUB AUTH HEADER
+===================================================== -->
+
+<header class="auth-header">
+
+    <!-- CENTER BRAND -->
+    <a href="index.html" class="auth-brand">
+
+        <img
+            src="assets/images/logo.png"
+            alt="StoreHub Logo"
+            class="auth-logo">
+
+        <span class="auth-brand-name">
+            StoreHub
+        </span>
+
+    </a>
+
+
+    <!-- RIGHT CONTROLS -->
+    <div class="auth-controls">
+
+        <!-- DARK MODE -->
+        <button
+            type="button"
+            id="themeToggle"
+            class="theme-btn"
+            aria-label="Toggle dark mode">
+
+            <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+
+        <!-- RTL -->
+        <button
+            type="button"
+            id="rtlToggle"
+            class="rtl-btn"
+            aria-label="Toggle RTL">
+
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+            <span id="rtlText">RTL</span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+    <!-- =====================================================
+         LOGIN SECTION
+    ====================================================== -->
+
+    <section class="login-section">
+
+        <div class="login-card">
+
+
+            <!-- ICON -->
+
+            <div class="login-icon">
+
+                <i class="fa-solid fa-right-to-bracket"></i>
+
+            </div>
+
+
+            <!-- TITLE -->
+
+            <h2 class="text-center fw-bold mb-2">
+
+                Welcome Back
+
+            </h2>
+
+
+            <p class="text-center text-muted mb-4">
+
+                Login to your StoreHub account
+
+            </p>
+
+
+            <!-- FORM -->
+
+            <form id="loginForm">
+
+
+                <!-- EMAIL -->
+
+                <div class="mb-3">
+
+                    <label
+                        for="email"
+                        class="form-label fw-semibold">
+
+                        Email Address
+
+                    </label>
+
+
+                    <input
+                        type="email"
+                        id="email"
+                        class="form-control"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required>
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="mb-3">
+
+                    <label
+                        for="password"
+                        class="form-label fw-semibold">
+
+                        Password
+
+                    </label>
+
+
+                    <input
+                        type="password"
+                        id="password"
+                        class="form-control"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required>
+
+                </div>
+
+
+
+                <!-- REMEMBER + FORGOT -->
+
+                <div
+                    class="d-flex justify-content-between align-items-center mb-4">
+
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="remember">
+
+                        <label
+                            class="form-check-label"
+                            for="remember">
+
+                            Remember me
+
+                        </label>
+
+                    </div>
+
+
+                    <a
+                        href="#"
+                        class="text-warning text-decoration-none">
+
+                        Forgot Password?
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button
+                    type="submit"
+                    class="btn btn-warning login-btn">
+
+                    <i class="fa-solid fa-right-to-bracket me-2"></i>
+
+                    Login
+
+                </button>
+
+            </form>
+
+
+
+            <!-- SIGNUP -->
+
+            <p
+                class="text-center text-muted mt-4 mb-0">
+
+                Don't have an account?
+
+                <a
+                    href="signup.html"
+                    class="text-warning fw-semibold text-decoration-none">
+
+                    Sign Up
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- =====================================================
+         BOOTSTRAP JS
+    ====================================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+
+    <!-- =====================================================
+         DARK MODE + RTL
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                /* =================================================
+                   DARK MODE
+                ================================================== */
+
+                const themeToggle =
+                    document.getElementById(
+                        "themeToggle"
+                    );
+
+
+                const savedTheme =
+                    localStorage.getItem(
+                        "theme"
+                    );
+
+
+                /* Load saved theme */
+
+                if (savedTheme === "dark") {
+
+                    document.body.classList.add(
+                        "dark-mode"
+                    );
+
+                    if (themeToggle) {
+
+                        themeToggle.innerHTML =
+                            "☀️";
+
+                    }
+
+                }
+
+
+                else {
+
+                    if (themeToggle) {
+
+                        themeToggle.innerHTML =
+                            "🌙";
+
+                    }
+
+                }
+
+
+                /* Toggle dark mode */
+
+                if (themeToggle) {
+
+                    themeToggle.addEventListener(
+                        "click",
+                        function () {
+
+
+                            document.body.classList.toggle(
+                                "dark-mode"
+                            );
+
+
+                            if (
+                                document.body.classList.contains(
+                                    "dark-mode"
+                                )
+                            ) {
+
+
+                                localStorage.setItem(
+                                    "theme",
+                                    "dark"
+                                );
+
+
+                                themeToggle.innerHTML =
+                                    "☀️";
+
+                            }
+
+                            else {
+
+
+                                localStorage.setItem(
+                                    "theme",
+                                    "light"
+                                );
+
+
+                                themeToggle.innerHTML =
+                                    "🌙";
+
+                            }
+
+                        }
+                    );
+
+                }
+
+
+
+                /* =================================================
+                   RTL / LTR
+                ================================================== */
+
+                const rtlToggle =
+                    document.getElementById(
+                        "rtlToggle"
+                    );
+
+
+                const savedDirection =
+                    localStorage.getItem(
+                        "direction"
+                    );
+
+
+                /* Load saved direction */
+
+                if (savedDirection === "rtl") {
+
+
+                    document.documentElement
+                        .setAttribute(
+                            "dir",
+                            "rtl"
+                        );
+
+
+                    if (rtlToggle) {
+
+                        rtlToggle.innerHTML =
+                            "⇄ <span>LTR</span>";
+
+                    }
+
+                }
+
+                else {
+
+
+                    document.documentElement
+                        .setAttribute(
+                            "dir",
+                            "ltr"
+                        );
+
+
+                    if (rtlToggle) {
+
+                        rtlToggle.innerHTML =
+                            "⇄ <span>RTL</span>";
+
+                    }
+
+                }
+
+
+
+                /* Toggle RTL */
+
+                if (rtlToggle) {
+
+                    rtlToggle.addEventListener(
+                        "click",
+                        function () {
+
+
+                            const currentDirection =
+                                document.documentElement
+                                    .getAttribute(
+                                        "dir"
+                                    );
+
+
+                            if (
+                                currentDirection ===
+                                "rtl"
+                            ) {
+
+
+                                document.documentElement
+                                    .setAttribute(
+                                        "dir",
+                                        "ltr"
+                                    );
+
+
+                                localStorage.setItem(
+                                    "direction",
+                                    "ltr"
+                                );
+
+
+                                rtlToggle.innerHTML =
+                                    "⇄ <span>RTL</span>";
+
+                            }
+
+                            else {
+
+
+                                document.documentElement
+                                    .setAttribute(
+                                        "dir",
+                                        "rtl"
+                                    );
+
+
+                                localStorage.setItem(
+                                    "direction",
+                                    "rtl"
+                                );
+
+
+                                rtlToggle.innerHTML =
+                                    "⇄ <span>LTR</span>";
+
+                            }
+
+                        }
+                    );
+
+                }
+
+            }
+            
+        );
+
+    </script>
+    <script>
+        /* =================================================
+   LOGIN SUCCESS
+================================================= */
+
+const loginForm = document.getElementById("loginForm");
+
+if (loginForm) {
+
+    loginForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        if (email === "" || password === "") {
+            return;
+        }
+
+        alert("Login Successful! 🎉");
+
+        // Go to home page after login
+        window.location.href = "index.html";
+
+    });
+
+}
+    </script>
+
+
+</body>
+
+</html>

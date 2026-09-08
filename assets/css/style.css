@@ -1,0 +1,2822 @@
+/* =========================================================
+   WAREHOUSE & STORAGE
+   COMMON THEME CSS
+   Emerald + Midnight Navy + Coral
+========================================================= */
+
+
+/* =========================================================
+   1. COLOR VARIABLES
+========================================================= */
+
+:root {
+    --primary: #10B981;
+    --primary-dark: #047857;
+    --secondary: #0B132B;
+    --secondary-light: #111C36;
+
+    --accent: #FF6B6B;
+    --gold: #F4C95D;
+
+    --light-bg: #F8FAFC;
+    --white: #FFFFFF;
+
+    --text: #172033;
+    --muted: #64748B;
+
+    --border: #E2E8F0;
+
+    --success: #10B981;
+    --danger: #EF4444;
+
+    --shadow: 0 10px 30px rgba(11, 19, 43, 0.08);
+    --shadow-hover: 0 15px 40px rgba(11, 19, 43, 0.14);
+
+    --radius: 14px;
+
+    --transition: all 0.3s ease;
+}
+
+
+/* =========================================================
+   2. GLOBAL
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Inter", "Poppins", sans-serif;
+
+    background: var(--light-bg);
+    color: var(--text);
+
+    transition: var(--transition);
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    transition: var(--transition);
+}
+
+
+/* =========================================================
+   3. NAVBAR
+========================================================= */
+
+.navbar {
+    background: var(--secondary) !important;
+
+    padding: 15px 0;
+
+    box-shadow: 0 4px 20px rgba(11, 19, 43, 0.15);
+
+    transition: var(--transition);
+}
+
+.navbar-brand {
+    color: var(--white) !important;
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.navbar-brand i,
+.navbar-brand .logo-icon {
+    color: var(--primary);
+}
+
+.navbar .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+
+    font-weight: 500;
+
+    margin: 0 5px;
+
+    transition: var(--transition);
+}
+
+.navbar .nav-link:hover {
+    color: var(--primary) !important;
+}
+
+.navbar .nav-link.active {
+    color: var(--primary) !important;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   4. NAVBAR DROPDOWN
+========================================================= */
+
+.navbar .dropdown-menu {
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 10px;
+
+    box-shadow: var(--shadow);
+
+    background: var(--white);
+}
+
+.navbar .dropdown-item {
+    color: var(--text);
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    transition: var(--transition);
+}
+
+.navbar .dropdown-item:hover {
+    background: rgba(16, 185, 129, 0.1);
+
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   5. BUTTONS
+========================================================= */
+
+.btn-primary {
+    background: var(--primary) !important;
+
+    border-color: var(--primary) !important;
+
+    color: var(--white) !important;
+
+    font-weight: 600;
+
+    border-radius: 10px;
+
+    padding: 10px 22px;
+
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark) !important;
+
+    border-color: var(--primary-dark) !important;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
+}
+
+
+.btn-outline-primary {
+    color: var(--primary) !important;
+
+    border-color: var(--primary) !important;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary) !important;
+
+    color: var(--white) !important;
+}
+
+
+.btn-accent {
+    background: var(--accent) !important;
+
+    border-color: var(--accent) !important;
+
+    color: var(--white) !important;
+
+    font-weight: 600;
+
+    border-radius: 10px;
+}
+
+.btn-accent:hover {
+    background: #e95555 !important;
+
+    border-color: #e95555 !important;
+
+    transform: translateY(-2px);
+}
+
+
+.btn-warning {
+    background: var(--gold) !important;
+
+    border-color: var(--gold) !important;
+
+    color: var(--secondary) !important;
+}
+
+
+/* =========================================================
+   6. HERO SECTION
+========================================================= */
+
+.hero-section {
+    background: var(--light-bg);
+
+    padding: 100px 0;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.hero-section h1 {
+    color: var(--text);
+
+    font-weight: 800;
+
+    line-height: 1.15;
+}
+
+.hero-section p {
+    color: var(--muted);
+
+    font-size: 17px;
+}
+
+.hero-section .highlight {
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   7. PAGE BANNER
+========================================================= */
+
+.page-banner {
+    background: var(--secondary);
+
+    padding: 80px 0;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.page-banner h1 {
+    color: var(--white);
+
+    font-weight: 800;
+}
+
+.page-banner p {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* =========================================================
+   8. SECTION
+========================================================= */
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    color: var(--text);
+
+    font-weight: 800;
+}
+
+.section-subtitle {
+    color: var(--muted);
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   9. CARDS
+========================================================= */
+
+.card {
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.card-title {
+    color: var(--text);
+
+    font-weight: 700;
+}
+
+.card-text {
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   10. SERVICE CARDS
+========================================================= */
+
+.service-card {
+    padding: 30px;
+
+    background: var(--white);
+
+    border-radius: var(--radius);
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--primary);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.service-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(16, 185, 129, 0.12);
+
+    color: var(--primary);
+
+    border-radius: 14px;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   11. STORAGE CARDS
+========================================================= */
+
+.storage-card {
+    overflow: hidden;
+
+    background: var(--white);
+
+    border-radius: var(--radius);
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+}
+
+.storage-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.storage-card img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.storage-card .card-body {
+    padding: 25px;
+}
+
+
+/* =========================================================
+   12. ICON BOX
+========================================================= */
+
+.icon-box {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(16, 185, 129, 0.12);
+
+    color: var(--primary);
+
+    border-radius: 14px;
+
+    font-size: 26px;
+}
+
+
+/* =========================================================
+   13. PRICING
+========================================================= */
+
+.pricing-card {
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 35px;
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.pricing-card.popular {
+    border: 2px solid var(--primary);
+
+    position: relative;
+}
+
+.pricing-card .price {
+    color: var(--primary);
+
+    font-size: 40px;
+
+    font-weight: 800;
+}
+
+.pricing-card ul {
+    padding-left: 0;
+
+    list-style: none;
+}
+
+.pricing-card li {
+    color: var(--muted);
+
+    margin-bottom: 12px;
+}
+
+.pricing-card li i {
+    color: var(--primary);
+
+    margin-right: 8px;
+}
+
+
+/* =========================================================
+   14. FORMS
+========================================================= */
+
+.form-control,
+.form-select {
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    padding: 12px 15px;
+
+    color: var(--text);
+
+    background: var(--white);
+
+    transition: var(--transition);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12);
+
+    background: var(--white);
+
+    color: var(--text);
+}
+
+.form-label {
+    color: var(--text);
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   15. TESTIMONIAL
+========================================================= */
+
+.testimonial-card {
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 30px;
+
+    box-shadow: var(--shadow);
+}
+
+.testimonial-card p {
+    color: var(--muted);
+
+    line-height: 1.8;
+}
+
+.testimonial-card .stars {
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   16. BLOG
+========================================================= */
+
+.blog-card {
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+}
+
+.blog-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.blog-card img {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+}
+
+.blog-card .blog-content {
+    padding: 25px;
+}
+
+.blog-card h4 {
+    color: var(--text);
+
+    font-weight: 700;
+}
+
+.blog-card p {
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   17. BADGES
+========================================================= */
+
+.badge-primary {
+    background: rgba(16, 185, 129, 0.12);
+
+    color: var(--primary);
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   18. ALERT / SUCCESS
+========================================================= */
+
+.alert-success {
+    background: rgba(16, 185, 129, 0.1);
+
+    border-color: rgba(16, 185, 129, 0.2);
+
+    color: var(--primary-dark);
+}
+
+
+/* =========================================================
+   19. FOOTER
+========================================================= */
+
+footer {
+    background: var(--secondary);
+
+    color: rgba(255, 255, 255, 0.75);
+
+    padding: 60px 0 25px;
+}
+
+footer h5,
+footer h4 {
+    color: var(--white);
+
+    font-weight: 700;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.7);
+
+    transition: var(--transition);
+}
+
+footer a:hover {
+    color: var(--primary);
+}
+
+footer .footer-logo {
+    color: var(--white);
+
+    font-size: 24px;
+
+    font-weight: 800;
+}
+
+footer .footer-logo i {
+    color: var(--primary);
+}
+
+footer hr {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================================================
+   20. SOCIAL ICONS
+========================================================= */
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: var(--white);
+
+    border-radius: 50%;
+
+    margin-right: 6px;
+
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    background: var(--primary);
+
+    color: var(--white);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   21. THEME TOGGLE BUTTON
+========================================================= */
+
+#themeToggle,
+.theme-toggle {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: var(--white);
+
+    border-radius: 10px;
+
+    padding: 8px 12px;
+
+    cursor: pointer;
+}
+
+#themeToggle:hover,
+.theme-toggle:hover {
+    background: var(--primary);
+
+    border-color: var(--primary);
+}
+
+
+/* =========================================================
+   22. RTL BUTTON
+========================================================= */
+
+#rtlToggle,
+.rtl-toggle {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: var(--white);
+
+    border-radius: 10px;
+
+    padding: 8px 12px;
+
+    cursor: pointer;
+}
+
+#rtlToggle:hover,
+.rtl-toggle:hover {
+    background: var(--primary);
+
+    border-color: var(--primary);
+}
+
+
+/* =========================================================
+   23. DARK MODE
+========================================================= */
+
+body.dark-mode {
+    background: #0B132B !important;
+
+    color: #F8FAFC !important;
+}
+
+
+/* Navbar */
+
+body.dark-mode .navbar {
+    background: #070D1D !important;
+}
+
+
+/* Sections */
+
+body.dark-mode section,
+body.dark-mode .hero-section {
+    background: #0B132B !important;
+}
+
+
+/* Headings */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode .section-title,
+body.dark-mode .card-title {
+    color: #F8FAFC !important;
+}
+
+
+/* Paragraph */
+
+body.dark-mode p {
+    color: #A7B0C0;
+}
+
+
+/* Cards */
+
+body.dark-mode .card,
+body.dark-mode .service-card,
+body.dark-mode .storage-card,
+body.dark-mode .pricing-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .blog-card {
+    background: #111C36 !important;
+
+    border-color: rgba(255, 255, 255, 0.08) !important;
+
+    color: #F8FAFC !important;
+}
+
+
+/* Card text */
+
+body.dark-mode .card-text,
+body.dark-mode .blog-card p,
+body.dark-mode .testimonial-card p {
+    color: #A7B0C0 !important;
+}
+
+
+/* Forms */
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background: #111C36 !important;
+
+    border-color: #263653 !important;
+
+    color: #F8FAFC !important;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #8490A6;
+}
+
+body.dark-mode .form-label {
+    color: #F8FAFC !important;
+}
+
+
+/* Dropdown */
+
+body.dark-mode .dropdown-menu {
+    background: #111C36 !important;
+}
+
+body.dark-mode .dropdown-item {
+    color: #F8FAFC !important;
+}
+
+body.dark-mode .dropdown-item:hover {
+    background: rgba(16, 185, 129, 0.12);
+
+    color: var(--primary) !important;
+}
+
+
+/* Page Banner */
+
+body.dark-mode .page-banner {
+    background: #070D1D !important;
+}
+
+
+/* =========================================================
+   24. RTL SUPPORT
+========================================================= */
+
+html[dir="rtl"] body {
+    text-align: right;
+}
+
+html[dir="rtl"] .navbar-nav {
+    margin-right: 0 !important;
+}
+
+html[dir="rtl"] .dropdown-menu {
+    text-align: right;
+}
+
+html[dir="rtl"] .social-icon {
+    margin-right: 0;
+
+    margin-left: 6px;
+}
+
+html[dir="rtl"] .pricing-card li i {
+    margin-right: 0;
+
+    margin-left: 8px;
+}
+
+
+/* =========================================================
+   25. SCROLL TO TOP
+========================================================= */
+
+#scrollTop {
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 999;
+
+    transition: var(--transition);
+}
+
+#scrollTop:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-3px);
+}
+
+html[dir="rtl"] #scrollTop {
+    right: auto;
+
+    left: 20px;
+}
+
+
+/* =========================================================
+   26. LOADING / SPINNER
+========================================================= */
+
+.spinner-border {
+    color: var(--primary) !important;
+}
+
+
+/* =========================================================
+   27. SELECTION
+========================================================= */
+
+::selection {
+    background: var(--primary);
+
+    color: var(--white);
+}
+
+
+/* =========================================================
+   28. RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .hero-section {
+        padding: 70px 0;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .navbar .nav-link {
+        padding: 10px 0;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .hero-section {
+        padding: 55px 0;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .page-banner {
+        padding: 60px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 36px;
+    }
+
+    .pricing-card {
+        padding: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   29. SMOOTH ANIMATION
+========================================================= */
+
+.fade-up {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   30. GLOBAL PRIMARY TEXT
+========================================================= */
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+
+/* =========================================================
+   31. HOVER EFFECT
+========================================================= */
+
+.hover-primary {
+    transition: var(--transition);
+}
+
+.hover-primary:hover {
+    color: var(--primary) !important;
+}
+
+
+/* =========================================================
+   32. CONTAINER SPACING
+========================================================= */
+
+.container {
+    position: relative;
+}
+/* =========================================================
+   DARK MODE - FIX ALL TEXT VISIBILITY
+========================================================= */
+
+body.dark-mode {
+    background: #0B132B !important;
+    color: #F8FAFC !important;
+}
+
+/* Headings */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #F8FAFC !important;
+}
+
+/* Normal text */
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode li,
+body.dark-mode label {
+    color: #CBD5E1 !important;
+}
+
+/* Strong / bold text */
+body.dark-mode strong,
+body.dark-mode b,
+body.dark-mode .fw-bold,
+body.dark-mode .fw-semibold {
+    color: #F8FAFC !important;
+}
+
+/* Links */
+body.dark-mode a {
+    color: #CBD5E1;
+}
+
+body.dark-mode a:hover {
+    color: #10B981 !important;
+}
+
+/* Bootstrap text classes */
+body.dark-mode .text-dark,
+body.dark-mode .text-black,
+body.dark-mode .text-body {
+    color: #F8FAFC !important;
+}
+
+body.dark-mode .text-muted {
+    color: #94A3B8 !important;
+}
+
+body.dark-mode .text-secondary {
+    color: #CBD5E1 !important;
+}
+
+/* Primary text */
+body.dark-mode .text-primary {
+    color: #10B981 !important;
+}
+
+/* White text */
+body.dark-mode .text-white {
+    color: #FFFFFF !important;
+}
+
+
+/* =========================================================
+   DARK MODE - CARDS
+========================================================= */
+
+body.dark-mode .card,
+body.dark-mode .service-card,
+body.dark-mode .storage-card,
+body.dark-mode .pricing-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .blog-card,
+body.dark-mode .login-card,
+body.dark-mode .signup-card {
+    background: #111C36 !important;
+    color: #F8FAFC !important;
+    border-color: #263653 !important;
+}
+
+body.dark-mode .card h1,
+body.dark-mode .card h2,
+body.dark-mode .card h3,
+body.dark-mode .card h4,
+body.dark-mode .card h5,
+body.dark-mode .card h6 {
+    color: #F8FAFC !important;
+}
+
+body.dark-mode .card p,
+body.dark-mode .card span,
+body.dark-mode .card li {
+    color: #CBD5E1 !important;
+}
+
+
+/* =========================================================
+   DARK MODE - FORMS
+========================================================= */
+
+body.dark-mode .form-label {
+    color: #F8FAFC !important;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select,
+body.dark-mode textarea {
+    background-color: #111C36 !important;
+    color: #F8FAFC !important;
+    border-color: #334155 !important;
+}
+
+body.dark-mode .form-control::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #94A3B8 !important;
+}
+
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus,
+body.dark-mode textarea:focus {
+    background-color: #111C36 !important;
+    color: #FFFFFF !important;
+    border-color: #10B981 !important;
+}
+
+
+/* =========================================================
+   DARK MODE - TABLE
+========================================================= */
+
+body.dark-mode table {
+    color: #F8FAFC !important;
+}
+
+body.dark-mode th {
+    color: #FFFFFF !important;
+    background: #111C36 !important;
+}
+
+body.dark-mode td {
+    color: #CBD5E1 !important;
+    background: #0B132B !important;
+    border-color: #263653 !important;
+}
+
+
+/* =========================================================
+   DARK MODE - LIST GROUP
+========================================================= */
+
+body.dark-mode .list-group-item {
+    background: #111C36 !important;
+    color: #CBD5E1 !important;
+    border-color: #263653 !important;
+}
+
+
+/* =========================================================
+   DARK MODE - DROPDOWN
+========================================================= */
+
+body.dark-mode .dropdown-menu {
+    background: #111C36 !important;
+    border-color: #263653 !important;
+}
+
+body.dark-mode .dropdown-item {
+    color: #F8FAFC !important;
+}
+
+body.dark-mode .dropdown-item:hover {
+    background: rgba(16, 185, 129, 0.12) !important;
+    color: #10B981 !important;
+}
+
+
+/* =========================================================
+   DARK MODE - NAVBAR
+========================================================= */
+
+body.dark-mode .navbar {
+    background: #070D1D !important;
+}
+
+body.dark-mode .navbar-brand {
+    color: #FFFFFF !important;
+}
+
+body.dark-mode .navbar-brand span {
+    color: #FFFFFF !important;
+}
+
+body.dark-mode .navbar .nav-link {
+    color: #CBD5E1 !important;
+}
+
+body.dark-mode .navbar .nav-link:hover,
+body.dark-mode .navbar .nav-link.active {
+    color: #10B981 !important;
+}
+
+
+/* =========================================================
+   DARK MODE - HERO
+========================================================= */
+
+body.dark-mode .hero-section {
+    background: #0B132B !important;
+}
+
+body.dark-mode .hero-section h1,
+body.dark-mode .hero-section h2,
+body.dark-mode .hero-section h3 {
+    color: #FFFFFF !important;
+}
+
+body.dark-mode .hero-section p {
+    color: #CBD5E1 !important;
+}
+
+
+/* =========================================================
+   DARK MODE - PAGE BANNER
+========================================================= */
+
+body.dark-mode .page-banner {
+    background: #070D1D !important;
+}
+
+body.dark-mode .page-banner h1,
+body.dark-mode .page-banner h2 {
+    color: #FFFFFF !important;
+}
+
+body.dark-mode .page-banner p {
+    color: #CBD5E1 !important;
+}
+
+
+/* =========================================================
+   DARK MODE - ICONS
+========================================================= */
+
+body.dark-mode .service-icon,
+body.dark-mode .icon-box {
+    background: rgba(16, 185, 129, 0.15) !important;
+    color: #10B981 !important;
+}
+
+
+/* =========================================================
+   DARK MODE - PRICING
+========================================================= */
+
+body.dark-mode .pricing-card .price {
+    color: #10B981 !important;
+}
+
+body.dark-mode .pricing-card li {
+    color: #CBD5E1 !important;
+}
+
+body.dark-mode .pricing-card li i {
+    color: #10B981 !important;
+}
+
+
+/* =========================================================
+   DARK MODE - BLOG
+========================================================= */
+
+body.dark-mode .blog-card h4,
+body.dark-mode .blog-card h5 {
+    color: #FFFFFF !important;
+}
+
+body.dark-mode .blog-card p {
+    color: #CBD5E1 !important;
+}
+
+
+/* =========================================================
+   DARK MODE - FOOTER
+========================================================= */
+
+body.dark-mode footer {
+    background: #070D1D !important;
+}
+
+body.dark-mode footer h4,
+body.dark-mode footer h5,
+body.dark-mode footer h6 {
+    color: #FFFFFF !important;
+}
+
+body.dark-mode footer p,
+body.dark-mode footer li {
+    color: #94A3B8 !important;
+}
+
+body.dark-mode footer a {
+    color: #CBD5E1 !important;
+}
+
+body.dark-mode footer a:hover {
+    color: #10B981 !important;
+}
+
+
+/* =========================================================
+   DARK MODE - BUTTONS
+========================================================= */
+
+body.dark-mode .btn-primary {
+    background: #10B981 !important;
+    border-color: #10B981 !important;
+    color: #FFFFFF !important;
+}
+
+body.dark-mode .btn-outline-primary {
+    color: #10B981 !important;
+    border-color: #10B981 !important;
+}
+
+body.dark-mode .btn-outline-primary:hover {
+    background: #10B981 !important;
+    color: #FFFFFF !important;
+}
+
+body.dark-mode .btn-outline-light {
+    color: #FFFFFF !important;
+}
+
+
+/* =========================================================
+   DARK MODE - LOGIN / SIGNUP
+========================================================= */
+
+body.dark-mode .login-section,
+body.dark-mode .signup-section {
+    background: #0B132B !important;
+}
+
+body.dark-mode .login-card,
+body.dark-mode .signup-card {
+    background: #111C36 !important;
+}
+
+body.dark-mode .login-card h1,
+body.dark-mode .login-card h2,
+body.dark-mode .login-card h3,
+body.dark-mode .signup-card h1,
+body.dark-mode .signup-card h2,
+body.dark-mode .signup-card h3 {
+    color: #FFFFFF !important;
+}
+
+body.dark-mode .login-card p,
+body.dark-mode .signup-card p {
+    color: #CBD5E1 !important;
+}
+
+
+/* =========================================================
+   DARK MODE - CHECKBOX
+========================================================= */
+
+body.dark-mode .form-check-label {
+    color: #CBD5E1 !important;
+}
+
+body.dark-mode .form-check-input {
+    background-color: #111C36;
+    border-color: #475569;
+}
+
+body.dark-mode .form-check-input:checked {
+    background-color: #10B981;
+    border-color: #10B981;
+}
+
+
+/* =========================================================
+   DARK MODE - HR
+========================================================= */
+
+body.dark-mode hr {
+    border-color: #334155 !important;
+    opacity: 1;
+}
+
+
+/* =========================================================
+   DARK MODE - SMALL TEXT
+========================================================= */
+
+body.dark-mode small {
+    color: #94A3B8 !important;
+}
+
+
+/* =========================================================
+   DARK MODE - PLACEHOLDER
+========================================================= */
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #94A3B8 !important;
+}
+/* =========================================================
+   STOREHUB / WAREHOUSE NAVBAR - FINAL FIX
+========================================================= */
+
+/* Navbar */
+.navbar {
+    min-height: 78px !important;
+    background: #0B132B !important;
+    padding: 12px 0 !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Main navbar container */
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.navbar-brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px;
+
+    color: #FFFFFF !important;
+
+    font-size: 24px !important;
+    font-weight: 800 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    white-space: nowrap;
+}
+
+.navbar-brand img {
+    width: 42px !important;
+    height: 42px !important;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+}
+
+.navbar-brand i {
+    color: #10B981 !important;
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 0 auto !important;
+}
+
+.navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    color: #E2E8F0 !important;
+
+    font-size: 16px !important;
+    font-weight: 500 !important;
+
+    padding: 10px 14px !important;
+
+    border-radius: 8px;
+
+    white-space: nowrap;
+
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #10B981 !important;
+    background: rgba(16, 185, 129, 0.08);
+}
+
+.navbar-nav .nav-link.active {
+    color: #10B981 !important;
+    font-weight: 700 !important;
+}
+
+
+/* Dropdown arrow */
+.navbar .dropdown-toggle::after {
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+
+/* =========================================================
+   RIGHT SIDE BUTTON AREA
+========================================================= */
+
+.navbar .navbar-actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-left: auto;
+}
+
+
+/* =========================================================
+   LTR BUTTON
+========================================================= */
+
+#rtlToggle {
+    min-width: 92px;
+
+    height: 44px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    background: #1A2540 !important;
+
+    color: #FFFFFF !important;
+
+    border: 1px solid #475569 !important;
+
+    border-radius: 22px !important;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    padding: 0 15px !important;
+
+    white-space: nowrap;
+}
+
+#rtlToggle:hover {
+    background: #10B981 !important;
+
+    border-color: #10B981 !important;
+
+    color: #FFFFFF !important;
+}
+
+
+/* =========================================================
+   DARK MODE BUTTON
+========================================================= */
+
+#themeToggle {
+    width: 46px !important;
+    height: 46px !important;
+
+    display: inline-flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #1A2540 !important;
+
+    color: #FFFFFF !important;
+
+    border: 1px solid #475569 !important;
+
+    border-radius: 50% !important;
+
+    padding: 0 !important;
+
+    font-size: 17px;
+}
+
+#themeToggle:hover {
+    background: #10B981 !important;
+
+    border-color: #10B981 !important;
+
+    color: #FFFFFF !important;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.navbar .login-btn,
+.navbar a[href="login.html"] {
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 72px;
+
+    height: 42px;
+
+    padding: 0 16px !important;
+
+    border: 1px solid #10B981 !important;
+
+    border-radius: 8px !important;
+
+    background: transparent !important;
+
+    color: #10B981 !important;
+
+    font-weight: 600 !important;
+
+    text-decoration: none !important;
+
+    white-space: nowrap;
+
+    opacity: 1 !important;
+}
+
+.navbar .login-btn:hover,
+.navbar a[href="login.html"]:hover {
+    background: #10B981 !important;
+
+    color: #FFFFFF !important;
+}
+
+
+/* =========================================================
+   SIGNUP BUTTON
+========================================================= */
+
+.navbar .signup-btn,
+.navbar a[href="signup.html"] {
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 78px;
+
+    height: 42px;
+
+    padding: 0 18px !important;
+
+    border: 1px solid #FF6B6B !important;
+
+    border-radius: 8px !important;
+
+    background: #FF6B6B !important;
+
+    color: #FFFFFF !important;
+
+    font-weight: 700 !important;
+
+    text-decoration: none !important;
+
+    white-space: nowrap;
+
+    opacity: 1 !important;
+}
+
+.navbar .signup-btn:hover,
+.navbar a[href="signup.html"]:hover {
+    background: #E95555 !important;
+
+    border-color: #E95555 !important;
+
+    color: #FFFFFF !important;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   DARK MODE NAVBAR
+========================================================= */
+
+body.dark-mode .navbar {
+    background: #070D1D !important;
+}
+
+body.dark-mode .navbar-brand {
+    color: #FFFFFF !important;
+}
+
+body.dark-mode .navbar-nav .nav-link {
+    color: #E2E8F0 !important;
+}
+
+body.dark-mode .navbar-nav .nav-link:hover {
+    color: #10B981 !important;
+}
+
+body.dark-mode .navbar-nav .nav-link.active {
+    color: #10B981 !important;
+}
+
+
+/* =========================================================
+   MOBILE NAVBAR
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .navbar {
+        min-height: auto !important;
+        padding: 12px 0 !important;
+    }
+
+    .navbar .container {
+        gap: 10px;
+    }
+
+    .navbar-brand {
+        font-size: 20px !important;
+    }
+
+    .navbar-brand img {
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    .navbar-nav {
+        width: 100%;
+
+        margin: 15px 0 0 0 !important;
+
+        gap: 2px;
+
+        align-items: stretch;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 11px 12px !important;
+    }
+
+    .navbar .navbar-actions {
+        width: 100%;
+
+        margin: 12px 0 0 0;
+
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* =========================================================
+   RTL NAVBAR
+========================================================= */
+
+html[dir="rtl"] .navbar .container {
+    direction: rtl;
+}
+
+html[dir="rtl"] .navbar-nav {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+html[dir="rtl"] .navbar .navbar-actions {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+html[dir="rtl"] .navbar .dropdown-toggle::after {
+    margin-left: 0;
+    margin-right: 6px;
+}
+/* =====================================================
+   STOREHUB NAVBAR
+===================================================== */
+
+/* Navbar links */
+.navbar .nav-link {
+    color: #ffffff !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+
+/* Navbar hover */
+.navbar .nav-link:hover {
+    color: #ffc107 !important;
+}
+
+
+/* Active nav link */
+.navbar .nav-link.active {
+    color: #ffc107 !important;
+}
+
+
+/* Dropdown arrow */
+.navbar .dropdown-toggle::after {
+    transition: all 0.3s ease;
+}
+
+
+/* Dropdown hover */
+.navbar .dropdown-item:hover {
+    background-color: #ffc107 !important;
+    color: #000000 !important;
+}
+
+
+/* Active dropdown item */
+.navbar .dropdown-item.active {
+    background-color: #ffc107 !important;
+    color: #000000 !important;
+}
+
+
+/* =====================================================
+   LOGIN + SIGNUP BUTTONS
+===================================================== */
+
+.navbar .btn-outline-dark,
+.navbar .btn-dark {
+    background-color: #ffc107 !important;
+    border: 1px solid #ffc107 !important;
+    color: #000000 !important;
+
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Login + Signup hover */
+.navbar .btn-outline-dark:hover,
+.navbar .btn-dark:hover {
+    background-color: #ffca2c !important;
+    border-color: #ffca2c !important;
+    color: #000000 !important;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   RTL / DARK MODE BUTTONS
+===================================================== */
+
+.navbar #rtlToggle,
+.navbar #themeToggle {
+    color: #ffffff;
+    border-color: #475569;
+
+    transition: all 0.3s ease;
+}
+
+
+/* RTL / Theme hover */
+
+.navbar #rtlToggle:hover,
+.navbar #themeToggle:hover {
+    color: #000000 !important;
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+}
+
+
+/* =====================================================
+   DROPDOWN
+===================================================== */
+
+.navbar .dropdown-menu {
+    border-radius: 10px;
+    padding: 8px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+.navbar .dropdown-item {
+    border-radius: 7px;
+    padding: 10px 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+
+/* =====================================================
+   MOBILE NAVBAR
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .navbar .navbar-nav {
+        padding-top: 15px;
+    }
+
+    .navbar .nav-link {
+        padding: 10px 15px;
+    }
+
+    .navbar .d-flex {
+        margin-top: 10px;
+    }
+
+}
+/* =====================================================
+   LOGIN + SIGNUP BUTTON - FINAL OVERRIDE
+===================================================== */
+
+.navbar a.btn.btn-outline-dark,
+.navbar a.btn.btn-dark {
+    background-color: #ffc107 !important;
+    border: 1px solid #ffc107 !important;
+    color: #000000 !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    padding: 8px 18px !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease !important;
+}
+
+
+/* HOVER */
+
+.navbar a.btn.btn-outline-dark:hover,
+.navbar a.btn.btn-dark:hover {
+    background-color: #ffca2c !important;
+    border-color: #ffca2c !important;
+    color: #000000 !important;
+    transform: translateY(-2px);
+}
+
+
+/* ACTIVE / FOCUS */
+
+.navbar a.btn.btn-outline-dark:focus,
+.navbar a.btn.btn-dark:focus,
+.navbar a.btn.btn-outline-dark:active,
+.navbar a.btn.btn-dark:active {
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+}
+/* =====================================================
+   STORAGE OPTIONS - DARK MODE FIX
+===================================================== */
+
+/* Light Mode */
+.storage-section {
+    background-color: #f8f9fa;
+}
+
+.storage-section .card {
+    background-color: #ffffff;
+    color: #212529;
+}
+
+.storage-section h2,
+.storage-section h3,
+.storage-section h4,
+.storage-section h5,
+.storage-section h6 {
+    color: #212529;
+}
+
+.storage-section p,
+.storage-section small {
+    color: #6c757d;
+}
+
+.storage-section .storage-description {
+    color: #6c757d;
+}
+
+.storage-section .storage-price {
+    color: #212529;
+}
+
+.storage-section .storage-features li {
+    color: #212529;
+}
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+html[data-bs-theme="dark"] .storage-section {
+    background-color: #121212;
+}
+
+html[data-bs-theme="dark"] .storage-section .card {
+    background-color: #1e1e1e;
+    border-color: #343a40 !important;
+    color: #ffffff;
+}
+
+
+/* Section Heading */
+html[data-bs-theme="dark"] .storage-section .section-title {
+    color: #ffffff !important;
+}
+
+html[data-bs-theme="dark"] .storage-section .section-subtitle {
+    color: #adb5bd !important;
+}
+
+
+/* Card Heading */
+html[data-bs-theme="dark"] .storage-section h2,
+html[data-bs-theme="dark"] .storage-section h3,
+html[data-bs-theme="dark"] .storage-section h4,
+html[data-bs-theme="dark"] .storage-section h5,
+html[data-bs-theme="dark"] .storage-section h6 {
+    color: #ffffff !important;
+}
+
+
+/* Card Description */
+html[data-bs-theme="dark"] .storage-section p,
+html[data-bs-theme="dark"] .storage-section small,
+html[data-bs-theme="dark"] .storage-section .text-body-secondary {
+    color: #adb5bd !important;
+}
+
+
+/* Price */
+html[data-bs-theme="dark"] .storage-section .storage-price {
+    color: #ffffff !important;
+}
+
+
+/* Feature Text */
+html[data-bs-theme="dark"] .storage-section .storage-features li {
+    color: #f1f1f1 !important;
+}
+
+
+/* Horizontal Line */
+html[data-bs-theme="dark"] .storage-section hr {
+    border-color: #495057;
+    opacity: 1;
+}
+
+
+/* Button */
+html[data-bs-theme="dark"] .storage-section .btn-outline-warning {
+    color: #ffc107;
+    border-color: #ffc107;
+}
+
+html[data-bs-theme="dark"] .storage-section .btn-outline-warning:hover {
+    background-color: #ffc107;
+    color: #000000;
+}
+/* =========================================================
+   GLOBAL DARK MODE - FINAL FIX
+   ========================================================= */
+
+/* ---------- BODY ---------- */
+
+html[data-bs-theme="dark"] body {
+    background-color: #121212 !important;
+    color: #f5f5f5 !important;
+}
+
+
+/* ---------- SECTIONS ---------- */
+
+html[data-bs-theme="dark"] section {
+    color: #f5f5f5;
+}
+
+
+/* ---------- HEADINGS ---------- */
+
+html[data-bs-theme="dark"] h1,
+html[data-bs-theme="dark"] h2,
+html[data-bs-theme="dark"] h3,
+html[data-bs-theme="dark"] h4,
+html[data-bs-theme="dark"] h5,
+html[data-bs-theme="dark"] h6 {
+    color: #ffffff !important;
+}
+
+
+/* ---------- PARAGRAPHS ---------- */
+
+html[data-bs-theme="dark"] p {
+    color: #d1d5db !important;
+}
+
+
+/* ---------- BOOTSTRAP SECONDARY TEXT ---------- */
+
+html[data-bs-theme="dark"] .text-body-secondary {
+    color: #adb5bd !important;
+}
+
+
+/* ---------- NORMAL BODY TEXT ---------- */
+
+html[data-bs-theme="dark"] .text-body {
+    color: #f1f1f1 !important;
+}
+
+
+/* ---------- DARK TEXT ---------- */
+
+html[data-bs-theme="dark"] .text-dark {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+html[data-bs-theme="dark"] .card {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #3a3a3a !important;
+}
+
+
+/* Card headings */
+
+html[data-bs-theme="dark"] .card h1,
+html[data-bs-theme="dark"] .card h2,
+html[data-bs-theme="dark"] .card h3,
+html[data-bs-theme="dark"] .card h4,
+html[data-bs-theme="dark"] .card h5,
+html[data-bs-theme="dark"] .card h6 {
+    color: #ffffff !important;
+}
+
+
+/* Card paragraphs */
+
+html[data-bs-theme="dark"] .card p {
+    color: #d1d5db !important;
+}
+
+
+/* Card secondary text */
+
+html[data-bs-theme="dark"] .card .text-body-secondary {
+    color: #adb5bd !important;
+}
+
+
+/* Card list text */
+
+html[data-bs-theme="dark"] .card li {
+    color: #e5e7eb !important;
+}
+
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+html[data-bs-theme="dark"] li {
+    color: #e5e7eb;
+}
+
+
+/* =========================================================
+   HR / DIVIDERS
+   ========================================================= */
+
+html[data-bs-theme="dark"] hr {
+    border-color: #444444 !important;
+    opacity: 1 !important;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+html[data-bs-theme="dark"] .navbar {
+    background-color: #1b1f23 !important;
+}
+
+
+html[data-bs-theme="dark"] .navbar-brand {
+    color: #ffffff !important;
+}
+
+
+html[data-bs-theme="dark"] .navbar .nav-link {
+    color: #ffffff !important;
+}
+
+
+html[data-bs-theme="dark"] .navbar .nav-link:hover,
+html[data-bs-theme="dark"] .navbar .nav-link.active {
+    color: #ffc107 !important;
+}
+
+
+/* Navbar dropdown */
+
+html[data-bs-theme="dark"] .dropdown-menu {
+    background-color: #1e1e1e !important;
+    border-color: #3a3a3a !important;
+}
+
+
+html[data-bs-theme="dark"] .dropdown-item {
+    color: #ffffff !important;
+}
+
+
+html[data-bs-theme="dark"] .dropdown-item:hover {
+    background-color: #2c2c2c !important;
+    color: #ffc107 !important;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+html[data-bs-theme="dark"] footer {
+    background-color: #0d0f10 !important;
+    color: #ffffff !important;
+}
+
+
+html[data-bs-theme="dark"] footer h1,
+html[data-bs-theme="dark"] footer h2,
+html[data-bs-theme="dark"] footer h3,
+html[data-bs-theme="dark"] footer h4,
+html[data-bs-theme="dark"] footer h5,
+html[data-bs-theme="dark"] footer h6 {
+    color: #ffffff !important;
+}
+
+
+html[data-bs-theme="dark"] footer p,
+html[data-bs-theme="dark"] footer li {
+    color: #bfc4ca !important;
+}
+
+
+html[data-bs-theme="dark"] footer a {
+    color: #d5d9de !important;
+}
+
+
+html[data-bs-theme="dark"] footer a:hover {
+    color: #ffc107 !important;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+html[data-bs-theme="dark"] a {
+    color: #ffc107;
+}
+
+
+html[data-bs-theme="dark"] a:hover {
+    color: #ffca2c;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+html[data-bs-theme="dark"] .btn-outline-warning {
+    color: #ffc107 !important;
+    border-color: #ffc107 !important;
+}
+
+
+html[data-bs-theme="dark"] .btn-outline-warning:hover {
+    background-color: #ffc107 !important;
+    color: #111111 !important;
+}
+
+
+html[data-bs-theme="dark"] .btn-warning {
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    color: #111111 !important;
+}
+
+
+html[data-bs-theme="dark"] .btn-warning:hover {
+    background-color: #ffca2c !important;
+    border-color: #ffca2c !important;
+    color: #111111 !important;
+}
+
+
+/* =========================================================
+   FORMS
+   ========================================================= */
+
+html[data-bs-theme="dark"] .form-control,
+html[data-bs-theme="dark"] .form-select {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+
+html[data-bs-theme="dark"] .form-control:focus,
+html[data-bs-theme="dark"] .form-select:focus {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #ffc107 !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.15) !important;
+}
+
+
+html[data-bs-theme="dark"] .form-control::placeholder {
+    color: #888888 !important;
+}
+
+
+html[data-bs-theme="dark"] .form-label {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+html[data-bs-theme="dark"] .table {
+    color: #ffffff !important;
+}
+
+
+html[data-bs-theme="dark"] .table th,
+html[data-bs-theme="dark"] .table td {
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+
+/* =========================================================
+   MODALS
+   ========================================================= */
+
+html[data-bs-theme="dark"] .modal-content {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #3a3a3a !important;
+}
+
+
+html[data-bs-theme="dark"] .modal-header,
+html[data-bs-theme="dark"] .modal-footer {
+    border-color: #3a3a3a !important;
+}
+
+
+html[data-bs-theme="dark"] .modal-title {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   ACCORDION
+   ========================================================= */
+
+html[data-bs-theme="dark"] .accordion-item {
+    background-color: #1e1e1e !important;
+    border-color: #3a3a3a !important;
+}
+
+
+html[data-bs-theme="dark"] .accordion-button {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+}
+
+
+html[data-bs-theme="dark"] .accordion-button:not(.collapsed) {
+    background-color: #2a2a2a !important;
+    color: #ffc107 !important;
+}
+
+
+/* =========================================================
+   BADGES
+   ========================================================= */
+
+html[data-bs-theme="dark"] .badge {
+    color: #111111;
+}
+
+
+/* =========================================================
+   STORAGE OPTIONS
+   ========================================================= */
+
+html[data-bs-theme="dark"] .storage-section {
+    background-color: #121212 !important;
+}
+
+
+html[data-bs-theme="dark"] .storage-section .card {
+    background-color: #1e1e1e !important;
+    border-color: #3a3a3a !important;
+}
+
+
+html[data-bs-theme="dark"] .storage-section h1,
+html[data-bs-theme="dark"] .storage-section h2,
+html[data-bs-theme="dark"] .storage-section h3,
+html[data-bs-theme="dark"] .storage-section h4 {
+    color: #ffffff !important;
+}
+
+
+html[data-bs-theme="dark"] .storage-section p,
+html[data-bs-theme="dark"] .storage-section small {
+    color: #adb5bd !important;
+}
+
+
+html[data-bs-theme="dark"] .storage-section li {
+    color: #e5e7eb !important;
+}
+
+
+/* =========================================================
+   SHADOWS
+   ========================================================= */
+
+html[data-bs-theme="dark"] .shadow,
+html[data-bs-theme="dark"] .shadow-sm,
+html[data-bs-theme="dark"] .shadow-lg {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+html[data-bs-theme="dark"] img {
+    opacity: 0.95;
+}
+
+
+/* =========================================================
+   TEXT MUTED
+   ========================================================= */
+
+html[data-bs-theme="dark"] .text-muted {
+    color: #adb5bd !important;
+}
+
+
+/* =========================================================
+   ICONS
+   ========================================================= */
+
+html[data-bs-theme="dark"] .text-warning {
+    color: #ffc107 !important;
+}
+/* =====================================================
+   INCLUDED FEATURES - DARK MODE FIX
+===================================================== */
+
+/* Dark Mode */
+body.dark-mode .bg-body,
+body[data-theme="dark"] .bg-body,
+[data-bs-theme="dark"] .bg-body {
+    background-color: #151c2f !important;
+    border-color: #2d3852 !important;
+}
+
+/* Card heading */
+body.dark-mode .bg-body h5,
+body[data-theme="dark"] .bg-body h5,
+[data-bs-theme="dark"] .bg-body h5 {
+    color: #ffffff !important;
+}
+
+/* Card paragraph */
+body.dark-mode .bg-body p,
+body[data-theme="dark"] .bg-body p,
+[data-bs-theme="dark"] .bg-body p {
+    color: #cbd5e1 !important;
+}
+
+/* Icon */
+body.dark-mode .bg-body i,
+body[data-theme="dark"] .bg-body i,
+[data-bs-theme="dark"] .bg-body i {
+    color: #ffc107 !important;
+}
+
+/* Card hover */
+body.dark-mode .bg-body:hover,
+body[data-theme="dark"] .bg-body:hover,
+[data-bs-theme="dark"] .bg-body:hover {
+    border-color: #ffc107 !important;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Smooth animation */
+.bg-body {
+    transition: all 0.3s ease;
+}
+/* =========================================================
+   GLOBAL DARK MODE - YELLOW SECTION TEXT FIX
+   ========================================================= */
+
+/* Yellow backgrounds */
+body.dark-mode .bg-warning,
+body.dark-mode .bg-yellow,
+body.dark-mode .bg-warning *,
+body.dark-mode .bg-yellow *,
+[data-bs-theme="dark"] .bg-warning,
+[data-bs-theme="dark"] .bg-yellow,
+[data-bs-theme="dark"] .bg-warning *,
+[data-bs-theme="dark"] .bg-yellow * {
+    color: #ffffff !important;
+}
+
+/* Yellow background using Bootstrap btn-warning / custom sections */
+body.dark-mode section.bg-warning,
+body.dark-mode div.bg-warning,
+body.dark-mode .bg-warning-subtle,
+[data-bs-theme="dark"] section.bg-warning,
+[data-bs-theme="dark"] div.bg-warning,
+[data-bs-theme="dark"] .bg-warning-subtle {
+    color: #ffffff !important;
+}
+
+/* Headings inside yellow sections */
+body.dark-mode .bg-warning h1,
+body.dark-mode .bg-warning h2,
+body.dark-mode .bg-warning h3,
+body.dark-mode .bg-warning h4,
+body.dark-mode .bg-warning h5,
+body.dark-mode .bg-warning h6,
+body.dark-mode .bg-warning p,
+body.dark-mode .bg-warning span,
+body.dark-mode .bg-warning a,
+[data-bs-theme="dark"] .bg-warning h1,
+[data-bs-theme="dark"] .bg-warning h2,
+[data-bs-theme="dark"] .bg-warning h3,
+[data-bs-theme="dark"] .bg-warning h4,
+[data-bs-theme="dark"] .bg-warning h5,
+[data-bs-theme="dark"] .bg-warning h6,
+[data-bs-theme="dark"] .bg-warning p,
+[data-bs-theme="dark"] .bg-warning span,
+[data-bs-theme="dark"] .bg-warning a {
+    color: #ffffff !important;
+}
+/* =========================================================
+   STOREHUB - GLOBAL DARK MODE TEXT VISIBILITY FIX
+   ========================================================= */
+
+/* Yellow backgrounds */
+body.dark-mode .bg-warning *,
+[data-bs-theme="dark"] .bg-warning * {
+    color: #ffffff !important;
+}
+
+/* Keep yellow icons yellow */
+body.dark-mode .bg-warning .text-warning,
+[data-bs-theme="dark"] .bg-warning .text-warning {
+    color: #ffffff !important;
+}
+
+/* Yellow buttons should keep dark text */
+body.dark-mode .btn-warning,
+[data-bs-theme="dark"] .btn-warning {
+    color: #111827 !important;
+}
+
+/* Dark buttons */
+body.dark-mode .btn-dark,
+[data-bs-theme="dark"] .btn-dark {
+    color: #ffffff !important;
+}
+
+/* Links inside yellow areas */
+body.dark-mode .bg-warning a,
+[data-bs-theme="dark"] .bg-warning a {
+    color: #ffffff !important;
+}
+
+/* Headings inside yellow areas */
+body.dark-mode .bg-warning h1,
+body.dark-mode .bg-warning h2,
+body.dark-mode .bg-warning h3,
+body.dark-mode .bg-warning h4,
+body.dark-mode .bg-warning h5,
+body.dark-mode .bg-warning h6,
+[data-bs-theme="dark"] .bg-warning h1,
+[data-bs-theme="dark"] .bg-warning h2,
+[data-bs-theme="dark"] .bg-warning h3,
+[data-bs-theme="dark"] .bg-warning h4,
+[data-bs-theme="dark"] .bg-warning h5,
+[data-bs-theme="dark"] .bg-warning h6 {
+    color: #ffffff !important;
+}
+
+/* Paragraphs */
+body.dark-mode .bg-warning p,
+[data-bs-theme="dark"] .bg-warning p {
+    color: #ffffff !important;
+}
+/* =====================================================
+   NAVBAR ACTIVE LINK - YELLOW
+===================================================== */
+
+/* Normal active link */
+.navbar .nav-link.active {
+    color: #ffc107 !important;
+}
+
+/* Dark mode active link */
+body.dark-mode .navbar .nav-link.active,
+[data-bs-theme="dark"] .navbar .nav-link.active {
+    color: #ffc107 !important;
+}
+
+/* Home dropdown active item */
+.navbar .dropdown-toggle.active {
+    color: #ffc107 !important;
+}
+
+/* Hover */
+.navbar .nav-link:hover {
+    color: #ffc107 !important;
+}
+
+/* Dark mode hover */
+body.dark-mode .navbar .nav-link:hover,
+[data-bs-theme="dark"] .navbar .nav-link:hover {
+    color: #ffc107 !important;
+}
+/* =====================================================
+   MOBILE NAVBAR TOGGLER
+===================================================== */
+
+.navbar-toggler {
+    padding: 6px 8px;
+    background: transparent;
+    border: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.navbar-toggler i {
+    color: var(--bs-body-color);
+    transition: 0.3s ease;
+}
+
+/* Dark mode */
+html[data-bs-theme="dark"] .navbar-toggler i {
+    color: #ffffff;
+}
+
+/* Mobile */
+@media (max-width: 991.98px) {
+
+    .navbar-toggler {
+        display: block !important;
+    }
+
+}
+.navbar-toggler i {
+    color: #ffffff !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}

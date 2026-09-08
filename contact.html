@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | StoreHub</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/images/logo.png">
+
+    <!-- Font Awesome -->
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+
+    <div class="container">
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="navbar-brand d-flex align-items-center gap-2 fw-bold">
+
+            <img
+                src="assets/images/logo.png"
+                alt="StoreHub Logo"
+                style="height:45px;width:auto;object-fit:contain;">
+
+            <span>
+                StoreHub
+            </span>
+
+        </a>
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+    class="navbar-toggler border-0 shadow-none"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#mainNavbar"
+    aria-controls="mainNavbar"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+
+    <i class="fa-solid fa-bars fs-3 text-white"></i>
+
+</button>
+
+
+        <!-- NAVIGATION -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar">
+
+            <ul
+                class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+
+                <!-- HOME -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown">
+
+                        Home
+
+                    </a>
+
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="index.html">
+
+                                Home 1
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="index2.html">
+
+                                Home 2
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- FACILITIES -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="facilities.html">
+
+                        Facilities
+
+                    </a>
+
+                </li>
+
+
+                <!-- PRICING -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="pricing.html">
+
+                        Pricing
+
+                    </a>
+
+                </li>
+
+
+                <!-- LOCATIONS -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="locations.html">
+
+                        Locations
+
+                    </a>
+
+                </li>
+
+<!-- =====================================================
+     PAGES DROPDOWN
+===================================================== -->
+
+<li class="nav-item dropdown">
+
+    <a
+        class="nav-link dropdown-toggle"
+        href="#"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false">
+
+        Pages
+
+    </a>
+
+
+    <ul class="dropdown-menu">
+
+        <!-- MAINTENANCE -->
+
+        <li>
+
+            <a
+                class="dropdown-item"
+                href="maintenance.html">
+
+                <i class="fa-solid fa-screwdriver-wrench me-2"></i>
+
+                Maintenance
+
+            </a>
+
+        </li>
+
+
+        <!-- 404 -->
+
+        <li>
+
+            <a
+                class="dropdown-item"
+                href="404.html">
+
+                <i class="fa-solid fa-triangle-exclamation me-2"></i>
+
+                404 Page
+
+            </a>
+
+        </li>
+
+
+        <!-- COMING SOON -->
+
+        <li>
+
+            <a
+                class="dropdown-item"
+                href="coming-soon.html">
+
+                <i class="fa-solid fa-rocket me-2"></i>
+
+                Coming Soon
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</li>
+                <!-- CONTACT -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="contact.html">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div
+                class="d-flex align-items-center gap-2 flex-wrap">
+
+
+                <!-- RTL / LTR -->
+
+                <button
+                    id="rtlToggle"
+                    type="button"
+                    class="btn btn-outline-secondary btn-sm rounded-pill px-3">
+
+                    <span id="directionText">
+                        LTR
+                    </span>
+
+                    <i
+                        class="fa-solid fa-arrows-left-right ms-1">
+                    </i>
+
+                </button>
+
+
+                <!-- DARK MODE -->
+
+                <button
+                    id="themeToggle"
+                    type="button"
+                    class="btn btn-outline-secondary rounded-circle"
+                    style="width:38px;height:38px;">
+
+                    <i
+                        id="themeIcon"
+                        class="fa-solid fa-moon">
+                    </i>
+
+                </button>
+
+
+                <!-- LOGIN -->
+
+                <a
+                    href="login.html"
+                    class="btn btn-outline-dark btn-sm">
+
+                    Login
+
+                </a>
+
+
+                <!-- SIGNUP -->
+
+                <a
+                    href="signup.html"
+                    class="btn btn-dark btn-sm">
+
+                    Signup
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     PAGE HERO
+===================================================== -->
+
+<section class="bg-body-secondary py-5">
+
+    <div class="container py-5">
+
+        <div
+            class="text-center mx-auto"
+            style="max-width:800px;">
+
+            <span
+                class="badge text-bg-warning px-3 py-2 mb-3">
+
+                CONTACT US
+
+            </span>
+
+
+            <h1
+                class="display-4 fw-bold text-body">
+
+                Let's Find Your
+                Perfect Storage Space
+
+            </h1>
+
+
+            <p
+                class="lead text-body-secondary mt-3">
+
+                Tell us what you need and our team
+                will help you find the right storage
+                solution.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT SECTION
+===================================================== -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="col-lg-5">
+
+
+                <span
+                    class="text-warning fw-semibold">
+
+                    GET IN TOUCH
+
+                </span>
+
+
+                <h2
+                    class="fw-bold mt-2">
+
+                    Have Questions?
+                    We're Here to Help.
+
+                </h2>
+
+
+                <p
+                    class="text-body-secondary">
+
+                    Whether you need personal storage,
+                    business space or a larger warehouse,
+                    our team can help you choose the
+                    right option.
+
+                </p>
+
+
+                <!-- PHONE -->
+
+                <div
+                    class="d-flex align-items-start gap-3 mt-4">
+
+                    <div
+                        class="bg-warning rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                        style="width:50px;height:50px;">
+
+                        <i
+                            class="fa-solid fa-phone text-dark">
+                        </i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h6 class="fw-bold mb-1">
+
+                            Phone
+
+                        </h6>
+
+                        <p
+                            class="text-body-secondary mb-0">
+
+                            +91 98765 43210
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div
+                    class="d-flex align-items-start gap-3 mt-4">
+
+                    <div
+                        class="bg-warning rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                        style="width:50px;height:50px;">
+
+                        <i
+                            class="fa-solid fa-envelope text-dark">
+                        </i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h6 class="fw-bold mb-1">
+
+                            Email
+
+                        </h6>
+
+                        <p
+                            class="text-body-secondary mb-0">
+
+                            storehub@gmail.com
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div
+                    class="d-flex align-items-start gap-3 mt-4">
+
+                    <div
+                        class="bg-warning rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                        style="width:50px;height:50px;">
+
+                        <i
+                            class="fa-solid fa-location-dot text-dark">
+                        </i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h6 class="fw-bold mb-1">
+
+                            Head Office
+
+                        </h6>
+
+                        <p
+                            class="text-body-secondary mb-0">
+
+                            Chennai, Tamil Nadu, India
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WORKING HOURS -->
+
+                <div
+                    class="d-flex align-items-start gap-3 mt-4">
+
+                    <div
+                        class="bg-warning rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                        style="width:50px;height:50px;">
+
+                        <i
+                            class="fa-solid fa-clock text-dark">
+                        </i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h6 class="fw-bold mb-1">
+
+                            Business Hours
+
+                        </h6>
+
+                        <p
+                            class="text-body-secondary mb-0">
+
+                            Monday – Saturday<br>
+                            9:00 AM – 6:00 PM
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ENQUIRY FORM -->
+
+            <div class="col-lg-7">
+
+                <div
+                    class="card border-0 shadow-sm">
+
+                    <div
+                        class="card-body p-4 p-md-5">
+
+
+                        <h3 class="fw-bold mb-2">
+
+                            Storage Space Enquiry
+
+                        </h3>
+
+
+                        <p
+                            class="text-body-secondary mb-4">
+
+                            Fill in the details below and
+                            we'll get back to you.
+
+                        </p>
+
+
+                        <form
+                            id="enquiryForm">
+
+
+                            <!-- NAME + PHONE -->
+
+                            <div class="row g-3">
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="name"
+                                        class="form-label fw-semibold">
+
+                                        Full Name
+
+                                    </label>
+
+
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        class="form-control"
+                                        placeholder="Enter your name"
+                                        required>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="phone"
+                                        class="form-label fw-semibold">
+
+                                        Phone Number
+
+                                    </label>
+
+
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        class="form-control"
+                                        placeholder="Enter phone number"
+                                        required>
+
+                                </div>
+
+
+                                <!-- EMAIL -->
+
+                                <div class="col-12">
+
+                                    <label
+                                        for="email"
+                                        class="form-label fw-semibold">
+
+                                        Email Address
+
+                                    </label>
+
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        class="form-control"
+                                        placeholder="Enter your email"
+                                        required>
+
+                                </div>
+
+
+                                <!-- LOCATION -->
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="location"
+                                        class="form-label fw-semibold">
+
+                                        Preferred Location
+
+                                    </label>
+
+
+                                    <select
+                                        id="location"
+                                        class="form-select"
+                                        required>
+
+                                        <option value="">
+                                            Select location
+                                        </option>
+
+                                        <option>
+                                            Chennai
+                                        </option>
+
+                                        <option>
+                                            Bangalore
+                                        </option>
+
+                                        <option>
+                                            Madurai
+                                        </option>
+
+                                        <option>
+                                            Other
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- STORAGE SIZE -->
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="storageSize"
+                                        class="form-label fw-semibold">
+
+                                        Storage Size
+
+                                    </label>
+
+
+                                    <select
+                                        id="storageSize"
+                                        class="form-select"
+                                        required>
+
+                                        <option value="">
+                                            Select size
+                                        </option>
+
+                                        <option>
+                                            Small - 25 sq. ft.
+                                        </option>
+
+                                        <option>
+                                            Medium - 50 sq. ft.
+                                        </option>
+
+                                        <option>
+                                            Large - 100 sq. ft.
+                                        </option>
+
+                                        <option>
+                                            Business - 250+ sq. ft.
+                                        </option>
+
+                                        <option>
+                                            Not Sure
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- RENTAL PERIOD -->
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="duration"
+                                        class="form-label fw-semibold">
+
+                                        Rental Duration
+
+                                    </label>
+
+
+                                    <select
+                                        id="duration"
+                                        class="form-select">
+
+                                        <option>
+                                            Less than 1 month
+                                        </option>
+
+                                        <option>
+                                            1 - 3 months
+                                        </option>
+
+                                        <option>
+                                            3 - 6 months
+                                        </option>
+
+                                        <option>
+                                            6 - 12 months
+                                        </option>
+
+                                        <option>
+                                            More than 1 year
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- STORAGE TYPE -->
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="storageType"
+                                        class="form-label fw-semibold">
+
+                                        Storage Type
+
+                                    </label>
+
+
+                                    <select
+                                        id="storageType"
+                                        class="form-select">
+
+                                        <option>
+                                            Personal Storage
+                                        </option>
+
+                                        <option>
+                                            Business Storage
+                                        </option>
+
+                                        <option>
+                                            Inventory Storage
+                                        </option>
+
+                                        <option>
+                                            Documents
+                                        </option>
+
+                                        <option>
+                                            Other
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- MESSAGE -->
+
+                                <div class="col-12">
+
+                                    <label
+                                        for="message"
+                                        class="form-label fw-semibold">
+
+                                        Message
+
+                                    </label>
+
+
+                                    <textarea
+                                        id="message"
+                                        class="form-control"
+                                        rows="5"
+                                        placeholder="Tell us about your storage requirements..."
+                                        required></textarea>
+
+                                </div>
+
+
+                                <!-- SUBMIT -->
+
+                                <div class="col-12">
+
+                                    <button
+                                        type="submit"
+                                        class="btn btn-warning btn-lg w-100">
+
+                                        <i
+                                            class="fa-solid fa-paper-plane me-2">
+                                        </i>
+
+                                        Send Enquiry
+
+                                    </button>
+
+                                </div>
+
+
+                            </div>
+
+                        </form>
+
+
+                        <!-- SUCCESS MESSAGE -->
+
+                        <div
+                            id="successMessage"
+                            class="alert alert-success mt-4 d-none"
+                            role="alert">
+
+                            <i
+                                class="fa-solid fa-circle-check me-2">
+                            </i>
+
+                            Thank you! Your enquiry has been
+                            submitted successfully.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAP / LOCATION
+===================================================== -->
+
+<section class="py-5 bg-body-secondary">
+
+    <div class="container">
+
+
+        <div class="text-center mb-4">
+
+            <span
+                class="text-warning fw-semibold">
+
+                FIND US
+
+            </span>
+
+
+            <h2 class="fw-bold mt-2">
+
+                Visit Our Head Office
+
+            </h2>
+
+
+            <p
+                class="text-body-secondary">
+
+                Chennai, Tamil Nadu, India
+
+            </p>
+
+        </div>
+
+
+        <div
+            class="rounded-4 overflow-hidden shadow-sm"
+            style="height:350px;">
+
+            <iframe
+                src="https://www.google.com/maps?q=Chennai,Tamil%20Nadu,India&output=embed"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div
+            class="bg-warning rounded-4 p-5 text-center">
+
+            <h2 class="fw-bold">
+
+                Need Storage Right Away?
+
+            </h2>
+
+
+            <p class="mb-4">
+
+                Contact our team today and
+                we'll help you find the right space.
+
+            </p>
+
+
+            <a
+                href="tel:+919876543210"
+                class="btn btn-dark btn-lg px-5">
+
+                <i
+                    class="fa-solid fa-phone me-2">
+                </i>
+
+                Call Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="bg-dark text-white pt-5">
+
+    <div class="container">
+
+        <div class="row g-4 pb-4">
+
+
+            <!-- BRAND -->
+
+            <div class="col-lg-4">
+
+                <a
+                    href="index.html"
+                    class="text-white text-decoration-none">
+
+
+                    <img
+                        src="assets/images/logo.png"
+                        alt="StoreHub Logo"
+                        style="height:50px;width:auto;object-fit:contain;"
+                        class="mb-3">
+
+
+                    <h5>
+                        StoreHub
+                    </h5>
+
+                </a>
+
+
+                <p class="text-white-50">
+
+                    Secure and flexible warehouse
+                    and storage solutions for
+                    individuals and businesses.
+
+                </p>
+
+
+                <div class="d-flex gap-3">
+
+                    <a
+                        href="#"
+                        class="text-white">
+
+                        <i
+                            class="fa-brands fa-facebook">
+                        </i>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="text-white">
+
+                        <i
+                            class="fa-brands fa-instagram">
+                        </i>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="text-white">
+
+                        <i
+                            class="fa-brands fa-linkedin">
+                        </i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="col-6 col-lg-2">
+
+                <h6>
+                    Quick Links
+                </h6>
+
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+
+                        <a
+                            href="index.html"
+                            class="text-white-50 text-decoration-none">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="mb-2">
+
+                        <a
+                            href="facilities.html"
+                            class="text-white-50 text-decoration-none">
+
+                            Facilities
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="mb-2">
+
+                        <a
+                            href="pricing.html"
+                            class="text-white-50 text-decoration-none">
+
+                            Pricing
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="mb-2">
+
+                        <a
+                            href="locations.html"
+                            class="text-white-50 text-decoration-none">
+
+                            Locations
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="contact.html"
+                            class="text-white-50 text-decoration-none">
+
+                            Contact
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- ACCOUNT -->
+
+            <div class="col-6 col-lg-2">
+
+                <h6>
+                    Account
+                </h6>
+
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+
+                        <a
+                            href="login.html"
+                            class="text-white-50 text-decoration-none">
+
+                            Login
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="mb-2">
+
+                        <a
+                            href="signup.html"
+                            class="text-white-50 text-decoration-none">
+
+                            Signup
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="contact.html"
+                            class="text-white-50 text-decoration-none">
+
+                            Enquiry
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="col-lg-4">
+
+                <h6>
+                    Contact Us
+                </h6>
+
+
+                <p class="text-white-50 mb-2">
+
+                    <i
+                        class="fa-solid fa-phone me-2">
+                    </i>
+
+                    +91 98765 43210
+
+                </p>
+
+
+                <p class="text-white-50 mb-2">
+
+                    <i
+                        class="fa-solid fa-envelope me-2">
+                    </i>
+
+                    storehub@gmail.com
+
+                </p>
+
+
+                <p class="text-white-50">
+
+                    <i
+                        class="fa-solid fa-location-dot me-2">
+                    </i>
+
+                    Chennai, Tamil Nadu
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div
+            class="border-top border-secondary py-3 text-center">
+
+            <small class="text-white-50">
+
+                © 2026 StoreHub.
+                All Rights Reserved.
+
+            </small>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     BOOTSTRAP JS
+===================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+
+<!-- =====================================================
+     COMMON SCRIPT
+===================================================== -->
+
+<script src="assets/js/script.js"></script>
+
+
+
+<!-- =====================================================
+     CONTACT FORM
+===================================================== -->
+
+<script>
+
+    const enquiryForm =
+        document.getElementById("enquiryForm");
+
+    const successMessage =
+        document.getElementById("successMessage");
+
+
+    enquiryForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        successMessage.classList.remove("d-none");
+
+        enquiryForm.reset();
+
+        setTimeout(function() {
+
+            successMessage.classList.add("d-none");
+
+        }, 5000);
+
+    });
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Signup | Warehouse & Storage</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/images/logo.png">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* =========================================
+           GLOBAL
+        ========================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+            transition: 0.3s ease;
+        }
+
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        .navbar {
+            background: #000 !important;
+        }
+
+        .navbar-brand {
+            color: #fff !important;
+            font-weight: 800;
+            font-size: 1.25rem;
+        }
+
+        .navbar-brand i {
+            color: #ffc107;
+        }
+
+        .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            transition: 0.2s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #ffc107 !important;
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+
+        /* =========================================
+           NAV BUTTONS
+        ========================================= */
+
+        #themeToggle,
+        #rtlToggle {
+            min-width: 42px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        #themeToggle:hover,
+        #rtlToggle:hover {
+            background: #ffc107;
+            border-color: #ffc107;
+            color: #000;
+        }
+
+
+        /* =========================================
+           SIGNUP SECTION
+        ========================================= */
+
+        .login-section {
+            min-height: calc(100vh - 76px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 15px;
+        }
+
+
+        /* =========================================
+           SIGNUP CARD
+        ========================================= */
+
+        .login-card {
+            width: 100%;
+            max-width: 470px;
+            background: #fff;
+            border-radius: 18px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+
+            transition:
+                background-color 0.3s ease,
+                color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        /* =========================================
+           ICON
+        ========================================= */
+
+        .login-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+
+            background: #ffc107;
+            color: #000;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 20px;
+
+            font-size: 28px;
+        }
+
+
+        /* =========================================
+           FORM
+        ========================================= */
+
+        .form-label {
+            color: #212529;
+        }
+
+        .form-control {
+            min-height: 48px;
+            padding: 12px 15px;
+            border-radius: 10px;
+        }
+
+        .form-control:focus {
+            border-color: #ffc107;
+            box-shadow: 0 0 0 0.2rem rgba(255,193,7,0.20);
+        }
+
+
+        /* =========================================
+           SIGNUP BUTTON
+        ========================================= */
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            background: #000;
+            color: #fff;
+        }
+
+        .footer-logo {
+            color: #fff;
+            font-weight: 800;
+        }
+
+        .footer-logo i {
+            color: #ffc107;
+        }
+
+
+        /* =========================================
+           DARK MODE
+        ========================================= */
+
+        body.dark-mode {
+            background: #121212 !important;
+            color: #f5f5f5 !important;
+        }
+
+        body.dark-mode .login-card {
+            background: #1e1e1e !important;
+            color: #fff !important;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+        }
+
+        body.dark-mode .login-card h2,
+        body.dark-mode .login-card p,
+        body.dark-mode .login-card label {
+            color: #fff !important;
+        }
+
+        body.dark-mode .text-muted {
+            color: #bdbdbd !important;
+        }
+
+        body.dark-mode .form-control {
+            background: #292929 !important;
+            color: #fff !important;
+            border-color: #555 !important;
+        }
+
+        body.dark-mode .form-control::placeholder {
+            color: #aaa !important;
+        }
+
+        body.dark-mode .form-control:focus {
+            border-color: #ffc107 !important;
+            box-shadow: 0 0 0 0.2rem rgba(255,193,7,0.20);
+        }
+
+        body.dark-mode footer {
+            background: #000 !important;
+        }
+
+
+        /* =========================================
+           RTL
+        ========================================= */
+
+        html[dir="rtl"] body {
+            text-align: right;
+        }
+
+        html[dir="rtl"] .login-card {
+            direction: rtl;
+        }
+
+        html[dir="rtl"] .form-control {
+            text-align: right;
+        }
+
+        html[dir="rtl"] .navbar-nav {
+            padding-right: 0;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 576px) {
+
+            .login-section {
+                padding: 40px 15px;
+            }
+
+            .login-card {
+                padding: 28px 22px;
+                border-radius: 14px;
+            }
+
+            .navbar-brand {
+                font-size: 1.05rem;
+            }
+
+        }
+        /* =====================================================
+   STOREHUB AUTH HEADER
+===================================================== */
+
+.auth-header {
+    width: 100%;
+    height: 145px;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    border-radius: 0 0 35px 35px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.08);
+
+    z-index: 1000;
+}
+
+
+/* =====================================================
+   STOREHUB BRAND
+===================================================== */
+
+.auth-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    color: #050505;
+
+    line-height: 1;
+
+    transition: 0.3s ease;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.auth-logo {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+
+    display: block;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   STOREHUB NAME
+===================================================== */
+
+.auth-brand-name {
+    font-size: 42px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -1.5px;
+
+    color: #050505;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   CONTROLS
+===================================================== */
+
+.auth-controls {
+    position: absolute;
+
+    right: 35px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* =====================================================
+   DARK MODE BUTTON
+===================================================== */
+
+.theme-btn {
+    width: 64px;
+    height: 64px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ffbd0a;
+
+    color: #000000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.theme-btn:hover {
+    transform: scale(1.06);
+
+    background: #ffc107;
+}
+
+
+/* =====================================================
+   RTL BUTTON
+===================================================== */
+
+.rtl-btn {
+    height: 64px;
+
+    min-width: 108px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    border-radius: 35px;
+
+    background: #1c2738;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+
+.rtl-btn:hover {
+    background: #ffbd0a;
+
+    color: #000000;
+}
+
+
+/* =====================================================
+   DARK MODE HEADER
+===================================================== */
+
+body.dark-mode .auth-header {
+    background: #161b22;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+
+body.dark-mode .auth-brand-name {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   RTL POSITION
+===================================================== */
+
+html[dir="rtl"] .auth-controls {
+    right: auto;
+    left: 35px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .auth-header {
+        height: 125px;
+    }
+
+    .auth-logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .auth-brand-name {
+        font-size: 34px;
+    }
+
+    .auth-controls {
+        right: 20px;
+    }
+
+    html[dir="rtl"] .auth-controls {
+        right: auto;
+        left: 20px;
+    }
+
+    .theme-btn {
+        width: 54px;
+        height: 54px;
+    }
+
+    .rtl-btn {
+        height: 54px;
+        min-width: 95px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+
+    .auth-header {
+        height: 105px;
+
+        padding: 10px 15px;
+    }
+
+    .auth-logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .auth-brand-name {
+        font-size: 25px;
+
+        letter-spacing: -0.8px;
+    }
+
+    .auth-brand {
+        gap: 7px;
+    }
+
+    .auth-controls {
+        right: 12px;
+
+        gap: 6px;
+    }
+
+    html[dir="rtl"] .auth-controls {
+        right: auto;
+        left: 12px;
+    }
+
+    .theme-btn {
+        width: 43px;
+        height: 43px;
+
+        font-size: 16px;
+    }
+
+    .rtl-btn {
+        height: 43px;
+
+        min-width: 70px;
+
+        padding: 0 10px;
+
+        font-size: 13px;
+
+        gap: 5px;
+    }
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================= -->
+
+  <!-- =====================================================
+     STOREHUB AUTH HEADER
+===================================================== -->
+
+<header class="auth-header">
+
+    <!-- CENTER BRAND -->
+    <a href="index.html" class="auth-brand">
+
+        <img
+            src="assets/images/logo.png"
+            alt="StoreHub Logo"
+            class="auth-logo">
+
+        <span class="auth-brand-name">
+            StoreHub
+        </span>
+
+    </a>
+
+
+    <!-- RIGHT CONTROLS -->
+    <div class="auth-controls">
+
+        <!-- DARK MODE -->
+        <button
+            type="button"
+            id="themeToggle"
+            class="theme-btn"
+            aria-label="Toggle dark mode">
+
+            <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+
+        <!-- RTL -->
+        <button
+            type="button"
+            id="rtlToggle"
+            class="rtl-btn"
+            aria-label="Toggle RTL">
+
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+            <span id="rtlText">RTL</span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+    <!-- =========================================
+         SIGNUP
+    ========================================= -->
+
+    <section class="login-section">
+
+        <div class="login-card">
+
+
+            <!-- ICON -->
+
+            <div class="login-icon">
+
+                <i class="fa-solid fa-user-plus"></i>
+
+            </div>
+
+
+            <!-- TITLE -->
+
+            <h2 class="text-center fw-bold mb-2">
+
+                Create Your Account
+
+            </h2>
+
+
+            <p class="text-center text-muted mb-4">
+
+                Sign up to manage your warehouse
+                and storage services
+
+            </p>
+
+
+            <!-- FORM -->
+
+<form id="signupForm">
+
+                <!-- NAME -->
+
+                <div class="mb-3">
+
+                    <label
+                        for="name"
+                        class="form-label fw-semibold">
+
+                        Full Name
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        class="form-control"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required>
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="mb-3">
+
+                    <label
+                        for="email"
+                        class="form-label fw-semibold">
+
+                        Email Address
+
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        class="form-control"
+                        placeholder="Enter your email address"
+                        autocomplete="email"
+                        required>
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div class="mb-3">
+
+                    <label
+                        for="phone"
+                        class="form-label fw-semibold">
+
+                        Phone Number
+
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        class="form-control"
+                        placeholder="Enter your phone number"
+                        autocomplete="tel"
+                        required>
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="mb-3">
+
+                    <label
+                        for="password"
+                        class="form-label fw-semibold">
+
+                        Password
+
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        class="form-control"
+                        placeholder="Create a password"
+                        autocomplete="new-password"
+                        required>
+
+                </div>
+
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="mb-4">
+
+                    <label
+                        for="confirmPassword"
+                        class="form-label fw-semibold">
+
+                        Confirm Password
+
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        class="form-control"
+                        placeholder="Confirm your password"
+                        autocomplete="new-password"
+                        required>
+
+                </div>
+
+
+
+                <!-- TERMS -->
+
+                <div class="form-check mb-4">
+
+                    <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="terms"
+                        required>
+
+                    <label
+                        class="form-check-label"
+                        for="terms">
+
+                        I agree to the
+                        <a
+                            href="#"
+                            class="text-warning text-decoration-none">
+
+                            Terms & Conditions
+
+                        </a>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- SIGNUP BUTTON -->
+
+                <button
+                    type="submit"
+                    class="btn btn-warning login-btn">
+
+                    <i class="fa-solid fa-user-plus me-2"></i>
+
+                    Create Account
+
+                </button>
+
+            </form>
+
+
+
+            <!-- LOGIN LINK -->
+
+            <p
+                class="text-center text-muted mt-4 mb-0">
+
+                Already have an account?
+
+                <a
+                    href="login.html"
+                    class="text-warning fw-semibold text-decoration-none">
+
+                    Login
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+  
+
+
+    <!-- =========================================
+         BOOTSTRAP JS
+    ========================================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+
+    <!-- =========================================
+         DARK MODE + RTL
+    ========================================= -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                /* =========================================
+                   DARK MODE
+                ========================================= */
+
+                const themeToggle =
+                    document.getElementById("themeToggle");
+
+
+                const savedTheme =
+                    localStorage.getItem("theme");
+
+
+                if (savedTheme === "dark") {
+
+                    document.body.classList.add(
+                        "dark-mode"
+                    );
+
+                    if (themeToggle) {
+
+                        themeToggle.innerHTML = "☀️";
+
+                    }
+
+                }
+
+
+                if (themeToggle) {
+
+                    themeToggle.addEventListener(
+                        "click",
+                        function () {
+
+
+                            document.body.classList.toggle(
+                                "dark-mode"
+                            );
+
+
+                            if (
+                                document.body.classList.contains(
+                                    "dark-mode"
+                                )
+                            ) {
+
+                                localStorage.setItem(
+                                    "theme",
+                                    "dark"
+                                );
+
+                                themeToggle.innerHTML = "☀️";
+
+                            }
+
+                            else {
+
+                                localStorage.setItem(
+                                    "theme",
+                                    "light"
+                                );
+
+                                themeToggle.innerHTML = "🌙";
+
+                            }
+
+                        }
+                    );
+
+                }
+
+
+
+                /* =========================================
+                   RTL / LTR
+                ========================================= */
+
+                const rtlToggle =
+                    document.getElementById("rtlToggle");
+
+
+                const savedDirection =
+                    localStorage.getItem("direction");
+
+
+                if (savedDirection === "rtl") {
+
+                    document.documentElement
+                        .setAttribute("dir", "rtl");
+
+
+                    if (rtlToggle) {
+
+                        rtlToggle.innerHTML = "LTR";
+
+                    }
+
+                }
+
+                else {
+
+                    document.documentElement
+                        .setAttribute("dir", "ltr");
+
+
+                    if (rtlToggle) {
+
+                        rtlToggle.innerHTML = "RTL";
+
+                    }
+
+                }
+
+
+                if (rtlToggle) {
+
+                    rtlToggle.addEventListener(
+                        "click",
+                        function () {
+
+
+                            const currentDirection =
+                                document.documentElement
+                                    .getAttribute("dir");
+
+
+                            if (
+                                currentDirection === "rtl"
+                            ) {
+
+                                document.documentElement
+                                    .setAttribute(
+                                        "dir",
+                                        "ltr"
+                                    );
+
+                                localStorage.setItem(
+                                    "direction",
+                                    "ltr"
+                                );
+
+                                rtlToggle.innerHTML = "RTL";
+
+                            }
+
+                            else {
+
+                                document.documentElement
+                                    .setAttribute(
+                                        "dir",
+                                        "rtl"
+                                    );
+
+                                localStorage.setItem(
+                                    "direction",
+                                    "rtl"
+                                );
+
+                                rtlToggle.innerHTML = "LTR";
+
+                            }
+
+                        }
+                    );
+
+                }
+
+            }
+        );
+
+    </script>
+    <script>
+        /* =========================================
+   SIGNUP SUCCESS
+========================================= */
+
+const signupForm = document.getElementById("signupForm");
+
+if (signupForm) {
+
+    signupForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const password = document.getElementById("password").value;
+        const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+        const terms = document.getElementById("terms").checked;
+
+
+        /* Password check */
+        if (password !== confirmPassword) {
+
+            alert("Passwords do not match!");
+
+            return;
+        }
+
+
+        /* Terms check */
+        if (!terms) {
+
+            alert("Please accept the Terms & Conditions.");
+
+            return;
+        }
+
+
+        /* Signup successful */
+
+        alert("Signup Successful! 🎉");
+
+
+        /* Go to login page */
+
+        window.location.href = "login.html";
+
+    });
+
+}
+    </script>
+
+
+</body>
+
+</html>
