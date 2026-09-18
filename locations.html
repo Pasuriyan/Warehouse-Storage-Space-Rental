@@ -703,11 +703,48 @@
 
 <section class="py-5 bg-body-secondary">
 
+    <style>
+        /* Convenient Locations - Force Equal Height */
+        .location-grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .location-grid > .location-col {
+            display: flex;
+        }
+
+        .location-card {
+            width: 100%;
+            height: 155px !important;
+            min-height: 155px !important;
+            max-height: 155px !important;
+            box-sizing: border-box;
+        }
+
+        .location-card h6 {
+            margin-bottom: 6px;
+        }
+
+        .location-card small {
+            line-height: 1.5;
+        }
+
+        /* Mobile */
+        @media (max-width: 575.98px) {
+            .location-card {
+                height: 155px !important;
+                min-height: 155px !important;
+                max-height: 155px !important;
+            }
+        }
+    </style>
+
     <div class="container">
 
         <div class="row align-items-center g-5">
 
-
+            <!-- IMAGE -->
             <div class="col-lg-6">
 
                 <img
@@ -719,60 +756,44 @@
             </div>
 
 
+            <!-- CONTENT -->
             <div class="col-lg-6">
 
-                <span
-                    class="text-warning fw-semibold">
-
+                <span class="text-warning fw-semibold">
                     CONVENIENT LOCATIONS
-
                 </span>
 
-
-                <h2
-                    class="fw-bold mt-2">
-
+                <h2 class="fw-bold mt-2">
                     Storage Close to
                     Where You Need It
-
                 </h2>
 
-
-                <p
-                    class="text-body-secondary">
-
+                <p class="text-body-secondary">
                     Our facilities are positioned in
                     convenient areas so you can easily
                     access your belongings whenever
                     required.
-
                 </p>
 
 
-                <div class="row g-3 mt-3">
+                <!-- LOCATION GRID -->
+                <div class="row g-3 mt-3 location-grid">
 
 
-                    <div class="col-sm-6">
+                    <!-- EASY ACCESS -->
+                    <div class="col-sm-6 location-col">
 
-                        <div
-                            class="bg-body border rounded-3 p-3">
+                        <div class="location-card bg-body border rounded-3 p-3">
 
-                            <i
-                                class="fa-solid fa-road text-warning fa-lg mb-2">
-                            </i>
+                            <i class="fa-solid fa-road text-warning fa-lg mb-2"></i>
 
                             <h6 class="fw-bold">
-
                                 Easy Access
-
                             </h6>
 
-                            <small
-                                class="text-body-secondary">
-
+                            <small class="text-body-secondary">
                                 Conveniently connected
                                 locations.
-
                             </small>
 
                         </div>
@@ -780,27 +801,20 @@
                     </div>
 
 
-                    <div class="col-sm-6">
+                    <!-- PARKING -->
+                    <div class="col-sm-6 location-col">
 
-                        <div
-                            class="bg-body border rounded-3 p-3">
+                        <div class="location-card bg-body border rounded-3 p-3">
 
-                            <i
-                                class="fa-solid fa-car text-warning fa-lg mb-2">
-                            </i>
+                            <i class="fa-solid fa-car text-warning fa-lg mb-2"></i>
 
                             <h6 class="fw-bold">
-
                                 Parking Available
-
                             </h6>
 
-                            <small
-                                class="text-body-secondary">
-
+                            <small class="text-body-secondary">
                                 Easy vehicle access for
-                                loading and unloading.
-
+                                loading.
                             </small>
 
                         </div>
@@ -808,27 +822,20 @@
                     </div>
 
 
-                    <div class="col-sm-6">
+                    <!-- DELIVERY -->
+                    <div class="col-sm-6 location-col">
 
-                        <div
-                            class="bg-body border rounded-3 p-3">
+                        <div class="location-card bg-body border rounded-3 p-3">
 
-                            <i
-                                class="fa-solid fa-truck text-warning fa-lg mb-2">
-                            </i>
+                            <i class="fa-solid fa-truck text-warning fa-lg mb-2"></i>
 
                             <h6 class="fw-bold">
-
                                 Delivery Friendly
-
                             </h6>
 
-                            <small
-                                class="text-body-secondary">
-
+                            <small class="text-body-secondary">
                                 Suitable for business
-                                storage and inventory.
-
+                                storage.
                             </small>
 
                         </div>
@@ -836,27 +843,20 @@
                     </div>
 
 
-                    <div class="col-sm-6">
+                    <!-- 24/7 -->
+                    <div class="col-sm-6 location-col">
 
-                        <div
-                            class="bg-body border rounded-3 p-3">
+                        <div class="location-card bg-body border rounded-3 p-3">
 
-                            <i
-                                class="fa-solid fa-clock text-warning fa-lg mb-2">
-                            </i>
+                            <i class="fa-solid fa-clock text-warning fa-lg mb-2"></i>
 
                             <h6 class="fw-bold">
-
                                 24/7 Access
-
                             </h6>
 
-                            <small
-                                class="text-body-secondary">
-
-                                Access your belongings
-                                whenever you need.
-
+                            <small class="text-body-secondary">
+                                Access your belongings.
+                                
                             </small>
 
                         </div>
@@ -872,7 +872,6 @@
     </div>
 
 </section>
-
 
 
 <!-- =====================================================

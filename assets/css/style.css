@@ -2820,3 +2820,335 @@ html[data-bs-theme="dark"] .navbar-toggler i {
 .navbar-toggler:focus {
     box-shadow: none !important;
 }
+/* =====================================================
+   STOREHUB - COMMON PAGE LEFT ALIGNMENT
+===================================================== */
+
+/* Main Bootstrap container */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Keep all sections aligned consistently */
+section > .container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Keep row spacing consistent */
+section .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Prevent columns from creating uneven alignment */
+section .row > [class*="col-"] {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* Prevent horizontal overflow */
+html,
+body {
+    overflow-x: hidden;
+}
+
+section,
+main {
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767.98px) {
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    section .row > [class*="col-"] {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+}
+/* =====================================================
+   STOREHUB - NAVBAR ALIGNMENT FIX
+===================================================== */
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* Navbar container */
+.navbar > .container,
+.navbar .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Logo / Brand */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Navigation menu */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Individual menu items */
+.navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+}
+
+/* Menu links */
+.navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 8px 14px;
+    white-space: nowrap;
+}
+
+/* Dropdown alignment */
+.navbar-nav .dropdown-menu {
+    margin-top: 8px;
+}
+
+/* Right-side navbar buttons */
+.navbar .btn {
+    white-space: nowrap;
+}
+
+/* Login / Signup / CTA area */
+.navbar .d-flex {
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* =====================================================
+   TABLET - 992px AND BELOW
+===================================================== */
+
+@media (max-width: 991.98px) {
+
+    .navbar > .container,
+    .navbar .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .navbar-brand {
+        margin-right: 0;
+    }
+
+    /* Mobile / tablet menu */
+    .navbar-collapse {
+        width: 100%;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        align-items: flex-start;
+        padding-top: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* Dropdown */
+    .navbar-nav .dropdown-menu {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    /* Right buttons */
+    .navbar .d-flex {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 575.98px) {
+
+    .navbar {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar > .container,
+    .navbar .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .navbar-brand {
+        margin-right: 0;
+    }
+
+    .navbar-brand img {
+        max-width: 180px;
+        height: auto;
+    }
+
+    /* Hamburger */
+    .navbar-toggler {
+        margin-left: auto;
+        padding: 6px 9px;
+    }
+
+    .navbar-collapse {
+        margin-top: 10px;
+    }
+
+    .navbar-nav {
+        padding-top: 5px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0;
+    }
+
+    .navbar .d-flex {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .navbar .d-flex .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+/* =====================================================
+   STOREHUB - HAMBURGER AT 1024px
+===================================================== */
+
+@media (max-width: 1024px) {
+
+    /* Hide desktop menu */
+    .navbar-expand-lg .navbar-collapse {
+        display: none !important;
+    }
+
+    /* Show hamburger */
+    .navbar-expand-lg .navbar-toggler {
+        display: block !important;
+        margin-left: auto;
+        border: 1px solid currentColor;
+    }
+
+    /* Show menu when hamburger is clicked */
+    .navbar-expand-lg .navbar-collapse.show {
+        display: block !important;
+    }
+
+    /* Navigation becomes vertical */
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* Navbar dropdown */
+    .navbar-expand-lg .dropdown-menu {
+        position: static;
+        width: 100%;
+        margin-top: 0;
+        border: 0;
+        box-shadow: none;
+    }
+
+    /* Login / Signup buttons */
+    .navbar-expand-lg .navbar-collapse .d-flex {
+        width: 100%;
+        margin-top: 10px;
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =====================================================
+   HAMBURGER ICON
+===================================================== */
+
+@media (max-width: 1024px) {
+
+    .navbar-toggler {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 40px;
+        padding: 6px 10px;
+        margin-left: auto;
+    }
+
+    .navbar-toggler-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+}
