@@ -3152,3 +3152,432 @@ main {
     }
 
 }
+/* =====================================================
+   FREEWAY - COMMON NAVBAR
+   DESKTOP + MOBILE 1024px
+===================================================== */
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    position: relative;
+    z-index: 1000;
+}
+
+/* Brand */
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+/* Hamburger */
+.navbar .navbar-toggler {
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 6px 8px;
+}
+
+/* =====================================================
+   1024px AND BELOW
+===================================================== */
+
+@media (max-width: 1024px) {
+
+    /* Navbar */
+    .navbar {
+        padding: 12px 15px !important;
+    }
+
+    /* Main navbar container */
+    .navbar > .container,
+    .navbar > .container-fluid {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    /* Logo + brand */
+    .navbar .navbar-brand {
+        font-size: 22px;
+        margin-right: 0;
+    }
+
+    /* Logo */
+    .navbar .navbar-brand img {
+        max-width: 50px;
+        height: auto;
+    }
+
+    /* ================= HAMBURGER ================= */
+
+    .navbar .navbar-toggler {
+        display: block !important;
+
+        margin-left: auto !important;
+
+        position: relative;
+        z-index: 1100;
+    }
+
+    .navbar .navbar-toggler-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* ================= MOBILE MENU ================= */
+
+    .navbar .navbar-collapse {
+        flex-basis: 100%;
+        width: 100%;
+
+        margin-top: 12px;
+
+        padding: 10px 0 0;
+
+        text-align: center;
+    }
+
+    /* Menu */
+    .navbar .navbar-nav {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center !important;
+        justify-content: center;
+
+        gap: 4px;
+    }
+
+    /* Menu items */
+    .navbar .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Menu links */
+    .navbar .nav-link {
+        display: block;
+
+        width: 100%;
+
+        padding: 10px 15px !important;
+
+        font-size: 17px;
+
+        text-align: center;
+    }
+
+    /* Active link */
+    .navbar .nav-link.active {
+        font-weight: 600;
+    }
+
+    /* ================= NAVBAR BUTTONS ================= */
+
+    .navbar .navbar-actions,
+    .navbar .nav-actions {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 8px;
+
+        margin-top: 12px;
+        padding-bottom: 8px;
+    }
+
+    .navbar .navbar-actions button,
+    .navbar .nav-actions button {
+        min-width: 90px;
+    }
+}
+
+
+/* =====================================================
+   768px
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 10px 15px !important;
+    }
+
+    .navbar .navbar-brand {
+        font-size: 20px;
+    }
+
+    .navbar .navbar-brand img {
+        max-width: 45px;
+    }
+
+    .navbar .nav-link {
+        font-size: 16px;
+        padding: 9px 15px !important;
+    }
+
+}
+
+
+/* =====================================================
+   480px
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .navbar .navbar-brand {
+        font-size: 18px;
+    }
+
+    .navbar .navbar-brand img {
+        max-width: 42px;
+    }
+
+    .navbar .navbar-toggler-icon {
+        width: 27px;
+        height: 27px;
+    }
+
+    .navbar .nav-link {
+        font-size: 15px;
+    }
+
+}
+/* =====================================================
+   MOVE NAVBAR TO TOP
+===================================================== */
+
+.navbar {
+    margin-top: 0 !important;
+    top: 0 !important;
+}
+
+/* Remove extra space above navbar */
+body {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* If navbar is sticky */
+.navbar.sticky-top {
+    top: 0 !important;
+}
+
+/* Mobile */
+@media (max-width: 1024px) {
+    .navbar {
+        margin-top: 0 !important;
+        top: 0 !important;
+    }
+}
+/* =====================================================
+   STOREHUB COMMON NAVBAR
+   1024px AND BELOW = MOBILE MENU
+===================================================== */
+
+/* Navbar */
+.navbar.sticky-top {
+    top: 0 !important;
+    margin-top: 0 !important;
+    z-index: 1050;
+}
+
+/* Normal desktop navbar */
+.navbar .container {
+    position: relative;
+}
+
+/* Brand */
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Logo */
+.navbar .navbar-brand img {
+    height: 45px !important;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Hamburger */
+.navbar .navbar-toggler {
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 5px 8px !important;
+}
+
+
+/* =====================================================
+   1024px AND BELOW
+===================================================== */
+
+@media (max-width: 1024px) {
+
+    /* Navbar stays at top */
+    .navbar.sticky-top {
+        top: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    /* Container */
+    .navbar .container {
+        position: relative;
+        width: 100%;
+    }
+
+    /* Brand */
+    .navbar .navbar-brand {
+        font-size: 21px;
+    }
+
+    /* Hamburger */
+    .navbar .navbar-toggler {
+        display: block !important;
+
+        position: absolute;
+        right: 12px;
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        margin: 0 !important;
+        z-index: 1060;
+    }
+
+    /* Hamburger icon */
+    .navbar .navbar-toggler i {
+        font-size: 28px !important;
+        color: #ffffff !important;
+    }
+
+    /* Open menu */
+    .navbar .navbar-collapse {
+        width: 100%;
+        margin-top: 12px;
+
+        padding: 8px 0 12px;
+
+        text-align: center;
+    }
+
+    /* Navigation */
+    .navbar .navbar-nav {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        margin-bottom: 10px !important;
+    }
+
+    /* Nav item */
+    .navbar .navbar-nav .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Nav links */
+    .navbar .navbar-nav .nav-link {
+        width: 100%;
+        padding: 10px 15px !important;
+
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* Dropdown */
+    .navbar .dropdown-menu {
+        position: static !important;
+
+        width: 100%;
+        margin: 0 !important;
+
+        text-align: center;
+        border: 0;
+    }
+
+    /* Dropdown items */
+    .navbar .dropdown-item {
+        text-align: center;
+        padding: 9px 15px;
+    }
+
+    /* Right side buttons */
+    .navbar .navbar-collapse > .d-flex {
+        width: 100%;
+
+        justify-content: center !important;
+        align-items: center !important;
+
+        margin-top: 8px;
+        padding-bottom: 5px;
+    }
+
+    /* Login / Signup */
+    .navbar .navbar-collapse > .d-flex a {
+        font-size: 14px;
+    }
+}
+
+
+/* =====================================================
+   768px
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .navbar .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .navbar .navbar-brand {
+        font-size: 20px;
+    }
+
+    .navbar .navbar-brand img {
+        height: 43px !important;
+    }
+
+    .navbar .navbar-toggler {
+        right: 10px;
+    }
+}
+
+
+/* =====================================================
+   480px
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .navbar .navbar-brand {
+        font-size: 18px;
+    }
+
+    .navbar .navbar-brand img {
+        height: 40px !important;
+    }
+
+    .navbar .navbar-toggler {
+        right: 5px;
+    }
+
+    .navbar .navbar-toggler i {
+        font-size: 25px !important;
+    }
+}
