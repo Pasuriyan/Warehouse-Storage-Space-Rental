@@ -19,6 +19,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
@@ -27,8 +28,7 @@
      NAVBAR
 ===================================================== -->
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
-
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
     <div class="container">
 
         <!-- LOGO -->
@@ -237,577 +237,439 @@
             </ul>
 
 
-            <!-- RIGHT SIDE -->
-            <div class="d-flex align-items-center gap-2 flex-wrap">
+           
+           <!-- RIGHT SIDE -->
+<!-- RIGHT SIDE -->
+<!-- NEW -->
+<div class="d-flex align-items-center gap-2 navbar-actions">
+    <!-- RTL / LTR -->
+    <button
+        id="rtlToggle"
+        type="button"
+        class="btn d-flex align-items-center justify-content-center"
+        style="
+            width:100px !important;
+            height:40px !important;
+            min-width:100px !important;
+            padding:0 !important;
+            margin:0 !important;
+            border:1px solid #6c757d !important;
+            border-radius:50px !important;
+            color:#fff !important;
+            background:#17233f !important;
+            box-shadow:none !important;
+        "
+        title="Switch RTL / LTR">
+
+        <i class="fa-solid fa-arrows-left-right"></i>
+
+    </button>
 
 
-                <!-- RTL / LTR -->
+    <!-- DARK MODE -->
+    <button
+        id="themeToggle"
+        type="button"
+        class="btn d-flex align-items-center justify-content-center"
+        style="
+            width:100px !important;
+            height:40px !important;
+            min-width:100px !important;
+            padding:0 !important;
+            margin:0 !important;
+            border:1px solid #6c757d !important;
+            border-radius:50px !important;
+            color:#fff !important;
+            background:#17233f !important;
+            box-shadow:none !important;
+        "
+        title="Toggle dark mode">
 
-                <button
-                    id="rtlToggle"
-                    type="button"
-                    class="btn btn-outline-secondary rounded-pill btn-sm px-3">
+        <i
+            id="themeIcon"
+            class="fa-solid fa-moon">
+        </i>
 
-                    <span id="directionText">LTR</span>
+    </button>
 
-                    <i
-                        class="fa-solid fa-arrows-left-right ms-1">
-                    </i>
-
-                </button>
-
-
-                <!-- DARK MODE -->
-
-                <button
-                    id="themeToggle"
-                    type="button"
-                    class="btn btn-outline-secondary rounded-circle"
-                    style="width:38px;height:38px;">
-
-                    <i
-                        id="themeIcon"
-                        class="fa-solid fa-moon">
-                    </i>
-
-                </button>
-
-
-        
-<!-- LOGIN -->
-
-<a
-    href="login.html"
-    class="btn btn-outline-dark btn-sm">
-
-    Login
-
-</a>
-
-
-<!-- SIGNUP -->
-
-<a
-    href="signup.html"
-    class="btn btn-dark btn-sm">
-
-    Signup
-
-</a>
-
-            </div>
+</div>
 
         </div>
 
     </div>
 
 </nav>
-
+<style>
+    
+</style>
 
 <!-- =====================================================
      HERO
 ===================================================== -->
-
-<section
-    class="py-5 bg-body-secondary">
-
-    <div class="container py-5">
-
-        <div
-            class="row align-items-center g-5">
-
-
-            <!-- CONTENT -->
-
-            <div class="col-lg-6">
-
-                <span
-                    class="badge text-bg-warning mb-3 px-3 py-2">
-
-                    SECURE STORAGE SOLUTIONS
-
-                </span>
-
-
-                <h1
-                    class="display-4 fw-bold text-body">
-
-                    Secure Storage.
-                    <br>
-                    Flexible Space.
-
-                </h1>
-
-
-                <p
-                    class="lead text-body-secondary mt-3">
-
-                    Reliable warehouse and storage spaces
-                    for individuals, families and businesses.
-
-                </p>
-
-
-                <div
-                    class="d-flex gap-3 flex-wrap mt-4">
-
-                    <a
-                        href="contact.html"
-                        class="btn btn-warning btn-lg px-4">
-
-                        Find Storage
-
-                    </a>
-
-
-                    <a
-                        href="pricing.html"
-                        class="btn btn-outline-secondary btn-lg px-4">
-
-                        View Pricing
-
-                    </a>
-
-                </div>
-
-
-                <!-- TRUST -->
-
-                <div
-                    class="d-flex flex-wrap gap-4 mt-4">
-
-                    <span class="text-body-secondary">
-
-                        <i
-                            class="fa-solid fa-shield-halved text-warning me-2">
-                        </i>
-
-                        Secure
-
-                    </span>
-
-
-                    <span class="text-body-secondary">
-
-                        <i
-                            class="fa-solid fa-clock text-warning me-2">
-                        </i>
-
-                        24/7 Access
-
-                    </span>
-
-
-                    <span class="text-body-secondary">
-
-                        <i
-                            class="fa-solid fa-video text-warning me-2">
-                        </i>
-
-                        CCTV
-
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <!-- IMAGE -->
-
-            <div class="col-lg-6">
-
-                <img
-                    src="assets/images/hero.png.jpg"
-                    alt="Warehouse Storage"
-                    class="img-fluid rounded-4 shadow"
-                    style="width:100%;height:450px;object-fit:cover;">
-
-            </div>
-
-        </div>
-
-    </div>
-
+<section class="py-5 bg-body-secondary">
+<div class="container py-5">
+<div class="row align-items-center g-5">
+<div class="col-lg-6">
+<span class="badge text-bg-warning mb-3 px-3 py-2">WAREHOUSE &amp; STORAGE RENTAL</span>
+<h1 class="display-4 fw-bold text-body">Flexible Warehouse &amp;<br>Storage Space for Your Needs</h1>
+<p class="lead text-body-secondary mt-3">Secure, clean and flexible storage for personal belongings, household goods, business inventory and equipment. Choose the space you need and rent it for as long as you need.</p>
+<div class="d-flex gap-3 flex-wrap mt-4">
+<a href="contact.html" class="btn btn-warning btn-lg px-4"><i class="fa-solid fa-box-open me-2"></i>Find Your Space</a>
+<a href="pricing.html" class="btn btn-outline-secondary btn-lg px-4"><i class="fa-solid fa-tags me-2"></i>View Storage Plans</a>
+</div>
+<div class="row g-3 mt-4">
+<div class="col-6 col-sm-4"><span class="text-body-secondary"><i class="fa-solid fa-shield-halved text-warning me-2"></i>Secure Storage</span></div>
+<div class="col-6 col-sm-4"><span class="text-body-secondary"><i class="fa-solid fa-calendar-check text-warning me-2"></i>Flexible Rental</span></div>
+<div class="col-6 col-sm-4"><span class="text-body-secondary"><i class="fa-solid fa-warehouse text-warning me-2"></i>Multiple Sizes</span></div>
+</div>
+</div>
+<div class="col-lg-6">
+<img src="assets/images/hero.png.jpg" alt="StoreHub warehouse and storage facility" class="img-fluid rounded-4 shadow" style="width:100%;height:450px;object-fit:cover;">
+</div>
+</div>
+</div>
 </section>
-
-
 <!-- =====================================================
-     STORAGE OPTIONS
+     WHY CHOOSE US / STATS
 ===================================================== -->
+<section class="py-5 bg-body-secondary">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <!-- Left Column: Content + Hero Showcase Image -->
+      <div class="col-lg-5">
+        <span class="text-warning fw-semibold text-uppercase tracking-wide">WHY STOREHUB</span>
+        <h2 class="fw-bold mt-2 text-body">A Simpler Way to Rent Storage</h2>
+        <p class="text-body-secondary">
+          Whether you need extra room at home or additional business storage, StoreHub helps you choose a suitable space without making the process complicated.
+        </p>
+        <a href="contact.html" class="btn btn-warning mt-2 mb-4">
+          Talk to Our Team <i class="fa-solid fa-arrow-right ms-2"></i>
+        </a>
 
-<section class="py-5">
-
-    <div class="container">
-
-        <div class="text-center mb-5">
-
-            <span
-                class="text-warning fw-semibold">
-
-                STORAGE OPTIONS
-
-            </span>
-
-
-            <h2
-                class="fw-bold mt-2 text-body">
-
-                Choose Your Storage Space
-
-            </h2>
-
-
-            <p
-                class="text-body-secondary">
-
-                Flexible sizes for every storage requirement.
-
-            </p>
-
+        <!-- Feature Spotlight Image -->
+        <div class="position-relative mt-2 d-none d-lg-block rounded-4 overflow-hidden shadow-sm" style="height: 220px;">
+          <img 
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" 
+            alt="Modern Storage Unit Facility" 
+            class="w-100 h-100 object-fit-cover"
+          />
+          <div class="position-absolute bottom-0 start-0 m-3 px-3 py-2 bg-dark bg-opacity-75 text-white rounded-3 backdrop-blur small">
+            <i class="fa-solid fa-circle-check text-warning me-2"></i> Clean, Inspected & Move-in Ready
+          </div>
         </div>
+      </div>
 
-
-        <div class="row g-4">
-
-
-            <!-- SMALL -->
-
-            <div class="col-md-6 col-lg-3">
-
-                <div
-                    class="card h-100 border-0 shadow-sm">
-
-                    <div class="card-body p-4">
-
-                        <i
-                            class="fa-solid fa-box fa-2x text-warning mb-3">
-                        </i>
-
-
-                        <h4 class="fw-bold">
-                            Small
-                        </h4>
-
-
-                        <p
-                            class="text-body-secondary">
-
-                            Perfect for personal belongings
-                            and small items.
-
-                        </p>
-
-
-                        <h5 class="fw-bold">
-
-                            ₹1,499
-
-                            <small
-                                class="text-body-secondary fw-normal">
-
-                                / month
-
-                            </small>
-
-                        </h5>
-
-
-                        <a
-                            href="contact.html"
-                            class="btn btn-outline-warning w-100 mt-3">
-
-                            Enquire
-
-                        </a>
-
-                    </div>
-
-                </div>
-
+      <!-- Right Column: 4 Feature Cards with Relevant Header Images -->
+      <div class="col-lg-7">
+        <div class="row g-3">
+          <!-- 1. Flexible Sizes -->
+          <div class="col-sm-6">
+            <div class="bg-body rounded-4 overflow-hidden shadow-sm h-100 d-flex flex-column">
+              <div class="position-relative" style="height: 130px;">
+                <img 
+                  src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?auto=format&fit=crop&w=600&q=80" 
+                  alt="Different sized storage units and boxes" 
+                  class="w-100 h-100 object-fit-cover"
+                />
+                <span class="position-absolute bottom-0 start-0 m-2 p-2 bg-body rounded-3 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                  <i class="fa-solid fa-ruler-combined text-warning"></i>
+                </span>
+              </div>
+              <div class="p-3 pt-2 flex-grow-1">
+                <h5 class="fw-bold text-body">Flexible Sizes</h5>
+                <p class="text-body-secondary mb-0 small">Choose a space based on the quantity of goods you need to store.</p>
+              </div>
             </div>
+          </div>
 
-
-            <!-- MEDIUM -->
-
-            <div class="col-md-6 col-lg-3">
-
-                <div
-                    class="card h-100 border-0 shadow-sm">
-
-                    <div class="card-body p-4">
-
-                        <i
-                            class="fa-solid fa-boxes-stacked fa-2x text-warning mb-3">
-                        </i>
-
-
-                        <h4 class="fw-bold">
-                            Medium
-                        </h4>
-
-
-                        <p
-                            class="text-body-secondary">
-
-                            Ideal for household and
-                            business storage.
-
-                        </p>
-
-
-                        <h5 class="fw-bold">
-
-                            ₹2,499
-
-                            <small
-                                class="text-body-secondary fw-normal">
-
-                                / month
-
-                            </small>
-
-                        </h5>
-
-
-                        <a
-                            href="contact.html"
-                            class="btn btn-outline-warning w-100 mt-3">
-
-                            Enquire
-
-                        </a>
-
-                    </div>
-
-                </div>
-
+          <!-- 2. Flexible Rental -->
+          <div class="col-sm-6">
+            <div class="bg-body rounded-4 overflow-hidden shadow-sm h-100 d-flex flex-column">
+              <div class="position-relative" style="height: 130px;">
+                <img 
+                  src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=600&q=80" 
+                  alt="Flexible calendar scheduling and rental booking" 
+                  class="w-100 h-100 object-fit-cover"
+                />
+                <span class="position-absolute bottom-0 start-0 m-2 p-2 bg-body rounded-3 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                  <i class="fa-solid fa-calendar-check text-warning"></i>
+                </span>
+              </div>
+              <div class="p-3 pt-2 flex-grow-1">
+                <h5 class="fw-bold text-body">Flexible Rental</h5>
+                <p class="text-body-secondary mb-0 small">Options for short-term and longer-term requirements.</p>
+              </div>
             </div>
+          </div>
 
-
-            <!-- LARGE -->
-
-            <div class="col-md-6 col-lg-3">
-
-                <div
-                    class="card h-100 border-0 shadow-sm">
-
-                    <div class="card-body p-4">
-
-                        <i
-                            class="fa-solid fa-warehouse fa-2x text-warning mb-3">
-                        </i>
-
-
-                        <h4 class="fw-bold">
-                            Large
-                        </h4>
-
-
-                        <p
-                            class="text-body-secondary">
-
-                            More room for inventory,
-                            equipment and furniture.
-
-                        </p>
-
-
-                        <h5 class="fw-bold">
-
-                            ₹4,499
-
-                            <small
-                                class="text-body-secondary fw-normal">
-
-                                / month
-
-                            </small>
-
-                        </h5>
-
-
-                        <a
-                            href="contact.html"
-                            class="btn btn-outline-warning w-100 mt-3">
-
-                            Enquire
-
-                        </a>
-
-                    </div>
-
-                </div>
-
+          <!-- 3. Security Focus -->
+          <div class="col-sm-6">
+            <div class="bg-body rounded-4 overflow-hidden shadow-sm h-100 d-flex flex-column">
+              <div class="position-relative" style="height: 130px;">
+                <img 
+                  src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" 
+                  alt="Security lock and secure storage facility" 
+                  class="w-100 h-100 object-fit-cover"
+                />
+                <span class="position-absolute bottom-0 start-0 m-2 p-2 bg-body rounded-3 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                  <i class="fa-solid fa-shield-halved text-warning"></i>
+                </span>
+              </div>
+              <div class="p-3 pt-2 flex-grow-1">
+                <h5 class="fw-bold text-body">Security Focus</h5>
+                <p class="text-body-secondary mb-0 small">Security-focused facilities designed for stored goods.</p>
+              </div>
             </div>
+          </div>
 
-
-            <!-- BUSINESS -->
-
-            <div class="col-md-6 col-lg-3">
-
-                <div
-                    class="card h-100 border-0 shadow-sm">
-
-                    <div class="card-body p-4">
-
-                        <i
-                            class="fa-solid fa-building fa-2x text-warning mb-3">
-                        </i>
-
-
-                        <h4 class="fw-bold">
-                            Business
-                        </h4>
-
-
-                        <p
-                            class="text-body-secondary">
-
-                            Large warehouse space for
-                            growing businesses.
-
-                        </p>
-
-
-                        <h5 class="fw-bold">
-                            Custom
-                        </h5>
-
-
-                        <a
-                            href="contact.html"
-                            class="btn btn-outline-warning w-100 mt-3">
-
-                            Get Quote
-
-                        </a>
-
-                    </div>
-
-                </div>
-
+          <!-- 4. Helpful Support -->
+          <div class="col-sm-6">
+            <div class="bg-body rounded-4 overflow-hidden shadow-sm h-100 d-flex flex-column">
+              <div class="position-relative" style="height: 130px;">
+                <img 
+                  src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=600&q=80" 
+                  alt="Customer support team and consultation" 
+                  class="w-100 h-100 object-fit-cover"
+                />
+                <span class="position-absolute bottom-0 start-0 m-2 p-2 bg-body rounded-3 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                  <i class="fa-solid fa-headset text-warning"></i>
+                </span>
+              </div>
+              <div class="p-3 pt-2 flex-grow-1">
+                <h5 class="fw-bold text-body">Helpful Support</h5>
+                <p class="text-body-secondary mb-0 small">Tell us your requirements and get help choosing the right space.</p>
+              </div>
             </div>
-
+          </div>
         </div>
-
+      </div>
     </div>
-
+  </div>
 </section>
+
 
 
 <!-- =====================================================
      SECURITY
 ===================================================== -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="text-warning fw-semibold">WAREHOUSE FACILITIES</span>
+      <h2 class="fw-bold mt-2 text-body">More Than Just Storage Space</h2>
+      <p class="text-body-secondary mx-auto" style="max-width: 720px;">
+        Practical facilities to make storing, accessing and managing your goods easier.
+      </p>
+    </div>
 
-<section
-    class="py-5 bg-body-secondary">
+    <div class="row g-4">
+      <!-- CCTV Monitoring -->
+      <div class="col-md-6 col-lg-3">
+        <div class="border border-secondary-subtle rounded-4 h-100 shadow-sm overflow-hidden d-flex flex-column bg-body">
+          <div class="position-relative" style="height: 180px;">
+            <img 
+              src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=600&q=80" 
+              alt="CCTV Security Monitoring" 
+              class="w-100 h-100 object-fit-cover"
+            />
+            <span class="position-absolute bottom-0 start-0 m-3 p-2 bg-body border border-secondary-subtle rounded-3 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+              <i class="fa-solid fa-video text-warning fs-5"></i>
+            </span>
+          </div>
+          <div class="p-4 pt-3 flex-grow-1">
+            <h5 class="fw-bold text-body">CCTV Monitoring</h5>
+            <p class="text-body-secondary mb-0">CCTV monitoring for added security.</p>
+          </div>
+        </div>
+      </div>
 
-    <div class="container">
+      <!-- Controlled Access -->
+      <div class="col-md-6 col-lg-3">
+        <div class="border border-secondary-subtle rounded-4 h-100 shadow-sm overflow-hidden d-flex flex-column bg-body">
+          <div class="position-relative" style="height: 180px;">
+            <img 
+              src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80" 
+              alt="Controlled Access Keypad & Door" 
+              class="w-100 h-100 object-fit-cover"
+            />
+            <span class="position-absolute bottom-0 start-0 m-3 p-2 bg-body border border-secondary-subtle rounded-3 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+              <i class="fa-solid fa-door-open text-warning fs-5"></i>
+            </span>
+          </div>
+          <div class="p-4 pt-3 flex-grow-1">
+            <h5 class="fw-bold text-body">Controlled Access</h5>
+            <p class="text-body-secondary mb-0">Controlled access helps keep storage areas secure.</p>
+          </div>
+        </div>
+      </div>
 
-        <div
-            class="row align-items-center g-5">
+      <!-- Climate Control -->
+      <div class="col-md-6 col-lg-3">
+        <div class="border border-secondary-subtle rounded-4 h-100 shadow-sm overflow-hidden d-flex flex-column bg-body">
+          <div class="position-relative" style="height: 180px;">
+            <img 
+              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" 
+              alt="Climate Controlled Warehouse" 
+              class="w-100 h-100 object-fit-cover"
+            />
+            <span class="position-absolute bottom-0 start-0 m-3 p-2 bg-body border border-secondary-subtle rounded-3 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+              <i class="fa-solid fa-temperature-half text-warning fs-5"></i>
+            </span>
+          </div>
+          <div class="p-4 pt-3 flex-grow-1">
+            <h5 class="fw-bold text-body">Climate Control</h5>
+            <p class="text-body-secondary mb-0">Suitable conditions for items requiring controlled environments.</p>
+          </div>
+        </div>
+      </div>
 
+      <!-- Loading Support -->
+      <div class="col-md-6 col-lg-3">
+        <div class="border border-secondary-subtle rounded-4 h-100 shadow-sm overflow-hidden d-flex flex-column bg-body">
+          <div class="position-relative" style="height: 180px;">
+            <img 
+              src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80" 
+              alt="Loading Bay Support" 
+              class="w-100 h-100 object-fit-cover"
+            />
+            <span class="position-absolute bottom-0 start-0 m-3 p-2 bg-body border border-secondary-subtle rounded-3 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+              <i class="fa-solid fa-truck-ramp-box text-warning fs-5"></i>
+            </span>
+          </div>
+          <div class="p-4 pt-3 flex-grow-1">
+            <h5 class="fw-bold text-body">Loading Support</h5>
+            <p class="text-body-secondary mb-0">Practical space for moving goods into and out of storage.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- =====================================================
+     BUSINESS STORAGE SOLUTIONS
+===================================================== -->
 
+<section class="py-5">
+    <div class="container py-4">
+
+        <div class="row align-items-center g-5">
+
+            <!-- IMAGE -->
             <div class="col-lg-6">
 
                 <img
-                    src="assets/images/storage sec.png.jpg"
-                    alt="Storage Security"
+                    src="assets/images/index (1).jpg"
+                    alt="Business warehouse storage"
                     class="img-fluid rounded-4 shadow"
-                    style="width:100%;height:400px;object-fit:cover;">
+                    style="width:100%; height:420px; object-fit:cover;">
 
             </div>
 
 
+            <!-- CONTENT -->
             <div class="col-lg-6">
 
-                <span
-                    class="text-warning fw-semibold">
-
-                    YOUR SAFETY FIRST
-
+                <span class="text-warning fw-semibold">
+                    BUSINESS STORAGE
                 </span>
 
-
-                <h2
-                    class="fw-bold mt-2 text-body">
-
-                    Storage You Can Trust
-
+                <h2 class="fw-bold mt-2 text-body">
+                    Flexible Warehouse Space for Growing Businesses
                 </h2>
 
-
-                <p
-                    class="text-body-secondary">
-
-                    Your belongings deserve a secure,
-                    clean and accessible storage environment.
-
+                <p class="text-body-secondary mt-3">
+                    StoreHub helps businesses manage extra inventory,
+                    equipment and supplies without the cost of maintaining
+                    their own warehouse.
                 </p>
 
+                <div class="mt-4">
 
-                <div class="row g-3 mt-3">
+                    <div class="d-flex mb-4">
 
+                        <div class="me-3">
+                            <div
+                                class="rounded-circle bg-warning text-dark
+                                d-flex align-items-center justify-content-center"
+                                style="width:50px;height:50px;">
 
-                    <div class="col-sm-6">
+                                <i class="fa-solid fa-boxes-stacked"></i>
 
-                        <div
-                            class="p-3 border rounded-3 bg-body">
+                            </div>
+                        </div>
 
-                            <i
-                                class="fa-solid fa-video text-warning me-2">
-                            </i>
+                        <div>
 
-                            CCTV Monitoring
+                            <h5 class="fw-bold text-body mb-1">
+                                Inventory Storage
+                            </h5>
+
+                            <p class="text-body-secondary mb-0">
+                                Keep your products and business stock
+                                organised and ready when needed.
+                            </p>
 
                         </div>
 
                     </div>
 
 
-                    <div class="col-sm-6">
+                    <div class="d-flex mb-4">
 
-                        <div
-                            class="p-3 border rounded-3 bg-body">
+                        <div class="me-3">
 
-                            <i
-                                class="fa-solid fa-clock text-warning me-2">
-                            </i>
+                            <div
+                                class="rounded-circle bg-warning text-dark
+                                d-flex align-items-center justify-content-center"
+                                style="width:50px;height:50px;">
 
-                            24/7 Access
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                            </div>
+
+                        </div>
+
+                        <div>
+
+                            <h5 class="fw-bold text-body mb-1">
+                                Equipment Storage
+                            </h5>
+
+                            <p class="text-body-secondary mb-0">
+                                Store tools, equipment and business assets
+                                when you need additional space.
+                            </p>
 
                         </div>
 
                     </div>
 
 
-                    <div class="col-sm-6">
+                    <div class="d-flex">
 
-                        <div
-                            class="p-3 border rounded-3 bg-body">
+                        <div class="me-3">
 
-                            <i
-                                class="fa-solid fa-temperature-half text-warning me-2">
-                            </i>
+                            <div
+                                class="rounded-circle bg-warning text-dark
+                                d-flex align-items-center justify-content-center"
+                                style="width:50px;height:50px;">
 
-                            Climate Control
+                                <i class="fa-solid fa-chart-line"></i>
+
+                            </div>
 
                         </div>
 
-                    </div>
+                        <div>
 
+                            <h5 class="fw-bold text-body mb-1">
+                                Space That Grows With You
+                            </h5>
 
-                    <div class="col-sm-6">
-
-                        <div
-                            class="p-3 border rounded-3 bg-body">
-
-                            <i
-                                class="fa-solid fa-fire-extinguisher text-warning me-2">
-                            </i>
-
-                            Fire Safety
+                            <p class="text-body-secondary mb-0">
+                                Choose a suitable storage size and expand
+                                your space as your business requirements grow.
+                            </p>
 
                         </div>
 
@@ -815,16 +677,31 @@
 
                 </div>
 
+
+                <a
+                    href="pricing.html"
+                    class="btn btn-warning mt-4 px-4">
+
+                    View Business Storage Plans
+
+                    <i class="fa-solid fa-arrow-right ms-2"></i>
+
+                </a>
+
             </div>
 
         </div>
 
     </div>
-
 </section>
+
+
+
+
 <!-- =====================================================
-     WHY CHOOSE US / STATS
+     HOW IT WORKS
 ===================================================== -->
+
 
 <section class="py-5 bg-body-secondary">
 
@@ -833,91 +710,170 @@
         <div class="text-center mb-5">
 
             <span class="text-warning fw-semibold">
-                WHY STOREHUB
+                HOW IT WORKS
             </span>
 
             <h2 class="fw-bold mt-2 text-body">
-                Storage Made Simple
+                Rent Your Storage in 4 Simple Steps
             </h2>
 
-            <p class="text-body-secondary">
-                Everything you need for safe, flexible and convenient storage.
+            <p class="text-body-secondary mx-auto" style="max-width:720px;">
+                A simple process from choosing your storage space
+                to moving your goods into the facility.
             </p>
 
         </div>
 
-        <div class="row g-4 text-center">
 
-            <div class="col-6 col-lg-3">
-
-                <div class="p-4 bg-body rounded-4 shadow-sm h-100">
-
-                    <i class="fa-solid fa-users fa-2x text-warning mb-3"></i>
-
-                    <h2 class="fw-bold text-body">
-                        5,000+
-                    </h2>
-
-                    <p class="text-body-secondary mb-0">
-                        Happy Customers
-                    </p>
-
-                </div>
-
-            </div>
+        <div class="row g-4">
 
 
-            <div class="col-6 col-lg-3">
+            <!-- STEP 01 -->
+            <div class="col-md-6 col-lg-3">
 
-                <div class="p-4 bg-body rounded-4 shadow-sm h-100">
+                <div class="card h-100 border-0 shadow-sm overflow-hidden">
 
-                    <i class="fa-solid fa-warehouse fa-2x text-warning mb-3"></i>
+                    <img
+                        src="assets/images/index (5).jpg"
+                        alt="Choose storage space"
+                        class="card-img-top"
+                        style="height:200px; object-fit:cover;">
 
-                    <h2 class="fw-bold text-body">
-                        25+
-                    </h2>
+                    <div class="card-body p-4 text-center">
 
-                    <p class="text-body-secondary mb-0">
-                        Storage Locations
-                    </p>
+                        <div
+                            class="mx-auto mb-3 rounded-circle bg-warning text-dark
+                            d-flex align-items-center justify-content-center fw-bold"
+                            style="width:55px;height:55px;">
 
-                </div>
+                            01
 
-            </div>
+                        </div>
 
+                        <h5 class="fw-bold text-body">
+                            Choose Your Space
+                        </h5>
 
-            <div class="col-6 col-lg-3">
+                        <p class="text-body-secondary mb-0">
+                            Decide the approximate storage size that
+                            suits your requirements.
+                        </p>
 
-                <div class="p-4 bg-body rounded-4 shadow-sm h-100">
-
-                    <i class="fa-solid fa-box-open fa-2x text-warning mb-3"></i>
-
-                    <h2 class="fw-bold text-body">
-                        10K+
-                    </h2>
-
-                    <p class="text-body-secondary mb-0">
-                        Items Stored
-                    </p>
+                    </div>
 
                 </div>
 
             </div>
 
 
-            <div class="col-6 col-lg-3">
+            <!-- STEP 02 -->
+            <div class="col-md-6 col-lg-3">
 
-                <div class="p-4 bg-body rounded-4 shadow-sm h-100">
+                <div class="card h-100 border-0 shadow-sm overflow-hidden">
 
-                    <i class="fa-solid fa-headset fa-2x text-warning mb-3"></i>
+                    <img
+                        src="assets/images/index (4).jpg"
+                        alt="Share storage requirement"
+                        class="card-img-top"
+                        style="height:200px; object-fit:cover;">
 
-                    <h2 class="fw-bold text-body">
-                        24/7
-                    </h2>
+                    <div class="card-body p-4 text-center">
 
-                    <p class="text-body-secondary mb-0">
-                        Customer Support
-                    </p>
+                        <div
+                            class="mx-auto mb-3 rounded-circle bg-warning text-dark
+                            d-flex align-items-center justify-content-center fw-bold"
+                            style="width:55px;height:55px;">
+
+                            02
+
+                        </div>
+
+                        <h5 class="fw-bold text-body">
+                            Share Your Requirement
+                        </h5>
+
+                        <p class="text-body-secondary mb-0">
+                            Tell our team what you want to store
+                            and how long you need the space.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 03 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 border-0 shadow-sm overflow-hidden">
+
+                    <img
+                        src="assets/images/index (3).jpg"
+                        alt="Get storage quote"
+                        class="card-img-top"
+                        style="height:200px; object-fit:cover;">
+
+                    <div class="card-body p-4 text-center">
+
+                        <div
+                            class="mx-auto mb-3 rounded-circle bg-warning text-dark
+                            d-flex align-items-center justify-content-center fw-bold"
+                            style="width:55px;height:55px;">
+
+                            03
+
+                        </div>
+
+                        <h5 class="fw-bold text-body">
+                            Get Your Quote
+                        </h5>
+
+                        <p class="text-body-secondary mb-0">
+                            We help identify a suitable storage
+                            option and rental plan.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 04 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 border-0 shadow-sm overflow-hidden">
+
+                    <img
+                        src="assets/images/index (2).jpg"
+                        alt="Move goods into storage"
+                        class="card-img-top"
+                        style="height:200px; object-fit:cover;">
+
+                    <div class="card-body p-4 text-center">
+
+                        <div
+                            class="mx-auto mb-3 rounded-circle bg-warning text-dark
+                            d-flex align-items-center justify-content-center fw-bold"
+                            style="width:55px;height:55px;">
+
+                            04
+
+                        </div>
+
+                        <h5 class="fw-bold text-body">
+                            Move In
+                        </h5>
+
+                        <p class="text-body-secondary mb-0">
+                            Confirm your space and move your
+                            goods into storage.
+                        </p>
+
+                    </div>
 
                 </div>
 
@@ -929,10 +885,91 @@
 
 </section>
 <!-- =====================================================
+     STORAGE OPTIONS
+===================================================== -->
+<section class="py-5">
+<div class="container">
+<div class="text-center mb-5">
+<span class="text-warning fw-semibold">STORAGE SOLUTIONS</span>
+<h2 class="fw-bold mt-2 text-body">Storage Space for Every Requirement</h2>
+<p class="text-body-secondary mx-auto" style="max-width:720px;">From a few boxes to business inventory, choose a storage option based on the amount and type of space you need.</p>
+</div>
+<div class="row g-4">
+<div class="col-md-6 col-lg-3"><div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+<i class="fa-solid fa-box fa-2x text-warning mb-3"></i><h4 class="fw-bold text-body">Small Storage</h4>
+<p class="text-body-secondary">For personal belongings, boxes, documents and smaller household items.</p>
+<ul class="small text-body-secondary"><li>Personal belongings</li><li>Boxes and documents</li><li>Short or long-term storage</li></ul>
+<a href="contact.html" class="btn btn-outline-warning w-100 mt-2">Enquire Now</a>
+</div></div></div>
+<div class="col-md-6 col-lg-3"><div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+<i class="fa-solid fa-boxes-stacked fa-2x text-warning mb-3"></i><h4 class="fw-bold text-body">Medium Storage</h4>
+<p class="text-body-secondary">For household goods, relocation needs and growing collections of items.</p>
+<ul class="small text-body-secondary"><li>Household goods</li><li>Moving and relocation</li><li>Growing storage needs</li></ul>
+<a href="contact.html" class="btn btn-outline-warning w-100 mt-2">Enquire Now</a>
+</div></div></div>
+<div class="col-md-6 col-lg-3"><div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+<i class="fa-solid fa-warehouse fa-2x text-warning mb-3"></i><h4 class="fw-bold text-body">Large Warehouse</h4>
+<p class="text-body-secondary">More room for furniture, equipment, stock and larger quantities of goods.</p>
+<ul class="small text-body-secondary"><li>Furniture and equipment</li><li>Bulk goods</li><li>Business inventory</li></ul>
+<a href="contact.html" class="btn btn-outline-warning w-100 mt-2">Enquire Now</a>
+</div></div></div>
+<div class="col-md-6 col-lg-3"><div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+<i class="fa-solid fa-building fa-2x text-warning mb-3"></i><h4 class="fw-bold text-body">Business Storage</h4>
+<p class="text-body-secondary">Flexible warehouse space for retailers, small businesses and teams.</p>
+<ul class="small text-body-secondary"><li>Stock and inventory</li><li>Business equipment</li><li>Custom requirements</li></ul>
+<a href="contact.html" class="btn btn-outline-warning w-100 mt-2">Get a Quote</a>
+</div></div></div>
+</div>
+</div>
+</section>
+<!-- =====================================================
      FAQ
 ===================================================== -->
-
 <section class="py-5">
+
+    <style>
+        /* FAQ Question Text */
+        #storehubFAQ .accordion-button {
+            color: #212529 !important;
+            background-color: #ffffff !important;
+            font-weight: 600;
+        }
+
+        /* FAQ Question Text - Dark Mode */
+        #storehubFAQ .accordion-button {
+            color: var(--bs-body-color) !important;
+        }
+
+        /* Force white text when dark theme is active */
+        [data-bs-theme="dark"] #storehubFAQ .accordion-button {
+            color: #ffffff !important;
+            background-color: #212529 !important;
+        }
+
+        /* Open FAQ */
+        [data-bs-theme="dark"] #storehubFAQ .accordion-button:not(.collapsed) {
+            color: #ffffff !important;
+            background-color: #343a40 !important;
+        }
+
+        /* FAQ Answer */
+        [data-bs-theme="dark"] #storehubFAQ .accordion-body {
+            color: #ced4da !important;
+            background-color: #212529 !important;
+        }
+
+        /* FAQ Box */
+        [data-bs-theme="dark"] #storehubFAQ .accordion-item {
+            background-color: #212529 !important;
+            border-color: #495057 !important;
+        }
+
+        /* Arrow */
+        [data-bs-theme="dark"] #storehubFAQ .accordion-button::after {
+            filter: invert(1);
+        }
+    </style>
+
 
     <div class="container">
 
@@ -943,15 +980,18 @@
             </span>
 
             <h2 class="fw-bold mt-2 text-body">
-                Frequently Asked Questions
+                Warehouse & Storage FAQs
             </h2>
 
         </div>
 
 
-        <div class="accordion mx-auto" id="storehubFAQ"
+        <div class="accordion mx-auto"
+             id="storehubFAQ"
              style="max-width:900px;">
 
+
+            <!-- FAQ 1 -->
             <div class="accordion-item">
 
                 <h2 class="accordion-header">
@@ -962,7 +1002,9 @@
                         data-bs-toggle="collapse"
                         data-bs-target="#faqOne">
 
-                        What storage sizes are available?
+                        <span style="color: inherit !important;">
+                            What storage sizes are available?
+                        </span>
 
                     </button>
 
@@ -973,7 +1015,9 @@
                     class="accordion-collapse collapse show"
                     data-bs-parent="#storehubFAQ">
 
-                    <div class="accordion-body text-body-secondary">
+                    <div
+                        class="accordion-body"
+                        style="color: var(--bs-secondary-color);">
 
                         We offer Small, Medium, Large and Business
                         storage options. Custom spaces are also available
@@ -986,6 +1030,7 @@
             </div>
 
 
+            <!-- FAQ 2 -->
             <div class="accordion-item">
 
                 <h2 class="accordion-header">
@@ -996,7 +1041,9 @@
                         data-bs-toggle="collapse"
                         data-bs-target="#faqTwo">
 
-                        Is my storage space secure?
+                        <span style="color: inherit !important;">
+                            Is my storage space secure?
+                        </span>
 
                     </button>
 
@@ -1007,7 +1054,9 @@
                     class="accordion-collapse collapse"
                     data-bs-parent="#storehubFAQ">
 
-                    <div class="accordion-body text-body-secondary">
+                    <div
+                        class="accordion-body"
+                        style="color: var(--bs-secondary-color);">
 
                         Yes. Our facilities include CCTV monitoring,
                         controlled access and fire safety systems.
@@ -1019,6 +1068,7 @@
             </div>
 
 
+            <!-- FAQ 3 -->
             <div class="accordion-item">
 
                 <h2 class="accordion-header">
@@ -1029,7 +1079,9 @@
                         data-bs-toggle="collapse"
                         data-bs-target="#faqThree">
 
-                        Can businesses use StoreHub?
+                        <span style="color: inherit !important;">
+                            Can businesses use StoreHub?
+                        </span>
 
                     </button>
 
@@ -1040,7 +1092,9 @@
                     class="accordion-collapse collapse"
                     data-bs-parent="#storehubFAQ">
 
-                    <div class="accordion-body text-body-secondary">
+                    <div
+                        class="accordion-body"
+                        style="color: var(--bs-secondary-color);">
 
                         Absolutely. We provide flexible storage solutions
                         for inventory, equipment, documents and other
@@ -1053,6 +1107,7 @@
             </div>
 
 
+            <!-- FAQ 4 -->
             <div class="accordion-item">
 
                 <h2 class="accordion-header">
@@ -1063,7 +1118,9 @@
                         data-bs-toggle="collapse"
                         data-bs-target="#faqFour">
 
-                        How can I book a storage unit?
+                        <span style="color: inherit !important;">
+                            How can I book a storage unit?
+                        </span>
 
                     </button>
 
@@ -1074,7 +1131,9 @@
                     class="accordion-collapse collapse"
                     data-bs-parent="#storehubFAQ">
 
-                    <div class="accordion-body text-body-secondary">
+                    <div
+                        class="accordion-body"
+                        style="color: var(--bs-secondary-color);">
 
                         Simply visit our Contact page and send us your
                         storage requirements. Our team will help you
@@ -1086,11 +1145,13 @@
 
             </div>
 
+
         </div>
 
     </div>
 
 </section>
+
 <!-- =====================================================
      CTA
 ===================================================== -->
@@ -1104,15 +1165,14 @@
 
             <h2 class="fw-bold">
 
-                Need More Storage Space?
+                Need Warehouse or Storage Space?
 
             </h2>
 
 
             <p class="mb-4">
 
-                Tell us what you need and we'll
-                find the right space for you.
+                Tell us what you need to store and how much space you require. We'll help you choose a suitable storage option.
 
             </p>
 
@@ -1140,64 +1200,97 @@
 
     <div class="container">
 
+
         <div class="row g-4 pb-4">
 
 
             <!-- BRAND -->
 
-            <div class="col-lg-4">
+         
 
-                <a
-                    href="index.html"
-                    class="text-white text-decoration-none">
+<div class="col-lg-4">
 
-                    <img
-                        src="assets/images/logo.png"
-                        alt="StoreHub Logo"
-                        style="height:50px;width:auto;object-fit:contain;"
-                        class="mb-3">
+    <!-- LOGO + BRAND NAME -->
 
-                    <h5>
-                        StoreHub
-                    </h5>
+    <a
+        href="index.html"
+        class="text-white text-decoration-none d-inline-flex align-items-center gap-3 mb-3">
 
-                </a>
+        <img
+            src="assets/images/logo.png"
+            alt="StoreHub Logo"
+            style="
+                height:55px;
+                width:55px;
+                object-fit:contain;
+                display:block;
+            ">
+
+        <span
+            class="fw-bold"
+            style="
+                font-size:28px;
+                line-height:1;
+            ">
+
+            StoreHub
+
+        </span>
+
+    </a>
 
 
-                <p class="text-white-50">
+    <!-- DESCRIPTION -->
 
-                    Secure and flexible warehouse
-                    and storage solutions for everyone.
+    <p
+        class="text-white-50 mb-3"
+        style="
+            max-width:360px;
+            line-height:1.7;
+        ">
 
-                </p>
+        Secure and flexible warehouse and storage
+        solutions for individuals and businesses.
+
+    </p>
 
 
-                <div class="d-flex gap-3">
+    <!-- SOCIAL ICONS -->
 
-                    <a href="#"
-                       class="text-white">
+    <div class="d-flex gap-3">
 
-                        <i class="fa-brands fa-facebook"></i>
+        <a
+            href="#"
+            class="text-white"
+            aria-label="Facebook">
 
-                    </a>
+            <i class="fa-brands fa-facebook"></i>
 
-                    <a href="#"
-                       class="text-white">
+        </a>
 
-                        <i class="fa-brands fa-instagram"></i>
 
-                    </a>
+        <a
+            href="#"
+            class="text-white"
+            aria-label="Instagram">
 
-                    <a href="#"
-                       class="text-white">
+            <i class="fa-brands fa-instagram"></i>
 
-                        <i class="fa-brands fa-linkedin"></i>
+        </a>
 
-                    </a>
 
-                </div>
+        <a
+            href="#"
+            class="text-white"
+            aria-label="LinkedIn">
 
-            </div>
+            <i class="fa-brands fa-linkedin"></i>
+
+        </a>
+
+    </div>
+
+</div>
 
 
             <!-- QUICK LINKS -->
@@ -1207,6 +1300,7 @@
                 <h6>
                     Quick Links
                 </h6>
+
 
                 <ul class="list-unstyled">
 
@@ -1247,38 +1341,53 @@
             </div>
 
 
-            <!-- ACCOUNT -->
+            <!-- PAGES -->
 
             <div class="col-6 col-lg-2">
 
                 <h6>
-                    Account
+                    Pages
                 </h6>
+
 
                 <ul class="list-unstyled">
 
                     <li class="mb-2">
+
                         <a
-                            href="login.html"
+                            href="maintenance.html"
                             class="text-white-50 text-decoration-none">
-                            Login
+
+                            Maintenance
+
                         </a>
+
                     </li>
+
 
                     <li class="mb-2">
+
                         <a
-                            href="signup.html"
+                            href="404.html"
                             class="text-white-50 text-decoration-none">
-                            Signup
+
+                            404 Page
+
                         </a>
+
                     </li>
 
+
                     <li>
+
                         <a
-                            href="contact.html"
+                            href="coming-soon.html"
                             class="text-white-50 text-decoration-none">
-                            Enquiry
+
+                            Coming Soon
+
                         </a>
+
                     </li>
 
                 </ul>
@@ -1323,6 +1432,7 @@
 
             </div>
 
+
         </div>
 
 
@@ -1345,6 +1455,7 @@
 </footer>
 
 
+
 <!-- Bootstrap JS -->
 
 <script
@@ -1352,149 +1463,8 @@
 </script>
 
 
-<!-- Theme + RTL -->
+<!-- Common JS -->
 
-<script>
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const themeButton =
-        document.getElementById("themeToggle");
-
-    const themeIcon =
-        document.getElementById("themeIcon");
-
-    const rtlButton =
-        document.getElementById("rtlToggle");
-
-    const directionText =
-        document.getElementById("directionText");
-
-
-    /* =========================
-       LOAD THEME
-    ========================= */
-
-    const savedTheme =
-        localStorage.getItem("theme") || "light";
-
-    document.documentElement.setAttribute(
-        "data-bs-theme",
-        savedTheme
-    );
-
-
-    function updateThemeIcon() {
-
-        if (savedTheme === "dark") {
-
-            themeIcon.classList.remove("fa-moon");
-            themeIcon.classList.add("fa-sun");
-
-        }
-
-    }
-
-
-    updateThemeIcon();
-
-
-    /* =========================
-       DARK MODE
-    ========================= */
-
-    themeButton.addEventListener("click", function () {
-
-        const current =
-            document.documentElement.getAttribute(
-                "data-bs-theme"
-            );
-
-        const newTheme =
-            current === "dark"
-                ? "light"
-                : "dark";
-
-
-        document.documentElement.setAttribute(
-            "data-bs-theme",
-            newTheme
-        );
-
-
-        localStorage.setItem(
-            "theme",
-            newTheme
-        );
-
-
-        if (newTheme === "dark") {
-
-            themeIcon.classList.remove("fa-moon");
-            themeIcon.classList.add("fa-sun");
-
-        } else {
-
-            themeIcon.classList.remove("fa-sun");
-            themeIcon.classList.add("fa-moon");
-
-        }
-
-    });
-
-
-    /* =========================
-       LOAD DIRECTION
-    ========================= */
-
-    const savedDirection =
-        localStorage.getItem("direction") || "ltr";
-
-    document.documentElement.setAttribute(
-        "dir",
-        savedDirection
-    );
-
-    directionText.textContent =
-        savedDirection.toUpperCase();
-
-
-    /* =========================
-       RTL / LTR
-    ========================= */
-
-    rtlButton.addEventListener("click", function () {
-
-        const current =
-            document.documentElement.getAttribute("dir");
-
-        const newDirection =
-            current === "rtl"
-                ? "ltr"
-                : "rtl";
-
-
-        document.documentElement.setAttribute(
-            "dir",
-            newDirection
-        );
-
-
-        localStorage.setItem(
-            "direction",
-            newDirection
-        );
-
-
-        directionText.textContent =
-            newDirection.toUpperCase();
-
-    });
-
-});
-
-</script>
-
+<script src="assets/js/script.js"></script>
 </body>
 </html>
-

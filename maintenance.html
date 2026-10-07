@@ -38,8 +38,7 @@
      NAVBAR
 ===================================================== -->
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
-
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
     <div class="container">
 
 
@@ -264,64 +263,59 @@
 
             <!-- RIGHT SIDE -->
 
-            <div class="d-flex align-items-center gap-2 flex-wrap">
+           <div class="d-flex align-items-center gap-2" style="margin-right:20px;">
+
+    <!-- RTL / LTR -->
+    <button
+        id="rtlToggle"
+        type="button"
+        class="btn d-flex align-items-center justify-content-center"
+        style="
+            width:100px !important;
+            height:40px !important;
+            min-width:100px !important;
+            padding:0 !important;
+            margin:0 !important;
+            border:1px solid #6c757d !important;
+            border-radius:50px !important;
+            color:#fff !important;
+            background:#17233f !important;
+            box-shadow:none !important;
+        "
+        title="Switch RTL / LTR">
+
+        <i class="fa-solid fa-arrows-left-right"></i>
+
+    </button>
 
 
-                <!-- RTL -->
+    <!-- DARK MODE -->
+    <button
+        id="themeToggle"
+        type="button"
+        class="btn d-flex align-items-center justify-content-center"
+        style="
+            width:100px !important;
+            height:40px !important;
+            min-width:100px !important;
+            padding:0 !important;
+            margin:0 !important;
+            border:1px solid #6c757d !important;
+            border-radius:50px !important;
+            color:#fff !important;
+            background:#17233f !important;
+            box-shadow:none !important;
+        "
+        title="Toggle dark mode">
 
-                <button
-                    id="rtlToggle"
-                    type="button"
-                    class="btn btn-outline-secondary rounded-pill btn-sm px-3">
+        <i
+            id="themeIcon"
+            class="fa-solid fa-moon">
+        </i>
 
-                    <span id="directionText">
-                        LTR
-                    </span>
+    </button>
 
-                    <i class="fa-solid fa-arrows-left-right ms-1"></i>
-
-                </button>
-
-
-                <!-- DARK MODE -->
-
-                <button
-                    id="themeToggle"
-                    type="button"
-                    class="btn btn-outline-secondary rounded-circle"
-                    style="width:38px;height:38px;">
-
-                    <i
-                        id="themeIcon"
-                        class="fa-solid fa-moon">
-                    </i>
-
-                </button>
-
-
-                <!-- LOGIN -->
-
-                <a
-                    href="login.html"
-                    class="btn btn-outline-dark btn-sm">
-
-                    Login
-
-                </a>
-
-
-                <!-- SIGNUP -->
-
-                <a
-                    href="signup.html"
-                    class="btn btn-dark btn-sm">
-
-                    Signup
-
-                </a>
-
-
-            </div>
+</div>
 
         </div>
 
@@ -335,71 +329,429 @@
      MAINTENANCE
 ===================================================== -->
 
+<!-- =====================================================
+     MAINTENANCE
+===================================================== -->
+
 <section
-    class="min-vh-100 d-flex align-items-center justify-content-center bg-body-secondary text-center">
+    class="py-5 bg-body-secondary"
+    style="min-height:calc(100vh - 80px);">
 
-    <div class="container">
+    <div class="container py-5">
 
+        <!-- MAIN MESSAGE -->
 
-        <div class="mb-4">
+        <div class="text-center mb-5">
 
-            <i
-                class="fa-solid fa-screwdriver-wrench text-warning"
-                style="font-size:90px;">
-            </i>
+            <div class="mb-4">
 
-        </div>
+                <div
+                    class="d-inline-flex align-items-center justify-content-center bg-warning rounded-circle"
+                    style="width:110px;height:110px;">
 
+                    <i
+                        class="fa-solid fa-screwdriver-wrench text-dark"
+                        style="font-size:50px;">
+                    </i>
 
-        <span
-            class="badge text-bg-warning px-4 py-2 mb-3">
+                </div>
 
-            UNDER MAINTENANCE
-
-        </span>
-
-
-        <h1
-            class="display-4 fw-bold text-body">
-
-            We'll Be Back Soon
-
-        </h1>
+            </div>
 
 
-        <p
-            class="lead text-body-secondary mx-auto"
-            style="max-width:650px;">
+            <span
+                class="badge text-bg-warning px-4 py-2 mb-3">
 
-            StoreHub is currently undergoing scheduled maintenance.
-            We're working hard to improve your storage experience.
-
-        </p>
-
-
-        <div class="my-4">
-
-            <span class="text-body-secondary">
-
-                <i class="fa-solid fa-clock text-warning me-2"></i>
-
-                Thank you for your patience.
+                UNDER MAINTENANCE
 
             </span>
 
+
+            <h1
+                class="display-4 fw-bold text-body mb-3">
+
+                We'll Be Back Soon
+
+            </h1>
+
+
+            <p
+                class="lead text-body-secondary mx-auto"
+                style="max-width:700px;line-height:1.8;">
+
+                StoreHub is currently undergoing scheduled maintenance
+                to improve our warehouse and storage services.
+                We are working to make your storage experience
+                safer, easier and more convenient.
+
+            </p>
+
+
+            <div class="mt-4">
+
+                <span class="text-body-secondary">
+
+                    <i class="fa-solid fa-clock text-warning me-2"></i>
+
+                    Thank you for your patience while we improve
+                    our services.
+
+                </span>
+
+            </div>
+
         </div>
 
 
-        <a
-            href="index.html"
-            class="btn btn-warning btn-lg px-5">
 
-            <i class="fa-solid fa-house me-2"></i>
+        <!-- =================================================
+             WHAT WE ARE IMPROVING
+        ================================================== -->
 
-            Back to Home
+        <div class="row g-4 mb-5">
 
-        </a>
 
+            <!-- CARD 1 -->
+
+            <div class="col-md-4">
+
+                <div
+                    class="card h-100 border-0 shadow-sm text-center p-4"
+                    style="border-radius:16px;">
+
+                    <div
+                        class="d-flex align-items-center justify-content-center bg-warning rounded-circle mx-auto mb-3"
+                        style="width:60px;height:60px;">
+
+                        <i
+                            class="fa-solid fa-warehouse text-dark fs-4">
+                        </i>
+
+                    </div>
+
+
+                    <h5 class="fw-bold text-body">
+
+                        Storage Services
+
+                    </h5>
+
+
+                    <p class="text-body-secondary mb-0">
+
+                        We are improving our storage service
+                        information and making it easier to
+                        explore available storage options.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 2 -->
+
+            <div class="col-md-4">
+
+                <div
+                    class="card h-100 border-0 shadow-sm text-center p-4"
+                    style="border-radius:16px;">
+
+                    <div
+                        class="d-flex align-items-center justify-content-center bg-warning rounded-circle mx-auto mb-3"
+                        style="width:60px;height:60px;">
+
+                        <i
+                            class="fa-solid fa-shield-halved text-dark fs-4">
+                        </i>
+
+                    </div>
+
+
+                    <h5 class="fw-bold text-body">
+
+                        Security & Safety
+
+                    </h5>
+
+
+                    <p class="text-body-secondary mb-0">
+
+                        Our facilities are designed around
+                        secure access, monitoring and safe
+                        storage for your belongings.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 3 -->
+
+            <div class="col-md-4">
+
+                <div
+                    class="card h-100 border-0 shadow-sm text-center p-4"
+                    style="border-radius:16px;">
+
+                    <div
+                        class="d-flex align-items-center justify-content-center bg-warning rounded-circle mx-auto mb-3"
+                        style="width:60px;height:60px;">
+
+                        <i
+                            class="fa-solid fa-location-dot text-dark fs-4">
+                        </i>
+
+                    </div>
+
+
+                    <h5 class="fw-bold text-body">
+
+                        Storage Locations
+
+                    </h5>
+
+
+                    <p class="text-body-secondary mb-0">
+
+                        We are updating information about our
+                        available storage centres and the
+                        services provided at each location.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             STOREHUB SERVICES
+        ================================================== -->
+
+        <div
+            class="row align-items-center g-4 mb-5">
+
+
+            <!-- LEFT -->
+
+            <div class="col-lg-6">
+
+                <div
+                    class="card border-0 shadow-sm p-4 h-100"
+                    style="border-radius:16px;">
+
+                    <span
+                        class="text-warning fw-semibold">
+
+                        STOREHUB
+
+                    </span>
+
+
+                    <h3
+                        class="fw-bold text-body mt-2 mb-3">
+
+                        What You Can Expect
+
+                    </h3>
+
+
+                    <p
+                        class="text-body-secondary"
+                        style="line-height:1.8;">
+
+                        StoreHub provides flexible storage
+                        solutions designed for personal belongings,
+                        business inventory, equipment and
+                        warehouse requirements.
+
+                    </p>
+
+
+                    <div class="mt-3">
+
+
+                        <div class="d-flex gap-3 mb-3">
+
+                            <i
+                                class="fa-solid fa-check text-warning mt-1">
+                            </i>
+
+                            <span class="text-body">
+
+                                Flexible storage spaces
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="d-flex gap-3 mb-3">
+
+                            <i
+                                class="fa-solid fa-check text-warning mt-1">
+                            </i>
+
+                            <span class="text-body">
+
+                                Secure and monitored facilities
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="d-flex gap-3 mb-3">
+
+                            <i
+                                class="fa-solid fa-check text-warning mt-1">
+                            </i>
+
+                            <span class="text-body">
+
+                                Personal and business storage
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="d-flex gap-3">
+
+                            <i
+                                class="fa-solid fa-check text-warning mt-1">
+                            </i>
+
+                            <span class="text-body">
+
+                                Different storage sizes and plans
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RIGHT -->
+
+            <div class="col-lg-6">
+
+                <div
+                    class="card border-0 shadow-sm p-4 h-100"
+                    style="border-radius:16px;">
+
+                    <h4
+                        class="fw-bold text-body mb-3">
+
+                        Need Assistance?
+
+                    </h4>
+
+
+                    <p
+                        class="text-body-secondary"
+                        style="line-height:1.8;">
+
+                        If you need information about our
+                        storage facilities or would like to
+                        enquire about available storage space,
+                        please contact the StoreHub team.
+
+                    </p>
+
+
+                    <div class="mt-2">
+
+
+                        <p class="mb-3 text-body">
+
+                            <i
+                                class="fa-solid fa-phone text-warning me-2">
+                            </i>
+
+                            +91 98765 43210
+
+                        </p>
+
+
+                        <p class="mb-3 text-body">
+
+                            <i
+                                class="fa-solid fa-envelope text-warning me-2">
+                            </i>
+
+                            storehub@gmail.com
+
+                        </p>
+
+
+                        <p class="mb-4 text-body">
+
+                            <i
+                                class="fa-solid fa-location-dot text-warning me-2">
+                            </i>
+
+                            Chennai, Tamil Nadu
+
+                        </p>
+
+
+                        <a
+                            href="contact.html"
+                            class="btn btn-warning px-4">
+
+                            <i
+                                class="fa-solid fa-envelope me-2">
+                            </i>
+
+                            Contact Us
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             BACK TO HOME
+        ================================================== -->
+
+        <div class="text-center">
+
+            <a
+                href="index.html"
+                class="btn btn-outline-warning btn-lg px-5">
+
+                <i
+                    class="fa-solid fa-house me-2">
+                </i>
+
+                Back to Home
+
+            </a>
+
+        </div>
 
     </div>
 
@@ -421,50 +773,91 @@
 
             <!-- BRAND -->
 
-            <div class="col-lg-4">
+         
 
-                <a
-                    href="index.html"
-                    class="text-white text-decoration-none">
+<div class="col-lg-4">
 
-                    <img
-                        src="assets/images/logo.png"
-                        alt="StoreHub Logo"
-                        style="height:50px;width:auto;object-fit:contain;"
-                        class="mb-3">
+    <!-- LOGO + BRAND NAME -->
 
-                    <h5>
-                        StoreHub
-                    </h5>
+    <a
+        href="index.html"
+        class="text-white text-decoration-none d-inline-flex align-items-center gap-3 mb-3">
 
-                </a>
+        <img
+            src="assets/images/logo.png"
+            alt="StoreHub Logo"
+            style="
+                height:55px;
+                width:55px;
+                object-fit:contain;
+                display:block;
+            ">
+
+        <span
+            class="fw-bold"
+            style="
+                font-size:28px;
+                line-height:1;
+            ">
+
+            StoreHub
+
+        </span>
+
+    </a>
 
 
-                <p class="text-white-50">
+    <!-- DESCRIPTION -->
 
-                    Secure and flexible warehouse
-                    and storage solutions for everyone.
+    <p
+        class="text-white-50 mb-3"
+        style="
+            max-width:360px;
+            line-height:1.7;
+        ">
 
-                </p>
+        Secure and flexible warehouse and storage
+        solutions for individuals and businesses.
+
+    </p>
 
 
-                <div class="d-flex gap-3">
+    <!-- SOCIAL ICONS -->
 
-                    <a href="#" class="text-white">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
+    <div class="d-flex gap-3">
 
-                    <a href="#" class="text-white">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+        <a
+            href="#"
+            class="text-white"
+            aria-label="Facebook">
 
-                    <a href="#" class="text-white">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
+            <i class="fa-brands fa-facebook"></i>
 
-                </div>
+        </a>
 
-            </div>
+
+        <a
+            href="#"
+            class="text-white"
+            aria-label="Instagram">
+
+            <i class="fa-brands fa-instagram"></i>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="text-white"
+            aria-label="LinkedIn">
+
+            <i class="fa-brands fa-linkedin"></i>
+
+        </a>
+
+    </div>
+
+</div>
 
 
             <!-- QUICK LINKS -->
@@ -527,27 +920,41 @@
                 <ul class="list-unstyled">
 
                     <li class="mb-2">
+
                         <a
                             href="maintenance.html"
                             class="text-white-50 text-decoration-none">
+
                             Maintenance
+
                         </a>
+
                     </li>
 
+
                     <li class="mb-2">
+
                         <a
                             href="404.html"
                             class="text-white-50 text-decoration-none">
+
                             404 Page
+
                         </a>
+
                     </li>
 
+
                     <li>
+
                         <a
                             href="coming-soon.html"
                             class="text-white-50 text-decoration-none">
+
                             Coming Soon
+
                         </a>
+
                     </li>
 
                 </ul>
@@ -630,142 +1037,7 @@
      THEME + RTL
 ===================================================== -->
 
-<script>
-
-document.addEventListener("DOMContentLoaded", function () {
-
-
-    const themeButton =
-        document.getElementById("themeToggle");
-
-    const themeIcon =
-        document.getElementById("themeIcon");
-
-    const rtlButton =
-        document.getElementById("rtlToggle");
-
-    const directionText =
-        document.getElementById("directionText");
-
-
-
-    /* THEME */
-
-    let savedTheme =
-        localStorage.getItem("theme") || "light";
-
-
-    document.documentElement.setAttribute(
-        "data-bs-theme",
-        savedTheme
-    );
-
-
-    function updateThemeIcon(theme) {
-
-        if (theme === "dark") {
-
-            themeIcon.classList.remove("fa-moon");
-            themeIcon.classList.add("fa-sun");
-
-        } else {
-
-            themeIcon.classList.remove("fa-sun");
-            themeIcon.classList.add("fa-moon");
-
-        }
-
-    }
-
-
-    updateThemeIcon(savedTheme);
-
-
-
-    themeButton.addEventListener("click", function () {
-
-
-        const current =
-            document.documentElement.getAttribute(
-                "data-bs-theme"
-            );
-
-
-        const newTheme =
-            current === "dark"
-                ? "light"
-                : "dark";
-
-
-        document.documentElement.setAttribute(
-            "data-bs-theme",
-            newTheme
-        );
-
-
-        localStorage.setItem(
-            "theme",
-            newTheme
-        );
-
-
-        updateThemeIcon(newTheme);
-
-    });
-
-
-
-    /* RTL */
-
-    let savedDirection =
-        localStorage.getItem("direction") || "ltr";
-
-
-    document.documentElement.setAttribute(
-        "dir",
-        savedDirection
-    );
-
-
-    directionText.textContent =
-        savedDirection.toUpperCase();
-
-
-
-    rtlButton.addEventListener("click", function () {
-
-
-        const current =
-            document.documentElement.getAttribute("dir");
-
-
-        const newDirection =
-            current === "rtl"
-                ? "ltr"
-                : "rtl";
-
-
-        document.documentElement.setAttribute(
-            "dir",
-            newDirection
-        );
-
-
-        localStorage.setItem(
-            "direction",
-            newDirection
-        );
-
-
-        directionText.textContent =
-            newDirection.toUpperCase();
-
-    });
-
-
-});
-
-</script>
+<script src="assets/js/script.js" ></script>
 
 
 </body>

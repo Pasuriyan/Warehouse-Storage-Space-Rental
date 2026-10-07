@@ -21,7 +21,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-
+<html lang="en" dir="ltr" data-bs-theme="light"></html>
 </head>
 
 <body>
@@ -31,8 +31,7 @@
      NAVBAR
 ===================================================== -->
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
-
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
     <div class="container">
 
         <!-- LOGO -->
@@ -261,66 +260,59 @@
 
             <!-- RIGHT SIDE -->
 
-            <div
-                class="d-flex align-items-center gap-2 flex-wrap">
+          <div class="d-flex align-items-center gap-2" style="margin-right:20px;">
+
+    <!-- RTL / LTR -->
+    <button
+        id="rtlToggle"
+        type="button"
+        class="btn d-flex align-items-center justify-content-center"
+        style="
+            width:100px !important;
+            height:40px !important;
+            min-width:100px !important;
+            padding:0 !important;
+            margin:0 !important;
+            border:1px solid #6c757d !important;
+            border-radius:50px !important;
+            color:#fff !important;
+            background:#17233f !important;
+            box-shadow:none !important;
+        "
+        title="Switch RTL / LTR">
+
+        <i class="fa-solid fa-arrows-left-right"></i>
+
+    </button>
 
 
-                <!-- RTL / LTR -->
+    <!-- DARK MODE -->
+    <button
+        id="themeToggle"
+        type="button"
+        class="btn d-flex align-items-center justify-content-center"
+        style="
+            width:100px !important;
+            height:40px !important;
+            min-width:100px !important;
+            padding:0 !important;
+            margin:0 !important;
+            border:1px solid #6c757d !important;
+            border-radius:50px !important;
+            color:#fff !important;
+            background:#17233f !important;
+            box-shadow:none !important;
+        "
+        title="Toggle dark mode">
 
-                <button
-                    id="rtlToggle"
-                    type="button"
-                    class="btn btn-outline-secondary btn-sm rounded-pill px-3">
+        <i
+            id="themeIcon"
+            class="fa-solid fa-moon">
+        </i>
 
-                    <span id="directionText">
-                        LTR
-                    </span>
+    </button>
 
-                    <i
-                        class="fa-solid fa-arrows-left-right ms-1">
-                    </i>
-
-                </button>
-
-
-                <!-- DARK MODE -->
-
-                <button
-                    id="themeToggle"
-                    type="button"
-                    class="btn btn-outline-secondary rounded-circle"
-                    style="width:38px;height:38px;">
-
-                    <i
-                        id="themeIcon"
-                        class="fa-solid fa-moon">
-                    </i>
-
-                </button>
-
-
-                <!-- LOGIN -->
-
-                <a
-                    href="login.html"
-                    class="btn btn-outline-dark btn-sm">
-
-                    Login
-
-                </a>
-
-
-                <!-- SIGNUP -->
-
-                <a
-                    href="signup.html"
-                    class="btn btn-dark btn-sm">
-
-                    Signup
-
-                </a>
-
-            </div>
+</div>
 
         </div>
 
@@ -379,76 +371,130 @@
      PRICING
 ===================================================== -->
 
-<section class="py-5">
+<!-- =========================
+     PRICING SECTION
+========================= -->
+
+<section class="py-5 bg-body-tertiary" id="pricing">
 
     <div class="container">
 
-        <div class="row g-4 justify-content-center">
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+
+            <span class="text-warning fw-semibold">
+                STORAGE PLANS
+            </span>
+
+            <h2 class="fw-bold mt-2">
+                Choose the Right Storage Space
+            </h2>
+
+            <p class="text-body-secondary">
+                Flexible storage options for personal belongings,
+                growing businesses, and large-scale inventory.
+            </p>
+
+        </div>
 
 
-            <!-- =====================================================
+        <!-- =========================
+             PRICING CARDS
+        ========================= -->
+
+        <div class="row g-4 align-items-stretch">
+
+
+            <!-- =========================
                  SMALL
-            ====================================================== -->
+            ========================= -->
 
-            <div class="col-md-6 col-lg-3">
+            <div class="col-lg-3 col-md-6">
 
-                <div class="card h-100 border shadow-sm">
+                <div class="pricing-card">
 
-                    <div class="card-body p-4 d-flex flex-column">
+                    <!-- Icon -->
+                    <div class="pricing-icon">
 
-                        <div class="text-center">
-
-                            <i class="fa-solid fa-box fa-2x text-warning mb-3"></i>
-
-                            <h4 class="fw-bold">
-                                Small
-                            </h4>
-
-                            <p class="text-body-secondary">
-                                Personal Storage
-                            </p>
-
-                            <h2 class="fw-bold">
-                                ₹1,499
-                                <small class="fs-6 fw-normal text-body-secondary">
-                                    /month
-                                </small>
-                            </h2>
-
-                        </div>
-
-                        <hr>
-
-                        <ul class="list-unstyled">
-
-                            <li class="mb-3">
-                                <i class="fa-solid fa-check text-warning me-2"></i>
-                                25 sq. ft. space
-                            </li>
-
-                            <li class="mb-3">
-                                <i class="fa-solid fa-check text-warning me-2"></i>
-                                CCTV monitoring
-                            </li>
-
-                            <li class="mb-3">
-                                <i class="fa-solid fa-check text-warning me-2"></i>
-                                Secure access
-                            </li>
-
-                            <li class="mb-3">
-                                <i class="fa-solid fa-check text-warning me-2"></i>
-                                Flexible rental
-                            </li>
-
-                        </ul>
-
-                        <a href="contact.html"
-                           class="btn btn-outline-warning w-100 mt-auto">
-                            Choose Plan
-                        </a>
+                        <i class="fa-solid fa-box"></i>
 
                     </div>
+
+
+                    <!-- Title -->
+                    <h3>
+                        Small
+                    </h3>
+
+
+                    <!-- Subtitle -->
+                    <div class="plan-subtitle">
+
+                        Personal & Small  Storage
+
+                    </div>
+
+
+                    <!-- Price -->
+                    <div class="price">
+
+                        <strong>₹1,499</strong>
+
+                        <span>/month</span>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <!-- Best For -->
+                    <div class="best-for">
+
+                        <p>
+
+                            <strong>Best for:</strong>
+
+                            Documents, personal belongings,
+                            small inventory and packaging materials.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- Features -->
+                    <div class="features">
+
+                        <p>
+                            <i class="fa-solid fa-check"></i>
+                            25 sq. ft. storage space
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-check"></i>
+                            CCTV monitoring
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-check"></i>
+                            Secure facility access
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-check"></i>
+                            Flexible rental
+                        </p>
+
+                    </div>
+
+
+                    <!-- Button -->
+                    <a href="#" class="pricing-btn">
+
+                        Choose Plan
+
+                    </a>
 
                 </div>
 
@@ -456,69 +502,96 @@
 
 
 
-            <!-- =====================================================
+            <!-- =========================
                  MEDIUM
-            ====================================================== -->
+            ========================= -->
 
-            <div class="col-md-6 col-lg-3">
+            <div class="col-lg-3 col-md-6">
 
-                <div class="card h-100 border shadow-sm">
+                <div class="pricing-card">
 
-                    <div class="card-body p-4 d-flex flex-column">
+                    <!-- Icon -->
+                    <div class="pricing-icon">
 
-                        <div class="text-center">
-
-                            <i class="fa-solid fa-boxes-stacked fa-2x text-warning mb-3"></i>
-
-                            <h4 class="fw-bold">
-                                Medium
-                            </h4>
-
-                            <p class="text-body-secondary">
-                                Home &amp; Business
-                            </p>
-
-                            <h2 class="fw-bold">
-                                ₹2,499
-                                <small class="fs-6 fw-normal text-body-secondary">
-                                    /month
-                                </small>
-                            </h2>
-
-                        </div>
-
-                        <hr>
-
-                        <ul class="list-unstyled">
-
-                            <li class="mb-3">
-                                <i class="fa-solid fa-check text-warning me-2"></i>
-                                50 sq. ft. space
-                            </li>
-
-                            <li class="mb-3">
-                                <i class="fa-solid fa-check text-warning me-2"></i>
-                                24/7 CCTV
-                            </li>
-
-                            <li class="mb-3">
-                                <i class="fa-solid fa-check text-warning me-2"></i>
-                                24-hour access
-                            </li>
-
-                            <li class="mb-3">
-                                <i class="fa-solid fa-check text-warning me-2"></i>
-                                Loading area
-                            </li>
-
-                        </ul>
-
-                        <a href="contact.html"
-                           class="btn btn-outline-warning w-100 mt-auto">
-                            Choose Plan
-                        </a>
+                        <i class="fa-solid fa-boxes-stacked"></i>
 
                     </div>
+
+
+                    <!-- Title -->
+                    <h3>
+                        Medium
+                    </h3>
+
+
+                    <!-- Subtitle -->
+                    <div class="plan-subtitle">
+
+                     Growing Business Storage
+
+                    </div>
+
+
+                    <!-- Price -->
+                    <div class="price">
+
+                        <strong>₹2,499</strong>
+
+                        <span>/month</span>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <!-- Best For -->
+                    <div class="best-for">
+
+                        <p>
+
+                            <strong>Best for:</strong>
+
+                            Growing inventory, extra stock,
+                            equipment and business supplies.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- Features -->
+                    <div class="features">
+
+                        <p>
+                            <i class="fa-solid fa-check"></i>
+                            50 sq. ft. storage space
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-check"></i>
+                            24/7 CCTV monitoring
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-check"></i>
+                            24-hour facility access
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-check"></i>
+                            Loading area
+                        </p>
+
+                    </div>
+
+
+                    <!-- Button -->
+                    <a href="#" class="pricing-btn">
+
+                        Choose Plan
+
+                    </a>
 
                 </div>
 
@@ -526,69 +599,96 @@
 
 
 
-            <!-- =====================================================
+            <!-- =========================
                  LARGE
-            ====================================================== -->
+            ========================= -->
 
-            <div class="col-md-6 col-lg-3">
+            <div class="col-lg-3 col-md-6">
 
-                <div class="card h-100 border shadow-sm">
+                <div class="pricing-card">
 
-                    <div class="card-body p-4 d-flex flex-column">
+                    <!-- Icon -->
+                    <div class="pricing-icon">
 
-                        <div class="text-center">
-
-                            <i class="fa-solid fa-warehouse fa-2x text-warning mb-3"></i>
-
-                            <h4 class="fw-bold">
-                                Large
-                            </h4>
-
-                            <p class="text-body-secondary">
-                                Business Storage
-                            </p>
-
-                            <h2 class="fw-bold">
-                                ₹4,499
-                                <small class="fs-6 fw-normal text-body-secondary">
-                                    /month
-                                </small>
-                            </h2>
-
-                        </div>
-
-                        <hr>
-
-                        <ul class="list-unstyled">
-
-                            <li class="mb-3">
-                                <i class="fa-solid fa-check text-warning me-2"></i>
-                                100 sq. ft. space
-                            </li>
-
-                            <li class="mb-3">
-                                <i class="fa-solid fa-check text-warning me-2"></i>
-                                Climate control
-                            </li>
-
-                            <li class="mb-3">
-                                <i class="fa-solid fa-check text-warning me-2"></i>
-                                24/7 security
-                            </li>
-
-                            <li class="mb-3">
-                                <i class="fa-solid fa-check text-warning me-2"></i>
-                                Loading assistance
-                            </li>
-
-                        </ul>
-
-                        <a href="contact.html"
-                           class="btn btn-outline-warning w-100 mt-auto">
-                            Choose Plan
-                        </a>
+                        <i class="fa-solid fa-warehouse"></i>
 
                     </div>
+
+
+                    <!-- Title -->
+                    <h3>
+                        Large
+                    </h3>
+
+
+                    <!-- Subtitle -->
+                    <div class="plan-subtitle">
+
+                        Business & Bulk Storage
+
+                    </div>
+
+
+                    <!-- Price -->
+                    <div class="price">
+
+                        <strong>₹4,499</strong>
+
+                        <span>/month</span>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <!-- Best For -->
+                    <div class="best-for">
+
+                        <p>
+
+                            <strong>Best for:</strong>
+
+                            Bulk inventory, large equipment,
+                            business materials and higher-volume storage.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- Features -->
+                    <div class="features">
+
+                        <p>
+                            <i class="fa-solid fa-check"></i>
+                            100 sq. ft. storage space
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-check"></i>
+                            Climate-controlled storage
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-check"></i>
+                            24/7 security
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-check"></i>
+                            Loading assistance
+                        </p>
+
+                    </div>
+
+
+                    <!-- Button -->
+                    <a href="#" class="pricing-btn">
+
+                        Choose Plan
+
+                    </a>
 
                 </div>
 
@@ -596,84 +696,1003 @@
 
 
 
-            <!-- =====================================================
+            <!-- =========================
                  BUSINESS+
-            ====================================================== -->
+            ========================= -->
 
-            <div class="col-md-6 col-lg-3">
+            <div class="col-lg-3 col-md-6">
 
-                <div class="card h-100 border shadow-sm">
+                <div class="pricing-card">
 
-                    <div class="card-body p-4 d-flex flex-column">
+                    <!-- Icon -->
+                    <div class="pricing-icon">
 
-                        <div class="text-center">
-
-                            <i class="fa-solid fa-building fa-2x text-warning mb-3"></i>
-
-                            <h4 class="fw-bold">
-                                Business+
-                            </h4>
-
-                            <p class="text-body-secondary">
-                                Large Warehouse
-                            </p>
-
-                            <h2 class="fw-bold">
-                                Custom
-                            </h2>
-
-                            <small class="text-body-secondary">
-                                Contact us for pricing
-                            </small>
-
-                        </div>
-
-                        <hr>
-
-                        <ul class="list-unstyled mt-3">
-
-                            <li class="mb-3">
-                                <i class="fa-solid fa-check text-warning me-2"></i>
-                                250+ sq. ft.
-                            </li>
-
-                            <li class="mb-3">
-                                <i class="fa-solid fa-check text-warning me-2"></i>
-                                Climate controlled
-                            </li>
-
-                            <li class="mb-3">
-                                <i class="fa-solid fa-check text-warning me-2"></i>
-                                Dedicated access
-                            </li>
-
-                            <li class="mb-3">
-                                <i class="fa-solid fa-check text-warning me-2"></i>
-                                Custom requirements
-                            </li>
-
-                        </ul>
-
-                        <a href="contact.html"
-                           class="btn btn-outline-warning w-100 mt-auto">
-                            Get Quote
-                        </a>
+                        <i class="fa-solid fa-building"></i>
 
                     </div>
+
+
+                    <!-- Title -->
+                    <h3>
+                        Business+
+                    </h3>
+
+
+                    <!-- Subtitle -->
+                    <div class="plan-subtitle">
+
+                        Large Warehouse Solution
+
+                    </div>
+
+
+                    <!-- Price -->
+                    <div class="price">
+
+                        <strong>Custom</strong>
+
+                        <span>Contact us for pricing</span>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <!-- Best For -->
+                    <div class="best-for">
+
+                        <p>
+
+                            <strong>Best for:</strong>
+
+                            Businesses requiring large-scale
+                            warehouse space and custom storage solutions.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- Features -->
+                    <div class="features">
+
+                        <p>
+                            <i class="fa-solid fa-check"></i>
+                            250+ sq. ft. space
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-check"></i>
+                            Climate-controlled storage
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-check"></i>
+                            Dedicated access
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-check"></i>
+                            Custom requirements
+                        </p>
+
+                    </div>
+
+
+                    <!-- Button -->
+                    <a href="#" class="pricing-btn">
+
+                        Get Quote
+
+                    </a>
 
                 </div>
 
             </div>
-
 
         </div>
 
     </div>
 
 </section>
+<style>
+    /* =====================================================
+   PRICING CARDS
+===================================================== */
+
+.pricing-card {
+    height: 100%;
+    min-height: 700px;
+
+    padding: 30px 30px 25px;
+
+    background: var(--bs-body-bg);
+
+    border: 1px solid var(--bs-border-color);
+
+    border-radius: 16px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+
+    transition: all 0.3s ease;
+}
 
 
+/* =====================================================
+   ICON
+===================================================== */
 
+.pricing-icon {
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 12px;
+}
+
+.pricing-icon i {
+    font-size: 38px;
+
+    /* YELLOW */
+    color: #ffb400 !important;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.pricing-card h3 {
+    min-height: 45px;
+
+    margin: 0 0 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    color: var(--bs-body-color);
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.plan-subtitle {
+    min-height: 58px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 18px;
+    line-height: 1.5;
+
+    /* LIGHT MODE */
+    color: #495057 !important;
+
+    padding: 0 5px;
+}
+
+
+/* =====================================================
+   DARK MODE SUBTITLE
+===================================================== */
+
+body.dark-mode .plan-subtitle {
+    color: #ffffff !important;
+}
+
+
+/* If your dark mode uses Bootstrap data-bs-theme */
+[data-bs-theme="dark"] .plan-subtitle {
+    color: #ffffff !important;
+}
+
+
+/* =====================================================
+   PRICE
+===================================================== */
+
+.price {
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    text-align: center;
+
+    flex-wrap: wrap;
+}
+
+
+/* PRICE COLOR - YELLOW */
+
+.price strong {
+    font-size: 38px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    color: #ffb400 !important;
+}
+
+
+/* /month */
+
+.price > span {
+    font-size: 17px;
+
+    color: var(--bs-secondary-color);
+}
+
+
+/* Business+ "Contact us for pricing" */
+
+.price strong + span {
+    flex-basis: 100%;
+
+    margin-top: -5px;
+}
+
+
+/* =====================================================
+   HORIZONTAL LINE
+===================================================== */
+
+.pricing-card hr {
+    margin: 15px 0 20px;
+
+    opacity: 0.2;
+}
+
+
+/* =====================================================
+   BEST FOR
+===================================================== */
+
+.best-for {
+    min-height: 110px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: var(--bs-secondary-color);
+}
+
+.best-for p {
+    margin-bottom: 0;
+}
+
+.best-for strong {
+    color: var(--bs-body-color);
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.features {
+    min-height: 190px;
+
+    padding-top: 10px;
+}
+
+.features p {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+    font-size: 17px;
+
+    line-height: 1.4;
+
+    color: var(--bs-body-color);
+}
+
+
+/* CHECK ICON - YELLOW */
+
+.features i {
+    color: #ffb400 !important;
+
+    font-size: 16px;
+
+    margin-top: 4px;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.pricing-btn {
+    margin-top: auto;
+
+    width: 100%;
+
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    border: 1px solid #ffb400;
+
+    border-radius: 7px;
+
+    color: #ffb400;
+
+    background: transparent;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+
+.pricing-btn:hover {
+    background: #ffb400;
+
+    color: #fff;
+}
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+body.dark-mode .pricing-card {
+    background: #1b1f24;
+
+    border-color: #343a40;
+}
+
+
+body.dark-mode .pricing-card h3 {
+    color: #ffffff !important;
+}
+
+
+body.dark-mode .plan-subtitle {
+    color: #ffffff !important;
+}
+
+
+body.dark-mode .price > span {
+    color: #dddddd !important;
+}
+
+
+body.dark-mode .best-for {
+    color: #dddddd !important;
+}
+
+
+body.dark-mode .best-for strong {
+    color: #ffffff !important;
+}
+
+
+body.dark-mode .features p {
+    color: #ffffff !important;
+}
+
+
+/* =====================================================
+   BOOTSTRAP DARK MODE SUPPORT
+===================================================== */
+
+[data-bs-theme="dark"] .pricing-card {
+    background: #1b1f24;
+}
+
+
+[data-bs-theme="dark"] .pricing-card h3 {
+    color: #ffffff !important;
+}
+
+
+[data-bs-theme="dark"] .plan-subtitle {
+    color: #ffffff !important;
+}
+
+
+[data-bs-theme="dark"] .price > span {
+    color: #dddddd !important;
+}
+
+
+[data-bs-theme="dark"] .best-for {
+    color: #dddddd !important;
+}
+
+
+[data-bs-theme="dark"] .best-for strong {
+    color: #ffffff !important;
+}
+
+
+[data-bs-theme="dark"] .features p {
+    color: #ffffff !important;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .pricing-card {
+        min-height: 680px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .pricing-card {
+        min-height: auto;
+    }
+
+    .plan-subtitle {
+        min-height: auto;
+
+        margin-bottom: 15px;
+    }
+
+    .best-for {
+        min-height: auto;
+
+        margin-bottom: 10px;
+    }
+
+    .features {
+        min-height: auto;
+    }
+
+}
+
+
+@media (max-width: 575px) {
+
+    .pricing-card {
+        padding: 25px 20px;
+    }
+
+    .pricing-card h3 {
+        font-size: 27px;
+    }
+
+    .price strong {
+        font-size: 34px;
+    }
+
+}
+</style>
+<!-- =====================================================
+     CHOOSE STORAGE SIZE
+===================================================== -->
+
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="text-warning fw-semibold">
+                FIND YOUR SPACE
+            </span>
+            <h2 class="fw-bold mt-2 text-body">
+                Choose the Right Storage Size
+            </h2>
+            <p class="text-body-secondary mx-auto" style="max-width: 650px;">
+                Select a space based on the amount and type of goods you need to store.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <!-- 1. SMALL SPACE (25 sq. ft. - Lockers / Archive Boxes) -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden bg-body">
+                    <div class="position-relative" style="height: 180px;">
+                        <img 
+                            src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?auto=format&fit=crop&w=600&q=80" 
+                            alt="Small compact storage unit with archive boxes" 
+                            class="w-100 h-100 object-fit-cover"
+                        />
+                        <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center position-absolute bottom-0 start-50 translate-middle-x mb-n4 shadow" style="width: 64px; height: 64px; z-index: 2;">
+                            <i class="fa-solid fa-box text-dark fs-5"></i>
+                        </div>
+                    </div>
+                    <div class="card-body p-4 pt-5 text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="fw-bold text-body mt-2">
+                                Small Space
+                            </h5>
+                            <p class="text-body-secondary mb-3">
+                                Suitable for documents, small stock, personal items and business supplies.
+                            </p>
+                        </div>
+                        <div>
+                            <span class="badge text-bg-warning px-3 py-2 fw-semibold rounded-pill">
+                                Up to 25 sq. ft.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. MEDIUM SPACE (50 sq. ft. - Household & Small Inventory) -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden bg-body">
+                    <div class="position-relative" style="height: 180px;">
+                        <img 
+                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" 
+                            alt="Medium sized organized self-storage room" 
+                            class="w-100 h-100 object-fit-cover"
+                        />
+                        <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center position-absolute bottom-0 start-50 translate-middle-x mb-n4 shadow" style="width: 64px; height: 64px; z-index: 2;">
+                            <i class="fa-solid fa-boxes-stacked text-dark fs-5"></i>
+                        </div>
+                    </div>
+                    <div class="card-body p-4 pt-5 text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="fw-bold text-body mt-2">
+                                Medium Space
+                            </h5>
+                            <p class="text-body-secondary mb-3">
+                                Ideal for growing inventory, equipment and household storage.
+                            </p>
+                        </div>
+                        <div>
+                            <span class="badge text-bg-warning px-3 py-2 fw-semibold rounded-pill">
+                                Up to 50 sq. ft.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. LARGE SPACE (100 sq. ft. - Commercial inventory / Furniture) -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden bg-body">
+                    <div class="position-relative" style="height: 180px;">
+                        <img 
+                            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" 
+                            alt="Large commercial storage unit and racking" 
+                            class="w-100 h-100 object-fit-cover"
+                        />
+                        <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center position-absolute bottom-0 start-50 translate-middle-x mb-n4 shadow" style="width: 64px; height: 64px; z-index: 2;">
+                            <i class="fa-solid fa-warehouse text-dark fs-5"></i>
+                        </div>
+                    </div>
+                    <div class="card-body p-4 pt-5 text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="fw-bold text-body mt-2">
+                                Large Space
+                            </h5>
+                            <p class="text-body-secondary mb-3">
+                                Designed for business inventory, equipment and larger quantities of goods.
+                            </p>
+                        </div>
+                        <div>
+                            <span class="badge text-bg-warning px-3 py-2 fw-semibold rounded-pill">
+                                Up to 100 sq. ft.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. WAREHOUSE SPACE (250+ sq. ft. - Full industrial warehouse) -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden bg-body">
+                    <div class="position-relative" style="height: 180px;">
+                        <img 
+                            src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80" 
+                            alt="Large industrial warehouse facility with high ceilings" 
+                            class="w-100 h-100 object-fit-cover"
+                        />
+                        <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center position-absolute bottom-0 start-50 translate-middle-x mb-n4 shadow" style="width: 64px; height: 64px; z-index: 2;">
+                            <i class="fa-solid fa-building text-dark fs-5"></i>
+                        </div>
+                    </div>
+                    <div class="card-body p-4 pt-5 text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="fw-bold text-body mt-2">
+                                Warehouse Space
+                            </h5>
+                            <p class="text-body-secondary mb-3">
+                                Larger areas for bulk inventory, equipment and business operations.
+                            </p>
+                        </div>
+                        <div>
+                            <span class="badge text-bg-warning px-3 py-2 fw-semibold rounded-pill">
+                                250+ sq. ft.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =====================================================
+     PRICING FACTORS
+===================================================== -->
+
+<section class="py-5 bg-body-secondary">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <span class="text-warning fw-semibold">
+                    PRICING FACTORS
+                </span>
+
+                <h2 class="fw-bold mt-2">
+                    What Determines Your Storage Cost?
+                </h2>
+
+                <p class="text-body-secondary mt-3">
+                    Storage pricing can vary depending on your
+                    space requirements and the facilities your
+                    business needs.
+                </p>
+
+                <div class="mt-4">
+
+                    <div class="d-flex gap-3 mb-4">
+
+                        <div
+                            class="bg-warning rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                            style="width:50px;height:50px;">
+
+                            <i class="fa-solid fa-ruler-combined text-dark"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h5 class="fw-bold mb-1">
+                                Storage Size
+                            </h5>
+
+                            <p class="text-body-secondary mb-0">
+                                Larger storage areas require more
+                                space and may have different rental rates.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="d-flex gap-3 mb-4">
+
+                        <div
+                            class="bg-warning rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                            style="width:50px;height:50px;">
+
+                            <i class="fa-solid fa-location-dot text-dark"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h5 class="fw-bold mb-1">
+                                Location
+                            </h5>
+
+                            <p class="text-body-secondary mb-0">
+                                Pricing may depend on the selected
+                                StoreHub storage location.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="d-flex gap-3 mb-4">
+
+                        <div
+                            class="bg-warning rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                            style="width:50px;height:50px;">
+
+                            <i class="fa-solid fa-temperature-half text-dark"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h5 class="fw-bold mb-1">
+                                Storage Requirements
+                            </h5>
+
+                            <p class="text-body-secondary mb-0">
+                                Specialized requirements such as
+                                climate-controlled storage can affect pricing.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="d-flex gap-3">
+
+                        <div
+                            class="bg-warning rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                            style="width:50px;height:50px;">
+
+                            <i class="fa-solid fa-calendar-days text-dark"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h5 class="fw-bold mb-1">
+                                Rental Duration
+                            </h5>
+
+                            <p class="text-body-secondary mb-0">
+                                Your preferred rental period can influence
+                                the available storage options.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="bg-body rounded-4 shadow-sm p-5">
+
+                    <div class="text-center">
+
+                        <i
+                            class="fa-solid fa-calculator fa-3x text-warning mb-4">
+                        </i>
+
+                        <h3 class="fw-bold">
+                            Need a Custom Quote?
+                        </h3>
+
+                        <p class="text-body-secondary">
+                            If you need more space or have specific
+                            storage requirements, our team can help
+                            you find a suitable option.
+                        </p>
+
+                        <a
+                            href="contact.html"
+                            class="btn btn-dark btn-lg px-4 mt-3">
+
+                            Request a Quote
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================================
+     RENTAL BENEFITS
+===================================================== -->
+
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="text-warning fw-semibold">
+                RENTAL BENEFITS
+            </span>
+            <h2 class="fw-bold mt-2 text-body">
+                Flexible Storage for Your Business
+            </h2>
+            <p class="text-body-secondary mx-auto" style="max-width: 680px;">
+                Get the space you need without taking on unnecessary warehouse overhead.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+                       <!-- 1. FLEXIBLE SPACE (Updated) -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden bg-body">
+                    <div class="position-relative" style="height: 190px;">
+                        <img 
+                            src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=700&q=80" 
+                            alt="Flexible modular warehouse storage units" 
+                            class="w-100 h-100 object-fit-cover"
+                        />
+                        <span class="position-absolute bottom-0 start-0 m-3 p-2 bg-body border border-secondary-subtle rounded-3 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 46px; height: 46px;">
+                            <i class="fa-solid fa-arrows-left-right-to-line text-warning fs-5"></i>
+                        </span>
+                    </div>
+                    <div class="card-body p-4 pt-3">
+                        <h5 class="fw-bold text-body">
+                            Flexible Space
+                        </h5>
+                        <p class="text-body-secondary mb-0">
+                            Choose a storage size that matches your current inventory and business needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. LOWER OVERHEAD -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden bg-body">
+                    <div class="position-relative" style="height: 190px;">
+                        <img 
+                            src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=700&q=80" 
+                            alt="Cost savings and financial overhead management" 
+                            class="w-100 h-100 object-fit-cover"
+                        />
+                        <span class="position-absolute bottom-0 start-0 m-3 p-2 bg-body border border-secondary-subtle rounded-3 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 46px; height: 46px;">
+                            <i class="fa-solid fa-money-bill-transfer text-warning fs-5"></i>
+                        </span>
+                    </div>
+                    <div class="card-body p-4 pt-3">
+                        <h5 class="fw-bold text-body">
+                            Lower Overhead
+                        </h5>
+                        <p class="text-body-secondary mb-0">
+                            Avoid the cost and responsibility of maintaining your own warehouse space.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+                      <!-- 3. EASY ACCESS (Updated) -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden bg-body">
+                    <div class="position-relative" style="height: 190px;">
+                        <img 
+                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" 
+                            alt="Direct roll-up door drive-up access storage unit" 
+                            class="w-100 h-100 object-fit-cover"
+                        />
+                        <span class="position-absolute bottom-0 start-0 m-3 p-2 bg-body border border-secondary-subtle rounded-3 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 46px; height: 46px;">
+                            <i class="fa-solid fa-door-open text-warning fs-5"></i>
+                        </span>
+                    </div>
+                    <div class="card-body p-4 pt-3">
+                        <h5 class="fw-bold text-body">
+                            Easy Access
+                        </h5>
+                        <p class="text-body-secondary mb-0">
+                            Access your stored inventory and equipment whenever your business needs it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. SECURE STORAGE -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden bg-body">
+                    <div class="position-relative" style="height: 190px;">
+                        <img 
+                            src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=700&q=80" 
+                            alt="Facility security camera and surveillance monitoring" 
+                            class="w-100 h-100 object-fit-cover"
+                        />
+                        <span class="position-absolute bottom-0 start-0 m-3 p-2 bg-body border border-secondary-subtle rounded-3 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 46px; height: 46px;">
+                            <i class="fa-solid fa-shield-halved text-warning fs-5"></i>
+                        </span>
+                    </div>
+                    <div class="card-body p-4 pt-3">
+                        <h5 class="fw-bold text-body">
+                            Secure Storage
+                        </h5>
+                        <p class="text-body-secondary mb-0">
+                            Store your goods in a facility with security and monitoring features.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. SCALE AS YOU GROW -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden bg-body">
+                    <div class="position-relative" style="height: 190px;">
+                        <img 
+                            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80" 
+                            alt="Business growth analytics and scaling" 
+                            class="w-100 h-100 object-fit-cover"
+                        />
+                        <span class="position-absolute bottom-0 start-0 m-3 p-2 bg-body border border-secondary-subtle rounded-3 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 46px; height: 46px;">
+                            <i class="fa-solid fa-chart-line text-warning fs-5"></i>
+                        </span>
+                    </div>
+                    <div class="card-body p-4 pt-3">
+                        <h5 class="fw-bold text-body">
+                            Scale as You Grow
+                        </h5>
+                        <p class="text-body-secondary mb-0">
+                            Move to a more suitable storage option as your inventory requirements increase.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. FOCUS ON YOUR BUSINESS -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden bg-body">
+                    <div class="position-relative" style="height: 190px;">
+                        <img 
+                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80" 
+                            alt="Team focused on core business operations" 
+                            class="w-100 h-100 object-fit-cover"
+                        />
+                        <span class="position-absolute bottom-0 start-0 m-3 p-2 bg-body border border-secondary-subtle rounded-3 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 46px; height: 46px;">
+                            <i class="fa-solid fa-briefcase text-warning fs-5"></i>
+                        </span>
+                    </div>
+                    <div class="card-body p-4 pt-3">
+                        <h5 class="fw-bold text-body">
+                            Focus on Your Business
+                        </h5>
+                        <p class="text-body-secondary mb-0">
+                            Let StoreHub handle your storage space while you focus on your day-to-day operations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 <!-- =====================================================
      WHAT'S INCLUDED
 ===================================================== -->
@@ -1085,56 +2104,97 @@
 
     <div class="container">
 
+
         <div class="row g-4 pb-4">
 
 
             <!-- BRAND -->
 
-            <div class="col-lg-4">
+         
 
-                <a
-                    href="index.html"
-                    class="text-white text-decoration-none">
+<div class="col-lg-4">
 
-                    <img
-                        src="assets/images/logo.png"
-                        alt="StoreHub Logo"
-                        style="height:50px;width:auto;object-fit:contain;"
-                        class="mb-3">
+    <!-- LOGO + BRAND NAME -->
 
-                    <h5>
-                        StoreHub
-                    </h5>
+    <a
+        href="index.html"
+        class="text-white text-decoration-none d-inline-flex align-items-center gap-3 mb-3">
 
-                </a>
+        <img
+            src="assets/images/logo.png"
+            alt="StoreHub Logo"
+            style="
+                height:55px;
+                width:55px;
+                object-fit:contain;
+                display:block;
+            ">
+
+        <span
+            class="fw-bold"
+            style="
+                font-size:28px;
+                line-height:1;
+            ">
+
+            StoreHub
+
+        </span>
+
+    </a>
 
 
-                <p class="text-white-50">
+    <!-- DESCRIPTION -->
 
-                    Secure and flexible warehouse
-                    and storage solutions for
-                    individuals and businesses.
+    <p
+        class="text-white-50 mb-3"
+        style="
+            max-width:360px;
+            line-height:1.7;
+        ">
 
-                </p>
+        Secure and flexible warehouse and storage
+        solutions for individuals and businesses.
+
+    </p>
 
 
-                <div class="d-flex gap-3">
+    <!-- SOCIAL ICONS -->
 
-                    <a href="#" class="text-white">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
+    <div class="d-flex gap-3">
 
-                    <a href="#" class="text-white">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+        <a
+            href="#"
+            class="text-white"
+            aria-label="Facebook">
 
-                    <a href="#" class="text-white">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
+            <i class="fa-brands fa-facebook"></i>
 
-                </div>
+        </a>
 
-            </div>
+
+        <a
+            href="#"
+            class="text-white"
+            aria-label="Instagram">
+
+            <i class="fa-brands fa-instagram"></i>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="text-white"
+            aria-label="LinkedIn">
+
+            <i class="fa-brands fa-linkedin"></i>
+
+        </a>
+
+    </div>
+
+</div>
 
 
             <!-- QUICK LINKS -->
@@ -1145,57 +2205,39 @@
                     Quick Links
                 </h6>
 
+
                 <ul class="list-unstyled">
 
                     <li class="mb-2">
-
                         <a
                             href="index.html"
                             class="text-white-50 text-decoration-none">
-
                             Home
-
                         </a>
-
                     </li>
 
-
                     <li class="mb-2">
-
                         <a
                             href="facilities.html"
                             class="text-white-50 text-decoration-none">
-
                             Facilities
-
                         </a>
-
                     </li>
 
-
                     <li class="mb-2">
-
                         <a
                             href="pricing.html"
                             class="text-white-50 text-decoration-none">
-
                             Pricing
-
                         </a>
-
                     </li>
 
-
                     <li>
-
                         <a
                             href="locations.html"
                             class="text-white-50 text-decoration-none">
-
                             Locations
-
                         </a>
-
                     </li>
 
                 </ul>
@@ -1203,23 +2245,24 @@
             </div>
 
 
-            <!-- ACCOUNT -->
+            <!-- PAGES -->
 
             <div class="col-6 col-lg-2">
 
                 <h6>
-                    Account
+                    Pages
                 </h6>
+
 
                 <ul class="list-unstyled">
 
                     <li class="mb-2">
 
                         <a
-                            href="login.html"
+                            href="maintenance.html"
                             class="text-white-50 text-decoration-none">
 
-                            Login
+                            Maintenance
 
                         </a>
 
@@ -1229,10 +2272,10 @@
                     <li class="mb-2">
 
                         <a
-                            href="signup.html"
+                            href="404.html"
                             class="text-white-50 text-decoration-none">
 
-                            Signup
+                            404 Page
 
                         </a>
 
@@ -1242,10 +2285,10 @@
                     <li>
 
                         <a
-                            href="contact.html"
+                            href="coming-soon.html"
                             class="text-white-50 text-decoration-none">
 
-                            Enquiry
+                            Coming Soon
 
                         </a>
 
@@ -1293,8 +2336,11 @@
 
             </div>
 
+
         </div>
 
+
+        <!-- COPYRIGHT -->
 
         <div
             class="border-top border-secondary py-3 text-center">
@@ -1311,6 +2357,7 @@
     </div>
 
 </footer>
+
 
 
 

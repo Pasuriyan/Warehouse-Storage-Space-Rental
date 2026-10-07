@@ -9,14 +9,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const savedTheme = localStorage.getItem("theme");
 
     if (savedTheme === "dark") {
+
         document.body.classList.add("dark-mode");
 
         if (themeToggle) {
             themeToggle.innerHTML = "☀️";
         }
+
+    } else {
+
+        if (themeToggle) {
+            themeToggle.innerHTML = "🌙";
+        }
+
     }
 
+
     if (themeToggle) {
+
         themeToggle.addEventListener("click", function () {
 
             document.body.classList.toggle("dark-mode");
@@ -32,8 +42,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 localStorage.setItem("theme", "light");
 
                 themeToggle.innerHTML = "🌙";
+
             }
+
         });
+
     }
 
 
@@ -41,53 +54,51 @@ document.addEventListener("DOMContentLoaded", function () {
        RTL / LTR
     ================================= */
 
-    const rtlToggle = document.getElementById("rtlToggle");
+    /* ================================
+   RTL / LTR FULL DYNAMIC TOGGLE
+================================= */
+const rtlToggle = document.getElementById("rtlToggle");
+const bootstrapLink = document.getElementById("bootstrap-css");
 
-    const savedDirection = localStorage.getItem("direction");
+const BOOTSTRAP_LTR = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
+const BOOTSTRAP_RTL = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css";
 
-    if (savedDirection === "rtl") {
+// 1. Function to apply direction
+function setDirection(dir) {
+    // Set dir attribute on <html>
+    document.documentElement.setAttribute("dir", dir);
 
-        document.documentElement.setAttribute("dir", "rtl");
+    // Swap Bootstrap CSS
+    if (bootstrapLink) {
+        bootstrapLink.setAttribute("href", dir === "rtl" ? BOOTSTRAP_RTL : BOOTSTRAP_LTR);
+    }
 
-        if (rtlToggle) {
-            rtlToggle.innerHTML = "LTR";
-        }
-
+    // Toggle helper class on body
+    if (dir === "rtl") {
+        document.body.classList.add("rtl-mode");
     } else {
-
-        document.documentElement.setAttribute("dir", "ltr");
-
-        if (rtlToggle) {
-            rtlToggle.innerHTML = "RTL";
-        }
+        document.body.classList.remove("rtl-mode");
     }
 
+    // Save preference
+    localStorage.setItem("direction", dir);
 
+    // Keep Icon
     if (rtlToggle) {
-
-        rtlToggle.addEventListener("click", function () {
-
-            const currentDirection =
-                document.documentElement.getAttribute("dir");
-
-            if (currentDirection === "rtl") {
-
-                document.documentElement.setAttribute("dir", "ltr");
-
-                localStorage.setItem("direction", "ltr");
-
-                rtlToggle.innerHTML = "RTL";
-
-            } else {
-
-                document.documentElement.setAttribute("dir", "rtl");
-
-                localStorage.setItem("direction", "rtl");
-
-                rtlToggle.innerHTML = "LTR";
-            }
-
-        });
+        rtlToggle.innerHTML = '<i class="fa-solid fa-arrows-left-right"></i>';
     }
+}
 
+// 2. Load saved direction on page start
+const savedDirection = localStorage.getItem("direction") || "ltr";
+setDirection(savedDirection);
+
+// 3. Click Event Listener
+if (rtlToggle) {
+    rtlToggle.addEventListener("click", function () {
+        const currentDirection = document.documentElement.getAttribute("dir") || "ltr";
+        const newDirection = (currentDirection === "rtl") ? "ltr" : "rtl";
+        setDirection(newDirection);
+    });
+}
 });

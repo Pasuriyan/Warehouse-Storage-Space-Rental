@@ -32,8 +32,7 @@
      NAVBAR
 ===================================================== -->
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
-
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
     <div class="container">
 
 
@@ -208,53 +207,59 @@
 
             <!-- RIGHT SIDE -->
 
-            <div class="d-flex align-items-center gap-2 flex-wrap">
+           <div class="d-flex align-items-center gap-2" style="margin-right:20px;">
+
+    <!-- RTL / LTR -->
+    <button
+        id="rtlToggle"
+        type="button"
+        class="btn d-flex align-items-center justify-content-center"
+        style="
+            width:100px !important;
+            height:40px !important;
+            min-width:100px !important;
+            padding:0 !important;
+            margin:0 !important;
+            border:1px solid #6c757d !important;
+            border-radius:50px !important;
+            color:#fff !important;
+            background:#17233f !important;
+            box-shadow:none !important;
+        "
+        title="Switch RTL / LTR">
+
+        <i class="fa-solid fa-arrows-left-right"></i>
+
+    </button>
 
 
-                <button
-                    id="rtlToggle"
-                    class="btn btn-outline-secondary rounded-pill btn-sm px-3">
+    <!-- DARK MODE -->
+    <button
+        id="themeToggle"
+        type="button"
+        class="btn d-flex align-items-center justify-content-center"
+        style="
+            width:100px !important;
+            height:40px !important;
+            min-width:100px !important;
+            padding:0 !important;
+            margin:0 !important;
+            border:1px solid #6c757d !important;
+            border-radius:50px !important;
+            color:#fff !important;
+            background:#17233f !important;
+            box-shadow:none !important;
+        "
+        title="Toggle dark mode">
 
-                    <span id="directionText">
-                        LTR
-                    </span>
+        <i
+            id="themeIcon"
+            class="fa-solid fa-moon">
+        </i>
 
-                    <i class="fa-solid fa-arrows-left-right ms-1"></i>
+    </button>
 
-                </button>
-
-
-                <button
-                    id="themeToggle"
-                    class="btn btn-outline-secondary rounded-circle"
-                    style="width:38px;height:38px;">
-
-                    <i
-                        id="themeIcon"
-                        class="fa-solid fa-moon">
-                    </i>
-
-                </button>
-
-
-                <a
-                    href="login.html"
-                    class="btn btn-outline-dark btn-sm">
-
-                    Login
-
-                </a>
-
-
-                <a
-                    href="signup.html"
-                    class="btn btn-dark btn-sm">
-
-                    Signup
-
-                </a>
-
-            </div>
+</div>
 
         </div>
 
@@ -268,67 +273,280 @@
      404 CONTENT
 ===================================================== -->
 
+<!-- =====================================================
+     404 PAGE
+===================================================== -->
+
 <section
-    class="min-vh-100 d-flex align-items-center justify-content-center bg-body-secondary text-center">
+    class="py-5 bg-body-secondary"
+    style="min-height:calc(100vh - 80px);">
 
-    <div class="container">
+    <div class="container py-5">
+
+        <!-- MAIN 404 MESSAGE -->
+
+        <div class="text-center mb-5">
+
+            <!-- 404 -->
+
+            <div class="mb-3">
+
+                <h1
+                    class="fw-bold text-warning"
+                    style="
+                        font-size:150px;
+                        line-height:1;
+                        letter-spacing:5px;
+                    ">
+
+                    404
+
+                </h1>
+
+            </div>
 
 
-        <div class="mb-2">
+            <!-- TITLE -->
 
-            <h1
-                class="fw-bold text-warning"
-                style="font-size:150px;line-height:1;">
+            <h2 class="fw-bold text-body mb-3">
 
-                404
+                Page Not Found
 
-            </h1>
+            </h2>
+
+
+            <!-- DESCRIPTION -->
+
+            <p
+                class="lead text-body-secondary mx-auto"
+                style="
+                    max-width:650px;
+                    line-height:1.8;
+                ">
+
+                Sorry, the page you're looking for doesn't exist,
+                may have been moved, or is temporarily unavailable.
+                Let's help you find the storage information you need.
+
+            </p>
+
+
+            <!-- BUTTONS -->
+
+            <div
+                class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+
+                <a
+                    href="index.html"
+                    class="btn btn-warning btn-lg px-4">
+
+                    <i class="fa-solid fa-house me-2"></i>
+
+                    Back to Home
+
+                </a>
+
+
+                <a
+                    href="contact.html"
+                    class="btn btn-outline-warning btn-lg px-4">
+
+                    <i class="fa-solid fa-envelope me-2"></i>
+
+                    Contact Us
+
+                </a>
+
+            </div>
 
         </div>
 
 
-        <h2 class="fw-bold text-body">
 
-            Page Not Found
+        <!-- =================================================
+             STOREHUB QUICK LINKS
+        ================================================== -->
 
-        </h2>
-
-
-        <p
-            class="lead text-body-secondary mx-auto"
-            style="max-width:600px;">
-
-            Sorry, the page you're looking for doesn't exist
-            or may have been moved.
-
-        </p>
+        <div class="row g-4 mt-3">
 
 
-        <div
-            class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+            <!-- FACILITIES -->
+
+            <div class="col-md-4">
+
+                <div
+                    class="card h-100 border-0 shadow-sm text-center p-4"
+                    style="border-radius:16px;">
+
+                    <div
+                        class="d-flex align-items-center justify-content-center bg-warning rounded-circle mx-auto mb-3"
+                        style="width:60px;height:60px;">
+
+                        <i
+                            class="fa-solid fa-warehouse text-dark fs-4">
+                        </i>
+
+                    </div>
 
 
-            <a
-                href="index.html"
-                class="btn btn-warning btn-lg px-4">
+                    <h5 class="fw-bold text-body">
 
-                <i class="fa-solid fa-house me-2"></i>
+                        Explore Facilities
 
-                Back to Home
-
-            </a>
+                    </h5>
 
 
-            <a
-                href="contact.html"
-                class="btn btn-outline-secondary btn-lg px-4">
+                    <p class="text-body-secondary">
 
-                <i class="fa-solid fa-envelope me-2"></i>
+                        Discover our storage facilities,
+                        security features and services
+                        designed to keep your belongings safe.
 
-                Contact Us
+                    </p>
 
-            </a>
 
+                    <a
+                        href="facilities.html"
+                        class="text-warning fw-semibold text-decoration-none">
+
+                        View Facilities
+
+                        <i class="fa-solid fa-arrow-right ms-1"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRICING -->
+
+            <div class="col-md-4">
+
+                <div
+                    class="card h-100 border-0 shadow-sm text-center p-4"
+                    style="border-radius:16px;">
+
+                    <div
+                        class="d-flex align-items-center justify-content-center bg-warning rounded-circle mx-auto mb-3"
+                        style="width:60px;height:60px;">
+
+                        <i
+                            class="fa-solid fa-tags text-dark fs-4">
+                        </i>
+
+                    </div>
+
+
+                    <h5 class="fw-bold text-body">
+
+                        View Storage Plans
+
+                    </h5>
+
+
+                    <p class="text-body-secondary">
+
+                        Compare our Small, Medium, Large
+                        and Business+ storage options
+                        to find the right space for you.
+
+                    </p>
+
+
+                    <a
+                        href="pricing.html"
+                        class="text-warning fw-semibold text-decoration-none">
+
+                        View Pricing
+
+                        <i class="fa-solid fa-arrow-right ms-1"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LOCATIONS -->
+
+            <div class="col-md-4">
+
+                <div
+                    class="card h-100 border-0 shadow-sm text-center p-4"
+                    style="border-radius:16px;">
+
+                    <div
+                        class="d-flex align-items-center justify-content-center bg-warning rounded-circle mx-auto mb-3"
+                        style="width:60px;height:60px;">
+
+                        <i
+                            class="fa-solid fa-location-dot text-dark fs-4">
+                        </i>
+
+                    </div>
+
+
+                    <h5 class="fw-bold text-body">
+
+                        Find a Location
+
+                    </h5>
+
+
+                    <p class="text-body-secondary">
+
+                        Explore our available storage centres
+                        and choose a convenient location
+                        for your storage requirements.
+
+                    </p>
+
+
+                    <a
+                        href="locations.html"
+                        class="text-warning fw-semibold text-decoration-none">
+
+                        View Locations
+
+                        <i class="fa-solid fa-arrow-right ms-1"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             HELP MESSAGE
+        ================================================== -->
+
+        <div class="text-center mt-5">
+
+            <p class="text-body-secondary mb-0">
+
+                <i class="fa-solid fa-circle-info text-warning me-2"></i>
+
+                Can't find what you're looking for?
+
+                <a
+                    href="contact.html"
+                    class="text-warning fw-semibold text-decoration-none">
+
+                    Contact the StoreHub team.
+
+                </a>
+
+            </p>
 
         </div>
 
@@ -346,83 +564,138 @@
 
     <div class="container">
 
+
         <div class="row g-4 pb-4">
 
 
-            <div class="col-lg-4">
+            <!-- BRAND -->
 
-                <a
-                    href="index.html"
-                    class="text-white text-decoration-none">
+         
 
-                    <img
-                        src="assets/images/logo.png"
-                        alt="StoreHub Logo"
-                        style="height:50px;width:auto;"
-                        class="mb-3">
+<div class="col-lg-4">
 
-                    <h5>StoreHub</h5>
+    <!-- LOGO + BRAND NAME -->
 
-                </a>
+    <a
+        href="index.html"
+        class="text-white text-decoration-none d-inline-flex align-items-center gap-3 mb-3">
+
+        <img
+            src="assets/images/logo.png"
+            alt="StoreHub Logo"
+            style="
+                height:55px;
+                width:55px;
+                object-fit:contain;
+                display:block;
+            ">
+
+        <span
+            class="fw-bold"
+            style="
+                font-size:28px;
+                line-height:1;
+            ">
+
+            StoreHub
+
+        </span>
+
+    </a>
 
 
-                <p class="text-white-50">
+    <!-- DESCRIPTION -->
 
-                    Secure and flexible warehouse
-                    and storage solutions for everyone.
+    <p
+        class="text-white-50 mb-3"
+        style="
+            max-width:360px;
+            line-height:1.7;
+        ">
 
-                </p>
+        Secure and flexible warehouse and storage
+        solutions for individuals and businesses.
+
+    </p>
 
 
-                <div class="d-flex gap-3">
+    <!-- SOCIAL ICONS -->
 
-                    <a href="#" class="text-white">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
+    <div class="d-flex gap-3">
 
-                    <a href="#" class="text-white">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+        <a
+            href="#"
+            class="text-white"
+            aria-label="Facebook">
 
-                    <a href="#" class="text-white">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
+            <i class="fa-brands fa-facebook"></i>
 
-                </div>
+        </a>
 
-            </div>
 
+        <a
+            href="#"
+            class="text-white"
+            aria-label="Instagram">
+
+            <i class="fa-brands fa-instagram"></i>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="text-white"
+            aria-label="LinkedIn">
+
+            <i class="fa-brands fa-linkedin"></i>
+
+        </a>
+
+    </div>
+
+</div>
+
+
+            <!-- QUICK LINKS -->
 
             <div class="col-6 col-lg-2">
 
-                <h6>Quick Links</h6>
+                <h6>
+                    Quick Links
+                </h6>
+
 
                 <ul class="list-unstyled">
 
                     <li class="mb-2">
-                        <a href="index.html"
-                           class="text-white-50 text-decoration-none">
+                        <a
+                            href="index.html"
+                            class="text-white-50 text-decoration-none">
                             Home
                         </a>
                     </li>
 
                     <li class="mb-2">
-                        <a href="facilities.html"
-                           class="text-white-50 text-decoration-none">
+                        <a
+                            href="facilities.html"
+                            class="text-white-50 text-decoration-none">
                             Facilities
                         </a>
                     </li>
 
                     <li class="mb-2">
-                        <a href="pricing.html"
-                           class="text-white-50 text-decoration-none">
+                        <a
+                            href="pricing.html"
+                            class="text-white-50 text-decoration-none">
                             Pricing
                         </a>
                     </li>
 
                     <li>
-                        <a href="locations.html"
-                           class="text-white-50 text-decoration-none">
+                        <a
+                            href="locations.html"
+                            class="text-white-50 text-decoration-none">
                             Locations
                         </a>
                     </li>
@@ -432,31 +705,53 @@
             </div>
 
 
+            <!-- PAGES -->
+
             <div class="col-6 col-lg-2">
 
-                <h6>Pages</h6>
+                <h6>
+                    Pages
+                </h6>
+
 
                 <ul class="list-unstyled">
 
                     <li class="mb-2">
-                        <a href="maintenance.html"
-                           class="text-white-50 text-decoration-none">
+
+                        <a
+                            href="maintenance.html"
+                            class="text-white-50 text-decoration-none">
+
                             Maintenance
+
                         </a>
+
                     </li>
+
 
                     <li class="mb-2">
-                        <a href="404.html"
-                           class="text-white-50 text-decoration-none">
+
+                        <a
+                            href="404.html"
+                            class="text-white-50 text-decoration-none">
+
                             404 Page
+
                         </a>
+
                     </li>
 
+
                     <li>
-                        <a href="coming-soon.html"
-                           class="text-white-50 text-decoration-none">
+
+                        <a
+                            href="coming-soon.html"
+                            class="text-white-50 text-decoration-none">
+
                             Coming Soon
+
                         </a>
+
                     </li>
 
                 </ul>
@@ -464,9 +759,14 @@
             </div>
 
 
+            <!-- CONTACT -->
+
             <div class="col-lg-4">
 
-                <h6>Contact Us</h6>
+                <h6>
+                    Contact Us
+                </h6>
+
 
                 <p class="text-white-50 mb-2">
 
@@ -496,8 +796,11 @@
 
             </div>
 
+
         </div>
 
+
+        <!-- COPYRIGHT -->
 
         <div
             class="border-top border-secondary py-3 text-center">
@@ -517,6 +820,7 @@
 
 
 
+
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 </script>
@@ -524,128 +828,7 @@
 
 <!-- THEME + RTL -->
 
-<script>
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const themeButton =
-        document.getElementById("themeToggle");
-
-    const themeIcon =
-        document.getElementById("themeIcon");
-
-    const rtlButton =
-        document.getElementById("rtlToggle");
-
-    const directionText =
-        document.getElementById("directionText");
-
-
-    let savedTheme =
-        localStorage.getItem("theme") || "light";
-
-
-    document.documentElement.setAttribute(
-        "data-bs-theme",
-        savedTheme
-    );
-
-
-    function updateThemeIcon(theme) {
-
-        if (theme === "dark") {
-
-            themeIcon.classList.remove("fa-moon");
-            themeIcon.classList.add("fa-sun");
-
-        } else {
-
-            themeIcon.classList.remove("fa-sun");
-            themeIcon.classList.add("fa-moon");
-
-        }
-
-    }
-
-
-    updateThemeIcon(savedTheme);
-
-
-    themeButton.addEventListener("click", function () {
-
-        const current =
-            document.documentElement.getAttribute(
-                "data-bs-theme"
-            );
-
-        const newTheme =
-            current === "dark"
-                ? "light"
-                : "dark";
-
-
-        document.documentElement.setAttribute(
-            "data-bs-theme",
-            newTheme
-        );
-
-
-        localStorage.setItem(
-            "theme",
-            newTheme
-        );
-
-
-        updateThemeIcon(newTheme);
-
-    });
-
-
-    let savedDirection =
-        localStorage.getItem("direction") || "ltr";
-
-
-    document.documentElement.setAttribute(
-        "dir",
-        savedDirection
-    );
-
-
-    directionText.textContent =
-        savedDirection.toUpperCase();
-
-
-    rtlButton.addEventListener("click", function () {
-
-        const current =
-            document.documentElement.getAttribute("dir");
-
-        const newDirection =
-            current === "rtl"
-                ? "ltr"
-                : "rtl";
-
-
-        document.documentElement.setAttribute(
-            "dir",
-            newDirection
-        );
-
-
-        localStorage.setItem(
-            "direction",
-            newDirection
-        );
-
-
-        directionText.textContent =
-            newDirection.toUpperCase();
-
-    });
-
-});
-
-</script>
+<script src="assets/js/script.js"></script>
 
 
 </body>

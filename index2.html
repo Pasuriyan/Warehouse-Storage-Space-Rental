@@ -27,8 +27,7 @@
      NAVBAR
 ===================================================== -->
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
-
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
     <div class="container">
 
 
@@ -250,66 +249,59 @@
 
             <!-- RIGHT -->
 
-            <div
-                class="d-flex align-items-center gap-2 flex-wrap">
+          <div class="d-flex align-items-center gap-2" style="margin-right:20px;">
+
+    <!-- RTL / LTR -->
+    <button
+        id="rtlToggle"
+        type="button"
+        class="btn d-flex align-items-center justify-content-center"
+        style="
+            width:100px !important;
+            height:40px !important;
+            min-width:100px !important;
+            padding:0 !important;
+            margin:0 !important;
+            border:1px solid #6c757d !important;
+            border-radius:50px !important;
+            color:#fff !important;
+            background:#17233f !important;
+            box-shadow:none !important;
+        "
+        title="Switch RTL / LTR">
+
+        <i class="fa-solid fa-arrows-left-right"></i>
+
+    </button>
 
 
-                <!-- RFL -->
+    <!-- DARK MODE -->
+    <button
+        id="themeToggle"
+        type="button"
+        class="btn d-flex align-items-center justify-content-center"
+        style="
+            width:100px !important;
+            height:40px !important;
+            min-width:100px !important;
+            padding:0 !important;
+            margin:0 !important;
+            border:1px solid #6c757d !important;
+            border-radius:50px !important;
+            color:#fff !important;
+            background:#17233f !important;
+            box-shadow:none !important;
+        "
+        title="Toggle dark mode">
 
-                <button
-                    id="rtlToggle"
-                    type="button"
-                    class="btn btn-outline-secondary rounded-pill btn-sm px-3">
+        <i
+            id="themeIcon"
+            class="fa-solid fa-moon">
+        </i>
 
-                    <span id="directionText">
-                        LTR
-                    </span>
+    </button>
 
-                    <i
-                        class="fa-solid fa-arrows-left-right ms-1">
-                    </i>
-
-                </button>
-
-
-                <!-- DARK -->
-
-                <button
-                    id="themeToggle"
-                    type="button"
-                    class="btn btn-outline-secondary rounded-circle"
-                    style="width:38px;height:38px;">
-
-                    <i
-                        id="themeIcon"
-                        class="fa-solid fa-moon">
-                    </i>
-
-                </button>
-
-
-                <!-- LOGIN -->
-
-                <a
-                    href="login.html"
-                    class="btn btn-outline-dark btn-sm">
-
-                    Login
-
-                </a>
-
-
-                <!-- SIGNUP -->
-
-                <a
-                    href="signup.html"
-                    class="btn btn-dark btn-sm">
-
-                    Signup
-
-                </a>
-
-            </div>
+</div>
 
         </div>
 
@@ -322,7 +314,7 @@
      HERO
 ===================================================== -->
 
-<section class="bg-dark text-white">
+<section class="py-5 bg-body-secondary">
 
     <div class="container py-5">
 
@@ -330,73 +322,57 @@
             class="row align-items-center g-5"
             style="min-height:75vh;">
 
-
             <!-- CONTENT -->
-
             <div class="col-lg-6">
 
-                <span
-                    class="badge text-bg-warning px-3 py-2 mb-3">
-
-                    BUSINESS STORAGE
-
+                <span class="badge text-bg-warning px-3 py-2 mb-3">
+                    WAREHOUSE & STORAGE RENTAL
                 </span>
 
-
-                <h1
-                    class="display-3 fw-bold">
-
+                <h1 class="display-3 fw-bold text-body">
                     More Space.
                     <br>
                     More Possibilities.
-
                 </h1>
 
-
-                <p
-                    class="lead text-white-50 mt-3">
-
-                    Store inventory, equipment and
-                    business supplies in a secure
-                    and flexible warehouse.
-
+                <p class="lead text-body mt-3">
+                    Rent secure warehouse and storage space for inventory,
+                    equipment, supplies and business goods. Choose the space
+                    and rental option that fits your needs.
                 </p>
 
+                <div class="d-flex gap-3 flex-wrap mt-4">
 
-                <div
-                    class="d-flex gap-3 flex-wrap mt-4">
-
+                    <!-- GET QUOTE -->
                     <a
                         href="contact.html"
                         class="btn btn-warning btn-lg px-4">
-
-                        Request Storage
-
+                        Get a Storage Quote
                     </a>
 
-
+                    <!-- LOCATIONS -->
                     <a
                         href="locations.html"
-                        class="btn btn-outline-light btn-lg px-4">
-
+                        class="btn btn-outline-dark btn-lg px-4">
                         Our Locations
-
                     </a>
 
                 </div>
 
             </div>
 
-
             <!-- IMAGE -->
-
             <div class="col-lg-6">
 
                 <img
                     src="assets/images/hero2.png.jpg"
                     alt="Business Warehouse"
                     class="img-fluid rounded-4 shadow"
-                    style="width:100%;height:450px;object-fit:cover;">
+                    style="
+                        width:100%;
+                        height:450px;
+                        object-fit:cover;
+                    ">
 
             </div>
 
@@ -408,102 +384,221 @@
 
 
 <!-- =====================================================
-     STATS
+     STORAGE OPTIONS
 ===================================================== -->
-
-<section class="py-5">
+<section class="py-5 bg-body">
 
     <div class="container">
 
-        <div class="row g-4 text-center">
+        <div class="text-center mb-5">
+
+            <span class="text-warning fw-semibold">
+                STORAGE OPTIONS
+            </span>
+
+            <h2 class="fw-bold mt-2">
+                Space for Every Business Need
+            </h2>
+
+            <p class="text-body-secondary mx-auto"
+               style="max-width:700px;">
+                Choose a practical storage solution based on the amount
+                and type of goods your business needs to store.
+            </p>
+
+        </div>
 
 
-            <div class="col-6 col-lg-3">
+        <div class="row g-4 align-items-stretch">
 
-                <div
-                    class="p-4 border rounded-4">
 
-                    <i
-                        class="fa-solid fa-warehouse fa-2x text-warning mb-3">
-                    </i>
+            <!-- SMALL STORAGE -->
 
-                    <h2 class="fw-bold">
-                        25+
-                    </h2>
+            <div class="col-md-6 col-lg-3">
 
-                    <p class="text-body-secondary mb-0">
-                        Storage Units
-                    </p>
+                <div class="card h-100 border-0 shadow-sm overflow-hidden">
+
+                    <img
+                        src="assets/images/2index (5).jpg"
+                        alt="Small Storage"
+                        class="w-100"
+                        style="
+                            height:260px;
+                            object-fit:cover;
+                        ">
+
+                    <div class="card-body p-4 d-flex flex-column">
+
+                        <div class="mb-3">
+
+                            <i class="fa-solid fa-box text-warning fa-xl"></i>
+
+                        </div>
+
+                        <h4 class="fw-bold mb-3">
+                            Small Storage
+                        </h4>
+
+                        <p class="text-body-secondary">
+                            Ideal for smaller inventory, documents,
+                            equipment and business supplies.
+                        </p>
+
+                        <ul class="text-body-secondary mt-auto mb-0 ps-3">
+
+                            <li>Documents</li>
+                            <li>Small inventory</li>
+                            <li>Business supplies</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- MEDIUM STORAGE -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 border-0 shadow-sm overflow-hidden">
+
+                    <img
+                        src="assets/images/2index (3).jpg"
+                        alt="Medium Storage"
+                        class="w-100"
+                        style="
+                            height:260px;
+                            object-fit:cover;
+                        ">
+
+                    <div class="card-body p-4 d-flex flex-column">
+
+                        <div class="mb-3">
+
+                            <i class="fa-solid fa-boxes-stacked text-warning fa-xl"></i>
+
+                        </div>
+
+                        <h4 class="fw-bold mb-3">
+                            Medium Storage
+                        </h4>
+
+                        <p class="text-body-secondary">
+                            A flexible option for growing stock
+                            and regular business inventory.
+                        </p>
+
+                        <ul class="text-body-secondary mt-auto mb-0 ps-3">
+
+                            <li>Growing inventory</li>
+                            <li>Retail stock</li>
+                            <li>Equipment</li>
+
+                        </ul>
+
+                    </div>
 
                 </div>
 
             </div>
 
 
-            <div class="col-6 col-lg-3">
+            <!-- WAREHOUSE SPACE -->
 
-                <div
-                    class="p-4 border rounded-4">
+            <div class="col-md-6 col-lg-3">
 
-                    <i
-                        class="fa-solid fa-location-dot fa-2x text-warning mb-3">
-                    </i>
+                <div class="card h-100 border-0 shadow-sm overflow-hidden">
 
-                    <h2 class="fw-bold">
-                        10+
-                    </h2>
+                    <img
+                        src="assets/images/2index (4).jpg"
+                        alt="Warehouse Storage Space"
+                        class="w-100"
+                        style="
+                            height:260px;
+                            object-fit:cover;
+                        ">
 
-                    <p class="text-body-secondary mb-0">
-                        Locations
-                    </p>
+                    <div class="card-body p-4 d-flex flex-column">
+
+                        <div class="mb-3">
+
+                            <i class="fa-solid fa-warehouse text-warning fa-xl"></i>
+
+                        </div>
+
+                        <h4 class="fw-bold mb-3">
+                            Warehouse Space
+                        </h4>
+
+                        <p class="text-body-secondary">
+                            Larger space for bulk inventory,
+                            equipment and business operations.
+                        </p>
+
+                        <ul class="text-body-secondary mt-auto mb-0 ps-3">
+
+                            <li>Bulk inventory</li>
+                            <li>Large equipment</li>
+                            <li>Business operations</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUSINESS INVENTORY -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 border-0 shadow-sm overflow-hidden">
+
+                    <img
+                        src="assets/images/2index (2).jpg"
+                        alt="Business Inventory Storage"
+                        class="w-100"
+                        style="
+                            height:260px;
+                            object-fit:cover;
+                        ">
+
+                    <div class="card-body p-4 d-flex flex-column">
+
+                        <div class="mb-3">
+
+                            <i class="fa-solid fa-dolly text-warning fa-xl"></i>
+
+                        </div>
+
+                        <h4 class="fw-bold mb-3">
+                            Business Inventory
+                        </h4>
+
+                        <p class="text-body-secondary">
+                            Convenient storage for retailers,
+                            suppliers and businesses managing stock.
+                        </p>
+
+                        <ul class="text-body-secondary mt-auto mb-0 ps-3">
+
+                            <li>Retail stock</li>
+                            <li>Packaging supplies</li>
+                            <li>Business goods</li>
+
+                        </ul>
+
+                    </div>
 
                 </div>
 
             </div>
 
-
-            <div class="col-6 col-lg-3">
-
-                <div
-                    class="p-4 border rounded-4">
-
-                    <i
-                        class="fa-solid fa-clock fa-2x text-warning mb-3">
-                    </i>
-
-                    <h2 class="fw-bold">
-                        24/7
-                    </h2>
-
-                    <p class="text-body-secondary mb-0">
-                        Access
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="col-6 col-lg-3">
-
-                <div
-                    class="p-4 border rounded-4">
-
-                    <i
-                        class="fa-solid fa-shield-halved fa-2x text-warning mb-3">
-                    </i>
-
-                    <h2 class="fw-bold">
-                        100%
-                    </h2>
-
-                    <p class="text-body-secondary mb-0">
-                        Secure
-                    </p>
-
-                </div>
-
-            </div>
 
         </div>
 
@@ -535,7 +630,7 @@
             <h2
                 class="fw-bold mt-2">
 
-                Everything Your Business Needs
+                Warehouse Facilities That Support Your Business
 
             </h2>
 
@@ -543,8 +638,7 @@
             <p
                 class="text-body-secondary">
 
-                Simple, secure and flexible storage
-                designed for modern businesses.
+                Practical facilities and services that make storing, accessing and managing your goods easier.
 
             </p>
 
@@ -789,6 +883,133 @@
 
 
 <!-- =====================================================
+     WHAT YOU CAN STORE
+===================================================== -->
+
+<section class="py-5 bg-body-secondary">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+                <img
+                    src="assets/images/Facilities (1).jpg"
+                    alt="Warehouse storage and business inventory"
+                    class="img-fluid rounded-4 shadow"
+                    style="width:100%;height:420px;object-fit:cover;">
+            </div>
+
+            <div class="col-lg-6">
+
+                <span class="text-warning fw-semibold">WHAT CAN YOU STORE?</span>
+
+                <h2 class="fw-bold mt-2">
+                    Store the Goods Your Business Depends On
+                </h2>
+
+                <p class="text-body-secondary">
+                    StoreHub provides flexible space for a wide range of business
+                    storage requirements. Select the space that matches your
+                    inventory volume and access needs.
+                </p>
+
+                <div class="row g-3 mt-3">
+
+                    <div class="col-sm-6">
+                        <div class="d-flex gap-3">
+                            <i class="fa-solid fa-check text-warning mt-1"></i>
+                            <span>Retail inventory</span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="d-flex gap-3">
+                            <i class="fa-solid fa-check text-warning mt-1"></i>
+                            <span>Business equipment</span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="d-flex gap-3">
+                            <i class="fa-solid fa-check text-warning mt-1"></i>
+                            <span>Packaging supplies</span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="d-flex gap-3">
+                            <i class="fa-solid fa-check text-warning mt-1"></i>
+                            <span>Documents and stock</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="facilities.html" class="btn btn-warning mt-4 px-4">
+                    Explore Facilities
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- WHY CHOOSE STOREHUB -->
+<section class="py-5 bg-body-tertiary">
+    <div class="container py-lg-4">
+        <div class="text-center mb-5">
+            <span class="text-warning fw-semibold">WHY STOREHUB?</span>
+            <h2 class="fw-bold mt-2">A Storage Partner You Can Rely On</h2>
+            <p class="text-body-secondary mx-auto" style="max-width:700px;">
+                StoreHub gives businesses a simple way to create extra space without the cost and commitment of maintaining their own warehouse.
+            </p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3"><div class="card h-100 border-0 shadow-sm text-center"><div class="card-body p-4">
+                <i class="fa-solid fa-ruler-combined fa-2x text-warning mb-3"></i><h5 class="fw-bold">Flexible Space</h5>
+                <p class="text-body-secondary mb-0">Choose storage space based on your current inventory and business needs.</p>
+            </div></div></div>
+            <div class="col-md-6 col-lg-3"><div class="card h-100 border-0 shadow-sm text-center"><div class="card-body p-4">
+                <i class="fa-solid fa-shield-halved fa-2x text-warning mb-3"></i><h5 class="fw-bold">Secure Storage</h5>
+                <p class="text-body-secondary mb-0">Keep your inventory and equipment in a protected and managed storage environment.</p>
+            </div></div></div>
+            <div class="col-md-6 col-lg-3"><div class="card h-100 border-0 shadow-sm text-center"><div class="card-body p-4">
+                <i class="fa-solid fa-truck-ramp-box fa-2x text-warning mb-3"></i><h5 class="fw-bold">Easy Access</h5>
+                <p class="text-body-secondary mb-0">Access your stored goods when you need to move, restock or manage inventory.</p>
+            </div></div></div>
+            <div class="col-md-6 col-lg-3"><div class="card h-100 border-0 shadow-sm text-center"><div class="card-body p-4">
+                <i class="fa-solid fa-chart-line fa-2x text-warning mb-3"></i><h5 class="fw-bold">Business Ready</h5>
+                <p class="text-body-secondary mb-0">Free up valuable business space and keep your operations organised.</p>
+            </div></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section class="py-5">
+    <div class="container py-lg-4">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-5">
+                <span class="text-warning fw-semibold">WHO WE SERVE</span>
+                <h2 class="fw-bold mt-2">Storage Solutions for Different Business Needs</h2>
+                <p class="text-body-secondary">Whether you are growing your inventory or need extra space for equipment and supplies, StoreHub provides practical storage options for businesses of different sizes.</p>
+                <a href="contact.html" class="btn btn-warning px-4">Discuss Your Storage Need</a>
+            </div>
+            <div class="col-lg-7"><div class="row g-3">
+                <div class="col-sm-6"><div class="p-4 border rounded-4 h-100"><i class="fa-solid fa-store fa-xl text-warning mb-3"></i><h5 class="fw-bold">Retail Businesses</h5><p class="text-body-secondary mb-0">Extra space for products, seasonal stock and retail inventory.</p></div></div>
+                <div class="col-sm-6"><div class="p-4 border rounded-4 h-100"><i class="fa-solid fa-boxes-stacked fa-xl text-warning mb-3"></i><h5 class="fw-bold">E-commerce</h5><p class="text-body-secondary mb-0">Store growing online inventory and fulfilment supplies.</p></div></div>
+                <div class="col-sm-6"><div class="p-4 border rounded-4 h-100"><i class="fa-solid fa-screwdriver-wrench fa-xl text-warning mb-3"></i><h5 class="fw-bold">Equipment &amp; Tools</h5><p class="text-body-secondary mb-0">Dedicated space for business equipment, tools and operational supplies.</p></div></div>
+                <div class="col-sm-6"><div class="p-4 border rounded-4 h-100"><i class="fa-solid fa-file-lines fa-xl text-warning mb-3"></i><h5 class="fw-bold">Documents &amp; Supplies</h5><p class="text-body-secondary mb-0">Keep important business documents, packaging and supplies organised.</p></div></div>
+            </div></div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
      STORAGE PROCESS
 ===================================================== -->
 
@@ -809,7 +1030,7 @@
 
             <h2 class="fw-bold mt-2">
 
-                Store in 3 Simple Steps
+                Rent Your Storage in 4 Simple Steps
 
             </h2>
 
@@ -818,100 +1039,48 @@
 
         <div class="row g-4 text-center">
 
-
-            <div class="col-md-4">
-
-                <div
-                    class="p-4">
-
-                    <div
-                        class="rounded-circle bg-warning d-inline-flex align-items-center justify-content-center fw-bold fs-4 mb-3"
-                        style="width:60px;height:60px;">
-
-                        1
-
-                    </div>
-
-
-                    <h4>
-                        Choose Space
-                    </h4>
-
-
-                    <p
-                        class="text-body-secondary">
-
-                        Select the storage
-                        size that fits your needs.
-
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 h-100">
+                    <div class="rounded-circle bg-warning d-inline-flex align-items-center justify-content-center fw-bold fs-4 mb-3"
+                         style="width:60px;height:60px;">1</div>
+                    <h4>Tell Us Your Need</h4>
+                    <p class="text-body-secondary">
+                        Share the type and amount of goods you need to store.
                     </p>
-
                 </div>
-
             </div>
 
-
-            <div class="col-md-4">
-
-                <div
-                    class="p-4">
-
-                    <div
-                        class="rounded-circle bg-warning d-inline-flex align-items-center justify-content-center fw-bold fs-4 mb-3"
-                        style="width:60px;height:60px;">
-
-                        2
-
-                    </div>
-
-
-                    <h4>
-                        Book Your Unit
-                    </h4>
-
-
-                    <p
-                        class="text-body-secondary">
-
-                        Send us your requirements
-                        and confirm your booking.
-
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 h-100">
+                    <div class="rounded-circle bg-warning d-inline-flex align-items-center justify-content-center fw-bold fs-4 mb-3"
+                         style="width:60px;height:60px;">2</div>
+                    <h4>Choose Your Space</h4>
+                    <p class="text-body-secondary">
+                        Select a storage size and rental option that suits your business.
                     </p>
-
                 </div>
-
             </div>
 
-
-            <div class="col-md-4">
-
-                <div
-                    class="p-4">
-
-                    <div
-                        class="rounded-circle bg-warning d-inline-flex align-items-center justify-content-center fw-bold fs-4 mb-3"
-                        style="width:60px;height:60px;">
-
-                        3
-
-                    </div>
-
-
-                    <h4>
-                        Start Storing
-                    </h4>
-
-
-                    <p
-                        class="text-body-secondary">
-
-                        Move your belongings
-                        into your secure unit.
-
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 h-100">
+                    <div class="rounded-circle bg-warning d-inline-flex align-items-center justify-content-center fw-bold fs-4 mb-3"
+                         style="width:60px;height:60px;">3</div>
+                    <h4>Confirm Rental</h4>
+                    <p class="text-body-secondary">
+                        Confirm your requirements and reserve the available storage space.
                     </p>
-
                 </div>
+            </div>
 
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 h-100">
+                    <div class="rounded-circle bg-warning d-inline-flex align-items-center justify-content-center fw-bold fs-4 mb-3"
+                         style="width:60px;height:60px;">4</div>
+                    <h4>Start Storing</h4>
+                    <p class="text-body-secondary">
+                        Move your goods into your secure warehouse or storage space.
+                    </p>
+                </div>
             </div>
 
         </div>
@@ -935,7 +1104,7 @@
             <h2
                 class="display-6 fw-bold">
 
-                Ready to Make More Space?
+                Need Warehouse or Storage Space?
 
             </h2>
 
@@ -943,8 +1112,7 @@
             <p
                 class="text-body-secondary">
 
-                Get a flexible storage solution
-                for your business today.
+                Tell us what you need to store and we can help you choose a suitable warehouse or storage solution.
 
             </p>
 
@@ -972,59 +1140,100 @@
 
     <div class="container">
 
+
         <div class="row g-4 pb-4">
 
 
             <!-- BRAND -->
 
-            <div class="col-lg-4">
+         
 
-                <a
-                    href="index.html"
-                    class="text-white text-decoration-none">
+<div class="col-lg-4">
 
-                    <img
-                        src="assets/images/logo.png"
-                        alt="StoreHub Logo"
-                        style="height:50px;width:auto;object-fit:contain;"
-                        class="mb-3">
+    <!-- LOGO + BRAND NAME -->
 
-                    <h5>
-                        StoreHub
-                    </h5>
+    <a
+        href="index.html"
+        class="text-white text-decoration-none d-inline-flex align-items-center gap-3 mb-3">
 
-                </a>
+        <img
+            src="assets/images/logo.png"
+            alt="StoreHub Logo"
+            style="
+                height:55px;
+                width:55px;
+                object-fit:contain;
+                display:block;
+            ">
 
+        <span
+            class="fw-bold"
+            style="
+                font-size:28px;
+                line-height:1;
+            ">
 
-                <p class="text-white-50">
+            StoreHub
 
-                    Secure and flexible warehouse
-                    storage solutions for
-                    growing businesses.
+        </span>
 
-                </p>
-
-
-                <div class="d-flex gap-3">
-
-                    <a href="#" class="text-white">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-
-                    <a href="#" class="text-white">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a href="#" class="text-white">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-
-                </div>
-
-            </div>
+    </a>
 
 
-            <!-- LINKS -->
+    <!-- DESCRIPTION -->
+
+    <p
+        class="text-white-50 mb-3"
+        style="
+            max-width:360px;
+            line-height:1.7;
+        ">
+
+        Secure and flexible warehouse and storage
+        solutions for individuals and businesses.
+
+    </p>
+
+
+    <!-- SOCIAL ICONS -->
+
+    <div class="d-flex gap-3">
+
+        <a
+            href="#"
+            class="text-white"
+            aria-label="Facebook">
+
+            <i class="fa-brands fa-facebook"></i>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="text-white"
+            aria-label="Instagram">
+
+            <i class="fa-brands fa-instagram"></i>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="text-white"
+            aria-label="LinkedIn">
+
+            <i class="fa-brands fa-linkedin"></i>
+
+        </a>
+
+    </div>
+
+</div>
+
+
+            <!-- QUICK LINKS -->
 
             <div class="col-6 col-lg-2">
 
@@ -1032,57 +1241,39 @@
                     Quick Links
                 </h6>
 
+
                 <ul class="list-unstyled">
 
                     <li class="mb-2">
-
                         <a
                             href="index.html"
                             class="text-white-50 text-decoration-none">
-
                             Home
-
                         </a>
-
                     </li>
 
-
                     <li class="mb-2">
-
                         <a
                             href="facilities.html"
                             class="text-white-50 text-decoration-none">
-
                             Facilities
-
                         </a>
-
                     </li>
 
-
                     <li class="mb-2">
-
                         <a
                             href="pricing.html"
                             class="text-white-50 text-decoration-none">
-
                             Pricing
-
                         </a>
-
                     </li>
 
-
                     <li>
-
                         <a
                             href="locations.html"
                             class="text-white-50 text-decoration-none">
-
                             Locations
-
                         </a>
-
                     </li>
 
                 </ul>
@@ -1090,23 +1281,24 @@
             </div>
 
 
-            <!-- ACCOUNT -->
+            <!-- PAGES -->
 
             <div class="col-6 col-lg-2">
 
                 <h6>
-                    Account
+                    Pages
                 </h6>
+
 
                 <ul class="list-unstyled">
 
                     <li class="mb-2">
 
                         <a
-                            href="login.html"
+                            href="maintenance.html"
                             class="text-white-50 text-decoration-none">
 
-                            Login
+                            Maintenance
 
                         </a>
 
@@ -1116,10 +1308,10 @@
                     <li class="mb-2">
 
                         <a
-                            href="signup.html"
+                            href="404.html"
                             class="text-white-50 text-decoration-none">
 
-                            Signup
+                            404 Page
 
                         </a>
 
@@ -1129,10 +1321,10 @@
                     <li>
 
                         <a
-                            href="contact.html"
+                            href="coming-soon.html"
                             class="text-white-50 text-decoration-none">
 
-                            Enquiry
+                            Coming Soon
 
                         </a>
 
@@ -1180,8 +1372,11 @@
 
             </div>
 
+
         </div>
 
+
+        <!-- COPYRIGHT -->
 
         <div
             class="border-top border-secondary py-3 text-center">
@@ -1200,6 +1395,7 @@
 </footer>
 
 
+
 <!-- Bootstrap -->
 
 <script
@@ -1211,128 +1407,9 @@
      DARK MODE + RTL SCRIPT
 ===================================================== -->
 
-<script>
+<!-- Common JS -->
 
-document.addEventListener("DOMContentLoaded", function () {
-
-    const themeButton =
-        document.getElementById("themeToggle");
-
-    const themeIcon =
-        document.getElementById("themeIcon");
-
-    const rtlButton =
-        document.getElementById("rtlToggle");
-
-    const directionText =
-        document.getElementById("directionText");
-
-
-    /* =========================
-       THEME
-    ========================= */
-
-    let theme =
-        localStorage.getItem("theme") || "light";
-
-
-    document.documentElement.setAttribute(
-        "data-bs-theme",
-        theme
-    );
-
-
-    function updateThemeIcon() {
-
-        if (theme === "dark") {
-
-            themeIcon.classList.remove("fa-moon");
-            themeIcon.classList.add("fa-sun");
-
-        } else {
-
-            themeIcon.classList.remove("fa-sun");
-            themeIcon.classList.add("fa-moon");
-
-        }
-
-    }
-
-
-    updateThemeIcon();
-
-
-    themeButton.addEventListener("click", function () {
-
-        theme =
-            theme === "dark"
-                ? "light"
-                : "dark";
-
-
-        document.documentElement.setAttribute(
-            "data-bs-theme",
-            theme
-        );
-
-
-        localStorage.setItem(
-            "theme",
-            theme
-        );
-
-
-        updateThemeIcon();
-
-    });
-
-
-    /* =========================
-       DIRECTION
-    ========================= */
-
-    let direction =
-        localStorage.getItem("direction") || "ltr";
-
-
-    document.documentElement.setAttribute(
-        "dir",
-        direction
-    );
-
-
-    directionText.textContent =
-        direction.toUpperCase();
-
-
-    rtlButton.addEventListener("click", function () {
-
-        direction =
-            direction === "rtl"
-                ? "ltr"
-                : "rtl";
-
-
-        document.documentElement.setAttribute(
-            "dir",
-            direction
-        );
-
-
-        localStorage.setItem(
-            "direction",
-            direction
-        );
-
-
-        directionText.textContent =
-            direction.toUpperCase();
-
-    });
-
-});
-
-</script>
+<script src="assets/js/script.js"></script>
 
 </body>
 
