@@ -5260,3 +5260,7 @@ body.rtl-mode .navbar-toggler {
     margin-inline-start: 0 !important;
     margin-inline-end: auto !important;
 }
+body.dark-mode .bg-warning i,
+[data-bs-theme="dark"] .bg-warning i {
+    color: #0B132B !important;
+}
