@@ -127,7 +127,13 @@
                     </ul>
 
                 </li>
-
+   <!-- ABOUT (ACTIVE) -->
+                <li class="nav-item">
+                    <a class="nav-link " href="about.html">
+                        About
+                    </a>
+                </li> 
+            
 
                 <!-- FACILITIES -->
 
@@ -173,7 +179,20 @@
 
                 </li>
 
+   
+                     <!-- blog(ACTIVE) -->
 
+              <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="blog.html">
+
+                      Blog
+
+                    </a>
+
+                </li>
                 <!-- PAGES -->
 
                 <li class="nav-item dropdown">
@@ -332,696 +351,406 @@
 <!-- =====================================================
      MAINTENANCE
 ===================================================== -->
+<!-- =====================================================
+     MAINTENANCE PAGE CSS (DARK & LIGHT MODE STYLES)
+===================================================== -->
+<style>
+    /* Maintenance Card & Contrast Helpers */
+    .maintenance-info-card {
+        background-color: var(--bs-body-bg, #ffffff) !important;
+        border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    }
+    .maintenance-status-box {
+        background-color: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        color: #1e293b !important;
+    }
 
-<section
-    class="py-5 bg-body-secondary"
-    style="min-height:calc(100vh - 80px);">
+    /* Dark Mode (Supports body.dark-mode and [data-bs-theme="dark"]) */
+    body.dark-mode .maintenance-info-card,
+    [data-bs-theme="dark"] .maintenance-info-card {
+        background-color: #111c36 !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    }
+    body.dark-mode .maintenance-status-box,
+    [data-bs-theme="dark"] .maintenance-status-box {
+        background-color: #0b132b !important;
+        border: 1px solid rgba(255, 255, 255, 0.16) !important;
+        color: #f1f5f9 !important;
+    }
+    body.dark-mode .maintenance-status-box span,
+    body.dark-mode .maintenance-status-box strong,
+    body.dark-mode .maintenance-status-box p,
+    [data-bs-theme="dark"] .maintenance-status-box span,
+    [data-bs-theme="dark"] .maintenance-status-box strong,
+    [data-bs-theme="dark"] .maintenance-status-box p {
+        color: #e2e8f0 !important;
+    }
+</style>
 
-    <div class="container py-5">
+<!-- =====================================================
+     MAINTENANCE SECTION
+===================================================== -->
+<section class="py-5 bg-body-secondary" style="min-height: calc(100vh - 80px); margin-top: 75px;">
+    <div class="container py-4">
 
-        <!-- MAIN MESSAGE -->
-
+        <!-- MAIN HERO & STATUS -->
         <div class="text-center mb-5">
 
+            <!-- Maintenance Icon with Dark Mode Protection -->
             <div class="mb-4">
-
-                <div
-                    class="d-inline-flex align-items-center justify-content-center bg-warning rounded-circle"
-                    style="width:110px;height:110px;">
-
-                    <i
-                        class="fa-solid fa-screwdriver-wrench text-dark"
-                        style="font-size:50px;">
-                    </i>
-
+                <div class="d-inline-flex align-items-center justify-content-center bg-warning rounded-circle shadow-sm"
+                     style="width: 105px; height: 105px;">
+                    <i class="fa-solid fa-screwdriver-wrench" style="font-size: 46px; color: #0B132B !important;"></i>
                 </div>
-
             </div>
 
-
-            <span
-                class="badge text-bg-warning px-4 py-2 mb-3">
-
-                UNDER MAINTENANCE
-
+            <!-- Status Pill -->
+            <span class="badge text-bg-warning px-3 py-2 mb-3 text-uppercase fw-semibold">
+                <i class="fa-solid fa-gear fa-spin me-1"></i> System Upgrade in Progress
             </span>
 
-
-            <h1
-                class="display-4 fw-bold text-body mb-3">
-
-                We'll Be Back Soon
-
+            <!-- Main Heading -->
+            <h1 class="display-5 fw-bold text-body mb-3">
+                We're Upgrading StoreHub Portal
             </h1>
 
-
-            <p
-                class="lead text-body-secondary mx-auto"
-                style="max-width:700px;line-height:1.8;">
-
-                StoreHub is currently undergoing scheduled maintenance
-                to improve our warehouse and storage services.
-                We are working to make your storage experience
-                safer, easier and more convenient.
-
+            <!-- Meaningful Context Message -->
+            <p class="lead text-body-secondary mx-auto" style="max-width: 720px; line-height: 1.8;">
+                We are performing scheduled maintenance to roll out our new real-time unit booking engine, 3D space estimation calculator, and improved client security portal.
             </p>
 
-
-            <div class="mt-4">
-
-                <span class="text-body-secondary">
-
-                    <i class="fa-solid fa-clock text-warning me-2"></i>
-
-                    Thank you for your patience while we improve
-                    our services.
-
-                </span>
-
+            <!-- Maintenance Window & Progress Indicator -->
+            <div class="maintenance-status-box p-3 rounded-4 mx-auto mt-4 text-start shadow-sm" style="max-width: 600px;">
+                <div class="d-flex justify-content-between align-items-center mb-2 small">
+                    <span class="fw-semibold">
+                        <i class="fa-solid fa-clock text-warning me-2"></i>
+                        Window: <strong>02:00 AM – 06:00 AM IST</strong>
+                    </span>
+                    <span class="badge bg-warning text-dark fw-bold">85% Completed</span>
+                </div>
+                
+                <!-- Progress Bar -->
+                <div class="progress" style="height: 10px; border-radius: 6px;">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" 
+                         role="progressbar" 
+                         style="width: 85%;" 
+                         aria-valuenow="85" 
+                         aria-valuemin="0" 
+                         aria-valuemax="100">
+                    </div>
+                </div>
+                <small class="text-body-secondary mt-2 d-block text-center">
+                    Estimated Time Remaining: <strong>~35 Minutes</strong>
+                </small>
             </div>
 
         </div>
 
 
+        <!-- =====================================================
+             IMPORTANT REASSURANCE ALERT FOR EXISTING CLIENTS
+        ===================================================== -->
+        <div class="alert border-0 shadow-sm rounded-4 p-4 mb-5 mx-auto" 
+             style="max-width: 900px; background-color: rgba(16, 185, 129, 0.12); border-left: 5px solid #10B981 !important;">
+            <div class="d-flex align-items-start gap-3">
+                <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center flex-shrink-0"
+                     style="width: 44px; height: 44px;">
+                    <i class="fa-solid fa-shield-check fs-5"></i>
+                </div>
+                <div>
+                    <h5 class="fw-bold text-body mb-1">
+                        Physical Storage & Warehouse Entry Remains Fully Operational
+                    </h5>
+                    <p class="mb-0 text-body-secondary small" style="line-height: 1.7;">
+                        If you need immediate access to your stored goods today, <strong>all physical warehouse gates, keycard locks, and on-site staff remain 100% active 24/7</strong>. Only our online booking website is temporarily paused for routine server maintenance.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-        <!-- =================================================
-             WHAT WE ARE IMPROVING
-        ================================================== -->
 
+        <!-- =====================================================
+             WHAT WE ARE IMPROVING (MEANINGFUL TILES)
+        ===================================================== -->
         <div class="row g-4 mb-5">
 
-
-            <!-- CARD 1 -->
-
+            <!-- Card 1: Live Unit Booking -->
             <div class="col-md-4">
-
-                <div
-                    class="card h-100 border-0 shadow-sm text-center p-4"
-                    style="border-radius:16px;">
-
-                    <div
-                        class="d-flex align-items-center justify-content-center bg-warning rounded-circle mx-auto mb-3"
-                        style="width:60px;height:60px;">
-
-                        <i
-                            class="fa-solid fa-warehouse text-dark fs-4">
-                        </i>
-
+                <div class="card maintenance-info-card h-100 shadow-sm text-center p-4 rounded-4">
+                    <div class="d-flex align-items-center justify-content-center bg-warning rounded-circle mx-auto mb-3"
+                         style="width: 60px; height: 60px;">
+                        <i class="fa-solid fa-boxes-packing fs-4" style="color: #0B132B !important;"></i>
                     </div>
-
-
-                    <h5 class="fw-bold text-body">
-
-                        Storage Services
-
-                    </h5>
-
-
-                    <p class="text-body-secondary mb-0">
-
-                        We are improving our storage service
-                        information and making it easier to
-                        explore available storage options.
-
+                    <h5 class="fw-bold text-body mb-2">Live Unit Availability</h5>
+                    <p class="text-body-secondary small mb-0">
+                        Upgrading inventory sync across Chennai, Bangalore, and Madurai hubs so you can view vacant lockers and pallet bays in real time.
                     </p>
-
                 </div>
-
             </div>
 
-
-
-            <!-- CARD 2 -->
-
+            <!-- Card 2: 3D Space Calculator -->
             <div class="col-md-4">
-
-                <div
-                    class="card h-100 border-0 shadow-sm text-center p-4"
-                    style="border-radius:16px;">
-
-                    <div
-                        class="d-flex align-items-center justify-content-center bg-warning rounded-circle mx-auto mb-3"
-                        style="width:60px;height:60px;">
-
-                        <i
-                            class="fa-solid fa-shield-halved text-dark fs-4">
-                        </i>
-
+                <div class="card maintenance-info-card h-100 shadow-sm text-center p-4 rounded-4">
+                    <div class="d-flex align-items-center justify-content-center bg-warning rounded-circle mx-auto mb-3"
+                         style="width: 60px; height: 60px;">
+                        <i class="fa-solid fa-cube fs-4" style="color: #0B132B !important;"></i>
                     </div>
-
-
-                    <h5 class="fw-bold text-body">
-
-                        Security & Safety
-
-                    </h5>
-
-
-                    <p class="text-body-secondary mb-0">
-
-                        Our facilities are designed around
-                        secure access, monitoring and safe
-                        storage for your belongings.
-
+                    <h5 class="fw-bold text-body mb-2">Smart 3D Space Sizer</h5>
+                    <p class="text-body-secondary small mb-0">
+                        Adding an interactive space calculator to help you pick the exact square footage required for household items or warehouse stock.
                     </p>
-
                 </div>
-
             </div>
 
-
-
-            <!-- CARD 3 -->
-
+            <!-- Card 3: Security & Invoicing -->
             <div class="col-md-4">
-
-                <div
-                    class="card h-100 border-0 shadow-sm text-center p-4"
-                    style="border-radius:16px;">
-
-                    <div
-                        class="d-flex align-items-center justify-content-center bg-warning rounded-circle mx-auto mb-3"
-                        style="width:60px;height:60px;">
-
-                        <i
-                            class="fa-solid fa-location-dot text-dark fs-4">
-                        </i>
-
+                <div class="card maintenance-info-card h-100 shadow-sm text-center p-4 rounded-4">
+                    <div class="d-flex align-items-center justify-content-center bg-warning rounded-circle mx-auto mb-3"
+                         style="width: 60px; height: 60px;">
+                        <i class="fa-solid fa-file-invoice-dollar fs-4" style="color: #0B132B !important;"></i>
                     </div>
-
-
-                    <h5 class="fw-bold text-body">
-
-                        Storage Locations
-
-                    </h5>
-
-
-                    <p class="text-body-secondary mb-0">
-
-                        We are updating information about our
-                        available storage centres and the
-                        services provided at each location.
-
+                    <h5 class="fw-bold text-body mb-2">Instant Invoicing & Pass</h5>
+                    <p class="text-body-secondary small mb-0">
+                        Upgrading client billing dashboards with automated GST invoices and instant contactless digital gate pass generation.
                     </p>
-
                 </div>
-
             </div>
 
         </div>
 
 
+        <!-- =====================================================
+             TWO COLUMN: NOTIFY ME + 24/7 HOTLINE
+        ===================================================== -->
+        <div class="row g-4 mb-5">
 
-        <!-- =================================================
-             STOREHUB SERVICES
-        ================================================== -->
-
-        <div
-            class="row align-items-center g-4 mb-5">
-
-
-            <!-- LEFT -->
-
+            <!-- LEFT: Get Notified When Live -->
             <div class="col-lg-6">
-
-                <div
-                    class="card border-0 shadow-sm p-4 h-100"
-                    style="border-radius:16px;">
-
-                    <span
-                        class="text-warning fw-semibold">
-
-                        STOREHUB
-
-                    </span>
-
-
-                    <h3
-                        class="fw-bold text-body mt-2 mb-3">
-
-                        What You Can Expect
-
-                    </h3>
-
-
-                    <p
-                        class="text-body-secondary"
-                        style="line-height:1.8;">
-
-                        StoreHub provides flexible storage
-                        solutions designed for personal belongings,
-                        business inventory, equipment and
-                        warehouse requirements.
-
+                <div class="card maintenance-info-card p-4 h-100 rounded-4 shadow-sm">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <i class="fa-solid fa-bell text-warning fs-5"></i>
+                        <h4 class="fw-bold text-body mb-0">Notify Me When Live</h4>
+                    </div>
+                    <p class="text-body-secondary small mb-3">
+                        Enter your email address to receive an automated notification as soon as the maintenance window closes.
                     </p>
 
-
-                    <div class="mt-3">
-
-
-                        <div class="d-flex gap-3 mb-3">
-
-                            <i
-                                class="fa-solid fa-check text-warning mt-1">
-                            </i>
-
-                            <span class="text-body">
-
-                                Flexible storage spaces
-
-                            </span>
-
+                    <form onsubmit="event.preventDefault(); alert('You will be notified as soon as StoreHub is fully back online!');">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control form-control-lg border-secondary-subtle" 
+                                   placeholder="Enter your email address..." required>
+                            <button class="btn btn-warning px-4 fw-semibold" type="submit">
+                                Notify Me
+                            </button>
                         </div>
-
-
-                        <div class="d-flex gap-3 mb-3">
-
-                            <i
-                                class="fa-solid fa-check text-warning mt-1">
-                            </i>
-
-                            <span class="text-body">
-
-                                Secure and monitored facilities
-
-                            </span>
-
-                        </div>
-
-
-                        <div class="d-flex gap-3 mb-3">
-
-                            <i
-                                class="fa-solid fa-check text-warning mt-1">
-                            </i>
-
-                            <span class="text-body">
-
-                                Personal and business storage
-
-                            </span>
-
-                        </div>
-
-
-                        <div class="d-flex gap-3">
-
-                            <i
-                                class="fa-solid fa-check text-warning mt-1">
-                            </i>
-
-                            <span class="text-body">
-
-                                Different storage sizes and plans
-
-                            </span>
-
-                        </div>
-
-                    </div>
-
+                    </form>
+                    
+                    <small class="text-body-secondary">
+                        <i class="fa-solid fa-lock text-warning me-1"></i> No spam. We only send a single completion alert.
+                    </small>
                 </div>
-
             </div>
 
-
-
-            <!-- RIGHT -->
-
+            <!-- RIGHT: Need Immediate Help? -->
             <div class="col-lg-6">
-
-                <div
-                    class="card border-0 shadow-sm p-4 h-100"
-                    style="border-radius:16px;">
-
-                    <h4
-                        class="fw-bold text-body mb-3">
-
-                        Need Assistance?
-
-                    </h4>
-
-
-                    <p
-                        class="text-body-secondary"
-                        style="line-height:1.8;">
-
-                        If you need information about our
-                        storage facilities or would like to
-                        enquire about available storage space,
-                        please contact the StoreHub team.
-
+                <div class="card maintenance-info-card p-4 h-100 rounded-4 shadow-sm">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <i class="fa-solid fa-headset text-warning fs-5"></i>
+                        <h4 class="fw-bold text-body mb-0">Need Urgent Assistance?</h4>
+                    </div>
+                    <p class="text-body-secondary small mb-3">
+                        Our emergency warehouse support desk and facility managers are available right now to assist with unit keys and space bookings.
                     </p>
 
-
-                    <div class="mt-2">
-
-
-                        <p class="mb-3 text-body">
-
-                            <i
-                                class="fa-solid fa-phone text-warning me-2">
-                            </i>
-
-                            +91 98765 43210
-
-                        </p>
-
-
-                        <p class="mb-3 text-body">
-
-                            <i
-                                class="fa-solid fa-envelope text-warning me-2">
-                            </i>
-
-                            storehub@gmail.com
-
-                        </p>
-
-
-                        <p class="mb-4 text-body">
-
-                            <i
-                                class="fa-solid fa-location-dot text-warning me-2">
-                            </i>
-
-                            Chennai, Tamil Nadu
-
-                        </p>
-
-
-                        <a
-                            href="contact.html"
-                            class="btn btn-warning px-4">
-
-                            <i
-                                class="fa-solid fa-envelope me-2">
-                            </i>
-
-                            Contact Us
-
-                        </a>
-
+                    <div class="row g-2 mb-3">
+                        <div class="col-sm-6">
+                            <a href="tel:+919876543210" class="btn btn-outline-warning w-100 text-start p-2 d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-phone fs-5"></i>
+                                <div>
+                                    <small class="d-block text-body-secondary" style="font-size:11px;">Direct Call</small>
+                                    <strong class="text-body small">+91 98765 43210</strong>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" 
+                               class="btn btn-outline-secondary w-100 text-start p-2 d-flex align-items-center gap-2">
+                                <i class="fa-brands fa-whatsapp fs-5 text-success"></i>
+                                <div>
+                                    <small class="d-block text-body-secondary" style="font-size:11px;">WhatsApp</small>
+                                    <strong class="text-body small">Chat with Team</strong>
+                                </div>
+                            </a>
+                        </div>
                     </div>
 
+                    <p class="mb-0 small text-body-secondary">
+                        <i class="fa-solid fa-envelope text-warning me-2"></i>
+                        Email: <strong>storehub@gmail.com</strong>
+                    </p>
                 </div>
-
             </div>
 
         </div>
 
 
-
-        <!-- =================================================
-             BACK TO HOME
-        ================================================== -->
-
+        <!-- =====================================================
+             BACK TO HOME BUTTON
+        ===================================================== -->
         <div class="text-center">
-
-            <a
-                href="index.html"
-                class="btn btn-outline-warning btn-lg px-5">
-
-                <i
-                    class="fa-solid fa-house me-2">
-                </i>
-
-                Back to Home
-
+            <a href="index.html" class="btn btn-outline-warning btn-lg px-5 rounded-pill fw-semibold">
+                <i class="fa-solid fa-house me-2"></i> Return to Homepage
             </a>
-
         </div>
 
     </div>
-
 </section>
-
 
 
 <!-- =====================================================
      FOOTER
 ===================================================== -->
-
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 <footer class="bg-dark text-white pt-5">
-
     <div class="container">
-
-
         <div class="row g-4 pb-4">
 
-
             <!-- BRAND -->
+            <div class="col-lg-4">
+                <!-- LOGO + BRAND NAME -->
+                <a href="index.html" class="text-white text-decoration-none d-inline-flex align-items-center gap-2 mb-3">
+                    <img
+                        src="assets/images/logo.png"
+                        alt="StoreHub Logo"
+                        style="
+                            height: 44px;
+                            width: auto;
+                            max-height: 44px;
+                            object-fit: contain;
+                            display: block;
+                            flex-shrink: 0;
+                        ">
+                    <span
+                        class="fw-bold text-white"
+                        style="
+                            font-size: 26px;
+                            line-height: 1;
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                            align-items: center;
+                        ">
+                        StoreHub
+                    </span>
+                </a>
 
-         
+                <!-- DESCRIPTION -->
+                <p class="text-white-50 mb-3" style="max-width:360px; line-height:1.7;">
+                    Secure and flexible warehouse and storage solutions for individuals and businesses.
+                </p>
 
-<div class="col-lg-4">
+                <!-- SOCIAL ICONS -->
+                <div class="d-flex gap-3">
+                    <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fs-5"
+                        aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
 
-    <!-- LOGO + BRAND NAME -->
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fs-5"
+                        aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
 
-    <a
-        href="index.html"
-        class="text-white text-decoration-none d-inline-flex align-items-center gap-3 mb-3">
-
-        <img
-            src="assets/images/logo.png"
-            alt="StoreHub Logo"
-            style="
-                height:55px;
-                width:55px;
-                object-fit:contain;
-                display:block;
-            ">
-
-        <span
-            class="fw-bold"
-            style="
-                font-size:28px;
-                line-height:1;
-            ">
-
-            StoreHub
-
-        </span>
-
-    </a>
-
-
-    <!-- DESCRIPTION -->
-
-    <p
-        class="text-white-50 mb-3"
-        style="
-            max-width:360px;
-            line-height:1.7;
-        ">
-
-        Secure and flexible warehouse and storage
-        solutions for individuals and businesses.
-
-    </p>
-
-
-    <!-- SOCIAL ICONS -->
-
-    <div class="d-flex gap-3">
-
-        <a
-            href="#"
-            class="text-white"
-            aria-label="Facebook">
-
-            <i class="fa-brands fa-facebook"></i>
-
-        </a>
-
-
-        <a
-            href="#"
-            class="text-white"
-            aria-label="Instagram">
-
-            <i class="fa-brands fa-instagram"></i>
-
-        </a>
-
-
-        <a
-            href="#"
-            class="text-white"
-            aria-label="LinkedIn">
-
-            <i class="fa-brands fa-linkedin"></i>
-
-        </a>
-
-    </div>
-
-</div>
-
+                    <a
+                        href="https://www.linkedin.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fs-5"
+                        aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
 
             <!-- QUICK LINKS -->
-
             <div class="col-6 col-lg-2">
-
-                <h6>
-                    Quick Links
-                </h6>
-
-
+                <h6>Quick Links</h6>
                 <ul class="list-unstyled">
-
                     <li class="mb-2">
-                        <a
-                            href="index.html"
-                            class="text-white-50 text-decoration-none">
-                            Home
-                        </a>
+                        <a href="index.html" class="text-white-50 text-decoration-none">Home</a>
                     </li>
-
                     <li class="mb-2">
-                        <a
-                            href="facilities.html"
-                            class="text-white-50 text-decoration-none">
-                            Facilities
-                        </a>
+                        <a href="about.html" class="text-white-50 text-decoration-none">About Us</a>
                     </li>
-
                     <li class="mb-2">
-                        <a
-                            href="pricing.html"
-                            class="text-white-50 text-decoration-none">
-                            Pricing
-                        </a>
+                        <a href="facilities.html" class="text-white-50 text-decoration-none">Facilities</a>
                     </li>
-
+                    <li class="mb-2">
+                        <a href="pricing.html" class="text-white-50 text-decoration-none">Pricing</a>
+                    </li>
                     <li>
-                        <a
-                            href="locations.html"
-                            class="text-white-50 text-decoration-none">
-                            Locations
-                        </a>
+                        <a href="locations.html" class="text-white-50 text-decoration-none">Locations</a>
                     </li>
-
                 </ul>
-
             </div>
-
 
             <!-- PAGES -->
-
             <div class="col-6 col-lg-2">
-
-                <h6>
-                    Pages
-                </h6>
-
-
+                <h6>Pages</h6>
                 <ul class="list-unstyled">
-
                     <li class="mb-2">
-
-                        <a
-                            href="maintenance.html"
-                            class="text-white-50 text-decoration-none">
-
-                            Maintenance
-
-                        </a>
-
+                        <a href="blog.html" class="text-white-50 text-decoration-none">Blog</a>
                     </li>
-
-
                     <li class="mb-2">
-
-                        <a
-                            href="404.html"
-                            class="text-white-50 text-decoration-none">
-
-                            404 Page
-
-                        </a>
-
+                        <a href="maintenance.html" class="text-white-50 text-decoration-none">Maintenance</a>
                     </li>
-
-
+                    <li class="mb-2">
+                        <a href="404.html" class="text-white-50 text-decoration-none">404 Page</a>
+                    </li>
                     <li>
-
-                        <a
-                            href="coming-soon.html"
-                            class="text-white-50 text-decoration-none">
-
-                            Coming Soon
-
-                        </a>
-
+                        <a href="coming-soon.html" class="text-white-50 text-decoration-none">Coming Soon</a>
                     </li>
-
                 </ul>
-
             </div>
-
 
             <!-- CONTACT -->
-
             <div class="col-lg-4">
-
-                <h6>
-                    Contact Us
-                </h6>
-
-
+                <h6>Contact Us</h6>
                 <p class="text-white-50 mb-2">
-
                     <i class="fa-solid fa-phone me-2"></i>
-
                     +91 98765 43210
-
                 </p>
-
-
                 <p class="text-white-50 mb-2">
-
                     <i class="fa-solid fa-envelope me-2"></i>
-
                     storehub@gmail.com
-
                 </p>
-
-
                 <p class="text-white-50">
-
                     <i class="fa-solid fa-location-dot me-2"></i>
-
                     Chennai, Tamil Nadu
-
                 </p>
-
             </div>
 
-
         </div>
-
 
         <!-- COPYRIGHT -->
-
-        <div
-            class="border-top border-secondary py-3 text-center">
-
+        <div class="border-top border-secondary py-3 text-center">
             <small class="text-white-50">
-
-                © 2026 StoreHub.
-                All Rights Reserved.
-
+                © 2026 StoreHub. All Rights Reserved.
             </small>
-
         </div>
-
     </div>
-
 </footer>
-
-
 
 <!-- =====================================================
      BOOTSTRAP JS

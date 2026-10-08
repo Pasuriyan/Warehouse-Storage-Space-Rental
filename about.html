@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | StoreHub - Warehouse & Storage Space Rental</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
+    <div class="container">
+
+        <!-- LOGO -->
+        <a href="index.html" class="navbar-brand d-flex align-items-center gap-2 fw-bold">
+            <img src="assets/images/logo.png" style="height:45px; width:auto; object-fit:contain;" alt="StoreHub Logo">
+            <span>StoreHub</span>
+        </a>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars fs-3 text-white"></i>
+        </button>
+
+        <!-- NAVIGATION -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                <!-- HOME -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Home
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="index.html">Home 1</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="index2.html">Home 2</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- ABOUT (ACTIVE) -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <!-- FACILITIES -->
+                <li class="nav-item">
+                    <a class="nav-link" href="facilities.html">
+                        Facilities
+                    </a>
+                </li>
+
+                <!-- PRICING -->
+                <li class="nav-item">
+                    <a class="nav-link" href="pricing.html">
+                        Pricing
+                    </a>
+                </li>
+
+                <!-- LOCATIONS -->
+                <li class="nav-item">
+                    <a class="nav-link" href="locations.html">
+                        Locations
+                    </a>
+                </li>
+                    <!-- blog -->
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">
+                        Blog
+                    </a>
+                </li>
+                <!-- PAGES DROPDOWN -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Pages
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="maintenance.html">
+                                <i class="fa-solid fa-screwdriver-wrench me-2"></i>
+                                Maintenance
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="404.html">
+                                <i class="fa-solid fa-triangle-exclamation me-2"></i>
+                                404 Page
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="coming-soon.html">
+                                <i class="fa-solid fa-rocket me-2"></i>
+                                Coming Soon
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- CONTACT -->
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- RIGHT SIDE ACTIONS -->
+            <div class="d-flex align-items-center gap-2 navbar-actions ms-auto">
+                <!-- RTL / LTR Button -->
+                <button id="rtlToggle" type="button" class="btn d-flex align-items-center justify-content-center"
+                    style="
+                        width:100px !important;
+                        height:40px !important;
+                        min-width:100px !important;
+                        padding:0 !important;
+                        margin:0 !important;
+                        border:1px solid #6c757d !important;
+                        border-radius:50px !important;
+                        color:#fff !important;
+                        background:#17233f !important;
+                        box-shadow:none !important;
+                        text-align:center !important;
+                    "
+                    title="Switch RTL / LTR">
+                    <i class="fa-solid fa-arrows-left-right"></i>
+                </button>
+
+                <!-- DARK MODE Button -->
+                <button id="themeToggle" type="button" class="btn d-flex align-items-center justify-content-center"
+                    style="
+                        width:100px !important;
+                        height:40px !important;
+                        min-width:100px !important;
+                        padding:0 !important;
+                        margin:0 !important;
+                        border:1px solid #6c757d !important;
+                        border-radius:50px !important;
+                        color:#fff !important;
+                        background:#17233f !important;
+                        box-shadow:none !important;
+                    "
+                    title="Toggle dark mode">
+                    <i id="themeIcon" class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- =====================================================
+     HERO BANNER
+===================================================== -->
+<section class="bg-body-secondary py-5" style="margin-top: 75px;">
+    <div class="container py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-3">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-body-secondary">Home</a></li>
+                        <li class="breadcrumb-item active text-warning fw-semibold" aria-current="page">About Us</li>
+                    </ol>
+                </nav>
+                <span class="badge text-bg-warning px-3 py-2 mb-3">ABOUT STOREHUB</span>
+                <h1 class="display-4 fw-bold text-body">
+                    Smart, Secure & Scalable Warehousing Solutions
+                </h1>
+                <p class="lead text-body-secondary mt-3">
+                    StoreHub was founded with a single mission: to take the complexity, risk, and friction out of renting commercial warehouse and personal self-storage spaces across Chennai and beyond.
+                </p>
+                <div class="d-flex gap-3 flex-wrap mt-4">
+                    <a href="facilities.html" class="btn btn-warning btn-lg px-4">
+                        <i class="fa-solid fa-warehouse me-2"></i>View Facilities
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-secondary btn-lg px-4">
+                        <i class="fa-solid fa-headset me-2"></i>Contact Team
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1549194388-f61be84a6e9e?auto=format&fit=crop&w=800&q=80" 
+                         alt="StoreHub Modern Distribution Facility" 
+                         class="img-fluid rounded-4 shadow" 
+                         style="width:100%; height:380px; object-fit:cover;">
+                    <div class="position-absolute bottom-0 start-0 m-3 px-3 py-2 bg-dark bg-opacity-75 text-white rounded-3 small">
+                        <i class="fa-solid fa-award text-warning me-2"></i> Certified & Inspected Storage Facility
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- =====================================================
+     KEY NUMBERS / STATS COUNTER
+===================================================== -->
+<section class="py-5 border-bottom border-secondary-subtle">
+    <div class="container">
+        <div class="row g-4 text-center">
+            <div class="col-6 col-md-3">
+                <div class="p-3">
+                    <h2 class="display-5 fw-bold text-warning mb-1">250K+</h2>
+                    <p class="text-body-secondary fw-semibold mb-0">Sq. Ft. Managed Space</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-3">
+                    <h2 class="display-5 fw-bold text-warning mb-1">15,000+</h2>
+                    <p class="text-body-secondary fw-semibold mb-0">Satisfied Clients</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-3">
+                    <h2 class="display-5 fw-bold text-warning mb-1">24/7</h2>
+                    <p class="text-body-secondary fw-semibold mb-0">Surveillance & Access</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-3">
+                    <h2 class="display-5 fw-bold text-warning mb-1">99.8%</h2>
+                    <p class="text-body-secondary fw-semibold mb-0">Customer Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- =====================================================
+     OUR STORY & WHO WE ARE
+===================================================== -->
+<section class="py-5">
+    <div class="container py-4">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=600&q=80" 
+                             alt="Warehouse Aisle" class="w-100 rounded-4 shadow-sm" style="height:250px; object-fit:cover;">
+                    </div>
+                    <div class="col-6">
+                        <img src="https://images.unsplash.com/photo-1586528116493-a029325540fa?auto=format&fit=crop&w=600&q=80" 
+                             alt="Organized Industrial Storage" class="w-100 rounded-4 shadow-sm mt-4" style="height:250px; object-fit:cover;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <span class="text-warning fw-semibold text-uppercase">WHO WE ARE</span>
+                <h2 class="fw-bold mt-2 text-body">
+                    Built to Solve India's Storage & Commercial Inventory Demands
+                </h2>
+                <p class="text-body-secondary mt-3">
+                    At StoreHub, we noticed how difficult it was for growing businesses, e-commerce retailers, and relocating families to find clean, transparently priced, and trustworthy storage space without long, restrictive lease agreements.
+                </p>
+                <p class="text-body-secondary">
+                    We built our facility network from the ground up: combining heavy-duty industrial specifications with intuitive consumer-level convenience. Whether you need a 25 sq. ft. locker for personal keepsakes or a 10,000 sq. ft. commercial pallet facility with loading docks, StoreHub is configured to serve your exact requirements.
+                </p>
+
+                <div class="row g-3 mt-2">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-warning fs-5"></i>
+                            <span class="fw-medium text-body">Zero Long-Term Lock-ins</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-warning fs-5"></i>
+                            <span class="fw-medium text-body">Fully Pest & Climate Controlled</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-warning fs-5"></i>
+                            <span class="fw-medium text-body">Direct Drive-In Loading Bays</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-warning fs-5"></i>
+                            <span class="fw-medium text-body">Multi-Tier Fire & CCTV Security</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- =====================================================
+     [NEW SECTION 1]
+     SMART STORAGE INFRASTRUCTURE & MATERIAL HANDLING
+===================================================== -->
+<section class="py-5 bg-body-secondary">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <span class="text-warning fw-semibold text-uppercase">MODERN INFRASTRUCTURE</span>
+            <h2 class="fw-bold mt-2 text-body">Engineered for Heavy-Duty Storage & Quick Handling</h2>
+            <p class="text-body-secondary mx-auto" style="max-width: 720px;">
+                Our facilities are built with high-density vertical racking, precision material equipment, and digital inventory check-ins so your belongings stay safe and accessible.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <!-- 1. Heavy High-Bay Racking -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-body">
+                    <div class="position-relative" style="height: 220px;">
+                        <img src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&w=800&q=80" 
+                             alt="Automated High-Bay Racking & Forklifts" 
+                             class="w-100 h-100 object-fit-cover">
+                        <span class="position-absolute bottom-0 start-0 m-3 p-2 bg-body rounded-3 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+                            <i class="fa-solid fa-dolly text-warning fs-5"></i>
+                        </span>
+                    </div>
+                    <div class="p-4 flex-grow-1">
+                        <h4 class="fw-bold text-body">Heavy Racking & Forklifts</h4>
+                        <p class="text-body-secondary mb-0">
+                            Equipped with industrial pallet racking systems, certified electric forklifts, and wide corridors to ensure smooth, damage-free loading and unloading.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Digital Inventory Tracking -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-body">
+                    <div class="position-relative" style="height: 220px;">
+                        <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=800&q=80" 
+                             alt="Digital barcode scanning and storage management" 
+                             class="w-100 h-100 object-fit-cover">
+                        <span class="position-absolute bottom-0 start-0 m-3 p-2 bg-body rounded-3 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+                            <i class="fa-solid fa-qrcode text-warning fs-5"></i>
+                        </span>
+                    </div>
+                    <div class="p-4 flex-grow-1">
+                        <h4 class="fw-bold text-body">Barcode & Inventory Logging</h4>
+                        <p class="text-body-secondary mb-0">
+                            Digital check-in systems and item location logging ensure full visibility, traceability, and zero misplaced items across commercial units.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Protected Goods Handling -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-body">
+                    <div class="position-relative" style="height: 220px;">
+                        <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80" 
+                             alt="Staging and careful packing handling" 
+                             class="w-100 h-100 object-fit-cover">
+                        <span class="position-absolute bottom-0 start-0 m-3 p-2 bg-body rounded-3 shadow-sm d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+                            <i class="fa-solid fa-box-archive text-warning fs-5"></i>
+                        </span>
+                    </div>
+                    <div class="p-4 flex-grow-1">
+                        <h4 class="fw-bold text-body">Safe Staging & Packing Bays</h4>
+                        <p class="text-body-secondary mb-0">
+                            Dedicated prep areas equipped with stretch film, heavy-duty shrink-wrappers, strapping tools, and sturdy rolling carts for secure moving.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- =====================================================
+     [NEW SECTION 2]
+     SAFETY CERTIFICATIONS, INSPECTION & GREEN WAREHOUSING
+===================================================== -->
+<section class="py-5">
+    <div class="container py-4">
+        <div class="row align-items-center g-5">
+            <!-- Left: Content & Bullet Highlights -->
+            <div class="col-lg-6">
+                <span class="text-warning fw-semibold text-uppercase">SAFETY & SUSTAINABILITY</span>
+                <h2 class="fw-bold mt-2 text-body">
+                    Strict Quality Control & Environmentally Conscious Facilities
+                </h2>
+                <p class="text-body-secondary mt-3">
+                    Safety is not an afterthought at StoreHub. Every square foot is continuously inspected for moisture, pest prevention, and electrical integrity, backed by comprehensive facility insurance.
+                </p>
+
+                <div class="row g-4 mt-2">
+                    <div class="col-12">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="bg-warning text-dark rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                                 style="width:48px; height:48px;">
+                                <i class="fa-solid fa-clipboard-check fs-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold text-body mb-1">Weekly Preventative Audits</h5>
+                                <p class="text-body-secondary mb-0 small">
+                                    Our on-site supervisors perform weekly mechanical, pest control, and air-flow audits to maintain pristine unit standards.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="bg-warning text-dark rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                                 style="width:48px; height:48px;">
+                                <i class="fa-solid fa-solar-panel fs-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold text-body mb-1">Energy-Efficient & Solar Powered</h5>
+                                <p class="text-body-secondary mb-0 small">
+                                    Low-energy LED motion lighting and solar panels help maintain continuous backup power while minimizing our ecological footprint.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="bg-warning text-dark rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                                 style="width:48px; height:48px;">
+                                <i class="fa-solid fa-file-shield fs-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold text-body mb-1">Comprehensive Goods Insurance</h5>
+                                <p class="text-body-secondary mb-0 small">
+                                    Tie-ups with leading national insurers provide optional coverage against natural damages, transit losses, or fire incidents.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: 2 Distinct Showcase Images -->
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <!-- Main Inspection Image -->
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" 
+                         alt="Certified Warehouse Facility Inspector" 
+                         class="img-fluid rounded-4 shadow-sm w-100" 
+                         style="height:360px; object-fit:cover;">
+
+                    <!-- Inset Floating Certification Card with image -->
+                    <div class="position-absolute bottom-0 start-0 m-3 p-3 bg-body border border-secondary-subtle rounded-4 shadow d-flex align-items-center gap-3"
+                         style="max-width: 320px;">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=200&q=80" 
+                             alt="Verified compliance checklist" 
+                             class="rounded-3" 
+                             style="width:65px; height:65px; object-fit:cover;">
+                        <div>
+                            <span class="badge text-bg-warning mb-1">100% Certified</span>
+                            <p class="fw-bold text-body mb-0 small">Fire & Safety Compliant</p>
+                            <small class="text-body-secondary">Inspected quarterly</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- =====================================================
+     MISSION, VISION & VALUES
+===================================================== -->
+<section class="py-5 bg-body-secondary">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="text-warning fw-semibold text-uppercase">OUR PRINCIPLES</span>
+            <h2 class="fw-bold mt-2 text-body">Mission, Vision & Core Values</h2>
+            <p class="text-body-secondary mx-auto" style="max-width: 650px;">
+                Our standards guide how we safeguard your inventory and handle every single item placed in our care.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <!-- MISSION -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-body">
+                    <div class="bg-warning text-dark rounded-3 d-flex align-items-center justify-content-center mb-3"
+                         style="width:55px; height:55px;">
+                        <i class="fa-solid fa-bullseye fa-xl"></i>
+                    </div>
+                    <h4 class="fw-bold text-body">Our Mission</h4>
+                    <p class="text-body-secondary mb-0">
+                        To empower businesses and individuals with easily accessible, highly secure, and cost-effective storage solutions that adapt dynamically as their storage needs evolve.
+                    </p>
+                </div>
+            </div>
+
+            <!-- VISION -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-body">
+                    <div class="bg-warning text-dark rounded-3 d-flex align-items-center justify-content-center mb-3"
+                         style="width:55px; height:55px;">
+                        <i class="fa-solid fa-eye fa-xl"></i>
+                    </div>
+                    <h4 class="fw-bold text-body">Our Vision</h4>
+                    <p class="text-body-secondary mb-0">
+                        To become South India’s most dependable, technologically driven warehouse and storage network, recognized for operational excellence, trust, and speed.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CORE VALUES -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-body">
+                    <div class="bg-warning text-dark rounded-3 d-flex align-items-center justify-content-center mb-3"
+                         style="width:55px; height:55px;">
+                        <i class="fa-solid fa-gem fa-xl"></i>
+                    </div>
+                    <h4 class="fw-bold text-body">Our Core Values</h4>
+                    <p class="text-body-secondary mb-0">
+                        Total integrity in pricing, relentless focus on physical security, customer-first flexibility, and continuous upkeep of clean, modern storage infrastructure.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- =====================================================
+     MEET OUR LEADERSHIP / TEAM
+===================================================== -->
+<section class="py-5">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <span class="text-warning fw-semibold text-uppercase">OUR TEAM</span>
+            <h2 class="fw-bold mt-2 text-body">The People Behind StoreHub</h2>
+            <p class="text-body-secondary mx-auto" style="max-width: 650px;">
+                Our logistics veterans and customer support team work around the clock to keep your stored goods secure.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Team Member 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center bg-body h-100">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80" 
+                         alt="Rajesh Kumar" class="w-100" style="height:240px; object-fit:cover;">
+                    <div class="card-body p-3">
+                        <h5 class="fw-bold text-body mb-1">Rajesh Kumar</h5>
+                        <p class="text-warning small fw-semibold mb-2">Managing Director & Co-Founder</p>
+                        <p class="text-body-secondary small mb-3">15+ years of industrial warehousing and commercial logistics expertise.</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#" class="text-body-secondary"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#" class="text-body-secondary"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center bg-body h-100">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" 
+                         alt="Priya Sundaram" class="w-100" style="height:240px; object-fit:cover;">
+                    <div class="card-body p-3">
+                        <h5 class="fw-bold text-body mb-1">Priya Sundaram</h5>
+                        <p class="text-warning small fw-semibold mb-2">Head of Warehouse Operations</p>
+                        <p class="text-body-secondary small mb-3">Oversees facility security compliance, pest control, and inventory workflows.</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#" class="text-body-secondary"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#" class="text-body-secondary"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center bg-body h-100">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80" 
+                         alt="Vikram Raman" class="w-100" style="height:240px; object-fit:cover;">
+                    <div class="card-body p-3">
+                        <h5 class="fw-bold text-body mb-1">Vikram Raman</h5>
+                        <p class="text-warning small fw-semibold mb-2">Director of Safety & Security</p>
+                        <p class="text-body-secondary small mb-3">Specialist in biometric security, smart surveillance, and fire safety systems.</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#" class="text-body-secondary"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#" class="text-body-secondary"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center bg-body h-100">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80" 
+                         alt="Ananya Sharma" class="w-100" style="height:240px; object-fit:cover;">
+                    <div class="card-body p-3">
+                        <h5 class="fw-bold text-body mb-1">Ananya Sharma</h5>
+                        <p class="text-warning small fw-semibold mb-2">Client Experience Lead</p>
+                        <p class="text-body-secondary small mb-3">Assisting clients in finding accurate unit sizes and seamless move-in experiences.</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#" class="text-body-secondary"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#" class="text-body-secondary"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- =====================================================
+     CTA SECTION
+===================================================== -->
+<section class="py-5" style="background: linear-gradient(135deg, #0B132B 0%, #17233f 100%);">
+    <div class="container py-4 text-center text-white">
+        <span class="badge bg-warning text-dark px-3 py-2 mb-3">GET STARTED TODAY</span>
+        <h2 class="display-6 fw-bold mb-3">Need Space for Your Business or Household?</h2>
+        <p class="lead text-white-50 mx-auto mb-4" style="max-width: 650px;">
+            Our storage specialists are ready to calculate the exact space you need, coordinate a visit, and reserve your unit with transparent pricing.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="contact.html" class="btn btn-warning btn-lg px-4 fw-semibold">
+                <i class="fa-solid fa-phone me-2"></i>Request a Free Quote
+            </a>
+            <a href="pricing.html" class="btn btn-outline-light btn-lg px-4">
+                <i class="fa-solid fa-tags me-2"></i>Explore Pricing Plans
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+<footer class="bg-dark text-white pt-5">
+    <div class="container">
+        <div class="row g-4 pb-4">
+
+            <!-- BRAND -->
+            <div class="col-lg-4">
+                <!-- LOGO + BRAND NAME -->
+                <a href="index.html" class="text-white text-decoration-none d-inline-flex align-items-center gap-2 mb-3">
+                    <img
+                        src="assets/images/logo.png"
+                        alt="StoreHub Logo"
+                        style="
+                            height: 44px;
+                            width: auto;
+                            max-height: 44px;
+                            object-fit: contain;
+                            display: block;
+                            flex-shrink: 0;
+                        ">
+                    <span
+                        class="fw-bold text-white"
+                        style="
+                            font-size: 26px;
+                            line-height: 1;
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                            align-items: center;
+                        ">
+                        StoreHub
+                    </span>
+                </a>
+
+                <!-- DESCRIPTION -->
+                <p class="text-white-50 mb-3" style="max-width:360px; line-height:1.7;">
+                    Secure and flexible warehouse and storage solutions for individuals and businesses.
+                </p>
+
+                <!-- SOCIAL ICONS -->
+                <div class="d-flex gap-3">
+                    <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fs-5"
+                        aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fs-5"
+                        aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fs-5"
+                        aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="col-6 col-lg-2">
+                <h6>Quick Links</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="index.html" class="text-white-50 text-decoration-none">Home</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="about.html" class="text-white-50 text-decoration-none">About Us</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="facilities.html" class="text-white-50 text-decoration-none">Facilities</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="pricing.html" class="text-white-50 text-decoration-none">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="locations.html" class="text-white-50 text-decoration-none">Locations</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- PAGES -->
+            <div class="col-6 col-lg-2">
+                <h6>Pages</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="blog.html" class="text-white-50 text-decoration-none">Blog</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="maintenance.html" class="text-white-50 text-decoration-none">Maintenance</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="404.html" class="text-white-50 text-decoration-none">404 Page</a>
+                    </li>
+                    <li>
+                        <a href="coming-soon.html" class="text-white-50 text-decoration-none">Coming Soon</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="col-lg-4">
+                <h6>Contact Us</h6>
+                <p class="text-white-50 mb-2">
+                    <i class="fa-solid fa-phone me-2"></i>
+                    +91 98765 43210
+                </p>
+                <p class="text-white-50 mb-2">
+                    <i class="fa-solid fa-envelope me-2"></i>
+                    storehub@gmail.com
+                </p>
+                <p class="text-white-50">
+                    <i class="fa-solid fa-location-dot me-2"></i>
+                    Chennai, Tamil Nadu
+                </p>
+            </div>
+
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="border-top border-secondary py-3 text-center">
+            <small class="text-white-50">
+                © 2026 StoreHub. All Rights Reserved.
+            </small>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom Script -->
+<script src="assets/js/script.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

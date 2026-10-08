@@ -114,7 +114,13 @@
                     </ul>
 
                 </li>
-
+   <!-- ABOUT (ACTIVE) -->
+                <li class="nav-item">
+                    <a class="nav-link " href="about.html">
+                        About
+                    </a>
+                </li> 
+             
 
                 <!-- FACILITIES -->
 
@@ -155,6 +161,20 @@
                         href="locations.html">
 
                         Locations
+
+                    </a>
+
+                </li>
+                 
+                     <!-- blog(ACTIVE) -->
+
+              <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="blog.html">
+
+                      Blog
 
                     </a>
 
@@ -359,474 +379,422 @@
 </section>
 
 
+<!-- =====================================================
+     LOCATION DETAILS CSS (PERFECT ALIGNMENT & CONTRAST)
+===================================================== -->
+<style>
+    /* Fixed Uniform Heights */
+    .branch-card-title {
+        height: 52px;
+    }
+    .branch-card-desc {
+        height: 55px;
+    }
+    .branch-details-box {
+        height: 265px !important;
+        background-color: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        color: #1e293b !important;
+    }
+    .branch-details-box span,
+    .branch-details-box strong,
+    .branch-details-box small {
+        color: #1e293b !important;
+    }
+    .branch-tags-grid {
+        height: 72px;
+    }
+    .branch-tag {
+        background-color: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #334155 !important;
+        font-size: 12px;
+        padding: 6px 4px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Dark Mode (Supports body.dark-mode and [data-bs-theme="dark"]) */
+    body.dark-mode .branch-details-box,
+    [data-bs-theme="dark"] .branch-details-box {
+        background-color: #0b132b !important;
+        border: 1px solid rgba(255, 255, 255, 0.16) !important;
+        color: #f8fafc !important;
+    }
+    body.dark-mode .branch-details-box span,
+    body.dark-mode .branch-details-box strong,
+    body.dark-mode .branch-details-box small,
+    [data-bs-theme="dark"] .branch-details-box span,
+    [data-bs-theme="dark"] .branch-details-box strong,
+    [data-bs-theme="dark"] .branch-details-box small {
+        color: #e2e8f0 !important;
+    }
+    body.dark-mode .branch-tag,
+    [data-bs-theme="dark"] .branch-tag {
+        background-color: rgba(255, 255, 255, 0.08) !important;
+        border: 1px solid rgba(255, 255, 255, 0.22) !important;
+        color: #f1f5f9 !important;
+    }
+</style>
 
 <!-- =====================================================
-     LOCATIONS
+     STORAGE CENTRES & BRANCHES SECTION
 ===================================================== -->
-
 <section class="py-5 bg-body-tertiary">
-
     <div class="container">
 
         <!-- Heading -->
         <div class="text-center mb-5">
-
-            <span class="text-warning fw-semibold">
-                STORAGE CENTRES
+            <span class="badge text-bg-warning px-3 py-2 text-uppercase fw-semibold mb-2">
+                STORAGE NETWORK
             </span>
-
-            <h2 class="fw-bold mt-2">
-                Our Available Locations
+            <h2 class="fw-bold mt-2 text-body display-6">
+                Our Available Locations & Branches
             </h2>
-
-            <p class="text-body-secondary mx-auto"
-               style="max-width:750px;">
-
-                Choose a convenient location for your
-                personal or business storage requirements.
-                Our facilities provide secure, flexible and
-                accessible storage solutions.
-
+            <p class="text-body-secondary mx-auto fs-6" style="max-width: 750px;">
+                Choose the nearest StoreHub facility for your personal storage, office records, or bulk business inventory. Every hub offers 24/7 access, CCTV monitoring, and dedicated loading zones.
             </p>
-
         </div>
 
 
-        <!-- LOCATION CARDS -->
+        <!-- LOCATION CARDS ROW -->
+        <div class="row g-4 align-items-stretch">
 
-        <div class="row g-4">
-
-
-            <!-- =========================
-                 CHENNAI
-            ========================== -->
-
-            <div class="col-md-6 col-lg-4">
-
-                <div class="card h-100 border-0 shadow-sm overflow-hidden"
-                     style="border-radius:16px;">
-
-                    <!-- Image -->
-
-                    <img
-                        src="assets/images/pexels-peter-xie-371876898-36006588.jpg"
-                        class="card-img-top"
-                        alt="Chennai Storage Facility"
-                        style="height:220px;object-fit:cover;">
-
+            <!-- =====================================================
+                 1. CHENNAI HUB
+            ===================================================== -->
+            <div class="col-md-6 col-lg-4 d-flex">
+                <div class="card w-100 border-0 shadow-sm overflow-hidden bg-body d-flex flex-column" style="border-radius: 20px;">
+                    
+                    <!-- Image & Badge -->
+                    <div class="position-relative">
+                        <img
+                            src="assets/images/pexels-peter-xie-371876898-36006588.jpg"
+                            class="card-img-top"
+                            alt="Chennai Storage Facility"
+                            style="height: 220px; object-fit: cover;">
+                        <span class="position-absolute top-0 end-0 m-3 badge bg-success text-white shadow-sm px-3 py-2 rounded-pill">
+                            <i class="fa-solid fa-circle-check me-1"></i> Units Available
+                        </span>
+                        <span class="position-absolute bottom-0 start-0 m-3 badge bg-dark bg-opacity-75 text-white px-2 py-1 rounded small">
+                            <i class="fa-solid fa-star text-warning me-1"></i> Flagship Hub
+                        </span>
+                    </div>
 
                     <!-- Body -->
+                    <div class="card-body p-4 d-flex flex-column flex-grow-1">
 
-                    <div class="card-body p-4">
-
-                        <!-- Title -->
-
-                        <div class="d-flex align-items-center gap-2 mb-3">
-
-                            <div
-                                class="bg-warning rounded-circle d-flex align-items-center justify-content-center"
-                                style="width:45px;height:45px;min-width:45px;">
-
-                                <i class="fa-solid fa-location-dot text-dark"></i>
-
+                        <!-- Title (Locked Height: 52px) -->
+                        <div class="d-flex align-items-center gap-3 mb-2 branch-card-title">
+                            <div class="rounded-circle bg-warning d-flex align-items-center justify-content-center flex-shrink-0"
+                                 style="width: 48px; height: 48px;">
+                                <i class="fa-solid fa-location-dot fs-5" style="color: #0B132B !important;"></i>
                             </div>
-
-                            <h4 class="fw-bold mb-0">
-                                Chennai
-                            </h4>
-
+                            <div>
+                                <h4 class="fw-bold text-body mb-0">Chennai Hub</h4>
+                                <small class="text-warning fw-semibold">Guindy Industrial Estate</small>
+                            </div>
                         </div>
 
-
-                        <!-- Description -->
-
-                        <p class="text-body-secondary"
-                           style="line-height:1.7;">
-
-                            Our Chennai storage centre provides
-                            convenient and secure space for
-                            households, retailers and growing
-                            businesses.
-
+                        <!-- Description (Locked Height: 55px) -->
+                        <p class="text-body-secondary small mb-3 branch-card-desc">
+                            Centrally situated near airport transit corridors. Ideal for household storage, retail inventory, and documents.
                         </p>
 
+                        <!-- DETAILS BOX (Locked Height: 265px - Ends on Same Line) -->
+                        <div class="branch-details-box p-3 rounded-4 mb-3 d-flex flex-column justify-content-between">
+                            
+                            <div class="d-flex align-items-start gap-2 small">
+                                <i class="fa-solid fa-map-pin text-warning mt-1 flex-shrink-0"></i>
+                                <span><strong>Address:</strong> Plot 42, SIDCO Estate, Guindy, Chennai</span>
+                            </div>
 
-                        <!-- Location -->
+                            <div class="d-flex align-items-start gap-2 small">
+                                <i class="fa-solid fa-diamond-turn-right text-warning mt-1 flex-shrink-0"></i>
+                                <span><strong>Landmark:</strong> Near Kathipara & Guindy Metro (5 mins)</span>
+                            </div>
 
-                        <div class="d-flex align-items-center mb-3">
+                            <div class="d-flex align-items-center gap-2 small">
+                                <i class="fa-solid fa-clock text-warning flex-shrink-0"></i>
+                                <span><strong>Access:</strong> 24/7 Keycard Access & Staff Support</span>
+                            </div>
 
-                            <i class="fa-solid fa-location-dot text-warning me-2"></i>
+                            <div class="d-flex align-items-center gap-2 small">
+                                <i class="fa-solid fa-boxes-stacked text-warning flex-shrink-0"></i>
+                                <span><strong>Capacity:</strong> 65,000 sq.ft (Lockers to Pallet Bays)</span>
+                            </div>
 
-                            <span>
-                                Guindy, Chennai
-                            </span>
+                            <div class="d-flex align-items-center gap-2 small">
+                                <i class="fa-solid fa-phone text-warning flex-shrink-0"></i>
+                                <span><strong>Phone:</strong> +91 98765 43210</span>
+                            </div>
 
-                        </div>
-
-
-                        <!-- Storage -->
-
-                        <div class="d-flex align-items-center mb-3">
-
-                            <i class="fa-solid fa-box text-warning me-2"></i>
-
-                            <span>
-                                Personal & Business Storage
-                            </span>
-
-                        </div>
-
-
-                        <!-- Security -->
-
-                        <div class="d-flex align-items-center mb-3">
-
-                            <i class="fa-solid fa-shield-halved text-warning me-2"></i>
-
-                            <span>
-                                CCTV Monitored Facility
-                            </span>
+                            <div class="d-flex align-items-center gap-2 small pt-2 border-top border-secondary-subtle">
+                                <i class="fa-solid fa-tag text-warning flex-shrink-0"></i>
+                                <span><strong>Pricing:</strong> Starting from <strong class="text-warning">₹1,499 / mo</strong></span>
+                            </div>
 
                         </div>
 
-
-                        <!-- Access -->
-
-                        <div class="d-flex align-items-center mb-3">
-
-                            <i class="fa-solid fa-clock text-warning me-2"></i>
-
-                            <span>
-                                24-hour access
-                            </span>
-
+                        <!-- Feature Badges (Locked 2x2 Grid - Height: 72px) -->
+                        <div class="row g-2 mb-3 branch-tags-grid">
+                            <div class="col-6">
+                                <span class="badge branch-tag">Climate Control</span>
+                            </div>
+                            <div class="col-6">
+                                <span class="badge branch-tag">Forklift & Dock</span>
+                            </div>
+                            <div class="col-6">
+                                <span class="badge branch-tag">32 CCTV Cameras</span>
+                            </div>
+                            <div class="col-6">
+                                <span class="badge branch-tag">Pest Protected</span>
+                            </div>
                         </div>
 
-
-                        <!-- Suitable For -->
-
-                        <div class="border-top pt-3 mt-2">
-
-                            <small class="text-body-secondary">
-                                <strong>Suitable for:</strong>
-                                Home belongings, retail inventory,
-                                documents and business supplies.
-                            </small>
-
+                        <!-- Buttons (Aligned at Bottom) -->
+                        <div class="mt-auto d-flex gap-2">
+                            <a href="contact.html" class="btn btn-warning flex-grow-1 fw-semibold">
+                                Enquire Now
+                            </a>
+                            <a href="https://maps.google.com/?q=SIDCO+Industrial+Estate+Guindy+Chennai" 
+                               target="_blank" rel="noopener noreferrer" 
+                               class="btn btn-outline-secondary px-3 d-flex align-items-center justify-content-center" title="View on Google Maps">
+                                <i class="fa-solid fa-diamond-turn-right"></i>
+                            </a>
                         </div>
 
                     </div>
-
-
-                    <!-- Footer -->
-
-                    <div class="card-footer bg-body border-0 p-4 pt-0">
-
-                        <a
-                            href="contact.html"
-                            class="btn btn-outline-warning w-100">
-
-                            Enquire Now
-
-                        </a>
-
-                    </div>
-
                 </div>
-
             </div>
 
 
-
-            <!-- =========================
-                 BANGALORE
-            ========================== -->
-
-            <div class="col-md-6 col-lg-4">
-
-                <div class="card h-100 border-0 shadow-sm overflow-hidden"
-                     style="border-radius:16px;">
-
-                    <!-- Image -->
-
-                    <img
-                        src="assets/images/loc2.png.jpg"
-                        class="card-img-top"
-                        alt="Bangalore Storage Facility"
-                        style="height:220px;object-fit:cover;">
-
+            <!-- =====================================================
+                 2. BANGALORE HUB
+            ===================================================== -->
+            <div class="col-md-6 col-lg-4 d-flex">
+                <div class="card w-100 border-0 shadow-sm overflow-hidden bg-body d-flex flex-column" style="border-radius: 20px;">
+                    
+                    <!-- Image & Badge -->
+                    <div class="position-relative">
+                        <img
+                            src="assets/images/loc2.png.jpg"
+                            class="card-img-top"
+                            alt="Bangalore Storage Facility"
+                            style="height: 220px; object-fit: cover;">
+                        <span class="position-absolute top-0 end-0 m-3 badge bg-success text-white shadow-sm px-3 py-2 rounded-pill">
+                            <i class="fa-solid fa-circle-check me-1"></i> Units Available
+                        </span>
+                        <span class="position-absolute bottom-0 start-0 m-3 badge bg-dark bg-opacity-75 text-white px-2 py-1 rounded small">
+                            <i class="fa-solid fa-bolt text-warning me-1"></i> Tech Logistics Hub
+                        </span>
+                    </div>
 
                     <!-- Body -->
+                    <div class="card-body p-4 d-flex flex-column flex-grow-1">
 
-                    <div class="card-body p-4">
-
-                        <!-- Title -->
-
-                        <div class="d-flex align-items-center gap-2 mb-3">
-
-                            <div
-                                class="bg-warning rounded-circle d-flex align-items-center justify-content-center"
-                                style="width:45px;height:45px;min-width:45px;">
-
-                                <i class="fa-solid fa-location-dot text-dark"></i>
-
+                        <!-- Title (Locked Height: 52px) -->
+                        <div class="d-flex align-items-center gap-3 mb-2 branch-card-title">
+                            <div class="rounded-circle bg-warning d-flex align-items-center justify-content-center flex-shrink-0"
+                                 style="width: 48px; height: 48px;">
+                                <i class="fa-solid fa-location-dot fs-5" style="color: #0B132B !important;"></i>
                             </div>
-
-                            <h4 class="fw-bold mb-0">
-                                Bangalore
-                            </h4>
-
+                            <div>
+                                <h4 class="fw-bold text-body mb-0">Bangalore Hub</h4>
+                                <small class="text-warning fw-semibold">Whitefield IT Corridor</small>
+                            </div>
                         </div>
 
-
-                        <!-- Description -->
-
-                        <p class="text-body-secondary"
-                           style="line-height:1.7;">
-
-                            Our Bangalore facility offers
-                            flexible storage solutions close
-                            to major business and residential
-                            areas.
-
+                        <!-- Description (Locked Height: 55px) -->
+                        <p class="text-body-secondary small mb-3 branch-card-desc">
+                            High-ceiling commercial facility engineered for IT companies, data equipment, FMCG, and e-commerce stock.
                         </p>
 
+                        <!-- DETAILS BOX (Locked Height: 265px - Ends on Same Line) -->
+                        <div class="branch-details-box p-3 rounded-4 mb-3 d-flex flex-column justify-content-between">
+                            
+                            <div class="d-flex align-items-start gap-2 small">
+                                <i class="fa-solid fa-map-pin text-warning mt-1 flex-shrink-0"></i>
+                                <span><strong>Address:</strong> Survey 18, EPIP Zone, Whitefield, Bengaluru</span>
+                            </div>
 
-                        <!-- Location -->
+                            <div class="d-flex align-items-start gap-2 small">
+                                <i class="fa-solid fa-diamond-turn-right text-warning mt-1 flex-shrink-0"></i>
+                                <span><strong>Landmark:</strong> Near ITPL & Hoodi Metro Station (10 mins)</span>
+                            </div>
 
-                        <div class="d-flex align-items-center mb-3">
+                            <div class="d-flex align-items-center gap-2 small">
+                                <i class="fa-solid fa-clock text-warning flex-shrink-0"></i>
+                                <span><strong>Access:</strong> 24/7 RFID Gate Access & Staff Support</span>
+                            </div>
 
-                            <i class="fa-solid fa-location-dot text-warning me-2"></i>
+                            <div class="d-flex align-items-center gap-2 small">
+                                <i class="fa-solid fa-boxes-stacked text-warning flex-shrink-0"></i>
+                                <span><strong>Capacity:</strong> 85,000 sq.ft (Multi-Tier Pallet Racks)</span>
+                            </div>
 
-                            <span>
-                                Whitefield, Bangalore
-                            </span>
+                            <div class="d-flex align-items-center gap-2 small">
+                                <i class="fa-solid fa-phone text-warning flex-shrink-0"></i>
+                                <span><strong>Phone:</strong> +91 98765 43211</span>
+                            </div>
 
-                        </div>
-
-
-                        <!-- Storage -->
-
-                        <div class="d-flex align-items-center mb-3">
-
-                            <i class="fa-solid fa-box text-warning me-2"></i>
-
-                            <span>
-                                Business & Inventory Storage
-                            </span>
-
-                        </div>
-
-
-                        <!-- Security -->
-
-                        <div class="d-flex align-items-center mb-3">
-
-                            <i class="fa-solid fa-shield-halved text-warning me-2"></i>
-
-                            <span>
-                                Secure Storage Facility
-                            </span>
+                            <div class="d-flex align-items-center gap-2 small pt-2 border-top border-secondary-subtle">
+                                <i class="fa-solid fa-tag text-warning flex-shrink-0"></i>
+                                <span><strong>Pricing:</strong> Starting from <strong class="text-warning">₹1,999 / mo</strong></span>
+                            </div>
 
                         </div>
 
-
-                        <!-- Access -->
-
-                        <div class="d-flex align-items-center mb-3">
-
-                            <i class="fa-solid fa-clock text-warning me-2"></i>
-
-                            <span>
-                                24-hour access
-                            </span>
-
+                        <!-- Feature Badges (Locked 2x2 Grid - Height: 72px) -->
+                        <div class="row g-2 mb-3 branch-tags-grid">
+                            <div class="col-6">
+                                <span class="badge branch-tag">Heavy Pallet Racks</span>
+                            </div>
+                            <div class="col-6">
+                                <span class="badge branch-tag">Trailer Access</span>
+                            </div>
+                            <div class="col-6">
+                                <span class="badge branch-tag">Hydraulic Levelers</span>
+                            </div>
+                            <div class="col-6">
+                                <span class="badge branch-tag">24/7 Security</span>
+                            </div>
                         </div>
 
-
-                        <!-- Suitable For -->
-
-                        <div class="border-top pt-3 mt-2">
-
-                            <small class="text-body-secondary">
-
-                                <strong>Suitable for:</strong>
-                                E-commerce inventory, business
-                                stock, equipment and supplies.
-
-                            </small>
-
+                        <!-- Buttons (Aligned at Bottom) -->
+                        <div class="mt-auto d-flex gap-2">
+                            <a href="contact.html" class="btn btn-warning flex-grow-1 fw-semibold">
+                                Enquire Now
+                            </a>
+                            <a href="https://maps.google.com/?q=EPIP+Zone+Whitefield+Bangalore" 
+                               target="_blank" rel="noopener noreferrer" 
+                               class="btn btn-outline-secondary px-3 d-flex align-items-center justify-content-center" title="View on Google Maps">
+                                <i class="fa-solid fa-diamond-turn-right"></i>
+                            </a>
                         </div>
 
                     </div>
-
-
-                    <!-- Footer -->
-
-                    <div class="card-footer bg-body border-0 p-4 pt-0">
-
-                        <a
-                            href="contact.html"
-                            class="btn btn-outline-warning w-100">
-
-                            Enquire Now
-
-                        </a>
-
-                    </div>
-
                 </div>
-
             </div>
 
 
-
-            <!-- =========================
-                 MADURAI
-            ========================== -->
-
-            <div class="col-md-6 col-lg-4">
-
-                <div class="card h-100 border-0 shadow-sm overflow-hidden"
-                     style="border-radius:16px;">
-
-                    <!-- Image -->
-
-                    <img
-                        src="assets/images/loc3.png.jpg"
-                        class="card-img-top"
-                        alt="Madurai Storage Facility"
-                        style="height:220px;object-fit:cover;">
-
+            <!-- =====================================================
+                 3. MADURAI HUB
+            ===================================================== -->
+            <div class="col-md-6 col-lg-4 d-flex">
+                <div class="card w-100 border-0 shadow-sm overflow-hidden bg-body d-flex flex-column" style="border-radius: 20px;">
+                    
+                    <!-- Image & Badge -->
+                    <div class="position-relative">
+                        <img
+                            src="assets/images/loc3.png.jpg"
+                            class="card-img-top"
+                            alt="Madurai Storage Facility"
+                            style="height: 220px; object-fit: cover;">
+                        <span class="position-absolute top-0 end-0 m-3 badge bg-success text-white shadow-sm px-3 py-2 rounded-pill">
+                            <i class="fa-solid fa-circle-check me-1"></i> Units Available
+                        </span>
+                        <span class="position-absolute bottom-0 start-0 m-3 badge bg-dark bg-opacity-75 text-white px-2 py-1 rounded small">
+                            <i class="fa-solid fa-truck-moving text-warning me-1"></i> Regional Distribution
+                        </span>
+                    </div>
 
                     <!-- Body -->
+                    <div class="card-body p-4 d-flex flex-column flex-grow-1">
 
-                    <div class="card-body p-4">
-
-                        <!-- Title -->
-
-                        <div class="d-flex align-items-center gap-2 mb-3">
-
-                            <div
-                                class="bg-warning rounded-circle d-flex align-items-center justify-content-center"
-                                style="width:45px;height:45px;min-width:45px;">
-
-                                <i class="fa-solid fa-location-dot text-dark"></i>
-
+                        <!-- Title (Locked Height: 52px) -->
+                        <div class="d-flex align-items-center gap-3 mb-2 branch-card-title">
+                            <div class="rounded-circle bg-warning d-flex align-items-center justify-content-center flex-shrink-0"
+                                 style="width: 48px; height: 48px;">
+                                <i class="fa-solid fa-location-dot fs-5" style="color: #0B132B !important;"></i>
                             </div>
-
-                            <h4 class="fw-bold mb-0">
-                                Madurai
-                            </h4>
-
+                            <div>
+                                <h4 class="fw-bold text-body mb-0">Madurai Hub</h4>
+                                <small class="text-warning fw-semibold">Mattuthavani Transit Ring</small>
+                            </div>
                         </div>
 
-
-                        <!-- Description -->
-
-                        <p class="text-body-secondary"
-                           style="line-height:1.7;">
-
-                            Our Madurai storage centre provides
-                            convenient space for households,
-                            retailers and growing businesses.
-
+                        <!-- Description (Locked Height: 55px) -->
+                        <p class="text-body-secondary small mb-3 branch-card-desc">
+                            Direct ground-floor drive-up units with wide turning space. Ideal for wholesale stock, household goods, and tools.
                         </p>
 
+                        <!-- DETAILS BOX (Locked Height: 265px - Ends on Same Line) -->
+                        <div class="branch-details-box p-3 rounded-4 mb-3 d-flex flex-column justify-content-between">
+                            
+                            <div class="d-flex align-items-start gap-2 small">
+                                <i class="fa-solid fa-map-pin text-warning mt-1 flex-shrink-0"></i>
+                                <span><strong>Address:</strong> Ring Road Bypass, Mattuthavani, Madurai</span>
+                            </div>
 
-                        <!-- Location -->
+                            <div class="d-flex align-items-start gap-2 small">
+                                <i class="fa-solid fa-diamond-turn-right text-warning mt-1 flex-shrink-0"></i>
+                                <span><strong>Landmark:</strong> Near Mattuthavani Bus Terminus (2 mins)</span>
+                            </div>
 
-                        <div class="d-flex align-items-center mb-3">
+                            <div class="d-flex align-items-center gap-2 small">
+                                <i class="fa-solid fa-clock text-warning flex-shrink-0"></i>
+                                <span><strong>Access:</strong> 24/7 Drive-Up Roll-Up Door Access</span>
+                            </div>
 
-                            <i class="fa-solid fa-location-dot text-warning me-2"></i>
+                            <div class="d-flex align-items-center gap-2 small">
+                                <i class="fa-solid fa-boxes-stacked text-warning flex-shrink-0"></i>
+                                <span><strong>Capacity:</strong> 40,000 sq.ft (Ground-Level Units)</span>
+                            </div>
 
-                            <span>
-                                Mattuthavani, Madurai
-                            </span>
+                            <div class="d-flex align-items-center gap-2 small">
+                                <i class="fa-solid fa-phone text-warning flex-shrink-0"></i>
+                                <span><strong>Phone:</strong> +91 98765 43212</span>
+                            </div>
 
-                        </div>
-
-
-                        <!-- Storage -->
-
-                        <div class="d-flex align-items-center mb-3">
-
-                            <i class="fa-solid fa-box text-warning me-2"></i>
-
-                            <span>
-                                Personal & Business Storage
-                            </span>
-
-                        </div>
-
-
-                        <!-- Security -->
-
-                        <div class="d-flex align-items-center mb-3">
-
-                            <i class="fa-solid fa-shield-halved text-warning me-2"></i>
-
-                            <span>
-                                Secure Storage Facility
-                            </span>
+                            <div class="d-flex align-items-center gap-2 small pt-2 border-top border-secondary-subtle">
+                                <i class="fa-solid fa-tag text-warning flex-shrink-0"></i>
+                                <span><strong>Pricing:</strong> Starting from <strong class="text-warning">₹1,199 / mo</strong></span>
+                            </div>
 
                         </div>
 
-
-                        <!-- Access -->
-
-                        <div class="d-flex align-items-center mb-3">
-
-                            <i class="fa-solid fa-clock text-warning me-2"></i>
-
-                            <span>
-                                24-hour access
-                            </span>
-
+                        <!-- Feature Badges (Locked 2x2 Grid - Height: 72px) -->
+                        <div class="row g-2 mb-3 branch-tags-grid">
+                            <div class="col-6">
+                                <span class="badge branch-tag">Drive-Up Rollers</span>
+                            </div>
+                            <div class="col-6">
+                                <span class="badge branch-tag">Wide Truck Turning</span>
+                            </div>
+                            <div class="col-6">
+                                <span class="badge branch-tag">Ground Floor Only</span>
+                            </div>
+                            <div class="col-6">
+                                <span class="badge branch-tag">Fire Protected</span>
+                            </div>
                         </div>
 
-
-                        <!-- Suitable For -->
-
-                        <div class="border-top pt-3 mt-2">
-
-                            <small class="text-body-secondary">
-
-                                <strong>Suitable for:</strong>
-                                Household belongings, retail stock,
-                                equipment and business inventory.
-
-                            </small>
-
+                        <!-- Buttons (Aligned at Bottom) -->
+                        <div class="mt-auto d-flex gap-2">
+                            <a href="contact.html" class="btn btn-warning flex-grow-1 fw-semibold">
+                                Enquire Now
+                            </a>
+                            <a href="https://maps.google.com/?q=Mattuthavani+Madurai" 
+                               target="_blank" rel="noopener noreferrer" 
+                               class="btn btn-outline-secondary px-3 d-flex align-items-center justify-content-center" title="View on Google Maps">
+                                <i class="fa-solid fa-diamond-turn-right"></i>
+                            </a>
                         </div>
 
                     </div>
-
-
-                    <!-- Footer -->
-
-                    <div class="card-footer bg-body border-0 p-4 pt-0">
-
-                        <a
-                            href="contact.html"
-                            class="btn btn-outline-warning w-100">
-
-                            Enquire Now
-
-                        </a>
-
-                    </div>
-
                 </div>
-
             </div>
-
 
         </div>
 
     </div>
-
 </section>
+
 
 
 <!-- =====================================================
@@ -1104,265 +1072,146 @@
      FOOTER
 ===================================================== -->
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 <footer class="bg-dark text-white pt-5">
-
     <div class="container">
-
-
         <div class="row g-4 pb-4">
 
-
             <!-- BRAND -->
+            <div class="col-lg-4">
+                <!-- LOGO + BRAND NAME -->
+                <a href="index.html" class="text-white text-decoration-none d-inline-flex align-items-center gap-2 mb-3">
+                    <img
+                        src="assets/images/logo.png"
+                        alt="StoreHub Logo"
+                        style="
+                            height: 44px;
+                            width: auto;
+                            max-height: 44px;
+                            object-fit: contain;
+                            display: block;
+                            flex-shrink: 0;
+                        ">
+                    <span
+                        class="fw-bold text-white"
+                        style="
+                            font-size: 26px;
+                            line-height: 1;
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                            align-items: center;
+                        ">
+                        StoreHub
+                    </span>
+                </a>
 
-         
+                <!-- DESCRIPTION -->
+                <p class="text-white-50 mb-3" style="max-width:360px; line-height:1.7;">
+                    Secure and flexible warehouse and storage solutions for individuals and businesses.
+                </p>
 
-<div class="col-lg-4">
+                <!-- SOCIAL ICONS -->
+                <div class="d-flex gap-3">
+                    <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fs-5"
+                        aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
 
-    <!-- LOGO + BRAND NAME -->
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fs-5"
+                        aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
 
-    <a
-        href="index.html"
-        class="text-white text-decoration-none d-inline-flex align-items-center gap-3 mb-3">
-
-        <img
-            src="assets/images/logo.png"
-            alt="StoreHub Logo"
-            style="
-                height:55px;
-                width:55px;
-                object-fit:contain;
-                display:block;
-            ">
-
-        <span
-            class="fw-bold"
-            style="
-                font-size:28px;
-                line-height:1;
-            ">
-
-            StoreHub
-
-        </span>
-
-    </a>
-
-
-    <!-- DESCRIPTION -->
-
-    <p
-        class="text-white-50 mb-3"
-        style="
-            max-width:360px;
-            line-height:1.7;
-        ">
-
-        Secure and flexible warehouse and storage
-        solutions for individuals and businesses.
-
-    </p>
-
-
-    <!-- SOCIAL ICONS -->
-
-    <div class="d-flex gap-3">
-
-        <a
-            href="#"
-            class="text-white"
-            aria-label="Facebook">
-
-            <i class="fa-brands fa-facebook"></i>
-
-        </a>
-
-
-        <a
-            href="#"
-            class="text-white"
-            aria-label="Instagram">
-
-            <i class="fa-brands fa-instagram"></i>
-
-        </a>
-
-
-        <a
-            href="#"
-            class="text-white"
-            aria-label="LinkedIn">
-
-            <i class="fa-brands fa-linkedin"></i>
-
-        </a>
-
-    </div>
-
-</div>
-
+                    <a
+                        href="https://www.linkedin.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fs-5"
+                        aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
 
             <!-- QUICK LINKS -->
-
             <div class="col-6 col-lg-2">
-
-                <h6>
-                    Quick Links
-                </h6>
-
-
+                <h6>Quick Links</h6>
                 <ul class="list-unstyled">
-
                     <li class="mb-2">
-                        <a
-                            href="index.html"
-                            class="text-white-50 text-decoration-none">
-                            Home
-                        </a>
+                        <a href="index.html" class="text-white-50 text-decoration-none">Home</a>
                     </li>
-
                     <li class="mb-2">
-                        <a
-                            href="facilities.html"
-                            class="text-white-50 text-decoration-none">
-                            Facilities
-                        </a>
+                        <a href="about.html" class="text-white-50 text-decoration-none">About Us</a>
                     </li>
-
                     <li class="mb-2">
-                        <a
-                            href="pricing.html"
-                            class="text-white-50 text-decoration-none">
-                            Pricing
-                        </a>
+                        <a href="facilities.html" class="text-white-50 text-decoration-none">Facilities</a>
                     </li>
-
+                    <li class="mb-2">
+                        <a href="pricing.html" class="text-white-50 text-decoration-none">Pricing</a>
+                    </li>
                     <li>
-                        <a
-                            href="locations.html"
-                            class="text-white-50 text-decoration-none">
-                            Locations
-                        </a>
+                        <a href="locations.html" class="text-white-50 text-decoration-none">Locations</a>
                     </li>
-
                 </ul>
-
             </div>
-
 
             <!-- PAGES -->
-
             <div class="col-6 col-lg-2">
-
-                <h6>
-                    Pages
-                </h6>
-
-
+                <h6>Pages</h6>
                 <ul class="list-unstyled">
-
                     <li class="mb-2">
-
-                        <a
-                            href="maintenance.html"
-                            class="text-white-50 text-decoration-none">
-
-                            Maintenance
-
-                        </a>
-
+                        <a href="blog.html" class="text-white-50 text-decoration-none">Blog</a>
                     </li>
-
-
                     <li class="mb-2">
-
-                        <a
-                            href="404.html"
-                            class="text-white-50 text-decoration-none">
-
-                            404 Page
-
-                        </a>
-
+                        <a href="maintenance.html" class="text-white-50 text-decoration-none">Maintenance</a>
                     </li>
-
-
+                    <li class="mb-2">
+                        <a href="404.html" class="text-white-50 text-decoration-none">404 Page</a>
+                    </li>
                     <li>
-
-                        <a
-                            href="coming-soon.html"
-                            class="text-white-50 text-decoration-none">
-
-                            Coming Soon
-
-                        </a>
-
+                        <a href="coming-soon.html" class="text-white-50 text-decoration-none">Coming Soon</a>
                     </li>
-
                 </ul>
-
             </div>
-
 
             <!-- CONTACT -->
-
             <div class="col-lg-4">
-
-                <h6>
-                    Contact Us
-                </h6>
-
-
+                <h6>Contact Us</h6>
                 <p class="text-white-50 mb-2">
-
                     <i class="fa-solid fa-phone me-2"></i>
-
                     +91 98765 43210
-
                 </p>
-
-
                 <p class="text-white-50 mb-2">
-
                     <i class="fa-solid fa-envelope me-2"></i>
-
                     storehub@gmail.com
-
                 </p>
-
-
                 <p class="text-white-50">
-
                     <i class="fa-solid fa-location-dot me-2"></i>
-
                     Chennai, Tamil Nadu
-
                 </p>
-
             </div>
 
-
         </div>
-
 
         <!-- COPYRIGHT -->
-
-        <div
-            class="border-top border-secondary py-3 text-center">
-
+        <div class="border-top border-secondary py-3 text-center">
             <small class="text-white-50">
-
-                © 2026 StoreHub.
-                All Rights Reserved.
-
+                © 2026 StoreHub. All Rights Reserved.
             </small>
-
         </div>
-
     </div>
-
 </footer>
-
-
 
 
 <!-- Bootstrap JS -->

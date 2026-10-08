@@ -28,281 +28,185 @@
      NAVBAR
 ===================================================== -->
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
-    <div class="container">
+<!-- =====================================================
+     MOBILE NAVBAR ALIGNMENT FIX (360px - 991px)
+===================================================== -->
+<style>
+    @media (max-width: 991.98px) {
+        /* Force container to hold brand on left and toggler on right in 1 row */
+        .navbar > .container {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            flex-wrap: nowrap !important;
+        }
 
-        <!-- LOGO -->
+        /* Lock Logo to the far LEFT */
+        .navbar-brand {
+            margin-left: 0 !important;
+            margin-right: auto !important;
+            justify-content: flex-start !important;
+            text-align: left !important;
+            width: auto !important;
+        }
+
+        /* Lock Hamburger to the far RIGHT */
+        .navbar-toggler {
+            margin-left: auto !important;
+            margin-right: 0 !important;
+        }
+    }
+    
+</style>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
+    <div class="container d-flex flex-row flex-nowrap align-items-center justify-content-between">
+
+        <!-- LOGO & BRAND NAME (SIDE BY SIDE ON THE SAME LINE) -->
         <a
             href="index.html"
-            class="navbar-brand d-flex align-items-center gap-2 fw-bold">
+            class="navbar-brand d-inline-flex flex-row flex-nowrap align-items-center gap-2 fw-bold text-nowrap m-0 p-0"
+            style="display: inline-flex !important; flex-direction: row !important; flex-wrap: nowrap !important; white-space: nowrap !important; align-items: center !important;">
 
             <img
                 src="assets/images/logo.png"
-                style="height:45px; width:auto; object-fit:contain;">
+                alt="StoreHub Logo"
+                style="height: 38px !important; width: auto !important; flex-shrink: 0 !important; display: inline-block !important;">
 
-            <span>StoreHub</span>
+            <span style="white-space: nowrap !important; display: inline-block !important; font-size: 20px !important; line-height: 1 !important;">StoreHub</span>
 
         </a>
 
 
-        <!-- MOBILE MENU -->
-   <button
-    class="navbar-toggler border-0 shadow-none"
-    type="button"
-    data-bs-toggle="collapse"
-    data-bs-target="#mainNavbar"
-    aria-controls="mainNavbar"
-    aria-expanded="false"
-    aria-label="Toggle navigation">
+        <!-- MOBILE HAMBURGER BUTTON (IN SAME ROW ON THE RIGHT) -->
+        <button
+            class="navbar-toggler border-0 shadow-none ms-auto me-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            style="position: relative !important; top: auto !important; right: auto !important; transform: none !important;">
 
-    <i class="fa-solid fa-bars fs-3 text-white"></i>
+            <i class="fa-solid fa-bars fs-3 text-white"></i>
 
-</button>
+        </button>
 
 
-        <!-- NAVIGATION -->
-        <div
-            class="collapse navbar-collapse"
-            id="mainNavbar">
-
+        <!-- NAVIGATION COLLAPSE -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
 
-                <!-- HOME -->
                 <li class="nav-item dropdown">
-
-                    <a
-                        class="nav-link dropdown-toggle active"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown">
-
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
                         Home
-
                     </a>
-
                     <ul class="dropdown-menu">
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="index.html">
-
-                                Home 1
-
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="index2.html">
-
-                                Home 2
-
-                            </a>
-                        </li>
-
+                        <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                        <li><a class="dropdown-item" href="index2.html">Home 2</a></li>
                     </ul>
-
                 </li>
 
-
-                <!-- FACILITIES -->
                 <li class="nav-item">
-
-                    <a
-                        class="nav-link"
-                        href="facilities.html">
-
-                        Facilities
-
-                    </a>
-
+                    <a class="nav-link" href="about.html">About</a>
                 </li>
 
-
-                <!-- PRICING -->
                 <li class="nav-item">
-
-                    <a
-                        class="nav-link"
-                        href="pricing.html">
-
-                        Pricing
-
-                    </a>
-
+                    <a class="nav-link" href="facilities.html">Facilities</a>
                 </li>
 
-
-                <!-- LOCATIONS -->
                 <li class="nav-item">
-
-                    <a
-                        class="nav-link"
-                        href="locations.html">
-
-                        Locations
-
-                    </a>
-
+                    <a class="nav-link" href="pricing.html">Pricing</a>
                 </li>
 
-<!-- =====================================================
-     PAGES DROPDOWN
-===================================================== -->
-
-<li class="nav-item dropdown">
-
-    <a
-        class="nav-link dropdown-toggle"
-        href="#"
-        role="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false">
-
-        Pages
-
-    </a>
-
-
-    <ul class="dropdown-menu">
-
-        <!-- MAINTENANCE -->
-
-        <li>
-
-            <a
-                class="dropdown-item"
-                href="maintenance.html">
-
-                <i class="fa-solid fa-screwdriver-wrench me-2"></i>
-
-                Maintenance
-
-            </a>
-
-        </li>
-
-
-        <!-- 404 -->
-
-        <li>
-
-            <a
-                class="dropdown-item"
-                href="404.html">
-
-                <i class="fa-solid fa-triangle-exclamation me-2"></i>
-
-                404 Page
-
-            </a>
-
-        </li>
-
-
-        <!-- COMING SOON -->
-
-        <li>
-
-            <a
-                class="dropdown-item"
-                href="coming-soon.html">
-
-                <i class="fa-solid fa-rocket me-2"></i>
-
-                Coming Soon
-
-            </a>
-
-        </li>
-
-    </ul>
-
-</li>
-                <!-- CONTACT -->
                 <li class="nav-item">
+                    <a class="nav-link" href="locations.html">Locations</a>
+                </li>
 
-                    <a
-                        class="nav-link"
-                        href="contact.html">
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
 
-                        Contact
-
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Pages
                     </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="maintenance.html">
+                                <i class="fa-solid fa-screwdriver-wrench me-2"></i>Maintenance
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="404.html">
+                                <i class="fa-solid fa-triangle-exclamation me-2"></i>404 Page
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="coming-soon.html">
+                                <i class="fa-solid fa-rocket me-2"></i>Coming Soon
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
                 </li>
 
             </ul>
 
-
-           
-           <!-- RIGHT SIDE -->
-<!-- RIGHT SIDE -->
-<!-- NEW -->
-<div class="d-flex align-items-center gap-2 navbar-actions">
-    <!-- RTL / LTR -->
+            <!-- RIGHT ACTIONS (RTL / THEME) -->
+            <div class="d-flex align-items-center gap-2 navbar-actions ms-auto">
+    <!-- RTL / LTR Button -->
     <button
         id="rtlToggle"
         type="button"
         class="btn d-flex align-items-center justify-content-center"
         style="
-            width:100px !important;
-            height:40px !important;
-            min-width:100px !important;
-            padding:0 !important;
-            margin:0 !important;
-            border:1px solid #6c757d !important;
-            border-radius:50px !important;
-            color:#fff !important;
-            background:#17233f !important;
-            box-shadow:none !important;
+            width: 100px !important;
+            height: 40px !important;
+            min-width: 100px !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            border: 1px solid #6c757d !important;
+            border-radius: 50px !important;
+            color: #fff !important;
+            background: #17233f !important;
+            box-shadow: none !important;
         "
         title="Switch RTL / LTR">
-
         <i class="fa-solid fa-arrows-left-right"></i>
-
     </button>
 
-
-    <!-- DARK MODE -->
+    <!-- DARK MODE Button -->
     <button
         id="themeToggle"
         type="button"
         class="btn d-flex align-items-center justify-content-center"
         style="
-            width:100px !important;
-            height:40px !important;
-            min-width:100px !important;
-            padding:0 !important;
-            margin:0 !important;
-            border:1px solid #6c757d !important;
-            border-radius:50px !important;
-            color:#fff !important;
-            background:#17233f !important;
-            box-shadow:none !important;
+            width: 100px !important;
+            height: 40px !important;
+            min-width: 100px !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            border: 1px solid #6c757d !important;
+            border-radius: 50px !important;
+            color: #fff !important;
+            background: #17233f !important;
+            box-shadow: none !important;
         "
         title="Toggle dark mode">
-
-        <i
-            id="themeIcon"
-            class="fa-solid fa-moon">
-        </i>
-
+        <i id="themeIcon" class="fa-solid fa-moon"></i>
     </button>
-
 </div>
 
         </div>
 
     </div>
-
 </nav>
-<style>
-    
-</style>
-
 <!-- =====================================================
      HERO
 ===================================================== -->
@@ -1195,265 +1099,143 @@
 <!-- =====================================================
      FOOTER
 ===================================================== -->
-
 <footer class="bg-dark text-white pt-5">
-
     <div class="container">
-
-
         <div class="row g-4 pb-4">
 
-
             <!-- BRAND -->
+            <div class="col-lg-4">
+                <!-- LOGO + BRAND NAME -->
+                <a href="index.html" class="text-white text-decoration-none d-inline-flex align-items-center gap-2 mb-3">
+                    <img
+                        src="assets/images/logo.png"
+                        alt="StoreHub Logo"
+                        style="
+                            height: 44px;
+                            width: auto;
+                            max-height: 44px;
+                            object-fit: contain;
+                            display: block;
+                            flex-shrink: 0;
+                        ">
+                    <span
+                        class="fw-bold text-white"
+                        style="
+                            font-size: 26px;
+                            line-height: 1;
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                            align-items: center;
+                        ">
+                        StoreHub
+                    </span>
+                </a>
 
-         
+                <!-- DESCRIPTION -->
+                <p class="text-white-50 mb-3" style="max-width:360px; line-height:1.7;">
+                    Secure and flexible warehouse and storage solutions for individuals and businesses.
+                </p>
 
-<div class="col-lg-4">
+                <!-- SOCIAL ICONS -->
+                <div class="d-flex gap-3">
+                    <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fs-5"
+                        aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
 
-    <!-- LOGO + BRAND NAME -->
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fs-5"
+                        aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
 
-    <a
-        href="index.html"
-        class="text-white text-decoration-none d-inline-flex align-items-center gap-3 mb-3">
-
-        <img
-            src="assets/images/logo.png"
-            alt="StoreHub Logo"
-            style="
-                height:55px;
-                width:55px;
-                object-fit:contain;
-                display:block;
-            ">
-
-        <span
-            class="fw-bold"
-            style="
-                font-size:28px;
-                line-height:1;
-            ">
-
-            StoreHub
-
-        </span>
-
-    </a>
-
-
-    <!-- DESCRIPTION -->
-
-    <p
-        class="text-white-50 mb-3"
-        style="
-            max-width:360px;
-            line-height:1.7;
-        ">
-
-        Secure and flexible warehouse and storage
-        solutions for individuals and businesses.
-
-    </p>
-
-
-    <!-- SOCIAL ICONS -->
-
-    <div class="d-flex gap-3">
-
-        <a
-            href="#"
-            class="text-white"
-            aria-label="Facebook">
-
-            <i class="fa-brands fa-facebook"></i>
-
-        </a>
-
-
-        <a
-            href="#"
-            class="text-white"
-            aria-label="Instagram">
-
-            <i class="fa-brands fa-instagram"></i>
-
-        </a>
-
-
-        <a
-            href="#"
-            class="text-white"
-            aria-label="LinkedIn">
-
-            <i class="fa-brands fa-linkedin"></i>
-
-        </a>
-
-    </div>
-
-</div>
-
+                    <a
+                        href="https://www.linkedin.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fs-5"
+                        aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
 
             <!-- QUICK LINKS -->
-
             <div class="col-6 col-lg-2">
-
-                <h6>
-                    Quick Links
-                </h6>
-
-
+                <h6>Quick Links</h6>
                 <ul class="list-unstyled">
-
                     <li class="mb-2">
-                        <a
-                            href="index.html"
-                            class="text-white-50 text-decoration-none">
-                            Home
-                        </a>
+                        <a href="index.html" class="text-white-50 text-decoration-none">Home</a>
                     </li>
-
                     <li class="mb-2">
-                        <a
-                            href="facilities.html"
-                            class="text-white-50 text-decoration-none">
-                            Facilities
-                        </a>
+                        <a href="about.html" class="text-white-50 text-decoration-none">About Us</a>
                     </li>
-
                     <li class="mb-2">
-                        <a
-                            href="pricing.html"
-                            class="text-white-50 text-decoration-none">
-                            Pricing
-                        </a>
+                        <a href="facilities.html" class="text-white-50 text-decoration-none">Facilities</a>
                     </li>
-
+                    <li class="mb-2">
+                        <a href="pricing.html" class="text-white-50 text-decoration-none">Pricing</a>
+                    </li>
                     <li>
-                        <a
-                            href="locations.html"
-                            class="text-white-50 text-decoration-none">
-                            Locations
-                        </a>
+                        <a href="locations.html" class="text-white-50 text-decoration-none">Locations</a>
                     </li>
-
                 </ul>
-
             </div>
-
 
             <!-- PAGES -->
-
             <div class="col-6 col-lg-2">
-
-                <h6>
-                    Pages
-                </h6>
-
-
+                <h6>Pages</h6>
                 <ul class="list-unstyled">
-
                     <li class="mb-2">
-
-                        <a
-                            href="maintenance.html"
-                            class="text-white-50 text-decoration-none">
-
-                            Maintenance
-
-                        </a>
-
+                        <a href="blog.html" class="text-white-50 text-decoration-none">Blog</a>
                     </li>
-
-
                     <li class="mb-2">
-
-                        <a
-                            href="404.html"
-                            class="text-white-50 text-decoration-none">
-
-                            404 Page
-
-                        </a>
-
+                        <a href="maintenance.html" class="text-white-50 text-decoration-none">Maintenance</a>
                     </li>
-
-
+                    <li class="mb-2">
+                        <a href="404.html" class="text-white-50 text-decoration-none">404 Page</a>
+                    </li>
                     <li>
-
-                        <a
-                            href="coming-soon.html"
-                            class="text-white-50 text-decoration-none">
-
-                            Coming Soon
-
-                        </a>
-
+                        <a href="coming-soon.html" class="text-white-50 text-decoration-none">Coming Soon</a>
                     </li>
-
                 </ul>
-
             </div>
-
 
             <!-- CONTACT -->
-
             <div class="col-lg-4">
-
-                <h6>
-                    Contact Us
-                </h6>
-
-
+                <h6>Contact Us</h6>
                 <p class="text-white-50 mb-2">
-
                     <i class="fa-solid fa-phone me-2"></i>
-
                     +91 98765 43210
-
                 </p>
-
-
                 <p class="text-white-50 mb-2">
-
                     <i class="fa-solid fa-envelope me-2"></i>
-
                     storehub@gmail.com
-
                 </p>
-
-
                 <p class="text-white-50">
-
                     <i class="fa-solid fa-location-dot me-2"></i>
-
                     Chennai, Tamil Nadu
-
                 </p>
-
             </div>
 
-
         </div>
-
 
         <!-- COPYRIGHT -->
-
-        <div
-            class="border-top border-secondary py-3 text-center">
-
+        <div class="border-top border-secondary py-3 text-center">
             <small class="text-white-50">
-
-                © 2026 StoreHub.
-                All Rights Reserved.
-
+                © 2026 StoreHub. All Rights Reserved.
             </small>
-
         </div>
-
     </div>
-
 </footer>
-
 
 
 <!-- Bootstrap JS -->

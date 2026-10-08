@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Storage Guides | StoreHub - Warehouse & Storage Space Rental</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- =====================================================
+         MODAL & BLOG DARK MODE STYLES
+    ===================================================== -->
+    <style>
+        /* Light Mode Defaults for Modal */
+        #blogDetailModal .modal-content {
+            background-color: #ffffff !important;
+            color: #172033 !important;
+            border: 1px solid #e2e8f0;
+        }
+        #blogDetailModal .modal-title {
+            color: #0B132B !important;
+        }
+        #blogDetailModal #modalLead {
+            color: #475569 !important;
+        }
+        #blogDetailModal #modalContent,
+        #blogDetailModal #modalContent p,
+        #blogDetailModal #modalContent li {
+            color: #334155 !important;
+        }
+        #blogDetailModal #modalContent h5 {
+            color: #0f172a !important;
+            margin-top: 1.25rem;
+            font-weight: 700;
+        }
+
+        /* Dark Mode for Modal (Supports both body.dark-mode and [data-bs-theme="dark"]) */
+        body.dark-mode #blogDetailModal .modal-content,
+        [data-bs-theme="dark"] #blogDetailModal .modal-content {
+            background-color: #111c36 !important;
+            color: #f1f5f9 !important;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7) !important;
+        }
+        body.dark-mode #blogDetailModal .modal-title,
+        [data-bs-theme="dark"] #blogDetailModal .modal-title {
+            color: #ffffff !important;
+        }
+        body.dark-mode #blogDetailModal #modalLead,
+        [data-bs-theme="dark"] #blogDetailModal #modalLead {
+            color: #cbd5e1 !important;
+        }
+        body.dark-mode #blogDetailModal #modalContent,
+        body.dark-mode #blogDetailModal #modalContent p,
+        body.dark-mode #blogDetailModal #modalContent li,
+        [data-bs-theme="dark"] #blogDetailModal #modalContent,
+        [data-bs-theme="dark"] #blogDetailModal #modalContent p,
+        [data-bs-theme="dark"] #blogDetailModal #modalContent li {
+            color: #e2e8f0 !important;
+        }
+        body.dark-mode #blogDetailModal #modalContent h5,
+        [data-bs-theme="dark"] #blogDetailModal #modalContent h5 {
+            color: #f8fafc !important;
+        }
+        body.dark-mode #blogDetailModal .btn-close,
+        [data-bs-theme="dark"] #blogDetailModal .btn-close {
+            filter: invert(1) grayscale(100%) brightness(200%) !important;
+        }
+        body.dark-mode #blogDetailModal .modal-footer,
+        [data-bs-theme="dark"] #blogDetailModal .modal-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
+    <div class="container">
+
+        <!-- LOGO -->
+        <a href="index.html" class="navbar-brand d-flex align-items-center gap-2 fw-bold">
+            <img src="assets/images/logo.png" style="height:45px; width:auto; object-fit:contain;" alt="StoreHub Logo">
+            <span>StoreHub</span>
+        </a>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars fs-3 text-white"></i>
+        </button>
+
+        <!-- NAVIGATION -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                <!-- HOME -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Home
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                        <li><a class="dropdown-item" href="index2.html">Home 2</a></li>
+                    </ul>
+                </li>
+
+                <!-- ABOUT -->
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <!-- FACILITIES -->
+                <li class="nav-item">
+                    <a class="nav-link" href="facilities.html">Facilities</a>
+                </li>
+
+                <!-- PRICING -->
+                <li class="nav-item">
+                    <a class="nav-link" href="pricing.html">Pricing</a>
+                </li>
+
+                <!-- LOCATIONS -->
+                <li class="nav-item">
+                    <a class="nav-link" href="locations.html">Locations</a>
+                </li>
+
+                <!-- BLOG (ACTIVE) -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="blog.html">Blog</a>
+                </li>
+
+                <!-- PAGES DROPDOWN -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Pages
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="maintenance.html">
+                                <i class="fa-solid fa-screwdriver-wrench me-2"></i>Maintenance
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="404.html">
+                                <i class="fa-solid fa-triangle-exclamation me-2"></i>404 Page
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="coming-soon.html">
+                                <i class="fa-solid fa-rocket me-2"></i>Coming Soon
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- CONTACT -->
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+            <!-- RIGHT SIDE ACTIONS -->
+            <div class="d-flex align-items-center gap-2 navbar-actions ms-auto">
+                <!-- RTL / LTR Button -->
+                <button id="rtlToggle" type="button" class="btn d-flex align-items-center justify-content-center"
+                    style="
+                        width:100px !important;
+                        height:40px !important;
+                        min-width:100px !important;
+                        padding:0 !important;
+                        margin:0 !important;
+                        border:1px solid #6c757d !important;
+                        border-radius:50px !important;
+                        color:#fff !important;
+                        background:#17233f !important;
+                        box-shadow:none !important;
+                        text-align:center !important;
+                    "
+                    title="Switch RTL / LTR">
+                    <i class="fa-solid fa-arrows-left-right"></i>
+                </button>
+
+                <!-- DARK MODE Button -->
+                <button id="themeToggle" type="button" class="btn d-flex align-items-center justify-content-center"
+                    style="
+                        width:100px !important;
+                        height:40px !important;
+                        min-width:100px !important;
+                        padding:0 !important;
+                        margin:0 !important;
+                        border:1px solid #6c757d !important;
+                        border-radius:50px !important;
+                        color:#fff !important;
+                        background:#17233f !important;
+                        box-shadow:none !important;
+                    "
+                    title="Toggle dark mode">
+                    <i id="themeIcon" class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- =====================================================
+     [SECTION 1]
+     HERO BANNER & CATEGORY FILTERS
+===================================================== -->
+<section class="bg-body-secondary py-5" style="margin-top: 75px;">
+    <div class="container py-5 text-center">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center mb-3">
+                <!-- <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-body-secondary">Home</a></li> -->
+                <li class="breadcrumb-item active text-warning fw-semibold" aria-current="page">Blog & Articles</li>
+            </ol>
+        </nav>
+        <span class="badge text-bg-warning px-3 py-2 mb-3">KNOWLEDGE BASE & GUIDES</span>
+        <h1 class="display-4 fw-bold text-body">
+            Storage Insights, Moving Hacks & Logistics News
+        </h1>
+        <p class="lead text-body-secondary mx-auto mt-3" style="max-width: 720px;">
+            Expert advice on calculating space, packing delicate goods, choosing commercial warehouse units, and managing inventory safely.
+        </p>
+
+       
+    </div>
+</section>
+
+
+<!-- =====================================================
+     [SECTION 2]
+     FEATURED ARTICLE SPOTLIGHT (READ MORE BUTTON REMOVED)
+===================================================== -->
+<section class="py-5">
+    <div class="container">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden bg-body">
+            <div class="row g-0 align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80" 
+                         alt="Warehouse Storage Planning" 
+                         class="w-100 h-100 object-fit-cover" 
+                         style="min-height: 380px;">
+                </div>
+                <div class="col-lg-6 p-4 p-lg-5">
+                    <div class="d-flex align-items-center gap-3 mb-2">
+                        <span class="badge text-bg-warning">FEATURED GUIDE</span>
+                        <small class="text-body-secondary"><i class="fa-regular fa-clock me-1"></i> 6 min read</small>
+                    </div>
+                    <h2 class="fw-bold text-body mb-3">
+                        How to Accurately Estimate Warehouse Space for Fast-Growing E-Commerce Brands
+                    </h2>
+                    <p class="text-body-secondary mb-4">
+                        Running out of storage space unexpectedly can stall order fulfillment and lead to costly emergency rentals. Discover how to calculate cubic utilization, vertical pallet stacking, and seasonal buffer margins.
+                    </p>
+                    <div class="d-flex align-items-center gap-3 pt-3 border-top border-secondary-subtle">
+                        <i class="fa-solid fa-circle-user fs-4 text-warning"></i>
+                        <div>
+                            <small class="fw-bold text-body d-block">Logistics Team</small>
+                            <small class="text-body-secondary">Published Oct 2026</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- =====================================================
+     [SECTION 3]
+     MAIN ARTICLES GRID (6 INTERACTIVE CARDS WITH MODAL)
+===================================================== -->
+<section class="py-5 bg-body-secondary">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="text-warning fw-semibold text-uppercase">LATEST POSTS</span>
+            <h2 class="fw-bold mt-2 text-body">Practical Guides from Storage Experts</h2>
+            <p class="text-body-secondary mx-auto" style="max-width: 650px;">
+                Click "Read More" on any article below to explore complete tips, packaging steps, and security guidelines.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Card 1: Packing Guide -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-body d-flex flex-column">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=600&q=80" 
+                         alt="Packing Moving Boxes" class="card-img-top" style="height: 210px; object-fit: cover;">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <span class="badge text-bg-warning">PACKING TIPS</span>
+                            <small class="text-body-secondary"><i class="fa-regular fa-clock me-1"></i> 4 min</small>
+                        </div>
+                        <h5 class="fw-bold text-body">10 Rules for Packing Delicate Goods for Long-Term Storage</h5>
+                        <p class="text-body-secondary small flex-grow-1">
+                            Avoid moisture damage, shattered glassware, and collapsed boxes with professional packing tips.
+                        </p>
+                        <button class="btn btn-outline-warning w-100 mt-3 fw-semibold read-more-btn"
+                                data-category="PACKING TIPS"
+                                data-title="10 Rules for Packing Delicate Goods for Long-Term Storage"
+                                data-image="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80"
+                                data-lead="Proper packing safeguards your items from settling, vibrations, and ambient humidity during extended storage."
+                                data-content="<p>Whether you're storing fine china, fragile collectibles, or sensitive optics, proper technique is the difference between safe keeping and damaged goods.</p>
+                                <h5>Never Use Grocery Boxes</h5>
+                                <p>Standard supermarket boxes are often weakened by grocery moisture and lack double-walled corrugated strength. Invest in certified heavy-duty storage boxes.</p>
+                                <h5>Ditch Newspaper for Acid-Free Paper</h5>
+                                <p>Newspaper print transfers ink onto porous porcelain and fine wood over time. Use clean packing paper, tissue sheets, and corrugated bubble-wrap.</p>
+                                <h5>The 'Shake Test'</h5>
+                                <p>Before taping your box shut, give it a gentle shake. If items move or make sound, add void-fill cushions until the contents are completely immobilized.</p>">
+                            Read More <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Climate Control -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-body d-flex flex-column">
+                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80" 
+                         alt="Wood Furniture and Interior" class="card-img-top" style="height: 210px; object-fit: cover;">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <span class="badge text-bg-warning">CLIMATE CONTROL</span>
+                            <small class="text-body-secondary"><i class="fa-regular fa-clock me-1"></i> 5 min</small>
+                        </div>
+                        <h5 class="fw-bold text-body">Does Your Wooden Furniture Really Need Climate-Controlled Units?</h5>
+                        <p class="text-body-secondary small flex-grow-1">
+                            Understanding how humidity fluctuations warp teak, rosewood, and leather goods over summer seasons.
+                        </p>
+                        <button class="btn btn-outline-warning w-100 mt-3 fw-semibold read-more-btn"
+                                data-category="CLIMATE CONTROL"
+                                data-title="Does Your Wooden Furniture Really Need Climate-Controlled Units?"
+                                data-image="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80"
+                                data-lead="Humidity and tropical heat can warp wood, dry out leather, and crack antique finishes within weeks."
+                                data-content="<p>Solid wood is a hygroscopic material—it breathes and expands as atmospheric moisture shifts. In coastal cities like Chennai, unconditioned storage units can cause warping and mold growth.</p>
+                                <h5>Target Relative Humidity (RH)</h5>
+                                <p>StoreHub keeps climate-controlled units maintained between 45% and 55% relative humidity to preserve wood grain and adhesive joints.</p>
+                                <h5>Breathable Protective Covers</h5>
+                                <p>Avoid sealing wooden furniture in non-porous plastic wrap. Plastic traps condensed moisture against the finish. Instead, wrap furniture in breathable moving quilts or canvas drops.</p>
+                                <h5>Raise Off the Concrete</h5>
+                                <p>Place wood furniture onto wooden pallets or rubberized risers to allow steady airflow beneath baseboards and legs.</p>">
+                            Read More <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Security & Surveillance -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-body d-flex flex-column">
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=600&q=80" 
+                         alt="Padlock and Storage Security" class="card-img-top" style="height: 210px; object-fit: cover;">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <span class="badge text-bg-warning">FACILITY SECURITY</span>
+                            <small class="text-body-secondary"><i class="fa-regular fa-clock me-1"></i> 3 min</small>
+                        </div>
+                        <h5 class="fw-bold text-body">The Difference Between Disc Locks and Padlocks for Storage Units</h5>
+                        <p class="text-body-secondary small flex-grow-1">
+                            Why cylinder and shrouded disc locks prevent bolt-cutter tampering and protect your personal unit.
+                        </p>
+                        <button class="btn btn-outline-warning w-100 mt-3 fw-semibold read-more-btn"
+                                data-category="FACILITY SECURITY"
+                                data-title="The Difference Between Disc Locks and Padlocks for Storage Units"
+                                data-image="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80"
+                                data-lead="A standard padlock has an exposed shackle that can be compromised with bolt cutters in seconds."
+                                data-content="<p>While facility-wide CCTV and gate security provide perimeter deterrence, your unit lock is the ultimate individual defense for your personal items.</p>
+                                <h5>Why Disc Locks Outperform Traditional Padlocks</h5>
+                                <p>Disc locks feature a round laser-cut stainless steel body that encloses the shackle. This leaves virtually zero exposed metal for bolt cutters or hacksaws to grip.</p>
+                                <h5>Anti-Pick Cylinder Pins</h5>
+                                <p>Modern high-security storage locks use mushroom or spool pins that resist tension-wrench picking attempts.</p>
+                                <h5>Retain All Duplicate Keys</h5>
+                                <p>Never keep your spare lock keys inside the storage locker itself. Store copies in separate secure household locations.</p>">
+                            Read More <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Document Archiving -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-body d-flex flex-column">
+                    <img src="https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&w=600&q=80" 
+                         alt="Document Archive and Library" class="card-img-top" style="height: 210px; object-fit: cover;">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <span class="badge text-bg-warning">OFFICE LOGISTICS</span>
+                            <small class="text-body-secondary"><i class="fa-regular fa-clock me-1"></i> 5 min</small>
+                        </div>
+                        <h5 class="fw-bold text-body">Physical Document Retention: Legal Timelines & Storage Guidelines</h5>
+                        <p class="text-body-secondary small flex-grow-1">
+                            A quick checklist for businesses managing GST invoices, audit files, contracts, and payroll records.
+                        </p>
+                        <button class="btn btn-outline-warning w-100 mt-3 fw-semibold read-more-btn"
+                                data-category="OFFICE LOGISTICS"
+                                data-title="Physical Document Retention: Legal Timelines & Storage Guidelines"
+                                data-image="https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&w=800&q=80"
+                                data-lead="Corporate compliance laws mandate keeping physical contracts and tax files secure for several years."
+                                data-content="<p>Storing physical archives in expensive office premises wastes high-value square footage. Dedicated storage lockers free up valuable office desk capacity.</p>
+                                <h5>Legal Retention Periods in India</h5>
+                                <p>Under the Companies Act and GST rules, financial records and audit ledgers must be retained for at least 8 years. Employment registers and title deeds require permanent archiving.</p>
+                                <h5>Standardized Banker Boxes</h5>
+                                <p>Use uniform corrugated archival boxes with pre-printed label panels. Avoid overpacking boxes beyond 15 kg for safe ergonomic lifting.</p>
+                                <h5>Digital Indexing System</h5>
+                                <p>Assign each box a numeric code tied to an Excel or cloud spreadsheet so retrieved files can be pinpointed in under two minutes.</p>">
+                            Read More <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Inventory Management -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-body d-flex flex-column">
+                    <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=600&q=80" 
+                         alt="Small Business Merchant Shipping" class="card-img-top" style="height: 210px; object-fit: cover;">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <span class="badge text-bg-warning">COMMERCE</span>
+                            <small class="text-body-secondary"><i class="fa-regular fa-clock me-1"></i> 4 min</small>
+                        </div>
+                        <h5 class="fw-bold text-body">Micro-Warehousing: The Secret Weapon for D2C Retailers</h5>
+                        <p class="text-body-secondary small flex-grow-1">
+                            How direct-to-consumer businesses use localized storage hubs to achieve same-day regional deliveries.
+                        </p>
+                        <button class="btn btn-outline-warning w-100 mt-3 fw-semibold read-more-btn"
+                                data-category="COMMERCE"
+                                data-title="Micro-Warehousing: The Secret Weapon for D2C Retailers"
+                                data-image="https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=800&q=80"
+                                data-lead="Decentralized storage hubs allow D2C brands to compete with large marketplace delivery speeds."
+                                data-content="<p>Renting a massive 50,000 sq. ft. central warehouse far outside city limits causes delivery bottlenecks. Urban micro-warehouses solve the last-mile challenge.</p>
+                                <h5>Cut Transit Time in Half</h5>
+                                <p>By placing 200–500 sq. ft. hubs inside metro clusters like Chennai, delivery bikes and vans fulfill customer orders within 2 to 4 hours.</p>
+                                <h5>Lower Capital Overhead</h5>
+                                <p>Micro-warehouses require zero upfront infrastructure capex. You only pay for active storage racks month-to-month.</p>
+                                <h5>Live Delivery Driver Access</h5>
+                                <p>StoreHub features dedicated courier pickup parking zones so delivery riders pull up, pick their assigned parcels, and go.</p>">
+                            Read More <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Seasonal & Vehicle Storage -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-body d-flex flex-column">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" 
+                         alt="Car and Garage Vehicle Storage" class="card-img-top" style="height: 210px; object-fit: cover;">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <span class="badge text-bg-warning">VEHICLE STORAGE</span>
+                            <small class="text-body-secondary"><i class="fa-regular fa-clock me-1"></i> 3 min</small>
+                        </div>
+                        <h5 class="fw-bold text-body">How to Store Vehicles & Machinery During Long Relocations</h5>
+                        <p class="text-body-secondary small flex-grow-1">
+                            Essential steps to prevent flat spots on tires, battery drainage, and fuel degradation while abroad.
+                        </p>
+                        <button class="btn btn-outline-warning w-100 mt-3 fw-semibold read-more-btn"
+                                data-category="VEHICLE STORAGE"
+                                data-title="How to Store Vehicles & Machinery During Long Relocations"
+                                data-image="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+                                data-lead="Leaving a car or industrial machine idle for months requires strict pre-storage maintenance."
+                                data-content="<p>If you're traveling overseas for assignments, improper vehicle storage can result in degraded fluids, drained lithium batteries, and rusted brake assemblies.</p>
+                                <h5>Disconnect or Trickle-Charge Battery</h5>
+                                <p>Parasitic drain from onboard computer modules can drain standard batteries within 3 weeks. Disconnect the negative terminal or install an automated trickle charger.</p>
+                                <h5>Over-Inflate Tires Slightly</h5>
+                                <p>Inflate tires to 38-40 PSI or lift the car onto jack stands to eliminate tire flat-spotting from sustained floor contact.</p>
+                                <h5>Add Fuel Stabilizer</h5>
+                                <p>Fuel oxidizes and forms gummy residues over 60+ days. Fill the tank full to prevent moisture condensation and add quality fuel stabilizer.</p>">
+                            Read More <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- =====================================================
+     [SECTION 4]
+     STORAGE SIZING & CALCULATION GUIDE
+===================================================== -->
+<section class="py-5">
+    <div class="container py-4">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="text-warning fw-semibold text-uppercase">SPACE ESTIMATION</span>
+                <h2 class="fw-bold mt-2 text-body">Never Overpay for Storage You Don't Use</h2>
+                <p class="text-body-secondary mt-3">
+                    One of the biggest mistakes storage renters make is underestimating vertical ceiling height. Our units offer 10 to 12 foot ceiling clearance, allowing smart vertical layering.
+                </p>
+
+                <div class="row g-3 mt-3">
+                    <div class="col-sm-6">
+                        <div class="p-3 border border-secondary-subtle rounded-3 bg-body">
+                            <span class="text-warning fw-bold fs-4">25–50 sq.ft</span>
+                            <h6 class="fw-bold text-body mt-1">Locker / Studio</h6>
+                            <p class="text-body-secondary small mb-0">Fits 20–40 standard boxes, small luggage, bicycles, and seasonal apparel.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-3 border border-secondary-subtle rounded-3 bg-body">
+                            <span class="text-warning fw-bold fs-4">75–120 sq.ft</span>
+                            <h6 class="fw-bold text-body mt-1">1–2 BHK Apartment</h6>
+                            <p class="text-body-secondary small mb-0">Fits queen bed, sofa set, refrigerator, washing machine, and 50+ cartons.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-3 border border-secondary-subtle rounded-3 bg-body">
+                            <span class="text-warning fw-bold fs-4">150–250 sq.ft</span>
+                            <h6 class="fw-bold text-body mt-1">3–4 BHK Villa / Office</h6>
+                            <p class="text-body-secondary small mb-0">Complete household furniture, commercial office desks, and equipment.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-3 border border-secondary-subtle rounded-3 bg-body">
+                            <span class="text-warning fw-bold fs-4">500+ sq.ft</span>
+                            <h6 class="fw-bold text-body mt-1">Commercial Pallet Bay</h6>
+                            <p class="text-body-secondary small mb-0">High-capacity pallet racking, bulk e-commerce inventory, heavy machinery.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <a href="contact.html" class="btn btn-warning px-4 fw-semibold">
+                        <i class="fa-solid fa-calculator me-2"></i>Calculate Your Space
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1590402494587-44b71d7772f6?auto=format&fit=crop&w=800&q=80" 
+                     alt="Warehouse Racking and Space Calculation" 
+                     class="img-fluid rounded-4 shadow-sm w-100" 
+                     style="height: 420px; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- =====================================================
+     [SECTION 5]
+     POPULAR TOPICS / CATEGORY EXPLORER
+===================================================== -->
+<!-- =====================================================
+     [SECTION 5]
+     POPULAR TOPICS / CATEGORY EXPLORER
+===================================================== -->
+<section class="py-5 bg-body-secondary">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="text-warning fw-semibold text-uppercase">BROWSE TOPICS</span>
+            <h2 class="fw-bold mt-2 text-body">Everything You Need to Know by Category</h2>
+        </div>
+
+        <div class="row g-4">
+            <!-- 1. Self-Storage -->
+            <div class="col-6 col-md-3">
+                <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 bg-body">
+                    <div class="rounded-circle bg-warning mx-auto d-flex align-items-center justify-content-center mb-3"
+                         style="width: 60px; height: 60px;">
+                        <i class="fa-solid fa-boxes-stacked fs-4" style="color: #0B132B !important;"></i>
+                    </div>
+                    <h5 class="fw-bold text-body">Self-Storage</h5>
+                    <p class="text-body-secondary small mb-0">18 Articles</p>
+                </div>
+            </div>
+
+            <!-- 2. Warehousing -->
+            <div class="col-6 col-md-3">
+                <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 bg-body">
+                    <div class="rounded-circle bg-warning mx-auto d-flex align-items-center justify-content-center mb-3"
+                         style="width: 60px; height: 60px;">
+                        <i class="fa-solid fa-warehouse fs-4" style="color: #0B132B !important;"></i>
+                    </div>
+                    <h5 class="fw-bold text-body">Warehousing</h5>
+                    <p class="text-body-secondary small mb-0">24 Articles</p>
+                </div>
+            </div>
+
+            <!-- 3. Moving & Transit -->
+            <div class="col-6 col-md-3">
+                <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 bg-body">
+                    <div class="rounded-circle bg-warning mx-auto d-flex align-items-center justify-content-center mb-3"
+                         style="width: 60px; height: 60px;">
+                        <i class="fa-solid fa-truck-moving fs-4" style="color: #0B132B !important;"></i>
+                    </div>
+                    <h5 class="fw-bold text-body">Moving & Transit</h5>
+                    <p class="text-body-secondary small mb-0">15 Articles</p>
+                </div>
+            </div>
+
+            <!-- 4. Facility Safety -->
+            <div class="col-6 col-md-3">
+                <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 bg-body">
+                    <div class="rounded-circle bg-warning mx-auto d-flex align-items-center justify-content-center mb-3"
+                         style="width: 60px; height: 60px;">
+                        <i class="fa-solid fa-shield-halved fs-4" style="color: #0B132B !important;"></i>
+                    </div>
+                    <h5 class="fw-bold text-body">Facility Safety</h5>
+                    <p class="text-body-secondary small mb-0">12 Articles</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     [SECTION 6]
+     PRE-STORAGE SAFETY CHECKLIST
+===================================================== -->
+<section class="py-5">
+    <div class="container py-4">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-5">
+                <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=800&q=80" 
+                     alt="Pre-Storage Preparation and Inspection" 
+                     class="img-fluid rounded-4 shadow-sm w-100" 
+                     style="height: 400px; object-fit: cover;">
+            </div>
+
+            <div class="col-lg-7">
+                <span class="text-warning fw-semibold text-uppercase">STORAGE SAFETY CHECKLIST</span>
+                <h2 class="fw-bold mt-2 text-body">5 Golden Rules Before Locking Your Unit</h2>
+                <p class="text-body-secondary mt-2">
+                    Follow these simple steps before closing your roll-up door to make future access fast and keep your belongings spotless.
+                </p>
+
+                <div class="d-flex align-items-start gap-3 mt-3">
+                    <div class="badge bg-warning text-dark rounded-circle p-2 fs-6" style="width:32px;height:32px;">1</div>
+                    <div>
+                        <h6 class="fw-bold text-body mb-1">Clean and Dry Everything</h6>
+                        <p class="text-body-secondary small mb-0">Ensure garden equipment is wiped clean, fuel tanks drained, and refrigerator defrost lines fully dried.</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start gap-3 mt-3">
+                    <div class="badge bg-warning text-dark rounded-circle p-2 fs-6" style="width:32px;height:32px;">2</div>
+                    <div>
+                        <h6 class="fw-bold text-body mb-1">Create an Access Aisle</h6>
+                        <p class="text-body-secondary small mb-0">Leave a 2-foot walking path down the middle of your locker so you never have to unpack everything to reach back boxes.</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start gap-3 mt-3">
+                    <div class="badge bg-warning text-dark rounded-circle p-2 fs-6" style="width:32px;height:32px;">3</div>
+                    <div>
+                        <h6 class="fw-bold text-body mb-1">Heavy Items on Bottom, Light on Top</h6>
+                        <p class="text-body-secondary small mb-0">Stack large durable bins on the floor to prevent crushing smaller cardboard cartons underneath.</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start gap-3 mt-3">
+                    <div class="badge bg-warning text-dark rounded-circle p-2 fs-6" style="width:32px;height:32px;">4</div>
+                    <div>
+                        <h6 class="fw-bold text-body mb-1">Label on All Four Sides</h6>
+                        <p class="text-body-secondary small mb-0">Write box numbers and room tags on multiple faces so you can identify contents no matter how they are rotated.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- =====================================================
+     [SECTION 7]
+     NEWSLETTER & EXPERT CONSULTATION CTA
+===================================================== -->
+<section class="py-5" style="background: linear-gradient(135deg, #0B132B 0%, #17233f 100%);">
+    <div class="container py-4 text-center text-white">
+        <span class="badge bg-warning text-dark px-3 py-2 mb-3">STAY AHEAD</span>
+        <h2 class="display-6 fw-bold mb-3">Get Storage Hacks & Space Discounts Delivered</h2>
+        <p class="lead text-white-50 mx-auto mb-4" style="max-width: 600px;">
+            Join over 5,000+ business owners, facility managers, and renters who receive our monthly warehousing tips and exclusive promo rates.
+        </p>
+
+        <form class="row g-2 justify-content-center mx-auto" style="max-width: 520px;" onsubmit="event.preventDefault(); alert('Thank you for subscribing to StoreHub updates!');">
+            <div class="col-sm-8">
+                <input type="email" class="form-control form-control-lg border-0 shadow-none" placeholder="Enter your email address..." required>
+            </div>
+            <div class="col-sm-4">
+                <button type="submit" class="btn btn-warning btn-lg w-100 fw-semibold">Subscribe</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+<!-- =====================================================
+     INTERACTIVE "READ MORE" MODAL (DARK & LIGHT MODE READY)
+===================================================== -->
+<div class="modal fade" id="blogDetailModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-content rounded-4 shadow">
+            
+            <!-- Modal Header -->
+            <div class="modal-header border-0 pb-0 pt-4 px-4 align-items-start">
+                <div>
+                    <span id="modalCategory" class="text-warning fw-bold text-uppercase small d-block mb-1">
+                        STORAGE TIPS
+                    </span>
+                    <h3 id="modalTitle" class="modal-title fw-bold">
+                        Article Details
+                    </h3>
+                </div>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body p-4">
+                <!-- Featured Image -->
+                <img id="modalImage" 
+                     src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80" 
+                     alt="Article Featured Image" 
+                     class="img-fluid rounded-4 shadow-sm w-100 mb-4" 
+                     style="height: 320px; object-fit: cover;">
+
+                <!-- Lead Subtitle -->
+                <p id="modalLead" class="lead mb-4 fw-medium">
+                    Article introduction lead.
+                </p>
+
+                <!-- Detailed Article Content -->
+                <div id="modalContent" class="lh-lg">
+                    <!-- Injected dynamically via JavaScript -->
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer border-0 pt-0 px-4 pb-4 justify-content-between">
+                <small class="text-warning fw-semibold">
+                    <i class="fa-solid fa-shield-halved me-1"></i> StoreHub Storage Expert Verified
+                </small>
+                <button type="button" class="btn btn-secondary px-4 rounded-pill" data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+<footer class="bg-dark text-white pt-5">
+    <div class="container">
+        <div class="row g-4 pb-4">
+
+            <!-- BRAND -->
+            <div class="col-lg-4">
+                <!-- LOGO + BRAND NAME -->
+                <a href="index.html" class="text-white text-decoration-none d-inline-flex align-items-center gap-2 mb-3">
+                    <img
+                        src="assets/images/logo.png"
+                        alt="StoreHub Logo"
+                        style="
+                            height: 44px;
+                            width: auto;
+                            max-height: 44px;
+                            object-fit: contain;
+                            display: block;
+                            flex-shrink: 0;
+                        ">
+                    <span
+                        class="fw-bold text-white"
+                        style="
+                            font-size: 26px;
+                            line-height: 1;
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                            align-items: center;
+                        ">
+                        StoreHub
+                    </span>
+                </a>
+
+                <!-- DESCRIPTION -->
+                <p class="text-white-50 mb-3" style="max-width:360px; line-height:1.7;">
+                    Secure and flexible warehouse and storage solutions for individuals and businesses.
+                </p>
+
+                <!-- SOCIAL ICONS -->
+                <div class="d-flex gap-3">
+                    <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fs-5"
+                        aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fs-5"
+                        aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fs-5"
+                        aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="col-6 col-lg-2">
+                <h6>Quick Links</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="index.html" class="text-white-50 text-decoration-none">Home</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="about.html" class="text-white-50 text-decoration-none">About Us</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="facilities.html" class="text-white-50 text-decoration-none">Facilities</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="pricing.html" class="text-white-50 text-decoration-none">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="locations.html" class="text-white-50 text-decoration-none">Locations</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- PAGES -->
+            <div class="col-6 col-lg-2">
+                <h6>Pages</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="blog.html" class="text-white-50 text-decoration-none">Blog</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="maintenance.html" class="text-white-50 text-decoration-none">Maintenance</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="404.html" class="text-white-50 text-decoration-none">404 Page</a>
+                    </li>
+                    <li>
+                        <a href="coming-soon.html" class="text-white-50 text-decoration-none">Coming Soon</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="col-lg-4">
+                <h6>Contact Us</h6>
+                <p class="text-white-50 mb-2">
+                    <i class="fa-solid fa-phone me-2"></i>
+                    +91 98765 43210
+                </p>
+                <p class="text-white-50 mb-2">
+                    <i class="fa-solid fa-envelope me-2"></i>
+                    storehub@gmail.com
+                </p>
+                <p class="text-white-50">
+                    <i class="fa-solid fa-location-dot me-2"></i>
+                    Chennai, Tamil Nadu
+                </p>
+            </div>
+
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="border-top border-secondary py-3 text-center">
+            <small class="text-white-50">
+                © 2026 StoreHub. All Rights Reserved.
+            </small>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap 5 Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="assets/js/script.js"></script>
+<script src="script.js"></script>
+
+<!-- =====================================================
+     MODAL CONTROLLER SCRIPT
+===================================================== -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const modalElement = document.getElementById("blogDetailModal");
+        if (!modalElement) return;
+
+        const detailModal = new bootstrap.Modal(modalElement);
+        const modalCategory = document.getElementById("modalCategory");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalImage = document.getElementById("modalImage");
+        const modalLead = document.getElementById("modalLead");
+        const modalContent = document.getElementById("modalContent");
+
+        document.querySelectorAll(".read-more-btn").forEach(button => {
+            button.addEventListener("click", function () {
+                const category = this.getAttribute("data-category") || "STORAGE TIPS";
+                const title = this.getAttribute("data-title") || "Article Details";
+                const image = this.getAttribute("data-image") || "";
+                const lead = this.getAttribute("data-lead") || "";
+                const content = this.getAttribute("data-content") || "";
+
+                modalCategory.textContent = category;
+                modalTitle.textContent = title;
+                modalImage.src = image;
+                modalImage.alt = title;
+                modalLead.textContent = lead;
+                modalContent.innerHTML = content;
+
+                detailModal.show();
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
