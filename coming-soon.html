@@ -213,19 +213,7 @@
                         </li>
 
 
-                        <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="404.html">
-
-                                <i class="fa-solid fa-triangle-exclamation me-2"></i>
-
-                                404 Page
-
-                            </a>
-
-                        </li>
+                       
 
 
                         <li>
@@ -407,110 +395,94 @@
                  COUNTDOWN
             ================================================== -->
 
-            <div
-                class="row justify-content-center g-3 my-5">
+          <!-- COUNTDOWN TIMER -->
+<div class="row justify-content-center g-3 my-5" id="countdownTimer">
 
+    <!-- DAYS -->
+    <div class="col-6 col-sm-3 col-md-2">
+        <div class="bg-body rounded-4 shadow-sm p-3 text-center">
+            <h2 class="fw-bold text-warning mb-0" id="timerDays">12</h2>
+            <small class="text-body-secondary">Days</small>
+        </div>
+    </div>
 
-                <!-- DAYS -->
+    <!-- HOURS -->
+    <div class="col-6 col-sm-3 col-md-2">
+        <div class="bg-body rounded-4 shadow-sm p-3 text-center">
+            <h2 class="fw-bold text-warning mb-0" id="timerHours">08</h2>
+            <small class="text-body-secondary">Hours</small>
+        </div>
+    </div>
 
-                <div class="col-6 col-sm-3 col-md-2">
+    <!-- MINUTES -->
+    <div class="col-6 col-sm-3 col-md-2">
+        <div class="bg-body rounded-4 shadow-sm p-3 text-center">
+            <h2 class="fw-bold text-warning mb-0" id="timerMinutes">35</h2>
+            <small class="text-body-secondary">Minutes</small>
+        </div>
+    </div>
 
-                    <div
-                        class="bg-body rounded-4 shadow-sm p-3">
+    <!-- SECONDS -->
+    <div class="col-6 col-sm-3 col-md-2">
+        <div class="bg-body rounded-4 shadow-sm p-3 text-center">
+            <h2 class="fw-bold text-warning mb-0" id="timerSeconds">20</h2>
+            <small class="text-body-secondary">Seconds</small>
+        </div>
+    </div>
 
-                        <h2
-                            class="fw-bold text-warning mb-0">
+</div>
 
-                            12
+<!-- COUNTDOWN JAVASCRIPT -->
+<script>
+(function () {
 
-                        </h2>
+    // Initial countdown duration
+    const initialTime =
+        (12 * 24 * 60 * 60) +
+        (8 * 60 * 60) +
+        (35 * 60) +
+        20;
 
-                        <small class="text-body-secondary">
+    // Set the countdown end time
+    const endTime = Date.now() + initialTime * 1000;
 
-                            Days
+    const daysElement = document.getElementById("timerDays");
+    const hoursElement = document.getElementById("timerHours");
+    const minutesElement = document.getElementById("timerMinutes");
+    const secondsElement = document.getElementById("timerSeconds");
 
-                        </small>
+    function updateTimer() {
 
-                    </div>
+        let remainingSeconds = Math.max(
+            0,
+            Math.ceil((endTime - Date.now()) / 1000)
+        );
 
-                </div>
+        const days = Math.floor(remainingSeconds / 86400);
+        remainingSeconds %= 86400;
 
+        const hours = Math.floor(remainingSeconds / 3600);
+        remainingSeconds %= 3600;
 
-                <!-- HOURS -->
+        const minutes = Math.floor(remainingSeconds / 60);
+        const seconds = remainingSeconds % 60;
 
-                <div class="col-6 col-sm-3 col-md-2">
+        daysElement.textContent = String(days).padStart(2, "0");
+        hoursElement.textContent = String(hours).padStart(2, "0");
+        minutesElement.textContent = String(minutes).padStart(2, "0");
+        secondsElement.textContent = String(seconds).padStart(2, "0");
 
-                    <div
-                        class="bg-body rounded-4 shadow-sm p-3">
+        if (Date.now() >= endTime) {
+            clearInterval(timerInterval);
+        }
+    }
 
-                        <h2
-                            class="fw-bold text-warning mb-0">
+    updateTimer();
 
-                            08
+    const timerInterval = setInterval(updateTimer, 250);
 
-                        </h2>
-
-                        <small class="text-body-secondary">
-
-                            Hours
-
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-                <!-- MINUTES -->
-
-                <div class="col-6 col-sm-3 col-md-2">
-
-                    <div
-                        class="bg-body rounded-4 shadow-sm p-3">
-
-                        <h2
-                            class="fw-bold text-warning mb-0">
-
-                            35
-
-                        </h2>
-
-                        <small class="text-body-secondary">
-
-                            Minutes
-
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-                <!-- SECONDS -->
-
-                <div class="col-6 col-sm-3 col-md-2">
-
-                    <div
-                        class="bg-body rounded-4 shadow-sm p-3">
-
-                        <h2
-                            class="fw-bold text-warning mb-0">
-
-                            20
-
-                        </h2>
-
-                        <small class="text-body-secondary">
-
-                            Seconds
-
-                        </small>
-
-                    </div>
-
-                </div>
-
-            </div>
+})();
+</script>
 
         </div>
 
