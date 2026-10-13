@@ -5264,3 +5264,55 @@ body.dark-mode .bg-warning i,
 [data-bs-theme="dark"] .bg-warning i {
     color: #0B132B !important;
 }
+/* Minimize Navbar Spacing */
+.navbar {
+    padding: 6px 0 !important;
+}
+
+.navbar-brand {
+    margin-right: 8px !important;
+    font-size: 24px !important;
+}
+
+.navbar-brand img {
+    width: 42px !important;
+    height: 42px !important;
+}
+
+.navbar .navbar-nav {
+    gap: 2px !important;
+}
+
+.navbar .nav-link {
+    padding: 8px 10px !important;
+    font-size: 15px !important;
+    white-space: nowrap;
+}
+
+.navbar .btn {
+    padding: 8px 14px !important;
+    font-size: 13px !important;
+    white-space: nowrap;
+}
+
+/* Prevent Navbar Overlap on Smaller Screens */
+@media (max-width: 1199px) {
+    .navbar-brand {
+        font-size: 21px !important;
+    }
+
+    .navbar-brand img {
+        width: 38px !important;
+        height: 38px !important;
+    }
+
+    .navbar .nav-link {
+        padding: 7px 6px !important;
+        font-size: 13px !important;
+    }
+
+    .navbar .btn {
+        padding: 7px 10px !important;
+        font-size: 12px !important;
+    }
+}
