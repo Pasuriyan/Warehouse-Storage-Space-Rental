@@ -5316,3 +5316,60 @@ body.dark-mode .bg-warning i,
         font-size: 12px !important;
     }
 }
+/* ========================================================
+   Responsive "Book Storage" Button (320px to 1024px+)
+   ======================================================== */
+
+/* Mobile & Tablet Collapsed Menu (320px, 375px, 425px, 768px) */
+.btn-book-storage {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    height: 42px;
+    padding: 0 20px;
+    background: #17233f;
+    color: #c9cace !important;
+    border: 1px solid #596273;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    line-height: 1.5;
+    text-decoration: none !important;
+    box-shadow: none;
+    white-space: nowrap;
+    margin-bottom: 12px; /* Breathing room above the [<->] and [🌙] buttons */
+    transition: all 0.25s ease-in-out;
+}
+
+.btn-book-storage span {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Hover & Active States */
+.btn-book-storage:hover,
+.btn-book-storage:focus {
+    background: #23345c;
+    border-color: #7b879c;
+    color: #ffffff !important;
+}
+
+/* Desktop & Laptop Header (>= 992px / 1024px) */
+@media (min-width: 992px) {
+    .btn-book-storage {
+        width: auto !important;
+        min-width: 145px;
+        height: 40px;
+        margin-bottom: 0;
+        margin-left: 16px;
+        flex-shrink: 0;
+    }
+
+    .btn-book-storage span {
+        width: auto;
+    }
+}
